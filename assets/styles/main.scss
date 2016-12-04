@@ -1,0 +1,41 @@
+@import 'vendor/sanitize';
+
+@import 'utility/variables';
+@import 'utility/scaffolding';
+
+main {
+	height: 100vh;
+	padding-top: 20vh;
+	text-align: center;
+}
+
+@import 'components/typography';
+@import 'components/blockquotes';
+
+@import 'layouts/site-header';
+@import 'layouts/site-footer';
+@import 'layouts/pages';
+@import 'layouts/posts';
+
+@import 'pages/home';
+
+.links {
+	a {
+		font-size: 1.5rem;
+		margin-right: 10px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+@media only screen
+	and (max-device-width: 680px) {
+	main {
+		margin-bottom: 20px;
+		padding: 10vh 20px 0;
+	}
+	blockquote {
+		width: 80%;
+	}
+}
