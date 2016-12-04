@@ -24,8 +24,5 @@
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.9.1",
     "rimraf": "^2.5.4"
-  },
-  "dependencies": {
-    "jquery": "^3.1.1"
   }
 }

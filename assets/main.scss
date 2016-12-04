@@ -1,0 +1,19 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+@import 'vendor/sanitize';
+
+@import 'utility/variables';
+@import 'utility/scaffolding';
+
+@import 'components/typography';
+
+@import 'layouts/site-header';
+@import 'layouts/site-footer';
+@import 'layouts/pages';
+@import 'layouts/posts';
+
+@import 'pages/home';

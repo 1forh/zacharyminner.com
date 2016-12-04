@@ -1,0 +1,29 @@
+<!doctype html>
+<html class="no-js" lang="{{ page.lang | default: site.lang | default: "en" }}" itemscope itemtype="http://schema.org/WebPage">
+
+	{% include head.html %}
+
+<body>
+	<!--[if lt IE 8]>
+		<p class="browser-upgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	{% include header.html %}
+
+	<main class="page-content" aria-label="Content">
+		<div class="wrapper">
+			{{ content }}
+		</div>
+	</main>
+
+	<main>
+		<h1>Hi, I'm <strong>Zach Minner</strong>.</h1>
+		<h4>I work at <a href="http://skycatchfire.com" target="_blank">SKYCATCHFIRE</a>.</h4>
+	</main>
+
+	{% include footer.html %}
+
+	<script src="https://use.fontawesome.com/6c5ec8ec5d.js"></script>
+
+</body>
+</html>

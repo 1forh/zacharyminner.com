@@ -4,8 +4,10 @@ node_modules
 npm-debug.log
 yarn.lock
 
+Gemfile.lock
+
 _site
 .sass-cache
-*.css.map
 .jekyll-metadata
 
+*.css.map
