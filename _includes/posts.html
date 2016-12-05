@@ -1,16 +1,13 @@
-<h4 class="page-heading">Posts</h4>
-<p>Subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+<h4>Posts</h4>
 
-<div class="container">
-	<div class="row">
-		{% for post in site.posts %}
-			<div class="col-sm-12 col-md-4">
-				<div class="card card-block">
-					<h4 class="card-title">{{ post.title | escape }}</h4>
-					<p class="card-text">{{ post.date | date: "%b %-d, %Y" }}</p>
-					<a href="{{ post.url | relative_url }}" class="card-link">Read</a>
-				</div>
-			</div>
-		{% endfor %}
-	</div>
+<div class="row">
+	{% for post in site.posts %}
+		<div class="col-sm-12 col-md-6">
+			<article class="card card-block">
+				<h4 class="card-title">{{ post.title | escape }} - <small>{{ post.date | date: "%b %-d, %Y" }}</small></h4>
+				<div class="card-text mb-1">{{ post.excerpt }}</div>
+				<a href="{{ post.url | relative_url }}" class="card-link btn btn-primary float-xs-right">Read</a>
+			</article>
+		</div>
+	{% endfor %}
 </div>

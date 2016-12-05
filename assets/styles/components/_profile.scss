@@ -1,0 +1,35 @@
+.profile {
+	padding: 4rem;
+}
+
+ul.profile-links {
+	display: flex;
+	justify-content: space-around;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+li.profile-link {
+	font-size: 2em;
+	&__email {
+		i {
+			color: inherit;
+		}
+	}
+	&__github {
+		i {
+			color: #333333;
+		}
+	}
+	&__codepen {
+		i {
+			color: #000000;
+		}
+	}
+	&__linkedin {
+		i {
+			color: #0C7BB6;
+		}
+	}
+}

@@ -6,7 +6,11 @@ title: Zachary Minner
 description: "Hey! My name is Zach Minner. I am a front-end web developer at SKYCATCHFIRE who lives off Mr. Robot and grilled cheese sandwiches."
 
 email: zach@skycatchfire.com
-github_username:  1forh
+
+social:
+  github: "https://github.com/1forh"
+  codepen: "http://codepen.io/1forh"
+  linkedin: "https://www.linkedin.com/in/zachary-minner-877371118"
 
 google_analytics: UA-59393507-1
 
