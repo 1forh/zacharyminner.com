@@ -1,8 +1,45 @@
 <!doctype html>
 <html class="no-js" lang="{{ page.lang | default: site.lang | default: "en" }}" itemscope itemtype="http://schema.org/WebPage">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	{% include head.html %}
+	 <title>{% if page.title %}{{ page.title }}{% endif %} {% if page.url != '/' %}|{% endif %} {% if site.title %}{{ site.title }}{% endif %}</title>
+	<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
+	 <!-- Facebook / Open Graph -->
+	 <meta property="og:type" content="website">
+	 <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
+	 <meta property="og:title" content="{% if page.title %}{{ page.title }}{% endif %} {% if page.url != '/' %}|{% endif %} {% if site.title %}{{ site.title }}{% endif %}">
+	 <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+	 <meta property="og:locale" content="en_US">
+
+	 <!-- Twitter -->
+	 <meta name="twitter:card" content="summary">
+	 <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
+	 <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% endif %} {% if page.url != '/' %}|{% endif %} {% if site.title %}{{ site.title }}{% endif %}">
+	 <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+	 <!-- Google+ / Schema.org-->
+	 <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% endif %} {% if page.url != '/' %}|{% endif %} {% if site.title %}{{ site.title }}{% endif %}">
+	 <meta itemprop="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ 'feed.xml' | relative_url }}">
+
+	<link rel="icon" type="image/png" href="{{ 'assets/images/favicon.png' | relative_url }}">
+
+	<link rel="stylesheet" href="{{ 'assets/main.css' | relative_url }}">
+
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+
+	{% if jekyll.environment == 'production' and site.google_analytics %}
+		{% include google-analytics.html %}
+	{% endif %}
+</head>
 <body>
 	<!--[if lt IE 8]>
 		<p class="browser-upgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to improve your experience.</p>
@@ -10,15 +47,15 @@
 
 	{% include header.html %}
 
-	<main class="page-content" aria-label="Content">
-		<div class="wrapper">
-			{{ content }}
-		</div>
+	<main>
+		{{ content }}
 	</main>
 
 	{% include footer.html %}
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://use.fontawesome.com/6c5ec8ec5d.js"></script>
+	<script src="{{ 'assets/main.css' | relative_url }}"></script>
 
 </body>
 </html>
