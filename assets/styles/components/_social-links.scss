@@ -1,0 +1,14 @@
+.social-links {
+	width: 20%;
+	margin: 1rem auto 0;
+	display: flex;
+	justify-content: space-around;
+	padding: 0;
+	list-style: none;
+	.link {
+		font-size: 2rem;
+		i {
+			color: #fff;
+		}
+	}
+}
