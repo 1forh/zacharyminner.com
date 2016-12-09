@@ -12,3 +12,15 @@
 		}
 	}
 }
+
+@media (max-width: 990px) {
+	.social-links {
+		width: 40%;
+	}
+}
+
+@media (max-width: 425px) {
+	.social-links {
+		width: 70%;
+	}
+}
