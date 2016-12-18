@@ -1,26 +1,28 @@
 .social-links {
-	width: 30%;
-	margin: 1rem auto 0;
-	display: flex;
-	justify-content: space-around;
-	padding: 0;
-	list-style: none;
-	.link {
-		font-size: 2rem;
-		i {
-			color: #fff;
+	a {
+		margin-right: 15px;
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
 		}
-	}
-}
-
-@media (max-width: 990px) {
-	.social-links {
-		width: 50%;
-	}
-}
-
-@media (max-width: 425px) {
-	.social-links {
-		width: 70%;
+		&:last-child {
+			margin-right: 0;
+		}
+		i {
+			font-size: 36px;
+			transition: color 0.3s ease;
+			&:hover {
+				color: $brand-primary;
+			}
+			&.fa-linkedin {
+				color: #1E88BD;
+			}
+			&.fa-github {
+				color: #000000;
+			}
+			&.fa-codepen {
+				color: #333333;
+			}
+		}
 	}
 }
