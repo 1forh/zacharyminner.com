@@ -1,13 +1,18 @@
+body {
+	color: $gray-light;
+}
+
 h1,
-h2 {
-	line-height: 1.4em;
-	font-weight: normal;
+h2,
+h3,
+h4,
+h5 {
+	font-weight: 100;
 }
 
-h1 {
-	font-size: 48px;
-}
-
-h2 {
-	margin-bottom: 40px;
-}
+ a {
+ 	transition: all 0.3s ease;
+ 	&:hover {
+ 		text-decoration: none;
+ 	}
+ }

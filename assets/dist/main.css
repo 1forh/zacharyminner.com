@@ -1706,36 +1706,50 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     display: none !important; } }
 
 main {
-  margin-top: 100px; }
+  height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background-color: #FAFAFA;
+  text-align: center; }
+
+body {
+  color: #818a91; }
 
 h1,
-h2 {
-  line-height: 1.4em;
-  font-weight: normal; }
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 100; }
 
-h1 {
-  font-size: 48px; }
-
-h2 {
-  margin-bottom: 40px; }
-
-.social-links a {
-  margin-right: 15px;
-  text-decoration: none; }
-  .social-links a:hover {
+a {
+  transition: all 0.3s ease; }
+  a:hover {
     text-decoration: none; }
-  .social-links a:last-child {
-    margin-right: 0; }
-  .social-links a i {
-    font-size: 36px;
-    transition: color 0.3s ease; }
-    .social-links a i:hover {
-      color: #336DF7; }
-    .social-links a i.fa-linkedin {
-      color: #1E88BD; }
-    .social-links a i.fa-github {
-      color: #000000; }
-    .social-links a i.fa-codepen {
-      color: #333333; }
+
+.social-links {
+  margin-top: 30px; }
+  .social-links a {
+    margin-right: 15px;
+    text-decoration: none; }
+    .social-links a:hover {
+      text-decoration: none; }
+    .social-links a:last-child {
+      margin-right: 0; }
+    .social-links a i {
+      font-size: 28px;
+      transition: color 0.3s ease; }
+      .social-links a i:hover {
+        color: #336DF7; }
+      .social-links a i.fa-linkedin {
+        color: #1E88BD; }
+      .social-links a i.fa-github {
+        color: #000000; }
+      .social-links a i.fa-codepen {
+        color: #333333; }
 
 /*# sourceMappingURL=main.css.map */
