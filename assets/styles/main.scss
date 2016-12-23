@@ -48,11 +48,11 @@
 // Utility classes
 @import "../../node_modules/bootstrap/scss/utilities";
 
-// @import 'utilities/mixins';
+@import 'utilities/mixins';
 @import 'utilities/scaffolding';
 
 @import 'components/typography';
-@import 'components/social-links';
+@import 'components/links';
 
 // @import 'layouts/site-header';
 // @import 'layouts/site-footer';
