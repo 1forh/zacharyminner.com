@@ -1,20 +1,36 @@
 body {
-	color: $gray-light;
+	color: #fff;
+	font-size: 20px;
+	@media screen and (max-width: 992px) {
+		font-size: 16px;
+	}
+	@media screen and (max-width: 480px) {
+		font-size: 14px;
+	}
 }
 
 h1 {
-	font-weight: 300;
+	@media screen and (max-width: 560px) {
+		font-size: 2.0rem;
+	}
+	@media screen and (max-width: 375px) {
+		font-size: 1.4rem;
+	}
 }
 
+h1,
 h2,
 h3,
 h4,
 h5 {
+	color: #fff;
 	line-height: 1.4em;
-	font-weight: 100;
 }
 
  a {
+ 	color: #fff;
+ 	&:focus,
+ 	&:active,
  	&:hover {
  		text-decoration: none;
  	}
