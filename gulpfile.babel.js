@@ -18,7 +18,6 @@ import runSequence from 'run-sequence';
 import htmlmin from 'gulp-htmlmin';
 import path from 'path';
 import wrap from 'gulp-wrap';
-import ngAnnotate from 'gulp-ng-annotate';
 import markdownToJson from 'gulp-markdown-to-json';
 import marked from 'marked';
 import gutil from 'gulp-util';
@@ -42,6 +41,14 @@ gulp.task('posts', () => {
 		.pipe(gulp.dest(config.destination + '/data'));
 });
 
+gulp.task('projects', () => {
+	return gulp.src(config.projects.source)
+		.pipe(plumber())
+		.pipe(gutil.buffer())
+		.pipe(markdownToJson(marked, 'projects.json'))
+		.pipe(gulp.dest(config.destination + '/data'));
+});
+
 gulp.task('styles', () => {
 	return gulp.src(config.styles.source)
 		.pipe(plumber())
@@ -62,7 +69,6 @@ gulp.task('scripts', ['lint'], () => {
 		.pipe(gulpif(!argv.prod, sourcemaps.init()))
 		.pipe(wrap('(function(angular){\n\'use strict\';\n<%= contents %>})(window.angular);'))
 		.pipe(concat('bundle.js'))
-		.pipe(ngAnnotate())
 		.pipe(gulpif(config.scripts.babel.compile === true, babel(config.babel)))
 		.pipe(gulpif(argv.prod, uglify()))
 		.pipe(gulpif(!argv.prod, sourcemaps.write('.')))
@@ -110,7 +116,7 @@ gulp.task('clean', error => {
 });
 
 gulp.task('build', callback => {
-	runSequence('clean', 'posts', [
+	runSequence('clean', 'posts', 'projects', [
 		'styles',
 		'scripts',
 		'templates',
@@ -128,6 +134,7 @@ gulp.task('serve', ['build'], () => {
 
 	gulp.watch(config.styles.source, ['styles']);
 	gulp.watch(config.posts.source, ['posts', browserSync.reload]);
+	gulp.watch(config.projects.source, ['projects', browserSync.reload]);
 	gulp.watch(config.html.source, ['html', browserSync.reload]);
 	gulp.watch(config.scripts.templates.source, ['templates', browserSync.reload]);
 	gulp.watch(config.scripts.source, ['scripts', browserSync.reload]);

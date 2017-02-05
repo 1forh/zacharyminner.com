@@ -1,9 +1,9 @@
 <div class="container">
 	<h1>Projects</h1>
 
-	<div ng-repeat="project in $ctrl.projects">
-		<h2 ng-bind="project.title"></h2>
-		<img src="{{ project.featuredImage }}" alt="{{ project.title }}">
-		<p ng-bind="project.body"></p>
+	<div ng-repeat="project in $ctrl.projects" class="project project__preview">
+		<h2>
+			<a ui-sref="project({ id: project.url })">{{ project.title }}</a>
+		</h2>
 	</div>
 </div>

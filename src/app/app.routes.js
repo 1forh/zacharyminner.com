@@ -18,6 +18,11 @@ angular
 				component: 'zmProjects',
 				template: '<zm-projects></zm-projects>'
 			})
+			.state('project', {
+				url: '/projects/:id',
+				component: 'zmProject',
+				template: '<zm-project></zm-project>'
+			})
 			.state('blog', {
 				url: '/blog',
 				component: 'zmBlog',

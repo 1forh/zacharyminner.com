@@ -1,9 +1,9 @@
-function ZMProjectsController(ZMProjectsService) {
+function ZMProjectController(ZMProjectsService, $state) {
 	let ctrl = this;
 
 	ZMProjectsService.getProjects()
 		.then(function(response) {
-			ctrl.projects = response;
+			ctrl.project = response[$state.params.id];
 		})
 		.catch(function(error) {
 			console.error(error);
@@ -12,4 +12,4 @@ function ZMProjectsController(ZMProjectsService) {
 
 angular
 	.module('app.components')
-	.controller('ZMProjectsController', ZMProjectsController);
+	.controller('ZMProjectController', ZMProjectController);

@@ -6,6 +6,9 @@ export const config = {
 	posts: {
 		source: './src/posts/**/*.md'
 	},
+	projects: {
+		source: './src/projects/**/*.md'
+	},
 	styles: {
 		source: './src/styles/**/*.scss',
 		browsers: ['last 2 versions', 'ie >= 9']
