@@ -1,5 +1,6 @@
 ---
 title: Ms. Minner's Classroom
+featured: home.png
 ---
 
 # Ms. Minner's Classroom

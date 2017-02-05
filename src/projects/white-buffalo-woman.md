@@ -1,5 +1,6 @@
 ---
 title: White Buffalo Woman
+featured: home.png
 ---
 
 # White Buffalo Woman

@@ -1,5 +1,6 @@
 ---
 title: Pole Barns Direct
+featured: home.png
 ---
 
 # Pole Barns Direct
