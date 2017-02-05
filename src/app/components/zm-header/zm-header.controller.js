@@ -1,7 +1,7 @@
 function ZMHeaderController() {
 	let ctrl = this;
 
-	ctrl.links = [
+	ctrl.menu = [
 		{
 			state: 'blog',
 			name: 'Blog'
@@ -9,6 +9,10 @@ function ZMHeaderController() {
 		{
 			state: 'projects',
 			name: 'Projects'
+		},
+		{
+			state: 'contact',
+			name: 'Contact'
 		}
 	];
 }

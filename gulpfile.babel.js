@@ -19,6 +19,9 @@ import htmlmin from 'gulp-htmlmin';
 import path from 'path';
 import wrap from 'gulp-wrap';
 import ngAnnotate from 'gulp-ng-annotate';
+import markdownToJson from 'gulp-markdown-to-json';
+import marked from 'marked';
+import gutil from 'gulp-util';
 
 import { config } from './gulpfile.config.babel';
 
@@ -29,6 +32,14 @@ gulp.task('html', () => {
 		.pipe(plumber())
 		.pipe(gulpif(config.environment == 'prod', htmlmin({collapseWhitespace: true})))
 		.pipe(gulp.dest(config.destination));
+});
+
+gulp.task('posts', () => {
+	return gulp.src(config.posts.source)
+		.pipe(plumber())
+		.pipe(gutil.buffer())
+		.pipe(markdownToJson(marked, 'posts.json'))
+		.pipe(gulp.dest(config.destination + '/data'));
 });
 
 gulp.task('styles', () => {
@@ -99,8 +110,7 @@ gulp.task('clean', error => {
 });
 
 gulp.task('build', callback => {
-	runSequence('clean', [
-		'clean',
+	runSequence('clean', 'posts', [
 		'styles',
 		'scripts',
 		'templates',
@@ -117,6 +127,7 @@ gulp.task('serve', ['build'], () => {
 	});
 
 	gulp.watch(config.styles.source, ['styles']);
+	gulp.watch(config.posts.source, ['posts', browserSync.reload]);
 	gulp.watch(config.html.source, ['html', browserSync.reload]);
 	gulp.watch(config.scripts.templates.source, ['templates', browserSync.reload]);
 	gulp.watch(config.scripts.source, ['scripts', browserSync.reload]);

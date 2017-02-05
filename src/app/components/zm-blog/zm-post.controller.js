@@ -1,9 +1,9 @@
-function ZMBlogController(ZMBlogService) {
+function ZMPostController(ZMBlogService, $state) {
 	let ctrl = this;
 
 	ZMBlogService.getPosts()
 		.then(function(response) {
-			ctrl.posts = response;
+			ctrl.post = response[$state.params.id];
 		})
 		.catch(function(error) {
 			console.error(error);
@@ -12,4 +12,4 @@ function ZMBlogController(ZMBlogService) {
 
 angular
 	.module('app.components')
-	.controller('ZMBlogController', ZMBlogController);
+	.controller('ZMPostController', ZMPostController);

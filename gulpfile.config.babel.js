@@ -3,6 +3,9 @@ export const config = {
 	html: {
 		source: './src/index.html'
 	},
+	posts: {
+		source: './src/posts/**/*.md'
+	},
 	styles: {
 		source: './src/styles/**/*.scss',
 		browsers: ['last 2 versions', 'ie >= 9']
@@ -16,10 +19,12 @@ export const config = {
 		],
 		modules: [
 			'node_modules/angular/angular.js',
+			'node_modules/angular-sanitize/angular-sanitize.js',
 			'node_modules/angular-ui-router/release/angular-ui-router.js'
 		],
 		templates: {
 			source: [
+				'./dist/posts/**/*.html',
 				'./src/app/components/**/*.html'
 			],
 			moduleName: 'app.templates',

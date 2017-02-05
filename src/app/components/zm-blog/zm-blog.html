@@ -2,7 +2,9 @@
 	<h1>Blog</h1>
 
 	<div ng-repeat="post in $ctrl.posts" class="post post__preview">
-		<h2 ng-bind="post.title"></h2>
-		<p ng-bind="post.body"></p>
+		<h2>
+			<a ui-sref="post({ id: post.url })">{{ post.title }}</a>
+		</h2>
+		<p ng-bind="post.excerpt"></p>
 	</div>
 </div>
