@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12">
-			<img src="{{ $ctrl.project.featured }}" alt="{{ $ctrl.project.title }}" class="img-fluid">
+			<img ng-src="{{ $ctrl.project.featured }}" alt="{{ $ctrl.project.title }}" class="img-fluid">
 			<div ng-bind-html="$ctrl.project.body"></div>
 			<a href="{{ $ctrl.project.domain }}" title="{{ $ctrl.project.title }}" class="btn btn-primary" target="_blank">View site</a>
 		</div>
