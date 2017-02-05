@@ -1,5 +1,5 @@
 body {
-	color: #fff;
+	line-height: 1.5em;
 	font-size: 20px;
 	@media screen and (max-width: 992px) {
 		font-size: 16px;
@@ -18,17 +18,7 @@ h1 {
 	}
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-	color: #fff;
-	line-height: 1.4em;
-}
-
  a {
- 	color: #fff;
  	&:focus,
  	&:active,
  	&:hover {
