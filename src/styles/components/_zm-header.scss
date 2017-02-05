@@ -2,5 +2,11 @@ zm-header {
 	display: block;
 	.navbar {
 		background-color: $brand-gray;
+		&-nav {
+			flex-direction: row;
+		}
+		.nav-item {
+			margin-left: 20px;
+		}
 	}
 }

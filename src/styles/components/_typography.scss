@@ -10,12 +10,7 @@ body {
 }
 
 h1 {
-	@media screen and (max-width: 560px) {
-		font-size: 2.0rem;
-	}
-	@media screen and (max-width: 375px) {
-		font-size: 1.4rem;
-	}
+	margin-bottom: 40px;
 }
 
  a {

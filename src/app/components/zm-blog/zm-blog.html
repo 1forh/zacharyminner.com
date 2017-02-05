@@ -1,10 +1,8 @@
 <div class="container">
-	<div class="row">
-		<h1>Blog</h1>
+	<h1>Blog</h1>
 
-		<div ng-repeat="post in $ctrl.posts">
-			<h2 ng-bind="post.title"></h2>
-			<p ng-bind="post.body"></p>
-		</div>
+	<div ng-repeat="post in $ctrl.posts" class="post post__preview">
+		<h2 ng-bind="post.title"></h2>
+		<p ng-bind="post.body"></p>
 	</div>
 </div>
