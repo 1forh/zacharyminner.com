@@ -1,6 +1,7 @@
 ---
 title: Ms. Minner's Classroom
 featured: home.png
+domain: http://msminnersclassroom.com
 ---
 
 # Ms. Minner's Classroom

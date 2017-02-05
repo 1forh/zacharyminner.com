@@ -1,7 +1,7 @@
 <header class="navbar navbar-light bg-faded">
 	<div class="container">
 		<div class="row justify-content-between align-items-center">
-			<a ui-sref="home" ui-sref-active="active" class="navbar-brand">
+			<a ui-sref="home" ui-sref-active="active" class="col-sm-4 navbar-brand">
 				<svg class="logo" viewBox="64 70 498 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(64.000000, 70.000000)">
 						<polygon points="463.65625 46.1835938 491.183594 34.7226562 463.65625 21.609375 463.65625 16.3710938 497.441406 33.2109375 497.441406 36.65625 463.65625 51.4921875"></polygon>
@@ -13,7 +13,7 @@
 				</svg>
 			</a>
 
-			<nav class="navbar-nav">
+			<nav class="navbar-nav col-sm-4 justify-content-end">
 				<a class="nav-item nav-link" ng-repeat="link in $ctrl.menu" ui-sref="{{ link.state }}" ui-sref-active="active">{{ link.name }}</a>
 			</nav>
 		</div>

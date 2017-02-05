@@ -1,6 +1,7 @@
 ---
 title: White Buffalo Woman
 featured: home.png
+domain: http://whitebuffalowomanband.com
 ---
 
 # White Buffalo Woman

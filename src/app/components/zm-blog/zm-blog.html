@@ -1,10 +1,16 @@
 <div class="container">
-	<h1>Blog</h1>
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>Blog</h1>
+		</div>
+	</div>
 
-	<div ng-repeat="post in $ctrl.posts" class="post post__preview">
-		<h2>
-			<a ui-sref="post({ id: post.url })">{{ post.title }}</a>
-		</h2>
-		<p ng-bind="post.excerpt"></p>
+	<div class="row">
+		<div ng-repeat="post in $ctrl.posts" class="col-sm-12 post post__preview">
+			<h2>
+				<a ui-sref="post({ id: post.url })">{{ post.title }}</a>
+			</h2>
+			<p ng-bind="post.excerpt"></p>
+		</div>
 	</div>
 </div>

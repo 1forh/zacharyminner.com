@@ -55,6 +55,7 @@
 
     "globals": {
         "$": false,
+        "_": false,
         "inject": false,
         "angular": false
     }

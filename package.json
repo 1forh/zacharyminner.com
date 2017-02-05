@@ -44,6 +44,7 @@
     "angular": "^1.6.1",
     "angular-sanitize": "^1.6.1",
     "angular-ui-router": "^0.4.2",
-    "bootstrap": "4.0.0-alpha.6"
+    "bootstrap": "4.0.0-alpha.6",
+    "underscore": "^1.8.3"
   }
 }

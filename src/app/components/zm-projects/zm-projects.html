@@ -1,10 +1,16 @@
 <div class="container">
-	<h1>Projects</h1>
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>Projects</h1>
+		</div>
+	</div>
 
-	<div ng-repeat="project in $ctrl.projects" class="project project__preview">
-		<h2>
-			<a ui-sref="project({ id: project.url })">{{ project.title }}</a>
-		</h2>
-		<img src="{{ project.featured }}" alt="{{ project.title }}" class="img-fluid">
+	<div class="row">
+		<div ng-repeat="project in $ctrl.projects" class="col-sm-12 col-md-6 project project__preview">
+			<a ui-sref="project({ id: project.url })">
+				<h2 ng-bind="project.title"></h2>
+				<img src="{{ project.featured }}" alt="{{ project.title }}" class="img-fluid">
+			</a>
+		</div>
 	</div>
 </div>
