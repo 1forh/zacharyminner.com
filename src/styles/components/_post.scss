@@ -1,0 +1,23 @@
+.post {
+
+	&__preview {
+		margin-bottom: 50px;
+	}
+
+	h1 {
+		small {
+			font-size: 0.5em;
+		}
+	}
+
+	h2,
+	h3 {
+		margin-top: 50px;
+		margin-bottom: 25px;
+	}
+
+	h2 {
+		padding-bottom: 25px;
+		border-bottom: 1px solid $gray-lighter;
+	}
+}
