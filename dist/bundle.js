@@ -72,20 +72,20 @@
 (function (angular) {
 	'use strict';
 
-	function ZMFooterController() {
-		var ctrl = this;
-	}
-
-	angular.module('app.components').controller('ZMFooterController', ZMFooterController);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
 	function ZMFormController() {
 		var ctrl = this;
 	}
 
 	angular.module('app.components').controller('ZMFormController', ZMFormController);
+})(window.angular);
+(function (angular) {
+	'use strict';
+
+	function ZMFooterController() {
+		var ctrl = this;
+	}
+
+	angular.module('app.components').controller('ZMFooterController', ZMFooterController);
 })(window.angular);
 (function (angular) {
 	'use strict';
@@ -197,22 +197,22 @@
 (function (angular) {
 	'use strict';
 
-	var zmFooter = {
-		templateUrl: './zm-footer.html',
-		controller: 'ZMFooterController'
-	};
-
-	angular.module('app.components').component('zmFooter', zmFooter);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
 	var zmForm = {
 		templateUrl: './zm-form.html',
 		controller: 'ZMFormController'
 	};
 
 	angular.module('app.components').component('zmForm', zmForm);
+})(window.angular);
+(function (angular) {
+	'use strict';
+
+	var zmFooter = {
+		templateUrl: './zm-footer.html',
+		controller: 'ZMFooterController'
+	};
+
+	angular.module('app.components').component('zmFooter', zmFooter);
 })(window.angular);
 (function (angular) {
 	'use strict';
