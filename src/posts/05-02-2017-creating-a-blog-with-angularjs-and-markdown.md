@@ -1,5 +1,5 @@
 ---
-title: Creating a Blog with AngularJS and Markdown
+title: Creating a blog with AngularJS and Markdown
 excerpt: I use Angular a lot at my day job so to become more familiar with it, I wanted to create my portfolio using Angular. I also wanted to be able to write my posts in markdown.
 tags:
  - JavaScript
@@ -60,7 +60,13 @@ tags:
 
 ---
 
+## Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam in repellat suscipit maiores possimus aliquam hic distinctio, quas commodi, eaque tempora iusto ratione, nostrum adipisci quidem quasi! Numquam tempore, itaque.
+
+- Lorem Ipsum
+- Lorem Ipsum
+- Lorem Ipsum
 ```
 ### The application structure
 
@@ -89,9 +95,5 @@ angular
 ```
 
 ## Hosting on GitHub Pages
-
-TBD
-
-## Setting up continuous integration
 
 TBD

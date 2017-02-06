@@ -1,4 +1,15 @@
 .breadcrumb {
 	margin-bottom: 75px;
-	text-transform: capitalize;
+	a {
+		color: #fff;
+	}
+	span {
+		color: rgba(#fff, 0.75);
+	}
+	a,
+	span {
+		font-weight: 100;
+		font-size: 15px;
+		text-transform: lowercase;
+	}
 }

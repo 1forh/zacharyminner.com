@@ -3336,7 +3336,7 @@ tbody.collapse.show {
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
   list-style: none;
-  background-color: #eceeef;
+  background-color: #48639F;
   border-radius: 0.25rem; }
   .breadcrumb::after {
     display: block;
@@ -3349,8 +3349,8 @@ tbody.collapse.show {
     display: inline-block;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
-    color: #636c72;
-    content: "/"; }
+    color: #fff;
+    content: "|"; }
   .breadcrumb-item + .breadcrumb-item:hover::before {
     text-decoration: underline; }
   .breadcrumb-item + .breadcrumb-item:hover::before {
@@ -6518,8 +6518,16 @@ pre {
   background-color: #eceeef; }
 
 .breadcrumb {
-  margin-bottom: 75px;
-  text-transform: capitalize; }
+  margin-bottom: 75px; }
+  .breadcrumb a {
+    color: #fff; }
+  .breadcrumb span {
+    color: rgba(255, 255, 255, 0.75); }
+  .breadcrumb a,
+  .breadcrumb span {
+    font-weight: 100;
+    font-size: 15px;
+    text-transform: lowercase; }
 
 zm-header {
   display: block; }

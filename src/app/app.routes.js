@@ -13,11 +13,6 @@ angular
 				component: 'zmContact',
 				template: '<zm-contact></zm-contact>'
 			})
-			.state('resume', {
-				url: '/resume',
-				component: 'zmResume',
-				template: '<zm-resume></zm-resume>'
-			})
 			.state('projects', {
 				url: '/projects',
 				component: 'zmProjects',
