@@ -1,8 +1,5 @@
 export const config = {
 	destination: './dist',
-	html: {
-		source: './src/index.html'
-	},
 	posts: {
 		source: './src/posts/**/*.md'
 	},
@@ -50,6 +47,6 @@ export const config = {
 	},
 	browserSync: {
 		port: 5000,
-		server: './dist'
+		server: './'
 	}
 };

@@ -26,13 +26,6 @@ import { config } from './gulpfile.config.babel';
 
 const argv = yargs.argv;
 
-gulp.task('html', () => {
-	return gulp.src(config.html.source)
-		.pipe(plumber())
-		.pipe(gulpif(config.environment == 'prod', htmlmin({collapseWhitespace: true})))
-		.pipe(gulp.dest(config.destination));
-});
-
 gulp.task('posts', () => {
 	return gulp.src(config.posts.source)
 		.pipe(plumber())
@@ -120,7 +113,6 @@ gulp.task('build', callback => {
 		'styles',
 		'scripts',
 		'templates',
-		'html',
 		'images',
 		'modules'
 	], callback);
@@ -135,7 +127,6 @@ gulp.task('serve', ['build'], () => {
 	gulp.watch(config.styles.source, ['styles']);
 	gulp.watch(config.posts.source, ['posts', browserSync.reload]);
 	gulp.watch(config.projects.source, ['projects', browserSync.reload]);
-	gulp.watch(config.html.source, ['html', browserSync.reload]);
 	gulp.watch(config.scripts.templates.source, ['templates', browserSync.reload]);
 	gulp.watch(config.scripts.source, ['scripts', browserSync.reload]);
 });

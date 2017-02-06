@@ -8,7 +8,7 @@ function ZMBlogService($http, $sce, $filter) {
 	function getPosts() {
 		return $http({
 				method: 'GET',
-				url: './data/posts.json',
+				url: './dist/data/posts.json',
 				cache: false
 			})
 			.then(function(response) {
