@@ -20,6 +20,7 @@
 @import "../../node_modules/bootstrap/scss/buttons";
 
 // Components
+@import "../../node_modules/bootstrap/scss/badge";
 @import "../../node_modules/bootstrap/scss/transitions";
 @import "../../node_modules/bootstrap/scss/dropdown";
 @import "../../node_modules/bootstrap/scss/button-group";
@@ -55,8 +56,11 @@
 
 @import 'components/typography';
 @import 'components/logo';
+@import 'components/hero';
+@import 'components/breadcrumbs';
 
 @import 'components/zm-header';
 @import 'components/zm-footer';
 
 @import 'components/post';
+@import 'components/project';

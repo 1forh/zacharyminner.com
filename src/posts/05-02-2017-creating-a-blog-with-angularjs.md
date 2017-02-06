@@ -1,9 +1,7 @@
 ---
 title: Creating a Blog with AngularJS
-excerpt: Using Angularjs to create a blog/portfolio lorem ipsum dolor sit amet consectetur
+excerpt: Using Angularjs to create a blog/portfolio lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quibusdam quo excepturi, nisi alias soluta odit recusandae harum provident. Doloremque quidem iste corporis quo laudantium laborum minima delectus asperiores consectetur.
 ---
-
-# Creating a Blog with AngularJS
 
 - use AngularJS for front-end
 - write posts in markdown

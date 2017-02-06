@@ -1,6 +1,6 @@
 body {
-	line-height: 1.5em;
-	font-size: 20px;
+	line-height: 1.8em;
+	font-size: 17px;
 	@media screen and (max-width: 992px) {
 		font-size: 16px;
 	}
@@ -11,6 +11,13 @@ body {
 
 h1 {
 	margin-bottom: 40px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: 100;
 }
 
  a {

@@ -5,12 +5,18 @@
 		</div>
 	</div>
 
-	<div class="row">
-		<div ng-repeat="project in $ctrl.projects" class="col-sm-12 col-md-6 project project__preview">
-			<a ui-sref="project({ id: project.url })">
-				<h2 ng-bind="project.title"></h2>
-				<img ng-src="{{ project.featured }}" alt="{{ project.title }}" class="img-fluid">
-			</a>
+	<div class="row justify-content-between">
+		<div ng-repeat="project in $ctrl.projects" class="col-sm-12 col-md-6">
+			<div class="card project project__preview mb-4">
+				<img ng-src="{{ project.featured }}" alt="{{ project.title }}" class="card-img-top img-fluid">
+				<div class="card-block">
+					<h4 ng-bind="project.title"></h4>
+					<div class="project__tags mb-4">
+						<span ng-repeat="tag in project.tags" class="badge badge-pill badge-default">{{ tag }}</span>
+					</div>
+					<a ui-sref="project({ id: project.url })" class="btn btn-primary">View project</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

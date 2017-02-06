@@ -3,6 +3,10 @@ function ZMHeaderController() {
 
 	ctrl.menu = [
 		{
+			state: 'resume',
+			name: 'Resume'
+		},
+		{
 			state: 'blog',
 			name: 'Blog'
 		},
