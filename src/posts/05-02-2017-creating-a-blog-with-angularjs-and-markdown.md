@@ -88,7 +88,7 @@ angular
 	.component('zmBlog', zmBlog);
 ```
 
-## Hosting on a Digital Ocean Droplet
+## Hosting on GitHub Pages
 
 TBD
 
