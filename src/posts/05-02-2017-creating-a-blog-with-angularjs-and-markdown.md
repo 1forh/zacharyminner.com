@@ -34,11 +34,11 @@ import plumber from 'gulp-plumber';
 import markdownToJson from 'gulp-markdown-to-json';
 
 gulp.task('posts', () => {
-	return gulp.src('./src/posts/**/*.md')
-		.pipe(plumber())
-		.pipe(gutil.buffer())
-		.pipe(markdownToJson(marked, 'posts.json'))
-		.pipe(gulp.dest('./dist/data'));
+  return gulp.src('./src/posts/**/*.md')
+    .pipe(plumber())
+    .pipe(gutil.buffer())
+    .pipe(markdownToJson(marked, 'posts.json'))
+    .pipe(gulp.dest('./dist/data'));
 });
 ```
 
@@ -77,13 +77,13 @@ I will keep all of my application specific code in the `app` directory and I wil
 
 ```
 src/
-	app/
-		components/
-			zm-blog/
-		app.routes.js
-		app.module.js
-	posts/
-		05-02-2017-test-post.md
+  app/
+    components/
+      zm-blog/
+    app.routes.js
+    app.module.js
+  posts/
+    05-02-2017-test-post.md
 ```
 
 ### The blog component
@@ -98,85 +98,92 @@ I'm just going to use my initials. This makes it: `zm-blog`.
 
 Setup the Angular component
 
-	const zmBlog = {
-		templateUrl: './zm-blog.html',
-		controller: 'ZMBlogController'
-	};
+```javascript
+const zmBlog = {
+  templateUrl: './zm-blog.html',
+  controller: 'ZMBlogController'
+};
 
-	angular
-		.module('app.components')
-		.component('zmBlog', zmBlog);
+angular
+  .module('app.components')
+  .component('zmBlog', zmBlog);
+  ```
 
 #### zm-blog.service.js
 
 `GET` the data using an `http` request and return formatted data
 
-	function ZMBlogService($http, $sce, $filter) {
-		var service = {
-			getPosts: getPosts
-		};
+```javascript
+function ZMBlogService($http, $sce, $filter) {
+  var service = {
+    getPosts: getPosts
+  };
 
-		return service;
+  return service;
 
-		function getPosts() {
-			return $http({
-				method: 'GET',
-				url: './dist/data/posts.json',
-				cache: false
-			})
-			.then(function(response) {
-				for (let key in response.data) {
-					if(response.data) {
-						response.data[key].body = $sce.trustAsHtml(response.data[key].body); // sanitize html
-					}
-				}
-				return response.data;
-			})
-			.catch(function(error) {
-				console.error(error);
-			});
-		}
-	}
+  function getPosts() {
+    return $http({
+      method: 'GET',
+      url: './dist/data/posts.json',
+      cache: false
+    })
+    .then(function(response) {
+      for (let key in response.data) {
+        if(response.data) {
+          response.data[key].body = $sce.trustAsHtml(response.data[key].body); // sanitize html
+        }
+      }
+      return response.data;
+    })
+    .catch(function(error) {
+      console.error(error);
+    });
+  }
+}
 
 angular
-	.module('app.components')
-	.factory('ZMBlogService', ZMBlogService);
+  .module('app.components')
+  .factory('ZMBlogService', ZMBlogService);
+```
 
 #### zm-blog.controller.js
 
 Expose the data to the template
 
-	function ZMBlogController(ZMBlogService) {
-		let ctrl = this;
+```javascript
+function ZMBlogController(ZMBlogService) {
+  let ctrl = this;
 
-		ZMBlogService.getPosts()
-			.then(function(response) {
-				ctrl.posts = response;
-			})
-			.catch(function(error) {
-				console.error(error);
-			});
-	}
+  ZMBlogService.getPosts()
+    .then(function(response) {
+      ctrl.posts = response;
+    })
+    .catch(function(error) {
+      console.error(error);
+    });
+}
 
-	angular
-		.module('app.components')
-		.controller('ZMBlogController', ZMBlogController);
+angular
+  .module('app.components')
+  .controller('ZMBlogController', ZMBlogController);
+```
 
 #### zm-blog.html
 
 Using an HTML template, render the JSON data exposed by the controller
 
-	<h1>Blog</h1>
+```html
+<h1>Blog</h1>
 
-	<div ng-repeat="post in $ctrl.posts">
-		<a ui-sref="post({ id: post.url })">{{ post.title }}</a>
-		<small>{{ post.updatedAt | date }}</small>
-		<p ng-bind="post.excerpt"></p>
-	</div>
+<div ng-repeat="post in $ctrl.posts">
+  <a ui-sref="post({ id: post.url })">{{ post.title }}</a>
+  <small>{{ post.updatedAt | date }}</small>
+  <p ng-bind="post.excerpt"></p>
+</div>
+```
 
 ---
 
 ## The output
 
 I can now use `<zm-blog></zm-blog>` anywhere in my application and Angular will display a list of my blog posts, now rendered in HTML.
-
