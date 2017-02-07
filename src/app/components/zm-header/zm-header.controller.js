@@ -9,10 +9,6 @@ function ZMHeaderController() {
 		{
 			state: 'projects',
 			name: 'Projects'
-		},
-		{
-			state: 'contact',
-			name: 'Contact'
 		}
 	];
 }
