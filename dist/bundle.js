@@ -23,6 +23,34 @@
 (function (angular) {
 	'use strict';
 
+	function ZMFooterController() {
+		var ctrl = this;
+	}
+
+	angular.module('app.components').controller('ZMFooterController', ZMFooterController);
+})(window.angular);
+(function (angular) {
+	'use strict';
+
+	function ZMBreadcrumbsController(ZMBreadcrumbsService, $location, $rootScope) {
+		var ctrl = this;
+
+		$rootScope.$on('$stateChangeSuccess', function () {
+			if ($location.path() === '/') {
+				ctrl.isHome = true;
+			} else {
+				ctrl.isHome = false;
+			}
+		});
+
+		ctrl.breadcrumbs = ZMBreadcrumbsService;
+	}
+
+	angular.module('app.components').controller('ZMBreadcrumbsController', ZMBreadcrumbsController);
+})(window.angular);
+(function (angular) {
+	'use strict';
+
 	function ZMBlogController(ZMBlogService) {
 		var ctrl = this;
 
@@ -53,43 +81,6 @@
 (function (angular) {
 	'use strict';
 
-	function ZMBreadcrumbsController(ZMBreadcrumbsService, $location, $rootScope) {
-		var ctrl = this;
-
-		$rootScope.$on('$stateChangeSuccess', function () {
-			if ($location.path() === '/') {
-				ctrl.isHome = true;
-			} else {
-				ctrl.isHome = false;
-			}
-		});
-
-		ctrl.breadcrumbs = ZMBreadcrumbsService;
-	}
-
-	angular.module('app.components').controller('ZMBreadcrumbsController', ZMBreadcrumbsController);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
-	function ZMFooterController() {
-		var ctrl = this;
-	}
-
-	angular.module('app.components').controller('ZMFooterController', ZMFooterController);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
-	function ZMFormController() {
-		var ctrl = this;
-	}
-
-	angular.module('app.components').controller('ZMFormController', ZMFormController);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
 	function ZMHeaderController() {
 		var ctrl = this;
 
@@ -103,6 +94,15 @@
 	}
 
 	angular.module('app.components').controller('ZMHeaderController', ZMHeaderController);
+})(window.angular);
+(function (angular) {
+	'use strict';
+
+	function ZMFormController() {
+		var ctrl = this;
+	}
+
+	angular.module('app.components').controller('ZMFormController', ZMFormController);
 })(window.angular);
 (function (angular) {
 	'use strict';
@@ -155,6 +155,35 @@
 (function (angular) {
 	'use strict';
 
+	var zmContact = {
+		templateUrl: './zm-contact.html'
+	};
+
+	angular.module('app.components').component('zmContact', zmContact);
+})(window.angular);
+(function (angular) {
+	'use strict';
+
+	var zmFooter = {
+		templateUrl: './zm-footer.html',
+		controller: 'ZMFooterController'
+	};
+
+	angular.module('app.components').component('zmFooter', zmFooter);
+})(window.angular);
+(function (angular) {
+	'use strict';
+
+	var zmBreadcrumbs = {
+		templateUrl: './zm-breadcrumbs.html',
+		controller: 'ZMBreadcrumbsController'
+	};
+
+	angular.module('app.components').component('zmBreadcrumbs', zmBreadcrumbs);
+})(window.angular);
+(function (angular) {
+	'use strict';
+
 	var zmBlog = {
 		templateUrl: './zm-blog.html',
 		controller: 'ZMBlogController'
@@ -175,31 +204,12 @@
 (function (angular) {
 	'use strict';
 
-	var zmContact = {
-		templateUrl: './zm-contact.html'
+	var zmHeader = {
+		templateUrl: './zm-header.html',
+		controller: 'ZMHeaderController'
 	};
 
-	angular.module('app.components').component('zmContact', zmContact);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
-	var zmBreadcrumbs = {
-		templateUrl: './zm-breadcrumbs.html',
-		controller: 'ZMBreadcrumbsController'
-	};
-
-	angular.module('app.components').component('zmBreadcrumbs', zmBreadcrumbs);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
-	var zmFooter = {
-		templateUrl: './zm-footer.html',
-		controller: 'ZMFooterController'
-	};
-
-	angular.module('app.components').component('zmFooter', zmFooter);
+	angular.module('app.components').component('zmHeader', zmHeader);
 })(window.angular);
 (function (angular) {
 	'use strict';
@@ -210,16 +220,6 @@
 	};
 
 	angular.module('app.components').component('zmForm', zmForm);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
-	var zmHeader = {
-		templateUrl: './zm-header.html',
-		controller: 'ZMHeaderController'
-	};
-
-	angular.module('app.components').component('zmHeader', zmHeader);
 })(window.angular);
 (function (angular) {
 	'use strict';
@@ -314,37 +314,6 @@
 (function (angular) {
 	'use strict';
 
-	function ZMBlogService($http, $sce, $filter) {
-		var service = {
-			getPosts: getPosts
-		};
-
-		return service;
-
-		function getPosts() {
-			return $http({
-				method: 'GET',
-				url: './dist/data/posts.json',
-				cache: false
-			}).then(function (response) {
-				for (var key in response.data) {
-					if (response.data) {
-						response.data[key].url = $filter('replaceSpaces')(key); // add url to data object
-						response.data[key].body = $sce.trustAsHtml(response.data[key].body); // sanitize html
-					}
-				}
-				return response.data;
-			}).catch(function (error) {
-				console.error(error);
-			});
-		}
-	}
-
-	angular.module('app.components').factory('ZMBlogService', ZMBlogService);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
 	function ZMBreadcrumbsService($rootScope, $location, $filter) {
 		var breadcrumbs = [];
 
@@ -382,6 +351,37 @@
 	}
 
 	angular.module('app.components').factory('ZMBreadcrumbsService', ZMBreadcrumbsService);
+})(window.angular);
+(function (angular) {
+	'use strict';
+
+	function ZMBlogService($http, $sce, $filter) {
+		var service = {
+			getPosts: getPosts
+		};
+
+		return service;
+
+		function getPosts() {
+			return $http({
+				method: 'GET',
+				url: './dist/data/posts.json',
+				cache: false
+			}).then(function (response) {
+				for (var key in response.data) {
+					if (response.data) {
+						response.data[key].url = $filter('replaceSpaces')(key); // add url to data object
+						response.data[key].body = $sce.trustAsHtml(response.data[key].body); // sanitize html
+					}
+				}
+				return response.data;
+			}).catch(function (error) {
+				console.error(error);
+			});
+		}
+	}
+
+	angular.module('app.components').factory('ZMBlogService', ZMBlogService);
 })(window.angular);
 (function (angular) {
 	'use strict';
