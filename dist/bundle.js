@@ -81,6 +81,15 @@
 (function (angular) {
 	'use strict';
 
+	function ZMFormController() {
+		var ctrl = this;
+	}
+
+	angular.module('app.components').controller('ZMFormController', ZMFormController);
+})(window.angular);
+(function (angular) {
+	'use strict';
+
 	function ZMHeaderController() {
 		var ctrl = this;
 
@@ -94,15 +103,6 @@
 	}
 
 	angular.module('app.components').controller('ZMHeaderController', ZMHeaderController);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
-	function ZMFormController() {
-		var ctrl = this;
-	}
-
-	angular.module('app.components').controller('ZMFormController', ZMFormController);
 })(window.angular);
 (function (angular) {
 	'use strict';
@@ -204,22 +204,22 @@
 (function (angular) {
 	'use strict';
 
-	var zmHeader = {
-		templateUrl: './zm-header.html',
-		controller: 'ZMHeaderController'
-	};
-
-	angular.module('app.components').component('zmHeader', zmHeader);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
 	var zmForm = {
 		templateUrl: './zm-form.html',
 		controller: 'ZMFormController'
 	};
 
 	angular.module('app.components').component('zmForm', zmForm);
+})(window.angular);
+(function (angular) {
+	'use strict';
+
+	var zmHeader = {
+		templateUrl: './zm-header.html',
+		controller: 'ZMHeaderController'
+	};
+
+	angular.module('app.components').component('zmHeader', zmHeader);
 })(window.angular);
 (function (angular) {
 	'use strict';

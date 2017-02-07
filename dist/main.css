@@ -6559,6 +6559,9 @@ zm-footer {
   padding-bottom: 25px;
   border-bottom: 1px solid #eceeef; }
 
+.post h4 {
+  margin-bottom: 15px; }
+
 .project__tags {
   display: -ms-flexbox;
   display: flex;
