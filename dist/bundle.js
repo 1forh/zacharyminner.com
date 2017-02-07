@@ -23,15 +23,6 @@
 (function (angular) {
 	'use strict';
 
-	function ZMFooterController() {
-		var ctrl = this;
-	}
-
-	angular.module('app.components').controller('ZMFooterController', ZMFooterController);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
 	function ZMBreadcrumbsController(ZMBreadcrumbsService, $location, $rootScope) {
 		var ctrl = this;
 
@@ -81,6 +72,24 @@
 (function (angular) {
 	'use strict';
 
+	function ZMFooterController() {
+		var ctrl = this;
+	}
+
+	angular.module('app.components').controller('ZMFooterController', ZMFooterController);
+})(window.angular);
+(function (angular) {
+	'use strict';
+
+	function ZMFormController() {
+		var ctrl = this;
+	}
+
+	angular.module('app.components').controller('ZMFormController', ZMFormController);
+})(window.angular);
+(function (angular) {
+	'use strict';
+
 	function ZMHeaderController() {
 		var ctrl = this;
 
@@ -94,15 +103,6 @@
 	}
 
 	angular.module('app.components').controller('ZMHeaderController', ZMHeaderController);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
-	function ZMFormController() {
-		var ctrl = this;
-	}
-
-	angular.module('app.components').controller('ZMFormController', ZMFormController);
 })(window.angular);
 (function (angular) {
 	'use strict';
@@ -155,25 +155,6 @@
 (function (angular) {
 	'use strict';
 
-	var zmContact = {
-		templateUrl: './zm-contact.html'
-	};
-
-	angular.module('app.components').component('zmContact', zmContact);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
-	var zmFooter = {
-		templateUrl: './zm-footer.html',
-		controller: 'ZMFooterController'
-	};
-
-	angular.module('app.components').component('zmFooter', zmFooter);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
 	var zmBreadcrumbs = {
 		templateUrl: './zm-breadcrumbs.html',
 		controller: 'ZMBreadcrumbsController'
@@ -204,12 +185,21 @@
 (function (angular) {
 	'use strict';
 
-	var zmHeader = {
-		templateUrl: './zm-header.html',
-		controller: 'ZMHeaderController'
+	var zmContact = {
+		templateUrl: './zm-contact.html'
 	};
 
-	angular.module('app.components').component('zmHeader', zmHeader);
+	angular.module('app.components').component('zmContact', zmContact);
+})(window.angular);
+(function (angular) {
+	'use strict';
+
+	var zmFooter = {
+		templateUrl: './zm-footer.html',
+		controller: 'ZMFooterController'
+	};
+
+	angular.module('app.components').component('zmFooter', zmFooter);
 })(window.angular);
 (function (angular) {
 	'use strict';
@@ -220,6 +210,16 @@
 	};
 
 	angular.module('app.components').component('zmForm', zmForm);
+})(window.angular);
+(function (angular) {
+	'use strict';
+
+	var zmHeader = {
+		templateUrl: './zm-header.html',
+		controller: 'ZMHeaderController'
+	};
+
+	angular.module('app.components').component('zmHeader', zmHeader);
 })(window.angular);
 (function (angular) {
 	'use strict';
