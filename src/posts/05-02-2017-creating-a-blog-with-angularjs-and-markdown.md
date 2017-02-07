@@ -17,7 +17,7 @@ How do I get Angular to read my posts in markdown?
 
 ## The solution
 
-Let's use a Gulp task to convert our markdown to JSON. Angular can read JSON very easily.
+I'm going to use a Gulp task to convert our markdown to JSON. Angular can read JSON very easily.
 
 ### Setting up our application
 
@@ -48,7 +48,7 @@ Then I can get the data from `posts.json` using an Angular service.
 
 ### An example post
 
-The Gulp task will take the Front Matter block and output the data, along with the compiled markup of your post, as JSON. I can put any type of data I want here and the Gulp task will convert it to JSON. This will allow me to manipulate the data and use it in my Angular components.
+The Gulp task will take the Front Matter block and output the data, along with the compiled markup of my post, as JSON. I can put any type of data I want here and the Gulp task will convert it to JSON. This will allow me to manipulate the data and use it in my Angular components.
 
 ```markdown
 ---
