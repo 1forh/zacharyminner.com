@@ -1,3 +1,4 @@
+@import url(../../node_modules/prismjs/themes/prism.css);
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -6479,7 +6480,7 @@ main.ng-enter-active {
   opacity: 1; }
 
 body {
-  line-height: 1.8em;
+  line-height: 1.9em;
   font-size: 17px; }
   @media screen and (max-width: 992px) {
     body {
@@ -6489,13 +6490,15 @@ body {
       font-size: 14px; } }
 
 h1 {
-  margin-bottom: 40px; }
+  margin-bottom: 50px; }
 
-h1,
+h1 {
+  font-weight: 100; }
+
 h2,
 h3,
 h4 {
-  font-weight: 100; }
+  font-weight: 700; }
 
 a:focus, a:active, a:hover {
   text-decoration: none; }
@@ -6516,6 +6519,10 @@ pre {
   padding: 30px;
   border-radius: 3px;
   background-color: #eceeef; }
+
+pre,
+pre[class*="language-"] {
+  margin: 40px 0; }
 
 .breadcrumb {
   margin-bottom: 75px; }
@@ -6552,15 +6559,13 @@ zm-footer {
 
 .post h2,
 .post h3 {
-  margin-top: 50px;
-  margin-bottom: 25px; }
-
-.post h2 {
-  padding-bottom: 25px;
-  border-bottom: 1px solid #eceeef; }
+  margin-top: 35px; }
 
 .post h4 {
   margin-bottom: 15px; }
+
+.post hr {
+  margin: 50px 0; }
 
 .project__tags {
   display: -ms-flexbox;

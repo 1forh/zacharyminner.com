@@ -57,6 +57,7 @@
         "$": false,
         "_": false,
         "inject": false,
-        "angular": false
+        "angular": false,
+        "Prism": false
     }
 }

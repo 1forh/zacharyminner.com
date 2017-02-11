@@ -1,5 +1,5 @@
 body {
-	line-height: 1.8em;
+	line-height: 1.9em;
 	font-size: 17px;
 	@media screen and (max-width: 992px) {
 		font-size: 16px;
@@ -10,14 +10,17 @@ body {
 }
 
 h1 {
-	margin-bottom: 40px;
+	margin-bottom: 50px;
 }
 
-h1,
+h1 {
+	font-weight: 100;
+}
+
 h2,
 h3,
 h4 {
-	font-weight: 100;
+	font-weight: 700;
 }
 
  a {

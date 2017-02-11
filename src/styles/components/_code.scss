@@ -3,3 +3,8 @@ pre {
 	border-radius: 3px;
 	background-color: $gray-lighter;
 }
+
+pre,
+pre[class*="language-"] {
+	margin: 40px 0;
+}

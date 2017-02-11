@@ -3,7 +3,7 @@
 		<div class="col-sm-12 post">
 			<h1>
 				{{ $ctrl.post.title }}<br>
-				<small>{{ $ctrl.post.updatedAt | date }}</small>
+				<small>{{ $ctrl.post.date | date }}</small>
 			</h1>
 			<div ng-bind-html="$ctrl.post.body"></div>
 		</div>

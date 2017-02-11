@@ -18,6 +18,11 @@ export const config = {
 			'./src/app/**/*.js'
 		],
 		modules: [
+			'node_modules/prismjs/prism.js',
+			'node_modules/prismjs/components/prism-javascript.js',
+			'node_modules/prismjs/components/prism-markdown.js',
+			'node_modules/prismjs/components/prism-css.js',
+			'node_modules/prismjs/components/prism-sass.js',
 			'node_modules/underscore/underscore.js',
 			'node_modules/angular/angular.js',
 			'node_modules/angular-animate/angular-animate.js',

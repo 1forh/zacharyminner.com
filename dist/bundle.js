@@ -3,7 +3,16 @@
 (function (angular) {
 	'use strict';
 
-	angular.module('app', ['ui.router', 'ngAnimate', 'app.templates', 'app.components', 'app.common']);
+	angular.module('app', ['ui.router', 'ngAnimate', 'app.templates', 'app.components', 'app.common']).run(function ($rootScope, $timeout, $location) {
+		$rootScope.$on('$stateChangeSuccess', function () {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+
+			$timeout(function () {
+				Prism.highlightAll();
+			}, 100);
+		});
+	});
 })(window.angular);
 (function (angular) {
 	'use strict';
@@ -25,6 +34,8 @@
 
 	function ZMBlogController(ZMBlogService) {
 		var ctrl = this;
+
+		console.log(ctrl.count);
 
 		ZMBlogService.getPosts().then(function (response) {
 			ctrl.posts = response;
@@ -72,20 +83,20 @@
 (function (angular) {
 	'use strict';
 
-	function ZMFormController() {
-		var ctrl = this;
-	}
-
-	angular.module('app.components').controller('ZMFormController', ZMFormController);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
 	function ZMFooterController() {
 		var ctrl = this;
 	}
 
 	angular.module('app.components').controller('ZMFooterController', ZMFooterController);
+})(window.angular);
+(function (angular) {
+	'use strict';
+
+	function ZMFormController() {
+		var ctrl = this;
+	}
+
+	angular.module('app.components').controller('ZMFormController', ZMFormController);
 })(window.angular);
 (function (angular) {
 	'use strict';
@@ -175,15 +186,6 @@
 (function (angular) {
 	'use strict';
 
-	var zmContact = {
-		templateUrl: './zm-contact.html'
-	};
-
-	angular.module('app.components').component('zmContact', zmContact);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
 	var zmBreadcrumbs = {
 		templateUrl: './zm-breadcrumbs.html',
 		controller: 'ZMBreadcrumbsController'
@@ -194,12 +196,11 @@
 (function (angular) {
 	'use strict';
 
-	var zmForm = {
-		templateUrl: './zm-form.html',
-		controller: 'ZMFormController'
+	var zmContact = {
+		templateUrl: './zm-contact.html'
 	};
 
-	angular.module('app.components').component('zmForm', zmForm);
+	angular.module('app.components').component('zmContact', zmContact);
 })(window.angular);
 (function (angular) {
 	'use strict';
@@ -210,6 +211,16 @@
 	};
 
 	angular.module('app.components').component('zmFooter', zmFooter);
+})(window.angular);
+(function (angular) {
+	'use strict';
+
+	var zmForm = {
+		templateUrl: './zm-form.html',
+		controller: 'ZMFormController'
+	};
+
+	angular.module('app.components').component('zmForm', zmForm);
 })(window.angular);
 (function (angular) {
 	'use strict';

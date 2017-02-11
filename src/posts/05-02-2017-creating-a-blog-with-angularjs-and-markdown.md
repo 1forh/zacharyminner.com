@@ -1,4 +1,5 @@
 ---
+date: 5 February 2017
 title: Creating a blog with AngularJS and Markdown
 excerpt: I use Angular a lot at work so to become even more familiar with it, I wanted to create my portfolio using Angular. I also wanted to be able to write my posts in markdown.
 tags:
@@ -11,17 +12,38 @@ tags:
 
 ## The problem
 
-I use  [Angular](https://angularjs.org/) a lot at work so to become even more familiar with it, I wanted to create my portfolio using Angular. I also wanted to be able to write my posts in markdown.
+I use [Angular](https://angularjs.org/) a decent amount at work. To become even more familiar with it, I wanted to create my portfolio/blog using Angular. I also wanted to be able to write my posts in markdown.
 
 How do I get Angular to read my posts in markdown?
 
+---
+
 ## The solution
 
-I'm going to use a Gulp task to convert our markdown to JSON. Angular can read JSON very easily.
+I'm going to use a Gulp task to convert the markdown to JSON. Angular can read JSON very easily.
 
-### Setting up our application
+---
 
-I want to be able to easily refactor this application to [Angular 2](https://angular.io/) when we update our stack at work. I can setup my application using a "Component Architecture" so that it is relativey similar to how an Angular 2 application is setup. I will also heavily utilize Angular's [component](https://docs.angularjs.org/guide/component) directive for the same reason.
+## Setting up the application
+
+I want to be able to easily refactor this application to [Angular 2](https://angular.io/) when we start using it at work. I can setup my application using a "Component Architecture" so that it is relativey similar to how an Angular 2 application is setup. I will also heavily utilize Angular's [component](https://docs.angularjs.org/guide/component) directive for the same reason.
+
+### The application structure
+
+Like I said above, my portfolio's directory structure will be set up using a "[Component Architecture](https://docs.angularjs.org/guide/component)". Organizing my application utilizing the strengths of Angular's component directive will help me keep my portfolio maintainable and scalable. Here is an article explaining what an Angular component is and how to use it: [https://scotch.io/tutorials/how-to-use-angular-1-5s-component-method](https://scotch.io/tutorials/how-to-use-angular-1-5s-component-method)
+
+I will keep all of my application specific code in the `app` directory and I will keep all of my blog posts in the `posts` directory. Remember, my Gulp task will take the markdown files from the `post` directory and output a JSON file. An Angular service will then call for the data using an `http` request. This will allow me to manipulate the data and pass it to the template through a controller.
+
+```
+src/
+  app/
+    components/
+      zm-blog/
+    app.routes.js
+    app.module.js
+  posts/
+    05-02-2017-test-post.md
+```
 
 ### The Gulp task
 
@@ -69,30 +91,11 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam in repellat susc
 - Lorem Ipsum
 ```
 
-### The application structure
-
-Like I said above, my portfolio's directory structure will be set up using a "[Component Architecture](https://docs.angularjs.org/guide/component)". Organizing my application utilizing the strengths of Angular's component directive will help me keep my portfolio maintainable and scalable. Here is an article explaining what an Angular component is and how to use it: [https://scotch.io/tutorials/how-to-use-angular-1-5s-component-method](https://scotch.io/tutorials/how-to-use-angular-1-5s-component-method)
-
-I will keep all of my application specific code in the `app` directory and I will keep all of my blog posts in the `posts` directory. Remember, my Gulp task will take the markdown files from the `post` directory and output a JSON file. An Angular service will then call for the data using and `http` request. This will allow me to manipulate the data and pass it to the template through a controller.
-
-```
-src/
-  app/
-    components/
-      zm-blog/
-    app.routes.js
-    app.module.js
-  posts/
-    05-02-2017-test-post.md
-```
-
-### The blog component
+### The blog Angular component
 
 It's good practice to namespace a custom angular component. This allows relative certainty that none of the custom code will effect dependency/vendor code and vice/versa. 
 
 I'm just going to use my initials. This makes it: `zm-blog`.
-
----
 
 #### zm-blog.component.js
 
