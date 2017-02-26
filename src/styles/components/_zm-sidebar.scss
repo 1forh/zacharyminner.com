@@ -1,0 +1,50 @@
+zm-sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: $sidebar-width;
+	min-width: $sidebar-width;
+	height: 100vh;
+	background-color: $brand-gray;
+	.logo {
+		@extend .is-big-and-fat;
+		display: inline-block;
+		margin-top: 5vh;
+	}
+	.social,
+	.menu {
+		margin-top: 10vh;
+		margin-bottom: 0;
+		padding: 0;
+		list-style: none;
+		a {
+			@extend .is-big-and-fat;
+			display: flex;
+			align-items: center;
+			&::before {
+				content: '';
+				display: block;
+				width: 0;
+				height: 30px;
+				background-color: $brand-primary;
+				transition: all $link-transition ease;
+			}
+			&.is-active {
+				&::before {
+					width: 20px;
+					margin-right: 10px;
+				}
+			}
+			&:hover {
+				&::before {
+					width: 20px;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+	.social {
+		margin-top: 40vh;
+	}
+}

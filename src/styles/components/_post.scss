@@ -1,25 +1,59 @@
-.post {
-
-	&__preview {
-		margin-bottom: 50px;
-	}
-
-	h1 {
-		small {
-			font-size: 0.5em;
+.posts {
+	.post {
+		@extend %brand-gradient;
+		height: 25vh;
+		overflow: hidden;
+		a {
+			@extend .is-big-and-fat;
+			display: flex;
+			align-items: center;
+			padding-right: 25%;
+			height: 25vh;
+			margin-left: -12px;
+			color: $brand-gray;
+			font-size: 72px;
+			line-height: 62px;
 		}
 	}
+}
 
+zm-post {
+	.post {
+		margin-bottom: 50px;
+	}
+	header {
+		@extend %brand-gradient;
+		margin-bottom: 50px;
+		h1 {
+			@extend .is-big-and-fat;
+			max-width: 80%;
+			margin-bottom: 0;
+			margin-left: -6px;
+			padding: 35px 0;
+			font-size: 72px;
+			line-height: 62px;
+			color: $brand-gray;
+		}
+		time {
+			@extend .is-big-and-fat;
+			display: block;
+			padding-bottom: 35px;
+			color: rgba($brand-gray, 0.8);
+		}
+	}
+	
 	h2,
 	h3 {
-		margin-top: 35px;
+		margin-top: 50px;
+		margin-bottom: 25px;
+	}
+
+	h2 {
+		padding-bottom: 25px;
+		border-bottom: 1px solid $gray-lighter;
 	}
 
 	h4 {
 		margin-bottom: 15px;
-	}
-
-	hr {
-		margin: 50px 0;
 	}
 }

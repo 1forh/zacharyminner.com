@@ -5,21 +5,26 @@ angular
 		$stateProvider
 			.state('home', {
 				url: '/',
-				component: 'zmHome',
-				template: '<zm-home></zm-home>'
+				component: 'zmProjects',
+				template: '<zm-projects></zm-projects>'
 			})
 			.state('contact', {
 				url: '/contact',
 				component: 'zmContact',
 				template: '<zm-contact></zm-contact>'
 			})
-			.state('projects', {
-				url: '/projects',
+			.state('resume', {
+				url: '/resume',
+				component: 'zmResume',
+				template: '<zm-resume></zm-resume>'
+			})
+			.state('portfolio', {
+				url: '/portfolio',
 				component: 'zmProjects',
 				template: '<zm-projects></zm-projects>'
 			})
 			.state('project', {
-				url: '/projects/:id',
+				url: '/portfolio/:id',
 				component: 'zmProject',
 				template: '<zm-project></zm-project>'
 			})

@@ -1,22 +1,9 @@
-<div class="container">
-	<div class="row">
-		<div class="col-sm-12">
-			<h1>Projects</h1>
-		</div>
+<div class="projects">
+	
+	<div ng-repeat="project in $ctrl.projects" class="project">
+		<a ui-sref="project({ id: project.url })">
+			<span ng-bind="project.title"></span>
+		</a>
 	</div>
 
-	<div class="row justify-content-between">
-		<div ng-repeat="project in $ctrl.projects" class="col-sm-12 col-md-6">
-			<div class="card project project__preview mb-4">
-				<img ng-src="{{ project.featured }}" alt="{{ project.title }}" class="card-img-top img-fluid">
-				<div class="card-block">
-					<h4 ng-bind="project.title"></h4>
-					<div class="project__tags mb-4">
-						<span ng-repeat="tag in project.tags" class="badge badge-pill badge-default">{{ tag }}</span>
-					</div>
-					<a ui-sref="project({ id: project.url })" class="btn btn-primary">View project</a>
-				</div>
-			</div>
-		</div>
-	</div>
 </div>

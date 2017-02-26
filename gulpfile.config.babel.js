@@ -18,13 +18,14 @@ export const config = {
 			'./src/app/**/*.js'
 		],
 		modules: [
+			'node_modules/jquery/dist/jquery.js',
+			'node_modules/underscore/underscore.js',
+			'node_modules/angular/angular.js',
 			'node_modules/prismjs/prism.js',
 			'node_modules/prismjs/components/prism-javascript.js',
 			'node_modules/prismjs/components/prism-markdown.js',
 			'node_modules/prismjs/components/prism-css.js',
 			'node_modules/prismjs/components/prism-sass.js',
-			'node_modules/underscore/underscore.js',
-			'node_modules/angular/angular.js',
 			'node_modules/angular-animate/angular-animate.js',
 			'node_modules/angular-sanitize/angular-sanitize.js',
 			'node_modules/angular-ui-router/release/angular-ui-router.js'
@@ -48,7 +49,10 @@ export const config = {
 		}
 	},
 	images: {
-		source: './src/images/**/*.{png,jpg,svg}'
+		source: [
+			'node_modules/slick-carousel/slick/*.{png,jpg,svg,gif}',
+			'./src/images/**/*.{png,jpg,svg}'
+		]
 	},
 	browserSync: {
 		port: 5000,

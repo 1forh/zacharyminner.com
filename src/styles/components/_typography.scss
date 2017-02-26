@@ -1,4 +1,5 @@
 body {
+	color: $text-color;
 	line-height: 1.9em;
 	font-size: 17px;
 	@media screen and (max-width: 992px) {
@@ -23,10 +24,18 @@ h4 {
 	font-weight: 700;
 }
 
- a {
- 	&:focus,
- 	&:active,
- 	&:hover {
- 		text-decoration: none;
- 	}
- }
+a {
+	&:focus,
+	&:active,
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.is-big-and-fat {
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 36px;
+	letter-spacing: -0.5px;
+	margin-left: -3px;
+}

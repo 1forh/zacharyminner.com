@@ -1,14 +1,14 @@
 ---
 date: 10 February 2017
 title: Quick guide to Gulp
-excerpt: I'll build a task that compiles our Sass styles into CSS. As the Sass files are being compiled, we can manipulate the contents of the files in multiple ways depending on what we need.
+excerpt: I'll build a task that compiles Sass styles into CSS. As the Sass files are being compiled, we can manipulate the contents of the files in multiple ways depending on what we need.
 tags:
  - JavaScript
  - Gulp
 
 ---
 
-I'll build a task that compiles our Sass styles into CSS. As the Sass files are being compiled, we can manipulate the contents of the files in multiple ways depending on what we need.
+I'll build a task that compiles Sass styles into CSS. As the Sass files are being compiled, we can manipulate the contents of the files in multiple ways depending on what we need.
 
 ---
 

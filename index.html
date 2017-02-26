@@ -29,7 +29,7 @@
 	<link rel="canonical" href="http://zacharyminner.com">
 	<link rel="icon" type="image/png" href="dist/images/favicon.png">
 
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,400i,700">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,400i,700,800">
 	<link rel="stylesheet" href="dist/main.css">
 
 	<!--[if lt IE 9]>
@@ -52,10 +52,10 @@
 		<p class="browser-upgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
-	<zm-header></zm-header>
-	<zm-breadcrumbs></zm-breadcrumbs>
-	<main ui-view></main>
-	<zm-footer></zm-footer>
+	<div class="site-wrapper">
+		<zm-sidebar></zm-sidebar>
+		<main ui-view></main>
+	</div>
 
 	<script src="dist/vendor.js"></script>
 	<script src="dist/bundle.js"></script>

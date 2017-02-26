@@ -1,7 +1,10 @@
-body {
-	background-color: $brand-gray;
+.site-wrapper {
+	position: relative;
+	display: flex;
+	min-height: 100vh;
 }
 
-.container {
-	width: 920px;
+main {
+	flex-grow: 1;
+	padding-left: $sidebar-width;
 }

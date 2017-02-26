@@ -1,0 +1,19 @@
+<nav>
+	<a ui-sref="home" class="logo">Zach Minner</a>
+
+	<ul class="menu">
+		<li ng-repeat="item in $ctrl.menu">
+			<a ui-sref="{{ item.state }}" title="{{ item.name }}" ui-sref-active="is-active">
+				{{ item.name }}
+			</a>
+		</li>
+	</ul>
+
+	<ul class="social">
+		<li ng-repeat="item in $ctrl.social">
+			<a href="{{ item.url }}" title="{{ item.name }}" target="_blank">
+				{{ item.name }}
+			</a>
+		</li>
+	</ul>
+</nav>

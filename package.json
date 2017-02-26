@@ -7,7 +7,7 @@
     "type": "git"
   },
   "scripts": {
-    "start": "gulp",
+    "start": "gulp serve",
     "build": "gulp build"
   },
   "author": "1forh <1forhlol@gmail.com>",
@@ -46,6 +46,7 @@
     "angular-sanitize": "^1.6.1",
     "angular-ui-router": "^0.4.2",
     "bootstrap": "4.0.0-alpha.6",
+    "jquery": "^3.1.1",
     "prismjs": "^1.6.0",
     "underscore": "^1.8.3"
   }

@@ -1,11 +1,22 @@
-<div class="container">
-	<div class="row">
-		<div class="col-sm-12">
-			<h1>
-				{{ $ctrl.project.title }} -
-				<a href="{{ $ctrl.project.domain }}" title="{{ $ctrl.project.title }}" class="btn btn-primary btn-sm" target="_blank">View site</a>
-			</h1>
-			<img ng-src="{{ $ctrl.project.featured }}" alt="{{ $ctrl.project.title }}" class="img-fluid mb-4">
+<article class="project">
+	<header>
+		<h1>
+			{{ $ctrl.project.title }}
+		</h1>
+		<a href="{{ $ctrl.project.domain }}" title="{{ $ctrl.project.title }}" class="btn btn-primary" target="_blank">
+			<span>View site</span>
+		</a>
+	</header>
+
+	<div class="wrapper">
+		<div class="col-sm-6 images">
+			<img src="{{ $ctrl.project.featured }}" alt="{{ $ctrl.project.title }}" class="img-fluid">
+			<div ng-repeat="image in $ctrl.project.previews">
+				<img src="dist/images/projects/{{ $ctrl.project.url }}/{{ image }}" alt="{{ $ctrl.project.title }}" class="img-fluid">
+			</div>
+		</div>
+		<div class="col-sm-6 content">
+			<div ng-bind-html="$ctrl.project.body"></div>
 		</div>
 	</div>
-</div>
+</article>

@@ -101,46 +101,12 @@
 (function (angular) {
 	'use strict';
 
-	function ZMHeaderController() {
-		var ctrl = this;
-
-		ctrl.menu = [{
-			state: 'blog',
-			name: 'Blog'
-		}, {
-			state: 'projects',
-			name: 'Projects'
-		}];
-	}
-
-	angular.module('app.components').controller('ZMHeaderController', ZMHeaderController);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
-	function ZMHeroController() {
-		var ctrl = this;
-	}
-
-	angular.module('app.components').controller('ZMHeroController', ZMHeroController);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
-	function ZMHomeController() {
-		var ctrl = this;
-	}
-
-	angular.module('app.components').controller('ZMHomeController', ZMHomeController);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
 	function ZMProjectController(ZMProjectsService, $state) {
 		var ctrl = this;
 
 		ZMProjectsService.getProjects().then(function (response) {
 			ctrl.project = response[$state.params.id];
+			console.log(ctrl.project);
 		}).catch(function (error) {
 			console.error(error);
 		});
@@ -162,6 +128,43 @@
 	}
 
 	angular.module('app.components').controller('ZMProjectsController', ZMProjectsController);
+})(window.angular);
+(function (angular) {
+	'use strict';
+
+	function ZMSidebarController() {
+		var ctrl = this;
+
+		ctrl.menu = [{
+			state: 'portfolio',
+			name: 'Portfolio'
+		}, {
+			state: 'blog',
+			name: 'Blog'
+		}, {
+			state: 'contact',
+			name: 'Contact'
+		}, {
+			state: 'resume',
+			name: 'Resume'
+		}];
+
+		ctrl.social = [{
+			url: 'mailto:1forhlol@gmail.com',
+			name: 'Email'
+		}, {
+			url: 'https://github.com/1forh',
+			name: 'Github'
+		}, {
+			url: 'https://www.linkedin.com/in/zachary-minner-877371118',
+			name: 'Linkedin'
+		}, {
+			url: 'http://codepen.io/1forh/',
+			name: 'Codepen'
+		}];
+	}
+
+	angular.module('app.components').controller('ZMSidebarController', ZMSidebarController);
 })(window.angular);
 (function (angular) {
 	'use strict';
@@ -225,39 +228,6 @@
 (function (angular) {
 	'use strict';
 
-	var zmHeader = {
-		templateUrl: './zm-header.html',
-		controller: 'ZMHeaderController'
-	};
-
-	angular.module('app.components').component('zmHeader', zmHeader);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
-	var zmHero = {
-		bindings: {
-			title: '@',
-			description: '@'
-		},
-		templateUrl: './zm-hero.html',
-		controller: 'ZMHeroController'
-	};
-
-	angular.module('app.components').component('zmHero', zmHero);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
-	var zmHome = {
-		templateUrl: './zm-home.html'
-	};
-
-	angular.module('app.components').component('zmHome', zmHome);
-})(window.angular);
-(function (angular) {
-	'use strict';
-
 	var zmProject = {
 		templateUrl: './zm-project.html',
 		controller: 'ZMProjectController'
@@ -278,22 +248,36 @@
 (function (angular) {
 	'use strict';
 
+	var zmSidebar = {
+		templateUrl: './zm-sidebar.html',
+		controller: 'ZMSidebarController'
+	};
+
+	angular.module('app.components').component('zmSidebar', zmSidebar);
+})(window.angular);
+(function (angular) {
+	'use strict';
+
 	angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
 
 		$stateProvider.state('home', {
 			url: '/',
-			component: 'zmHome',
-			template: '<zm-home></zm-home>'
+			component: 'zmProjects',
+			template: '<zm-projects></zm-projects>'
 		}).state('contact', {
 			url: '/contact',
 			component: 'zmContact',
 			template: '<zm-contact></zm-contact>'
-		}).state('projects', {
-			url: '/projects',
+		}).state('resume', {
+			url: '/resume',
+			component: 'zmResume',
+			template: '<zm-resume></zm-resume>'
+		}).state('portfolio', {
+			url: '/portfolio',
 			component: 'zmProjects',
 			template: '<zm-projects></zm-projects>'
 		}).state('project', {
-			url: '/projects/:id',
+			url: '/portfolio/:id',
 			component: 'zmProject',
 			template: '<zm-project></zm-project>'
 		}).state('blog', {

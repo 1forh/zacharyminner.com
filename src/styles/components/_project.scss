@@ -1,13 +1,56 @@
-.project {
-	&__preview {
+.projects {
+	.project {
+		@extend %brand-gradient;
+		height: 33.3333vh;
+		overflow: hidden;
+		a {
+			@extend .is-big-and-fat;
+			display: flex;
+			align-items: center;
+			padding-right: 25%;
+			height: 33.3333vh;
+			margin-left: -12px;
+			color: $brand-gray;
+			font-size: 144px;
+			line-height: 109px;
+		}
+	}
+}
 
+zm-project {
+	display: block;
+	margin-bottom: 80px;
+	img {
+		@extend .img-fluid;
 	}
-	&__tags {
+	header {
+		@extend %brand-gradient;
+		margin-bottom: 80px;
 		display: flex;
-		margin-right: 10px;
+		align-items: center;
+		justify-content: center;
+		h1 {
+			@extend .is-big-and-fat;
+			flex-grow: 1;
+			margin-bottom: 0;
+			margin-left: -6px;
+			padding: 35px 0;
+			font-size: 72px;
+			line-height: 62px;
+			color: $brand-gray;
+		}
 	}
-	.badge {
-		display: block;
-		margin-right: 5px;
+	.wrapper {
+		@extend .row;
+		padding: 0 80px;
+	}
+	.images {
+		padding-right: 80px;
+		border-right: 1px solid $brand-gray;
+	}
+	.content {
+		padding-left: 80px;
+		font-size: 20px;
+		line-height: 1.9;
 	}
 }
