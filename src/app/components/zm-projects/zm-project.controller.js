@@ -4,7 +4,6 @@ function ZMProjectController(ZMProjectsService, $state) {
 	ZMProjectsService.getProjects()
 		.then(function(response) {
 			ctrl.project = response[$state.params.id];
-			console.log(ctrl.project);
 		})
 		.catch(function(error) {
 			console.error(error);

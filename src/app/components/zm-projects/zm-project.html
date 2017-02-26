@@ -9,14 +9,8 @@
 	</header>
 
 	<div class="wrapper">
-		<div class="col-sm-6 images">
-			<img src="{{ $ctrl.project.featured }}" alt="{{ $ctrl.project.title }}" class="img-fluid">
-			<div ng-repeat="image in $ctrl.project.previews">
-				<img src="dist/images/projects/{{ $ctrl.project.url }}/{{ image }}" alt="{{ $ctrl.project.title }}" class="img-fluid">
-			</div>
-		</div>
-		<div class="col-sm-6 content">
-			<div ng-bind-html="$ctrl.project.body"></div>
+		<div class="col-sm-12">
+			<img src="dist/images/projects/{{ $ctrl.project.url }}/{{ image }}" alt="{{ $ctrl.project.title }}" class="img-fluid mb-5" ng-repeat="image in $ctrl.project.images">
 		</div>
 	</div>
 </article>

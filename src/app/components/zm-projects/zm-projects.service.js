@@ -14,9 +14,6 @@ function ZMProjectsService($http, $sce, $filter) {
 			.then(function(response) {
 				for (let key in response.data) {
 					if(response.data) {
-						if(response.data[key].featured) {
-							response.data[key].featured = 'dist/images/projects/' + key + '/' + response.data[key].featured;
-						}
 						response.data[key].url = $filter('replaceSpaces')(key); // add url to data object
 						response.data[key].body = $sce.trustAsHtml(response.data[key].body); // sanitize html
 					}

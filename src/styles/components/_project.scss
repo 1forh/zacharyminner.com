@@ -19,13 +19,11 @@
 
 zm-project {
 	display: block;
-	margin-bottom: 80px;
 	img {
 		@extend .img-fluid;
 	}
 	header {
 		@extend %brand-gradient;
-		margin-bottom: 80px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -42,15 +40,7 @@ zm-project {
 	}
 	.wrapper {
 		@extend .row;
-		padding: 0 80px;
-	}
-	.images {
-		padding-right: 80px;
-		border-right: 1px solid $brand-gray;
-	}
-	.content {
-		padding-left: 80px;
-		font-size: 20px;
-		line-height: 1.9;
+		padding: 80px;
+		margin: 0;
 	}
 }

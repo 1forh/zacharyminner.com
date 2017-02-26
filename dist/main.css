@@ -4859,6 +4859,10 @@ zm-sidebar .menu a, .posts .post a, zm-post header h1, zm-post header time, .pro
   border: 0;
   border-radius: 0;
   transition: all 0.3s ease; }
+  .btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary:hover {
+    outline: none;
+    border: 0;
+    box-shadow: none; }
   .btn.btn-primary::after {
     content: '';
     display: block;
@@ -5009,10 +5013,8 @@ zm-post h4 {
     line-height: 109px; }
 
 zm-project {
-  display: block;
-  margin-bottom: 80px; }
+  display: block; }
   zm-project header {
-    margin-bottom: 80px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -5029,13 +5031,7 @@ zm-project {
       line-height: 62px;
       color: #e4e4e4; }
   zm-project .wrapper {
-    padding: 0 80px; }
-  zm-project .images {
-    padding-right: 80px;
-    border-right: 1px solid #e4e4e4; }
-  zm-project .content {
-    padding-left: 80px;
-    font-size: 20px;
-    line-height: 1.9; }
+    padding: 80px;
+    margin: 0; }
 
 /*# sourceMappingURL=main.css.map */
