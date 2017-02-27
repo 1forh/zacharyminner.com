@@ -107,15 +107,8 @@ gulp.task('images', () => {
 
 gulp.task('html', () => {
 	return gulp.src(config.html.source)
-		.pipe(plumber())
-		.pipe(gulp.dest(config.destination));
-});
-
-gulp.task('minify', () => {
-	return gulp.src('./index.html')
-		.pipe(plumber())
-		.pipe(useref())
-		.pipe(htmlmin())
+		// .pipe(gulpif(argv.prod, useref()))
+		.pipe(gulpif(argv.prod, htmlmin({ collapseWhitespace: true })))
 		.pipe(gulp.dest(config.destination));
 });
 
@@ -125,15 +118,14 @@ gulp.task('clean', error => {
 
 gulp.task('build', callback => {
 	let tasks = [
-		'html',
-		'styles',
 		'scripts',
+		'modules',
 		'templates',
-		'images',
-		'modules'
+		'styles',
+		'images'
 	];
 
-	runSequence('clean', 'posts', 'projects', tasks, callback);
+	runSequence('clean', 'posts', 'projects', tasks, 'html', callback);
 });
 
 gulp.task('serve', ['build'], () => {
