@@ -4,7 +4,7 @@
 		@extend %brand-gradient;
 		h1 {
 			@extend .is-big-and-fat;
-			width: 80%;
+			max-width: 80%;
 			margin-bottom: 0;
 			margin-left: -6px;
 			padding: 35px 0;
