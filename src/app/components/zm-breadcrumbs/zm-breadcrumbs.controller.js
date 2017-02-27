@@ -12,6 +12,8 @@ function ZMBreadcrumbsController(ZMBreadcrumbsService, $location, $rootScope) {
 	ctrl.breadcrumbs = ZMBreadcrumbsService;
 }
 
+ZMBreadcrumbsController.$inject = ['ZMBreadcrumbsService', '$location', '$rootScope'];
+
 angular
 	.module('app.components')
 	.controller('ZMBreadcrumbsController', ZMBreadcrumbsController);

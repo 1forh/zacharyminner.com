@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "gulp serve",
-    "build": "gulp build"
+    "build": "gulp build --prod"
   },
   "author": "1forh <1forhlol@gmail.com>",
   "license": "MIT",
@@ -44,6 +44,7 @@
   "dependencies": {
     "angular": "^1.6.1",
     "angular-animate": "^1.6.1",
+    "angular-google-analytics": "^1.1.8",
     "angular-sanitize": "^1.6.1",
     "angular-ui-router": "^0.4.2",
     "bootstrap": "4.0.0-alpha.6",

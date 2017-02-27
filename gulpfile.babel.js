@@ -63,7 +63,7 @@ gulp.task('scripts', ['lint'], () => {
 		.pipe(wrap('(function(angular){\n\'use strict\';\n<%= contents %>})(window.angular);'))
 		.pipe(concat('bundle.js'))
 		.pipe(gulpif(config.scripts.babel.compile === true, babel(config.babel)))
-		.pipe(gulpif(argv.prod, uglify()))
+		// .pipe(gulpif(argv.prod, uglify()))
 		.pipe(gulpif(!argv.prod, sourcemaps.write('.')))
 		.pipe(gulp.dest(config.destination));
 });

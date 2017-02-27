@@ -1,8 +1,6 @@
 function ZMBlogController(ZMBlogService) {
 	let ctrl = this;
 
-	console.log(ctrl.count);
-
 	ZMBlogService.getPosts()
 		.then(function(response) {
 			ctrl.posts = response;
@@ -11,6 +9,8 @@ function ZMBlogController(ZMBlogService) {
 			console.error(error);
 		});
 }
+
+ZMBlogController.$inject = ['ZMBlogService'];
 
 angular
 	.module('app.components')

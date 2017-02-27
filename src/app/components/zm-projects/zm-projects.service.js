@@ -26,6 +26,8 @@ function ZMProjectsService($http, $sce, $filter) {
 	}
 }
 
+ZMProjectsService.$inject = ['$http', '$sce', '$filter'];
+
 angular
 	.module('app.components')
 	.factory('ZMProjectsService', ZMProjectsService);

@@ -32,6 +32,8 @@ function ZMBreadcrumbsService($rootScope, $location, $filter) {
 		};
 }
 
+ZMBreadcrumbsService.$inject = ['$rootScope', '$location', '$filter'];
+
 angular
 	.module('app.components')
 	.factory('ZMBreadcrumbsService', ZMBreadcrumbsService);

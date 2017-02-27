@@ -9,15 +9,15 @@ function ZMSidebarController() {
 		{
 			state: 'blog',
 			name: 'Blog'
-		},
-		{
-			state: 'contact',
-			name: 'Contact'
-		},
-		{
-			state: 'resume',
-			name: 'Resume'
 		}
+		// {
+		// 	state: 'contact',
+		// 	name: 'Contact'
+		// },
+		// {
+		// 	state: 'resume',
+		// 	name: 'Resume'
+		// }
 	];
 
 	ctrl.social = [

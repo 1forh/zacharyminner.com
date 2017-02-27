@@ -1,14 +1,14 @@
 .projects {
 	.project {
 		@extend %brand-gradient;
-		height: 33.3333vh;
+		height: 380px;
 		overflow: hidden;
 		a {
 			@extend .is-big-and-fat;
 			display: flex;
 			align-items: center;
 			padding-right: 25%;
-			height: 33.3333vh;
+			height: 380px;
 			margin-left: -12px;
 			color: $brand-gray;
 			font-size: 144px;

@@ -26,6 +26,8 @@ function ZMBlogService($http, $sce, $filter) {
 	}
 }
 
+ZMBlogService.$inject = ['$http', '$sce', '$filter'];
+
 angular
 	.module('app.components')
 	.factory('ZMBlogService', ZMBlogService);

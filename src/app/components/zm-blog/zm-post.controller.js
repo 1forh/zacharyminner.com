@@ -10,6 +10,8 @@ function ZMPostController(ZMBlogService, $state) {
 		});
 }
 
+ZMPostController.$inject = ['ZMBlogService', '$state'];
+
 angular
 	.module('app.components')
 	.controller('ZMPostController', ZMPostController);

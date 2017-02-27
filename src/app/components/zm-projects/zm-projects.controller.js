@@ -10,6 +10,8 @@ function ZMProjectsController(ZMProjectsService) {
 		});
 }
 
+ZMProjectsController.$inject = ['ZMProjectsService'];
+
 angular
 	.module('app.components')
 	.controller('ZMProjectsController', ZMProjectsController);
