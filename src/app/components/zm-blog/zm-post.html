@@ -6,11 +6,9 @@
 		<time datetime="{{ $ctrl.post.date }}">{{ $ctrl.post.date }}</time>
 	</header>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<div ng-bind-html="$ctrl.post.body"></div>
-			</div>
+	<div class="wrapper">
+		<div class="col-sm-12">
+			<div ng-bind-html="$ctrl.post.body"></div>
 		</div>
 	</div>
 </article>

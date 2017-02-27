@@ -3,6 +3,9 @@
 		@extend %brand-gradient;
 		height: 380px;
 		overflow: hidden;
+		@media screen and (max-width: 1360px) {
+			height: 220px;
+		}
 		a {
 			@extend .is-big-and-fat;
 			display: flex;
@@ -13,6 +16,12 @@
 			color: $brand-gray;
 			font-size: 144px;
 			line-height: 109px;
+			@media screen and (max-width: 1360px) {
+				margin-left: -7px;
+				height: 220px;
+				font-size: 72px;
+				line-height: 62px;
+			}
 		}
 	}
 }
