@@ -1,1 +1,1 @@
-npm build
+web: npm build
