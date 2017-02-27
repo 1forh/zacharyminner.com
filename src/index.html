@@ -27,10 +27,10 @@
 	 <meta itemprop="description" content="Hey! My name is Zach Minner. I am a front-end web developer at SKYCATCHFIRE who lives off Mr. Robot and grilled cheese sandwiches.">
 
 	<link rel="canonical" href="http://zacharyminner.com">
-	<link rel="icon" type="image/png" href="dist/images/favicon.png">
+	<link rel="icon" type="image/png" href="images/favicon.png">
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,400i,700,800">
-	<link rel="stylesheet" href="dist/main.css">
+	<link rel="stylesheet" href="main.css">
 </head>
 <body>
 
@@ -38,9 +38,11 @@
 		<zm-sidebar></zm-sidebar>
 		<main ui-view></main>
 	</div>
-
-	<script src="dist/vendor.js"></script>
-	<script src="dist/bundle.js"></script>
-	<script src="dist/templates.js"></script>
+	
+	<!-- build:js everything.js -->
+	<script src="vendor.js"></script>
+	<script src="bundle.js"></script>
+	<script src="templates.js"></script>
+	<!-- endbuild -->
 </body>
 </html>

@@ -8,7 +8,7 @@ function ZMProjectsService($http, $sce, $filter) {
 	function getProjects() {
 		return $http({
 				method: 'GET',
-				url: './dist/data/projects.json',
+				url: './data/projects.json',
 				cache: false
 			})
 			.then(function(response) {

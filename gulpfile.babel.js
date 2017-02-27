@@ -21,6 +21,7 @@ import wrap from 'gulp-wrap';
 import markdownToJson from 'gulp-markdown-to-json';
 import marked from 'marked';
 import gutil from 'gulp-util';
+import useref from 'gulp-useref';
 
 import { config } from './gulpfile.config.babel';
 
@@ -104,18 +105,35 @@ gulp.task('images', () => {
 		.pipe(gulp.dest(config.destination + '/images'));
 });
 
+gulp.task('html', () => {
+	return gulp.src(config.html.source)
+		.pipe(plumber())
+		.pipe(gulp.dest(config.destination));
+});
+
+gulp.task('minify', () => {
+	return gulp.src('./index.html')
+		.pipe(plumber())
+		.pipe(useref())
+		.pipe(htmlmin())
+		.pipe(gulp.dest(config.destination));
+});
+
 gulp.task('clean', error => {
 	rimraf(config.destination, error);
 });
 
 gulp.task('build', callback => {
-	runSequence('clean', 'posts', 'projects', [
+	let tasks = [
+		'html',
 		'styles',
 		'scripts',
 		'templates',
 		'images',
 		'modules'
-	], callback);
+	];
+
+	runSequence('clean', 'posts', 'projects', tasks, callback);
 });
 
 gulp.task('serve', ['build'], () => {
@@ -124,9 +142,10 @@ gulp.task('serve', ['build'], () => {
 		server: config.browserSync.server
 	});
 
-	gulp.watch(config.styles.source, ['styles']);
+	gulp.watch(config.html.source, ['html', browserSync.reload]);
 	gulp.watch(config.posts.source, ['posts', browserSync.reload]);
 	gulp.watch(config.projects.source, ['projects', browserSync.reload]);
+	gulp.watch(config.styles.source, ['styles']);
 	gulp.watch(config.scripts.templates.source, ['templates', browserSync.reload]);
 	gulp.watch(config.scripts.source, ['scripts', browserSync.reload]);
 });
