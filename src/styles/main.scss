@@ -59,14 +59,14 @@
 
 @import 'components/typography';
 @import 'components/buttons';
-@import 'components/hero';
 @import 'components/code';
-@import 'components/breadcrumbs';
-
+@import 'components/zm-breadcrumbs';
 @import 'components/zm-sidebar';
-@import 'components/zm-footer';
+@import 'components/zm-form';
 
-@import 'components/post';
-@import 'components/project';
+@import 'components/zm-projects';
+@import 'components/zm-blog';
 
-@import 'components/home';
+@import 'components/zm-contact';
+
+@import 'layouts/layout';

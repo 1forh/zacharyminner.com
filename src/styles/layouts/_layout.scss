@@ -1,0 +1,47 @@
+.post,
+.page {
+	header {
+		@extend %brand-gradient;
+		h1 {
+			@extend .is-big-and-fat;
+			width: 80%;
+			margin-bottom: 0;
+			margin-left: -6px;
+			padding: 35px 0;
+			font-size: 72px;
+			line-height: 62px;
+			color: $brand-gray;
+			@media screen and (max-width: 1360px) {
+				margin-left: -7px;
+				font-size: 64px;
+				line-height: 52px;
+			}
+		}
+		time {
+			@extend .is-big-and-fat;
+			display: block;
+			padding-bottom: 35px;
+			color: rgba($brand-gray, 0.8);
+		}
+	}
+	.wrapper {
+		@extend .row;
+		padding: 40px;
+		margin: 0;
+	}
+
+	h2,
+	h3 {
+		margin-top: 50px;
+		margin-bottom: 25px;
+	}
+
+	h2 {
+		padding-bottom: 25px;
+		border-bottom: 1px solid $brand-gray;
+	}
+
+	h4 {
+		margin-bottom: 15px;
+	}
+}

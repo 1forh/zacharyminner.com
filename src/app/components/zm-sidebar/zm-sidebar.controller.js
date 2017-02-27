@@ -9,11 +9,11 @@ function ZMSidebarController() {
 		{
 			state: 'blog',
 			name: 'Blog'
+		},
+		{
+			state: 'contact',
+			name: 'Contact'
 		}
-		// {
-		// 	state: 'contact',
-		// 	name: 'Contact'
-		// },
 		// {
 		// 	state: 'resume',
 		// 	name: 'Resume'
@@ -34,7 +34,7 @@ function ZMSidebarController() {
 			name: 'Linkedin'
 		},
 		{
-			url: 'http://codepen.io/1forh/',
+			url: 'http://codepen.io/1forh',
 			name: 'Codepen'
 		}
 	];
