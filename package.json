@@ -9,7 +9,7 @@
   "scripts": {
     "start": "gulp serve",
     "build": "gulp build",
-    "postinstall": "npm install ; gulp build"
+    "postinstall": "gulp build"
   },
   "author": "1forh <1forhlol@gmail.com>",
   "license": "MIT",
