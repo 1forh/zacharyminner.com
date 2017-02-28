@@ -15,7 +15,6 @@ import gulpif from 'gulp-if';
 import templateCache from 'gulp-angular-templatecache';
 import yargs from 'yargs';
 import runSequence from 'run-sequence';
-import htmlmin from 'gulp-htmlmin';
 import path from 'path';
 import wrap from 'gulp-wrap';
 import markdownToJson from 'gulp-markdown-to-json';
@@ -107,8 +106,7 @@ gulp.task('images', () => {
 
 gulp.task('html', () => {
 	return gulp.src(config.html.source)
-		// .pipe(gulpif(argv.prod, useref()))
-		.pipe(gulpif(argv.prod, htmlmin({ collapseWhitespace: true })))
+		.pipe(gulpif(argv.prod, useref()))
 		.pipe(gulp.dest(config.destination));
 });
 
