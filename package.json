@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "gulpfile.js",
   "repository": {
-    "url": "git@github.com:1forh/1forh.github.io.git",
+    "url": "git@github.com:1forh/zacharyminner.com.git",
     "type": "git"
   },
   "scripts": {
