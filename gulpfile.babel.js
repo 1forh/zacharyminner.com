@@ -106,7 +106,9 @@ gulp.task('images', () => {
 
 gulp.task('html', () => {
 	return gulp.src(config.html.source)
-		.pipe(gulpif(argv.prod, useref()))
+		.pipe(gulpif(argv.prod, useref({
+			searchPath: './dist'
+		})))
 		.pipe(gulp.dest(config.destination));
 });
 
