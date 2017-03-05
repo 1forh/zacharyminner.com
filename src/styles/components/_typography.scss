@@ -38,4 +38,7 @@ a {
 	font-size: 36px;
 	letter-spacing: -0.5px;
 	margin-left: -3px;
+	@media screen and (max-width: 880px) {
+		font-size: 28px;
+	}
 }

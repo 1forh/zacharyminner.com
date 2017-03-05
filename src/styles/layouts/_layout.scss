@@ -16,6 +16,10 @@
 				font-size: 64px;
 				line-height: 52px;
 			}
+			@media screen and (max-width: 1040px) {
+				font-size: 52px;
+				line-height: 42px;
+			}
 		}
 		time {
 			@extend .is-big-and-fat;
