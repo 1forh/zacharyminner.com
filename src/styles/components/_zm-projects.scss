@@ -37,6 +37,12 @@ zm-project {
 		h1 {
 			flex-grow: 1;
 		}
+		.btn.btn-primary {
+			color: #fff;
+			&::after {
+				background-color: #fff;
+			}
+		}
 	}
 	.wrapper {
 		@extend .row;
