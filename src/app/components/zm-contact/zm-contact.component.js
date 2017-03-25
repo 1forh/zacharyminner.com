@@ -1,5 +1,6 @@
 const zmContact = {
-	templateUrl: './zm-contact.html'
+	templateUrl: './zm-contact.html',
+	component: 'ZMContactController'
 };
 
 angular
