@@ -1,4 +1,5 @@
 import express from 'express';
+import path from 'path';
 
 const app = express();
 
@@ -13,7 +14,7 @@ app.use(function(request, response, next) {
 });
 
 app.get('*', function(request, response) {
-	response.sendFile('./dist/index.html');
+	response.sendFile('index.html', { root: path.join(__dirname, './dist') });
 });
 
 app.listen(8080);
