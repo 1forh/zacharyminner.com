@@ -7,7 +7,7 @@
     "type": "git"
   },
   "scripts": {
-    "start": "babel-node server.babel.js",
+    "start": "gulp build --prod ; babel-node server.babel.js",
     "serve": "gulp serve",
     "build": "gulp build --prod"
   },
@@ -51,6 +51,7 @@
     "bootstrap": "4.0.0-alpha.6",
     "express": "^4.15.2",
     "jquery": "^3.1.1",
+    "prerender-node": "^2.7.0",
     "prismjs": "^1.6.0",
     "underscore": "^1.8.3"
   }

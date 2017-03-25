@@ -1,8 +1,19 @@
-var express = require('express');
-var app = express();
- 
-app.get('/', function (req, res) {
-  res.send('Hello World');
+import express from 'express';
+
+const app = express();
+
+app.use(require('prerender-node'));
+
+app.use(express.static(__dirname + '/dist'));
+
+app.use(function(request, response, next) {
+	response.set('Access-Control-Allow-Origin', '*');
+	response.set('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+	next();
 });
- 
-app.listen(3000);
+
+app.get('*', function(request, response) {
+	response.sendFile('./dist/index.html');
+});
+
+app.listen(8080);
