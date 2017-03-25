@@ -30,7 +30,8 @@ export function posts() {
 		.pipe(plumber())
 		.pipe(gutil.buffer())
 		.pipe(markdownToJson(marked, 'posts.json'))
-		.pipe(gulp.dest(config.destination + '/data'));
+		.pipe(gulp.dest(config.destination + '/data'))
+		.pipe(browserSync.stream());
 }
 
 export function projects() {
@@ -38,7 +39,8 @@ export function projects() {
 		.pipe(plumber())
 		.pipe(gutil.buffer())
 		.pipe(markdownToJson(marked, 'projects.json'))
-		.pipe(gulp.dest(config.destination + '/data'));
+		.pipe(gulp.dest(config.destination + '/data'))
+		.pipe(browserSync.stream());
 }
 
 export function styles() {
@@ -64,7 +66,8 @@ export function scripts() {
 		.pipe(gulpif(config.scripts.babel.compile === true, babel(config.babel)))
 		// .pipe(gulpif(argv.prod, uglify()))
 		.pipe(gulpif(!argv.prod, sourcemaps.write('.')))
-		.pipe(gulp.dest(config.destination));
+		.pipe(gulp.dest(config.destination))
+		.pipe(browserSync.stream());
 }
 
 export function modules() {
@@ -87,7 +90,8 @@ export function templates() {
 				return url.replace(path.dirname(url), '.');
 			}
 		}))
-		.pipe(gulp.dest(config.destination));
+		.pipe(gulp.dest(config.destination))
+		.pipe(browserSync.stream());
 }
 
 export function lint() {
@@ -100,7 +104,8 @@ export function lint() {
 export function images() {
 	return gulp.src(config.images.source)
 		.pipe(plumber())
-		.pipe(gulp.dest(config.destination + '/images'));
+		.pipe(gulp.dest(config.destination + '/images'))
+		.pipe(browserSync.stream());
 }
 
 export function html() {
@@ -108,7 +113,8 @@ export function html() {
 		.pipe(gulpif(argv.prod, useref({
 			searchPath: './dist'
 		})))
-		.pipe(gulp.dest(config.destination));
+		.pipe(gulp.dest(config.destination))
+		.pipe(browserSync.stream());
 }
 
 export function serve() {
@@ -117,12 +123,12 @@ export function serve() {
 		server: config.browserSync.server
 	});
 
-	gulp.watch(config.html.source, gulp.series(html, browserSync.reload));
-	gulp.watch(config.posts.source, gulp.series(posts, browserSync.reload));
-	gulp.watch(config.projects.source, gulp.series(projects, browserSync.reload));
+	gulp.watch(config.html.source, html);
+	gulp.watch(config.posts.source, posts);
+	gulp.watch(config.projects.source, projects);
 	gulp.watch(config.styles.source, styles);
-	gulp.watch(config.scripts.templates.source, gulp.series(templates, browserSync.reload));
-	gulp.watch(config.scripts.source, gulp.series(scripts, browserSync.reload));
+	gulp.watch(config.scripts.templates.source, templates);
+	gulp.watch(config.scripts.source, scripts);
 }
 
 const clean = () => del([config.destination]);
