@@ -26,7 +26,7 @@ const storage = {
 
 		// getEntries is used instead of getEntry to benefit from link resolution
 		storage.state.project = await client.getEntries(options)[0];
-	},
+	}
 };
 
 export default storage;

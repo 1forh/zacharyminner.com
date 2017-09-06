@@ -1,0 +1,14 @@
+html {
+	background-color: $body-bg;
+}
+
+img {
+	max-width: 100%;
+}
+
+hr {
+	width: 25%;
+	margin: 50px auto;
+	border: 0;
+	border-top: 1px solid $gray-lighter;
+}

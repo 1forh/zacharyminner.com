@@ -1,22 +1,33 @@
 <template>
 	<div id="home" class="home">
-		<h1>Yo</h1>
 
-		<div v-for="project in shared.state.projects.items">
-			<h2>{{ project.fields.title }}</h2>
-			<div v-html="marked(project.fields.summary)"></div>
-		</div>
+		<hr>
+		<section class="section">
+			<h2 class="section__title">Recent Projects</h2>
+			<div v-for="project in store.state.projects.items">
+				<project-preview
+					:project-title="project.fields.title"
+					:project-thumbnail="project.fields.thumbnail"
+					:project-date="project.sys.createdAt"
+					:project-slug="project.fields.slug"
+					:project-summary="project.fields.summary"></project-preview>
+			</div>
+		</section>
 	</div>
 </template>
 
 <script>
 import store from '../store';
+import ProjectPreview from './ProjectPreview';
 
 export default {
 	name: 'home',
+	components: {
+		projectPreview: ProjectPreview
+	},
 	data () {
 		return {
-			shared: store
+			store
 		}
 	},
 	created() {
@@ -25,9 +36,18 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
+@import '../styles/utilities/variables';
+
 .home {
 
+	.section {
+
+		&__title {
+			margin-top: 50px;
+			text-align: center;
+			font-weight: 100;
+		}
+	}
 }
 </style>
