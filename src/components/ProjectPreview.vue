@@ -2,17 +2,18 @@
 	<div class="project-preview">
 		<div
 			class="project-preview__thumbnail"
-			:style="{ 'background-image': 'url(' + projectThumbnail.fields.file.url + ')' }"></div>
+			:style="{ 'background-image': 'url(' + projectThumbnail.fields.file.url + ')' }"
+			v-once></div>
 		<div class="project-preview__content">
 			<header class="project-preview__header">
-				<h3 class="project-preview__header-title">{{ projectTitle }}</h3>
-				<time class="project-preview__header-date" :datetime="projectDate">Written {{ projectDate }}</time>
+				<h3 class="project-preview__header-title" v-once>{{ projectTitle }}</h3>
+				<time class="project-preview__header-date" :datetime="projectDate" v-once>Written {{ projectDate }}</time>
 			</header>
-			<div class="project-preview__summary" v-html="marked(projectSummary)"></div>
+			<div class="project-preview__summary" v-once v-html="marked(projectSummary)"></div>
 			<a
 				class="project-preview__slug"
 				:href="projectSlug"
-				title="Read more">Read more</a>
+				title="Read more" v-once>Read more</a>
 		</div>
 	</div>
 </template>
@@ -38,7 +39,7 @@ export default {
 
 .project-preview {
 	margin: 100px auto 0;
-	width: 40%;
+	width: 45%;
 	display: grid;
 	grid-template-columns: 40% 60%;
 

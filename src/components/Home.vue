@@ -4,14 +4,14 @@
 		<hr>
 		<section class="section">
 			<h2 class="section__title">Recent Projects</h2>
-			<div v-for="project in store.state.projects.items">
-				<project-preview
-					:project-title="project.fields.title"
-					:project-thumbnail="project.fields.thumbnail"
-					:project-date="project.sys.createdAt"
-					:project-slug="project.fields.slug"
-					:project-summary="project.fields.summary"></project-preview>
-			</div>
+			<project-preview
+				v-for="project in store.state.projects.items"
+				:key="project.sys.id"
+				:project-title="project.fields.title"
+				:project-thumbnail="project.fields.thumbnail"
+				:project-date="project.sys.createdAt"
+				:project-slug="project.fields.slug"
+				:project-summary="project.fields.summary"></project-preview>
 		</section>
 	</div>
 </template>
