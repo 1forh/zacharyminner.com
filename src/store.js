@@ -1,8 +1,10 @@
+import env from './env';
+
 const contentful = require('contentful');
 
 const client = contentful.createClient({
-	space: 'fszw82q3sv8j',
-	accessToken: '6a0eb2a1b859b3eb06113e96a382213db071e3edeb947b639035fca3625be54f'
+	space: env.CONTENTFUL_SPACE_ID,
+	accessToken: env.CONTENTFUL_ACCESS_TOKEN
 });
 
 const storage = {
