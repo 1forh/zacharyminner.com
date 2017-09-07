@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import HomeView from '@/components/HomeView';
-import ProjectView from '@/components/ProjectView';
+import HomeView from '@/app/components/HomeView';
+import ProjectView from '@/app/components/ProjectView';
 
 Vue.use(Router);
 

@@ -14,9 +14,11 @@
 
 <script>
 import store from '../store';
+import mixins from '../mixins';
 
 export default {
 	name: 'project-view',
+	mixins: mixins,
 	data () {
 		return {
 			project: null
@@ -37,7 +39,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/utilities/variables';
+@import '../../styles/utilities/variables';
 
 .project-view {
 	margin: 100px auto;

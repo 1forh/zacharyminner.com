@@ -24,9 +24,11 @@
 
 <script>
 import store from '../store';
+import mixins from '../mixins';
 
 export default {
 	name: 'project-preview',
+	mixins,
 	props: [
 		'projectTitle',
 		'projectThumbnail',
@@ -38,7 +40,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/utilities/variables';
+@import '../../styles/utilities/variables';
 
 .project-preview {
 	margin: 100px auto 0;

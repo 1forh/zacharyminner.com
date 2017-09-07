@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/utilities/variables';
+@import '../../styles/utilities/variables';
 
 .hero {
 	padding: 125px 0;

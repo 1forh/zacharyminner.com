@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/utilities/variables';
+@import '../../styles/utilities/variables';
 
 .home {
 
