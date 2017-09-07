@@ -18,7 +18,7 @@
     "contentful": "^4.6.1",
     "marked": "^0.3.6",
     "vue": "^2.4.2",
-    "vue-router": "^2.7.0",
+    "vue-router": "^2.7.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
