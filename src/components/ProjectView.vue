@@ -5,7 +5,7 @@
 			<time
 				class="project-view__header-date"
 				v-once
-				:datetime="project.sys.createdAt">Written {{ project.sys.createdAt }}</time>
+				:datetime="project.sys.createdAt">Written {{ formatDate(project.sys.createdAt) }}</time>
 		</header>
 		<hr>
 		<div class="project-view__body" v-once v-html="marked(project.fields.body)"></div>

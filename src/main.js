@@ -4,16 +4,16 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 
-const marked = require('marked');
+import marked from './directives/marked';
+import formatDate from './directives/format-date';
 
 Vue.config.productionTip = false;
 Vue.config.debug = true;
 
 Vue.mixin({
 	methods: {
-		marked(input) {
-			return marked(input);
-		}
+		marked,
+		formatDate
 	}
 });
 

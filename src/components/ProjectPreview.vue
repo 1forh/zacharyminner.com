@@ -10,7 +10,7 @@
 				<time
 					class="project-preview__header-date"
 					v-once
-					:datetime="projectDate">Written {{ projectDate }}</time>
+					:datetime="projectDate">Written {{ formatDate(projectDate) }}</time>
 			</header>
 			<div class="project-preview__summary" v-once v-html="marked(projectSummary)"></div>
 			<router-link
