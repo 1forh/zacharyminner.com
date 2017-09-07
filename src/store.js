@@ -9,25 +9,31 @@ const client = contentful.createClient({
 
 const storage = {
 	debug: false,
-	state: {
-		projects: {},
-		project: {}
-	},
 	async getProjects() {
 		const options = {
 			order: 'sys.createdAt',
 			content_type: 'project'
 		};
 
-		storage.state.projects = await client.getEntries(options);
+		try {
+			const entries = await client.getEntries(options);
+			return entries;
+		} catch (error) {
+			console.error(`Error getting project: ${slug}`, error);
+		}
 	},
-	async getProject(id) {
+	async getProject(slug) {
 		const options = {
-			'sys.id': id
+			'fields.slug': `projects/${slug}`,
+			content_type: 'project'
 		};
 
-		// getEntries is used instead of getEntry to benefit from link resolution
-		storage.state.project = await client.getEntries(options)[0];
+		try {
+			const entries = await client.getEntries(options);
+			return entries.items[0];
+		} catch (error) {
+			console.error(`Error getting project: ${slug}`, error);
+		}
 	}
 };
 

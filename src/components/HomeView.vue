@@ -1,11 +1,10 @@
 <template>
 	<div id="home" class="home">
-
 		<hr>
-		<section class="section">
+		<section class="section" v-if="projects">
 			<h2 class="section__title">Recent Projects</h2>
 			<project-preview
-				v-for="project in store.state.projects.items"
+				v-for="project in projects.items"
 				:key="project.sys.id"
 				:project-title="project.fields.title"
 				:project-thumbnail="project.fields.thumbnail"
@@ -27,11 +26,19 @@ export default {
 	},
 	data () {
 		return {
-			store
+			projects: null
 		}
 	},
-	created() {
-		store.getProjects();
+	async created () {
+		this.$data.projects = await this.getProjects();
+	},
+	methods: {
+		getProjects () {
+			return store.getProjects();
+		}
+	},
+	watch: {
+		'$route' : 'getProjects'
 	}
 }
 </script>

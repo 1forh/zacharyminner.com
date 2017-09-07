@@ -2,18 +2,22 @@
 	<div class="project-preview">
 		<div
 			class="project-preview__thumbnail"
-			:style="{ 'background-image': 'url(' + projectThumbnail.fields.file.url + ')' }"
-			v-once></div>
+			v-once
+			:style="{ 'background-image': 'url(' + projectThumbnail.fields.file.url + ')' }"></div>
 		<div class="project-preview__content">
 			<header class="project-preview__header">
 				<h3 class="project-preview__header-title" v-once>{{ projectTitle }}</h3>
-				<time class="project-preview__header-date" :datetime="projectDate" v-once>Written {{ projectDate }}</time>
+				<time
+					class="project-preview__header-date"
+					v-once
+					:datetime="projectDate">Written {{ projectDate }}</time>
 			</header>
 			<div class="project-preview__summary" v-once v-html="marked(projectSummary)"></div>
-			<a
+			<router-link
 				class="project-preview__slug"
-				:href="projectSlug"
-				title="Read more" v-once>Read more</a>
+				title="Read more"
+				v-once
+				:to="projectSlug">Read more</router-link>
 		</div>
 	</div>
 </template>
@@ -33,37 +37,32 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 @import '../styles/utilities/variables';
 
 .project-preview {
 	margin: 100px auto 0;
-	width: 45%;
+	width: 50%;
 	display: grid;
-	grid-template-columns: 40% 60%;
+	grid-template-columns: 30% 70%;
 
 	&:first-child {
 		margin-top: 60px;
 	}
 
 	&__thumbnail {
-		height: 225px;
+		height: 190px;
 		margin-right: 20px;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+		border-radius: 2px;
 	}
 
 	&__header {
 
 		&-title {
 			font-size: 24px;
-		}
-
-		&-date {
-			color: $gray-light;
-			font-size: 14px;
 		}
 	}
 

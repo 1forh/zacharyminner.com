@@ -7,9 +7,9 @@
 		</div>
 
 		<nav class="navbar__nav navbar__column">
-			<a href="#!" class="navbar__nav-link">Blog</a>
-			<a href="#!" class="navbar__nav-link">Projects</a>
-			<a href="#!" class="navbar__nav-link">About</a>
+			<router-link to="/blog" class="navbar__nav-link">Blog</router-link>
+			<router-link to="/projects" class="navbar__nav-link">Projects</router-link>
+			<router-link to="/about" class="navbar__nav-link">About</router-link>
 		</nav>
 	</header>
 </template>
