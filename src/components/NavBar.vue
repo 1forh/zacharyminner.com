@@ -1,9 +1,12 @@
 <template>
 	<header id="navbar" class="navbar">
 		<div class="navbar__column">
-			<a href="/" title="Home" class="navbar__brand">
+			<router-link
+				to="/"
+				title="Home"
+				class="navbar__brand">
 				<logo></logo>
-			</a>
+			</router-link>
 		</div>
 
 		<nav class="navbar__nav navbar__column">
@@ -30,7 +33,7 @@ export default {
 
 .navbar {
 	margin: 20px auto;
-	width: $container-width;
+	max-width: $container-width;
 	display: grid;
 	grid-template-columns: 50% 50%;
 

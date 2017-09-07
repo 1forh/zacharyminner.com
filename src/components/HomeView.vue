@@ -1,5 +1,8 @@
 <template>
 	<div id="home" class="home">
+<!-- 		<hero title="Hey, I'm Zach. I'm a web developer.">
+			I make websites and web applications at <a href="http://skycatchfire.com/" target="_blank" title="SKYCATCHFIRE">SKYCATCHFIRE</a>.
+		</hero> -->
 		<hr>
 		<section class="section" v-if="projects">
 			<h2 class="section__title">Recent Projects</h2>
@@ -17,11 +20,13 @@
 
 <script>
 import store from '../store';
+import Hero from './Hero';
 import ProjectPreview from './ProjectPreview';
 
 export default {
 	name: 'home',
 	components: {
+		hero: Hero,
 		projectPreview: ProjectPreview
 	},
 	data () {

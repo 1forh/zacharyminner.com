@@ -41,7 +41,7 @@ export default {
 
 .project-view {
 	margin: 100px auto;
-	width: 65%;
+	width: 50%;
 
 	&__header {
 		text-align: center;
