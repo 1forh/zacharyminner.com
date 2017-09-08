@@ -1,8 +1,8 @@
-import marked from './marked';
+import renderMarkdown from './render-markdown';
 import formatDate from './format-date';
 
 const mixins = [
-	marked,
+	renderMarkdown,
 	formatDate
 ];
 

@@ -2,7 +2,7 @@ import marked from 'marked';
 
 export default {
 	methods: {
-		marked (input) {
+		renderMarkdown (input) {
 			return marked(input);
 		}
 	}

@@ -8,7 +8,7 @@
 				:datetime="project.sys.createdAt">Written {{ formatDate(project.sys.createdAt) }}</time>
 		</header>
 		<hr>
-		<div class="project-view__body" v-once v-html="marked(project.fields.body)"></div>
+		<div class="project-view__body" v-once v-html="renderMarkdown(project.fields.body)"></div>
 	</div>
 </template>
 

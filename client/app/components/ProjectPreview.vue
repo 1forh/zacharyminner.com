@@ -12,7 +12,7 @@
 					v-once
 					:datetime="projectDate">Written {{ formatDate(projectDate) }}</time>
 			</header>
-			<div class="project-preview__summary" v-once v-html="marked(projectSummary)"></div>
+			<div class="project-preview__summary" v-once v-html="renderMarkdown(projectSummary)"></div>
 			<router-link
 				class="project-preview__slug"
 				title="Read more"
