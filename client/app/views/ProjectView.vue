@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import store from '../store';
-import mixins from '../mixins';
+import store from '@/app/store';
+import mixins from '@/app/mixins';
 
 export default {
 	name: 'project-view',

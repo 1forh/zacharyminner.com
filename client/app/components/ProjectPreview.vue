@@ -23,8 +23,8 @@
 </template>
 
 <script>
-import store from '../store';
-import mixins from '../mixins';
+import store from '@/app/store';
+import mixins from '@/app/mixins';
 
 export default {
 	name: 'project-preview',
@@ -41,6 +41,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../styles/utilities/variables';
+@import '../../styles/utilities/mixins';
 
 .project-preview {
 	margin: 100px auto 0;

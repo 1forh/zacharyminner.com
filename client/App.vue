@@ -1,23 +1,32 @@
 <template>
 	<div id="app" class="app">
-		<navbar></navbar>
+		<site-header></site-header>
 		<main class="app-main">
 			<router-view></router-view>
 		</main>
+		<site-footer></site-footer>
 	</div>
 </template>
 
 <script>
-import NavBar from './app/components/NavBar';
+import SiteHeader from '@/app/components/SiteHeader';
+import SiteFooter from '@/app/components/SiteFooter';
 
 export default {
 	name: 'app',
 	components: {
-		navbar: NavBar
+		siteHeader: SiteHeader,
+		siteFooter: SiteFooter
 	}
 };
 </script>
 
 <style lang="scss" scope>
 @import 'styles/global';
+
+.app {
+	height: 100vh;
+	display: grid;
+	grid-template-rows: $site-header-height auto $site-footer-height;
+}
 </style>

@@ -1,27 +1,26 @@
 <template>
-	<header id="navbar" class="navbar">
-		<div class="navbar__column">
+	<header id="site-header" class="site-header">
+		<div class="site-header__column">
 			<router-link
 				to="/"
 				title="Home"
-				class="navbar__brand">
+				class="site-header__brand">
 				<logo></logo>
 			</router-link>
 		</div>
 
-		<nav class="navbar__nav navbar__column">
-			<router-link to="/blog" class="navbar__nav-link">Blog</router-link>
-			<router-link to="/projects" class="navbar__nav-link">Projects</router-link>
-			<router-link to="/about" class="navbar__nav-link">About</router-link>
+		<nav class="site-header__nav site-header__column">
+			<router-link to="/projects" class="site-header__nav-link">Projects</router-link>
+			<router-link to="/about" class="site-header__nav-link">About</router-link>
 		</nav>
 	</header>
 </template>
 
 <script>
-import Logo from './Logo';
+import Logo from '@/app/components/Logo';
 
 export default {
-	name: 'navbar',
+	name: 'site-header',
 	components: {
 		logo: Logo
 	}
@@ -30,10 +29,10 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../styles/utilities/variables';
+@import '../../styles/utilities/mixins';
 
-.navbar {
-	margin: 20px auto;
-	max-width: $container-width;
+.site-header {
+	@include make-container();
 	display: grid;
 	grid-template-columns: 50% 50%;
 
