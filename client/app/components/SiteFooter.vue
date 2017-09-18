@@ -1,6 +1,6 @@
 <template>
 	<div id="site-footer" class="site-footer">
-		footer
+		Thanks for checking things out!
 	</div>
 </template>
 
@@ -16,5 +16,8 @@ export default {
 
 .site-footer {
 	@include make-container();
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 </style>

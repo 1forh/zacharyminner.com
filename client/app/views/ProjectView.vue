@@ -42,7 +42,7 @@ export default {
 @import '../../styles/utilities/variables';
 
 .project-view {
-	margin: 100px auto;
+	margin: 100px auto 0;
 	width: 50%;
 
 	&__header {

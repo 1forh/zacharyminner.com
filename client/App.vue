@@ -28,5 +28,9 @@ export default {
 	height: 100vh;
 	display: grid;
 	grid-template-rows: $site-header-height auto $site-footer-height;
+
+	.app-main {
+		padding-bottom: 50px;
+	}
 }
 </style>

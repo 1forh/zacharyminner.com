@@ -45,9 +45,9 @@ export default {
 
 .project-preview {
 	margin: 100px auto 0;
-	width: 50%;
+	width: 60%;
 	display: grid;
-	grid-template-columns: 30% 70%;
+	grid-template-columns: 35% 65%;
 
 	&:first-child {
 		margin-top: 60px;
