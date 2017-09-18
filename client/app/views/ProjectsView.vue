@@ -5,11 +5,7 @@
 			<project-preview
 				v-for="project in projects.items"
 				:key="project.sys.id"
-				:project-title="project.fields.title"
-				:project-thumbnail="project.fields.thumbnail"
-				:project-date="project.sys.createdAt"
-				:project-slug="project.fields.slug"
-				:project-summary="project.fields.summary"></project-preview>
+				:project="project"></project-preview>
 		</section>
 	</div>
 </template>

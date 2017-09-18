@@ -17,6 +17,7 @@
   "dependencies": {
     "contentful": "^4.6.1",
     "date-fns": "^1.28.5",
+    "lodash": "^4.17.4",
     "marked": "^0.3.6",
     "vue": "^2.4.2",
     "vue-router": "^2.7.0"

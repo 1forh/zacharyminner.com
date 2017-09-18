@@ -3,21 +3,35 @@
 		<div
 			class="project-preview__thumbnail"
 			v-once
-			:style="{ 'background-image': 'url(' + projectThumbnail.fields.file.url + ')' }"></div>
+			v-if="project.fields.thumbnail"
+			:style="{ 'background-image': 'url(' + project.fields.thumbnail.fields.file.url + ')' }"></div>
 		<div class="project-preview__content">
 			<header class="project-preview__header">
-				<h3 class="project-preview__header-title" v-once>{{ projectTitle }}</h3>
+				<h3 class="project-preview__header-title" v-once>{{ project.fields.title }}</h3>
 				<time
 					class="project-preview__header-date"
 					v-once
-					:datetime="projectDate">Written {{ formatDate(projectDate) }}</time>
+					:datetime="project.sys.createdAt">Written {{ formatDate(project.sys.createdAt) }}</time>
 			</header>
-			<div class="project-preview__summary" v-once v-html="renderMarkdown(projectSummary)"></div>
-			<router-link
-				class="project-preview__slug"
-				title="Read more"
-				v-once
-				:to="projectSlug">Read more</router-link>
+			<div class="project-preview__summary" v-once v-html="renderMarkdown(project.fields.summary)"></div>
+			<div class="project-preview__actions">
+				<router-link
+					class="project-preview__action"
+					title="Read more"
+					v-once
+					:to="project.fields.slug">
+					Read more
+				</router-link>
+				<a
+					class="project-preview__action project-preview__action--secondary"
+					title="View on GitHub"
+					v-once
+					v-if="project.fields.repositoryLink"
+					:href="project.fields.repositoryLink"
+					target="_blank">
+					View on GitHub
+				</a>
+			</div>
 		</div>
 	</div>
 </template>
@@ -30,11 +44,7 @@ export default {
 	name: 'project-preview',
 	mixins,
 	props: [
-		'projectTitle',
-		'projectThumbnail',
-		'projectDate',
-		'projectSlug',
-		'projectSummary'
+		'project'
 	]
 }
 </script>
@@ -79,8 +89,25 @@ export default {
 		}
 	}
 
-	&__slug {
+	&__actions {
+		margin-top: 10px;
+		display: flex;
+	}
+
+	&__action {
+		margin-right: 10px;
+		padding: 6px 14px;
 		font-weight: 600;
+		font-size: 14px;
+		border-radius: 4px;
+		color: #fff;
+		text-align: center;
+		background-color: $accent-color;
+
+		&--secondary {
+			background-color: transparent;
+			color: $accent-color;
+		}
 	}
 }
 </style>

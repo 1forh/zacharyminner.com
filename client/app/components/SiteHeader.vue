@@ -10,6 +10,7 @@
 		</div>
 
 		<nav class="site-header__nav site-header__column">
+			<router-link to="/blog" class="site-header__nav-link">Blog</router-link>
 			<router-link to="/projects" class="site-header__nav-link">Projects</router-link>
 			<router-link to="/about" class="site-header__nav-link">About</router-link>
 		</nav>

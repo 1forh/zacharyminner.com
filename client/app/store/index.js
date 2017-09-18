@@ -11,7 +11,7 @@ const storage = {
 	debug: false,
 	async getProjects() {
 		const options = {
-			order: 'sys.createdAt',
+			order: '-sys.createdAt',
 			content_type: 'project'
 		};
 

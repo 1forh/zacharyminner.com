@@ -1,6 +1,6 @@
 <template>
 	<div id="site-footer" class="site-footer">
-		Thanks for checking things out!
+		Thanks for checking everything out! ✌️️
 	</div>
 </template>
 

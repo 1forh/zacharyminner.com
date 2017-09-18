@@ -1,15 +1,14 @@
 <template>
 	<div id="home" class="home">
+		<section class="section">
+			<h2 class="section__title">Recent Blog Posts</h2>
+		</section>
 		<section class="section" v-if="projects">
 			<h2 class="section__title">Recent Projects</h2>
 			<project-preview
 				v-for="project in projects.items"
 				:key="project.sys.id"
-				:project-title="project.fields.title"
-				:project-thumbnail="project.fields.thumbnail"
-				:project-date="project.sys.createdAt"
-				:project-slug="project.fields.slug"
-				:project-summary="project.fields.summary"></project-preview>
+				:project="project"></project-preview>
 		</section>
 	</div>
 </template>
