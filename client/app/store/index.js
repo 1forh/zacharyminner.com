@@ -19,7 +19,7 @@ const storage = {
 			const entries = await client.getEntries(options);
 			return entries;
 		} catch (error) {
-			console.error(`Error getting project: ${slug}`, error);
+			console.error('Error getting projects: ', error);
 		}
 	},
 	async getProject(slug) {
@@ -32,9 +32,22 @@ const storage = {
 			const entries = await client.getEntries(options);
 			return entries.items[0];
 		} catch (error) {
-			console.error(`Error getting project: ${slug}`, error);
+			console.error('Error getting project: ', error);
 		}
-	}
+	},
+	async getBlogPosts() {
+		const options = {
+			order: '-sys.createdAt',
+			content_type: 'blogPost'
+		};
+
+		try {
+			const entries = await client.getEntries(options);
+			return entries;
+		} catch (error) {
+			console.error('Error getting project: ', error);
+		}
+	},
 };
 
 export default storage;
