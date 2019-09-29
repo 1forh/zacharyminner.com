@@ -3,7 +3,6 @@ import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout/layout';
 import SEO from '../components/seo';
-import Bio from '../components/bio';
 import { rhythm, scale } from '../utils/typography';
 
 class BlogPostTemplate extends React.Component {
@@ -32,9 +31,6 @@ class BlogPostTemplate extends React.Component {
             </p>
           </header>
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
-          <footer>
-            <Bio />
-          </footer>
         </article>
 
         <nav>

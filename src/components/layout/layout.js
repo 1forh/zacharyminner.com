@@ -17,7 +17,7 @@ class Layout extends React.Component {
             crossorigin="anonymous"
           />
         </Helmet>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-dark bg-dark">
           <Link to={`/`} className="navbar-brand" href="#">
             Zach Minner
           </Link>
