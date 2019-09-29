@@ -1,5 +1,5 @@
 ---
-title: Disable taxonomy term list pager in Drupal 8
+title: Disable taxonomy term pager in Drupal 8
 date: 2019-09-29T19:15:30.444Z
 description: >-
   In order to disable the pager on a taxonomy term list page, you can set the
