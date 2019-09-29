@@ -11,6 +11,6 @@ In order to disable the pager on a taxonomy term list page, you can set the `ter
 
 In your `settings.php` file, add the below line and tweak to your liking.
 
-```
+```php
 $config['taxonomy.settings']['terms_per_page_admin'] = 1000;
 ```
