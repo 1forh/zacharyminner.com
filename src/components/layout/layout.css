@@ -12,10 +12,6 @@
   color: var(--color-font);
 }
 
-.navbar {
-  margin-bottom: 40px;
-}
-
 .site-main {
   flex-grow: 1;
 }

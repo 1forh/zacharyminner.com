@@ -14,32 +14,41 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Blog" />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
-          return (
-            <article key={node.fields.slug}>
-              <header>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section>
-            </article>
-          );
-        })}
+        <div className="container" style={{ marginTop: rhythm(2) }}>
+          <div className="row">
+            <div className="col-8 offset-2">
+              {posts.map(({ node }) => {
+                const title = node.frontmatter.title || node.fields.slug;
+                return (
+                  <article key={node.fields.slug}>
+                    <header>
+                      <h3
+                        style={{
+                          marginBottom: rhythm(1 / 4),
+                        }}
+                      >
+                        <Link
+                          style={{ boxShadow: `none` }}
+                          to={node.fields.slug}
+                        >
+                          {title}
+                        </Link>
+                      </h3>
+                      <small>{node.frontmatter.date}</small>
+                    </header>
+                    <section>
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: node.frontmatter.description || node.excerpt,
+                        }}
+                      />
+                    </section>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </div>
       </Layout>
     );
   }

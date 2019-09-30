@@ -22,13 +22,7 @@ class Layout extends React.Component {
             Zach Minner
           </Link>
         </nav>
-        <main className="site-main">
-          <div className="container">
-            <div className="row">
-              <div className="col-8 offset-2">{children}</div>
-            </div>
-          </div>
-        </main>
+        <main className="site-main">{children}</main>
         <footer className="site-footer">
           <div className="container-fluid">
             <div className="row">

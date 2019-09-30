@@ -18,19 +18,42 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <article>
-          <header>
-            <h1>{post.frontmatter.title}</h1>
-            <p
-              style={{
-                ...scale(-1 / 5),
-                display: `block`,
-                marginBottom: rhythm(1),
-              }}
-            >
-              {post.frontmatter.date}
-            </p>
+          <header
+            style={{
+              backgroundColor: '#eee',
+              paddingTop: rhythm(2),
+              paddingBottom: rhythm(2),
+              marginBottom: rhythm(2),
+              textAlign: 'center',
+            }}
+          >
+            <div className="container">
+              <div className="row">
+                <div className="col-10 offset-1">
+                  <h1>{post.frontmatter.title}</h1>
+                  <p
+                    style={{
+                      ...scale(-1 / 5),
+                      display: `block`,
+                      marginBottom: 0,
+                    }}
+                  >
+                    {post.frontmatter.date}
+                  </p>
+                </div>
+              </div>
+            </div>
           </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <section>
+            <div className="container">
+              <div className="row">
+                <div
+                  className="col-8 offset-2"
+                  dangerouslySetInnerHTML={{ __html: post.html }}
+                ></div>
+              </div>
+            </div>
+          </section>
         </article>
 
         <nav>
