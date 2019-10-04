@@ -1,0 +1,37 @@
+{
+  "editor.tabSize": 2,
+  "editor.insertSpaces": false,
+  "editor.renderWhitespace": "all",
+  "editor.renderControlCharacters": true,
+  "editor.wordWrap": "on",
+  "editor.smoothScrolling": true,
+  "editor.dragAndDrop": false,
+  "editor.autoIndent": false,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "explorer.confirmDragAndDrop": false,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+
+  "emmet.triggerExpansionOnTab": true,
+  "explorer.confirmDelete": false,
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  "[twig]": {
+    "editor.formatOnSave": false
+  },
+  "html.format.indentInnerHtml": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "breadcrumbs.enabled": true,
+
+  "prettier.printWidth": 200,
+  "prettier.singleQuote": true,
+  "prettier.useTabs": false,
+  "prettier.tabWidth": 2,
+  "prettier.arrowParens": "always",
+  "prettier.trailingComma": "es5",
+  "prettier.semi": true,
+  "prettier.bracketSpacing": true
+}

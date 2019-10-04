@@ -1,0 +1,21 @@
+:root {
+  --color-gray-light: #eee;
+  --color-gray-dark: #212121;
+
+  --color-font: var(--color-gray-dark);
+}
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: var(--color-font);
+}
+
+.site-main {
+  flex-grow: 1;
+}
+
+.site-footer {
+  padding: 20px 0;
+}
