@@ -6,7 +6,7 @@ description: >-
   terms_per_page_admin setting to a really high number.
 thumbnail: /img/drupal-pager.png
 ---
-![Taxonomy term pager](/img/screenshot-2019-09-29-15.29.12.png "Taxonomy term pager")
+![Taxonomy term pager](/img/drupal-pager.png "Taxonomy term pager")
 
 In order to disable the pager on a taxonomy term list page, you can set the `terms_per_page_admin` setting to a really high number.
 
