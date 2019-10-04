@@ -15,17 +15,15 @@ class Pager extends React.Component {
         }}
       >
         <ul
+          class="d-flex justify-items-center d-md-block"
           style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
             listStyle: `none`,
             padding: 0,
             margin: 0,
           }}
         >
-          <li>
-            {previous && (
+          {previous && (
+            <li>
               <Link
                 to={previous.fields.slug}
                 rel="prev"
@@ -33,10 +31,10 @@ class Pager extends React.Component {
               >
                 ← {previous.frontmatter.title}
               </Link>
-            )}
-          </li>
-          <li>
-            {next && (
+            </li>
+          )}
+          {next && (
+            <li>
               <Link
                 to={next.fields.slug}
                 rel="next"
@@ -44,8 +42,8 @@ class Pager extends React.Component {
               >
                 {next.frontmatter.title} →
               </Link>
-            )}
-          </li>
+            </li>
+          )}
         </ul>
       </nav>
     );

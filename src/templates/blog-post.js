@@ -30,7 +30,7 @@ class BlogPostTemplate extends React.Component {
           >
             <div className="container">
               <div className="row">
-                <div className="col-10 offset-1">
+                <div className="col-12 col-md-10 offset-md-1">
                   <h1
                     style={{
                       marginBottom: rhythm(1 / 3),
@@ -56,7 +56,7 @@ class BlogPostTemplate extends React.Component {
             <div className="container">
               <div className="row">
                 <div
-                  className="col-8 offset-2"
+                  className="col-12 col-md-8 offset-md-2"
                   dangerouslySetInnerHTML={{ __html: post.html }}
                 ></div>
               </div>

@@ -14,9 +14,14 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Blog" />
-        <div className="container" style={{ marginTop: rhythm(2) }}>
+        <div
+          className="container"
+          style={{
+            marginTop: rhythm(2),
+          }}
+        >
           <div className="row">
-            <div className="col-8 offset-2">
+            <div className="col-12 col-md-8 offset-md-2">
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug;
                 return (
@@ -26,6 +31,7 @@ class BlogIndex extends React.Component {
                       marginBottom: rhythm(1.5),
                     }}
                   >
+                    <img src={node.fie} alt="" />
                     <header
                       style={{
                         marginBottom: rhythm(1 / 2),
