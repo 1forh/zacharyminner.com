@@ -5,6 +5,12 @@ backend:
 media_folder: static/img
 public_folder: /img
 
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: zacharyminner-com
+    api_key: 954923414454719
+
 collections:
   - name: 'blog'
     label: 'Blog'
