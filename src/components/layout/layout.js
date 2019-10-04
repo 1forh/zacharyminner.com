@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Helmet } from 'react-helmet';
 import './layout.css';
 
 class Layout extends React.Component {
