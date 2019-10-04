@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import Layout from '../components/layout/layout';
 import SEO from '../components/seo';
+import Pager from '../components/pager';
 import { rhythm, scale } from '../utils/typography';
 
 class BlogPostTemplate extends React.Component {
@@ -20,7 +21,7 @@ class BlogPostTemplate extends React.Component {
         <article>
           <header
             style={{
-              backgroundColor: '#eee',
+              backgroundColor: 'var(--color-gray-lighter',
               paddingTop: rhythm(2),
               paddingBottom: rhythm(2),
               marginBottom: rhythm(2),
@@ -30,12 +31,19 @@ class BlogPostTemplate extends React.Component {
             <div className="container">
               <div className="row">
                 <div className="col-10 offset-1">
-                  <h1>{post.frontmatter.title}</h1>
+                  <h1
+                    style={{
+                      marginBottom: rhythm(1 / 3),
+                    }}
+                  >
+                    {post.frontmatter.title}
+                  </h1>
                   <p
                     style={{
                       ...scale(-1 / 5),
                       display: `block`,
                       marginBottom: 0,
+                      color: 'var(--color-gray',
                     }}
                   >
                     {post.frontmatter.date}
@@ -56,33 +64,13 @@ class BlogPostTemplate extends React.Component {
           </section>
         </article>
 
-        <nav>
-          <ul
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
-              margin: 0,
-            }}
-          >
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
-        </nav>
+        <div className="container">
+          <div className="row">
+            <div className="col-10 offset-1">
+              <Pager previous={previous} next={next} />
+            </div>
+          </div>
+        </div>
       </Layout>
     );
   }

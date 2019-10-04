@@ -8,7 +8,7 @@ class Layout extends React.Component {
     const { children } = this.props;
 
     return (
-      <div class="site-wrapper">
+      <div className="site-wrapper">
         <Helmet>
           <link
             rel="stylesheet"
