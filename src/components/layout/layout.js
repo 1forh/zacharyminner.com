@@ -9,14 +9,6 @@ class Layout extends React.Component {
 
     return (
       <div className="site-wrapper">
-        <Helmet>
-          <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-            crossorigin="anonymous"
-          />
-        </Helmet>
         <nav className="navbar navbar-dark bg-dark">
           <Link to={`/`} className="navbar-brand" href="#">
             Zach Minner
