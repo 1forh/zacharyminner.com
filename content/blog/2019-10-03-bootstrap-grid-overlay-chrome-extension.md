@@ -21,4 +21,4 @@ Click the Bootstrap Grid Overlay icon to toggle the overlay on and off. If Boots
 
 Create a shortcut to trigger the Bootstrap Grid Overlay even faster. Navigate `chrome://extensions/shortcuts` in Chrome and add a shortcut.
 
-![Chrome extension shortcut](/img/screenshot-2019-10-03-20.02.38.png "Chrome extension shortcut")
+![Chrome extension shortcut](/img/chrome-extension-shortcuts.png "Chrome extension shortcut")
