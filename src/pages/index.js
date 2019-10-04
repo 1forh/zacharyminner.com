@@ -23,6 +23,7 @@ class BlogIndex extends React.Component {
           <div className="row">
             <div className="col-12 col-md-8 offset-md-2">
               {posts.map(({ node }) => {
+                console.log(node);
                 const title = node.frontmatter.title || node.fields.slug;
                 return (
                   <article
@@ -31,7 +32,7 @@ class BlogIndex extends React.Component {
                       marginBottom: rhythm(1.5),
                     }}
                   >
-                    <img src={node.fie} alt="" />
+                    {/* <img src={node.frontmatter.image} alt="" /> */}
                     <header
                       style={{
                         marginBottom: rhythm(1 / 2),

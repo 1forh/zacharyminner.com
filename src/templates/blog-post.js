@@ -66,7 +66,7 @@ class BlogPostTemplate extends React.Component {
 
         <div className="container">
           <div className="row">
-            <div className="col-10 offset-1">
+            <div className="col-12 col-md-8 offset-2">
               <Pager previous={previous} next={next} />
             </div>
           </div>

@@ -15,7 +15,7 @@ class Pager extends React.Component {
         }}
       >
         <ul
-          class="d-flex justify-items-center d-md-block"
+          className="d-flex justify-items-center d-md-block"
           style={{
             listStyle: `none`,
             padding: 0,
