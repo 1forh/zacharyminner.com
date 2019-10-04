@@ -8,7 +8,7 @@ thumbnail: /img/bootstrap-grid-overlay.png
 ---
 ![Bootstrap Grid Overlay](/img/bootstrap-grid-overlay.png "Bootstrap Grid Overlay")
 
-[Click here to view in the Chrome Web Store](https://chrome.google.com/webstore/detail/bootstrap-grid-overlay/mnlklmelflkheijccafopdohgclfefcg)
+[View in the Chrome Web Store](https://chrome.google.com/webstore/detail/bootstrap-grid-overlay/mnlklmelflkheijccafopdohgclfefcg)
 
 Click the Bootstrap Grid Overlay icon to toggle the overlay on and off. If Bootstrap Grid Overlay finds the Bootstrap grid classes in any of your application's CSS files, a Bootstrap grid will be displayed based on those styles.
 
