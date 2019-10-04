@@ -11,10 +11,14 @@ description: >-
 
 Click the Bootstrap Grid Overlay icon to toggle the overlay on and off. If Bootstrap Grid Overlay finds the Bootstrap grid classes in any of your application's CSS files, a Bootstrap grid will be displayed based on those styles.
 
+
+
 ## Features
 
 * allows user to click through the overlay to target specific elements while using the Chrome Developer Tools
 * allows user to customize column count
+
+
 
 ## Chrome extension shortcut
 
