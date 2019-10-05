@@ -11,13 +11,13 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark;
     const siteTitle = this.props.data.site.siteMetadata.title;
     const { previous, next } = this.props.pageContext;
+    const { title, description, date, featured_image } = post.frontmatter;
+
+    console.log(this.props);
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
-        />
+        <SEO title={title} description={description || post.excerpt} />
         <article>
           <header
             style={{
@@ -36,7 +36,7 @@ class BlogPostTemplate extends React.Component {
                       marginBottom: rhythm(1 / 3),
                     }}
                   >
-                    {post.frontmatter.title}
+                    {title}
                   </h1>
                   <p
                     style={{
@@ -46,7 +46,7 @@ class BlogPostTemplate extends React.Component {
                       color: 'var(--color-gray',
                     }}
                   >
-                    {post.frontmatter.date}
+                    {date}
                   </p>
                 </div>
               </div>
@@ -55,6 +55,11 @@ class BlogPostTemplate extends React.Component {
           <section>
             <div className="container">
               <div className="row">
+                <img
+                  className="col-12 col-md-8 offset-md-2"
+                  src={featured_image}
+                  alt={title}
+                />
                 <div
                   className="col-12 col-md-8 offset-md-2"
                   dangerouslySetInnerHTML={{ __html: post.html }}
@@ -94,6 +99,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        featured_image
       }
     }
   }
