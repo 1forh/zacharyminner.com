@@ -4,7 +4,7 @@ date: 2019-10-03T23:48:56.446Z
 description: >-
   This chrome extension allows you to quickly toggle a Bootstrap grid overlay
   that automatically uses your application's styles to determine how it looks.
-thumbnail: /img/bootstrap-grid-overlay.png
+featured_image: /img/bootstrap-grid-overlay.png
 ---
 ![Bootstrap Grid Overlay](/img/bootstrap-grid-overlay.png "Bootstrap Grid Overlay")
 
