@@ -23,16 +23,18 @@ class BlogIndex extends React.Component {
           <div className="row">
             <div className="col-12 col-md-8 offset-md-2">
               {posts.map(({ node }) => {
-                console.log(node);
                 const title = node.frontmatter.title || node.fields.slug;
+                const image = node.frontmatter.featured_image;
                 return (
                   <article
                     key={node.fields.slug}
+                    className="blog-teaser"
                     style={{
+                      paddingBottom: rhythm(1.5),
                       marginBottom: rhythm(1.5),
                     }}
                   >
-                    {/* <img src={node.frontmatter.image} alt="" /> */}
+                    <img src={image} alt={title} />
                     <header
                       style={{
                         marginBottom: rhythm(1 / 2),
@@ -54,6 +56,7 @@ class BlogIndex extends React.Component {
                     </header>
                     <section>
                       <p
+                        style={{ marginBottom: 0 }}
                         dangerouslySetInnerHTML={{
                           __html: node.frontmatter.description || node.excerpt,
                         }}
@@ -90,6 +93,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            featured_image
           }
         }
       }
