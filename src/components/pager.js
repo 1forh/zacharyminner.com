@@ -1,45 +1,23 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import { rhythm } from '../utils/typography';
-
 class Pager extends React.Component {
   render() {
     const { previous, next } = this.props;
 
     return (
-      <nav
-        style={{
-          marginTop: rhythm(3),
-          marginBottom: rhythm(3),
-        }}
-      >
-        <ul
-          className="d-flex justify-items-center d-md-block"
-          style={{
-            listStyle: `none`,
-            padding: 0,
-            margin: 0,
-          }}
-        >
+      <nav>
+        <ul>
           {previous && (
             <li>
-              <Link
-                to={previous.fields.slug}
-                rel="prev"
-                className="btn btn-secondary"
-              >
+              <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             </li>
           )}
           {next && (
             <li>
-              <Link
-                to={next.fields.slug}
-                rel="next"
-                className="btn btn-secondary"
-              >
+              <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
             </li>

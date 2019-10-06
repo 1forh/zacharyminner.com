@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
+import { Anchor, Box, Image } from 'grommet';
 
-import Layout from '../components/layout/layout';
+import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { rhythm } from '../utils/typography';
 
 class BlogIndex extends React.Component {
   render() {
@@ -14,60 +14,30 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Blog" />
-        <div
-          className="container"
-          style={{
-            marginTop: rhythm(2),
-          }}
-        >
-          <div className="row">
-            <div className="col-12 col-md-8 offset-md-2">
-              {posts.map(({ node }) => {
-                const title = node.frontmatter.title || node.fields.slug;
-                const image = node.frontmatter.featured_image;
-                return (
-                  <article
-                    key={node.fields.slug}
-                    className="blog-teaser"
-                    style={{
-                      paddingBottom: rhythm(1.5),
-                      marginBottom: rhythm(1.5),
+        <Box>
+          {posts.map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug;
+            const image = node.frontmatter.featured_image;
+            return (
+              <article key={node.fields.slug}>
+                <Image src={image} alt={title} />
+                <header>
+                  <h3>
+                    <Anchor href={node.fields.slug}>{title}</Anchor>
+                  </h3>
+                  <small>{node.frontmatter.date}</small>
+                </header>
+                <section>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.description || node.excerpt,
                     }}
-                  >
-                    <img src={image} alt={title} />
-                    <header
-                      style={{
-                        marginBottom: rhythm(1 / 2),
-                      }}
-                    >
-                      <h3
-                        style={{
-                          marginBottom: 0,
-                        }}
-                      >
-                        <Link
-                          style={{ boxShadow: `none` }}
-                          to={node.fields.slug}
-                        >
-                          {title}
-                        </Link>
-                      </h3>
-                      <small>{node.frontmatter.date}</small>
-                    </header>
-                    <section>
-                      <p
-                        style={{ marginBottom: 0 }}
-                        dangerouslySetInnerHTML={{
-                          __html: node.frontmatter.description || node.excerpt,
-                        }}
-                      />
-                    </section>
-                  </article>
-                );
-              })}
-            </div>
-          </div>
-        </div>
+                  />
+                </section>
+              </article>
+            );
+          })}
+        </Box>
       </Layout>
     );
   }

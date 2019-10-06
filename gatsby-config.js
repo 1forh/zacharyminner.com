@@ -3,7 +3,7 @@ module.exports = {
     title: `Zachary Minner`,
     author: `Zachary Minner`,
     description: `Hi, my name is Zach. I'm a front-end web developer. I make websites and web applications.`,
-    siteUrl: `https://zacharyminner.com/`,
+    siteUrl: `https://www.zacharyminner.com/`,
     social: {
       github: `https://github.com/1forh`,
     },
@@ -46,6 +46,17 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Open Sans`,
+            variants: [`400`, `400i`, `700`, `900`],
+          },
+        ],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -69,10 +80,15 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: `gatsby-plugin-global-styles`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        pathToConfigModule: `src/styles/GlobalStyles`,
+        props: {
+          theme: ``,
+          other: {},
+        },
       },
     },
   ],
