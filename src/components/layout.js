@@ -1,25 +1,6 @@
 import React from 'react';
-import { Anchor, Box, Grommet } from 'grommet';
-import styled from 'styled-components';
-import theme from '../utilities/grommet-theme';
-
-const NavBar = props => (
-  <Box
-    tag="header"
-    direction="row"
-    align="center"
-    justify="between"
-    background="primary"
-    pad={{ horizontal: 'medium', vertical: 'small' }}
-    style={{ zIndex: '1' }}
-    {...props}
-  />
-);
-
-export const Container = styled.div`
-  max-width: 1280px;
-  margin: 0 auto;
-`;
+import { Anchor, Box, Grid, Grommet } from 'grommet';
+import theme from '../styles/GrommetTheme';
 
 class Layout extends React.Component {
   render() {
@@ -27,20 +8,35 @@ class Layout extends React.Component {
 
     return (
       <Grommet theme={theme} full>
-        <NavBar>
-          <Anchor href="/" color="light-1" style={{ textDecoration: 'none' }}>
-            <span style={{ fontWeight: 100 }}>Zach</span> Minner
-          </Anchor>
-        </NavBar>
-        <main>
-          <Container>{children}</Container>
-        </main>
-        <footer>
-          <div>
-            © {new Date().getFullYear()}. Built with{' '}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>.
-          </div>
-        </footer>
+        <Grid
+          rows={['100vh']}
+          columns={['1/4', 'auto']}
+          areas={[
+            { name: 'nav', start: [0, 0], end: [0, 0] },
+            { name: 'main', start: [1, 0], end: [1, 0] },
+          ]}
+          style={{ position: 'fixed' }}
+        >
+          <Box gridArea="nav" background="brand">
+            <Anchor href="/" style={{ textDecoration: 'none' }}>
+              <span style={{ fontWeight: 100 }}>Zach</span> Minner
+            </Anchor>
+            <footer>
+              <div>
+                © {new Date().getFullYear()}. Built with{' '}
+                <a href="https://www.gatsbyjs.org">Gatsby</a>.
+              </div>
+            </footer>
+          </Box>
+          <Box
+            gridArea="main"
+            background="light-1"
+            pad="large"
+            style={{ overflow: 'scroll' }}
+          >
+            <main>{children}</main>
+          </Box>
+        </Grid>
       </Grommet>
     );
   }
