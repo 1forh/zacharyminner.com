@@ -1,5 +1,5 @@
 import React from 'react';
-import { Anchor, Box, Grid, Grommet } from 'grommet';
+import { Anchor, Box, Grid, Grommet, Heading } from 'grommet';
 import theme from '../styles/GrommetTheme';
 
 class Layout extends React.Component {
@@ -17,15 +17,29 @@ class Layout extends React.Component {
           ]}
           style={{ position: 'fixed' }}
         >
-          <Box gridArea="nav" background="brand">
-            <Anchor href="/" style={{ textDecoration: 'none' }}>
-              <span style={{ fontWeight: 100 }}>Zach</span> Minner
-            </Anchor>
+          <Box
+            gridArea="nav"
+            background="brand"
+            pad="medium"
+            direction="column"
+          >
+            <Heading margin="none" level="2">
+              <Anchor
+                href="/"
+                style={{ textDecoration: 'none', display: 'inline-flex' }}
+              >
+                <Box tag="span" style={{ fontWeight: 100 }}>
+                  Zach
+                </Box>
+                <Box tag="span">Minner</Box>
+              </Anchor>
+            </Heading>
+            <Box tag="nav" style={{ flexGrow: 1 }}>
+              <Anchor href="/experience">Experience</Anchor>
+            </Box>
             <footer>
-              <div>
-                © {new Date().getFullYear()}. Built with{' '}
-                <a href="https://www.gatsbyjs.org">Gatsby</a>.
-              </div>
+              © {new Date().getFullYear()}. Built with{' '}
+              <Anchor href="https://www.gatsbyjs.org">Gatsby</Anchor>.
             </footer>
           </Box>
           <Box
@@ -34,7 +48,7 @@ class Layout extends React.Component {
             pad="large"
             style={{ overflow: 'scroll' }}
           >
-            <main>{children}</main>
+            {children}
           </Box>
         </Grid>
       </Grommet>

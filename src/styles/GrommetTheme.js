@@ -9,7 +9,7 @@ export default {
       'accent-3': '#c0ffb3',
     },
     font: {
-      family: 'Open Sans',
+      family: 'Montserrat',
       size: '18px',
       height: '24px',
     },

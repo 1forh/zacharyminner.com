@@ -2,6 +2,7 @@
   "endOfLine": "lf",
   "semi": true,
   "singleQuote": true,
+  "prettier.printWidth": 200,
   "tabWidth": 2,
   "trailingComma": "es5",
   "prettier.useTabs": false

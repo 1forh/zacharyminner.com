@@ -46,17 +46,6 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Open Sans`,
-            variants: [`400`, `400i`, `700`, `900`],
-          },
-        ],
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -81,6 +70,17 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Montserrat`,
+            variants: [`100`, `400`, `400i`, `700`, `900`],
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-global-styles`,
       options: {
