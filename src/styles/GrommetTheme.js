@@ -14,4 +14,10 @@ export default {
       height: '24px',
     },
   },
+  anchor: {
+    color: { dark: 'accent-2', light: 'brand' },
+    hover: {
+      textDecoration: 'none',
+    },
+  },
 };

@@ -8,12 +8,6 @@ const GlobalStyles = createGlobalStyle`
   img {
     max-width: 100%;
   }
-
-  a {
-    &:hover {
-      text-decoration: none;
-    }
-  }
 `;
 
 export default GlobalStyles;

@@ -28,14 +28,19 @@ class Layout extends React.Component {
                 href="/"
                 style={{ textDecoration: 'none', display: 'inline-flex' }}
               >
-                <Box tag="span" style={{ fontWeight: 100 }}>
+                <Box as="span" style={{ fontWeight: 100 }}>
                   Zach
                 </Box>
-                <Box tag="span">Minner</Box>
+                <Box as="span">Minner</Box>
               </Anchor>
             </Heading>
-            <Box tag="nav" style={{ flexGrow: 1 }}>
-              <Anchor href="/experience">Experience</Anchor>
+            <Box as="nav" pad={{ vertical: 'large' }} style={{ flexGrow: 1 }}>
+              <Anchor href="/experience" margin={{ bottom: 'xsmall' }}>
+                Blog
+              </Anchor>
+              <Anchor href="/experience" margin={{ bottom: 'xsmall' }}>
+                Experience
+              </Anchor>
             </Box>
             <footer>
               © {new Date().getFullYear()}. Built with{' '}
