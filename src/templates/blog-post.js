@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { Box, Heading, Image, Paragraph } from 'grommet';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -15,19 +16,23 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={title} description={description || post.excerpt} />
-        <article>
-          <header>
-            <h1>{title}</h1>
-            <p>{date}</p>
-          </header>
-          <section>
-            <img src={featured_image} alt={title} />
-            <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
-          </section>
-        </article>
-        <footer>
+        <Box as="article" direction="column" style={{ minHeight: 'unset' }}>
+          <Box as="header" margin={{ bottom: 'medium' }} direction="column">
+            <Heading level="1" margin="none">
+              {title}
+            </Heading>
+            <Paragraph margin={{ top: 'small', bottom: 'none' }} size="large">
+              {date}
+            </Paragraph>
+          </Box>
+          <Box as="section" style={{ minHeight: 'unset' }}>
+            <Image src={featured_image} alt={title} />
+            <Box dangerouslySetInnerHTML={{ __html: post.html }}></Box>
+          </Box>
+        </Box>
+        <Box as="footer" style={{ minHeight: 'unset' }}>
           <Pager previous={previous} next={next} />
-        </footer>
+        </Box>
       </Layout>
     );
   }

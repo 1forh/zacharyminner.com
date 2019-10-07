@@ -34,8 +34,8 @@ class Layout extends React.Component {
                 <Box as="span">Minner</Box>
               </Anchor>
             </Heading>
-            <Box as="nav" pad={{ vertical: 'large' }} style={{ flexGrow: 1 }}>
-              <Anchor href="/experience" margin={{ bottom: 'xsmall' }}>
+            <Box as="nav" pad={{ vertical: 'xlarge' }} style={{ flexGrow: 1 }}>
+              <Anchor href="/" margin={{ bottom: 'xsmall' }}>
                 Blog
               </Anchor>
               <Anchor href="/experience" margin={{ bottom: 'xsmall' }}>

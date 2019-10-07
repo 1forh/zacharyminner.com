@@ -7,7 +7,7 @@ class Pager extends React.Component {
     const { previous, next } = this.props;
 
     return (
-      <Box as="nav">
+      <Box as="nav" margin={{ top: 'medium' }}>
         {previous && (
           <Button
             icon={<FormPrevious />}
