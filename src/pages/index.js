@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Anchor, Box, Grid, Heading, Paragraph } from 'grommet';
+import { Anchor, Box, Grid, Heading, Paragraph, Text } from 'grommet';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -25,10 +25,10 @@ class BlogIndex extends React.Component {
                 margin={{ bottom: 'medium' }}
               >
                 <Box as="header" margin={{ bottom: 'small' }}>
-                  <Heading level="2" margin={{ bottom: 'small' }}>
+                  <Heading level="2" margin={{ bottom: 'xsmall' }}>
                     <Anchor href={node.fields.slug}>{title}</Anchor>
                   </Heading>
-                  <small>{node.frontmatter.date}</small>
+                  <Text color="dark-5">{node.frontmatter.date}</Text>
                 </Box>
                 <Box as="section">
                   <Paragraph
