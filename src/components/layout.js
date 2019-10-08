@@ -9,8 +9,9 @@ class Layout extends React.Component {
     return (
       <Grommet theme={theme} full>
         <Grid
+          fill="true"
           rows={['100vh']}
-          columns={['1/4', 'auto']}
+          columns={['1/4', '3/4']}
           areas={[
             { name: 'nav', start: [0, 0], end: [0, 0] },
             { name: 'main', start: [1, 0], end: [1, 0] },
@@ -35,10 +36,14 @@ class Layout extends React.Component {
               </Anchor>
             </Heading>
             <Box as="nav" pad={{ vertical: 'xlarge' }} style={{ flexGrow: 1 }}>
-              <Anchor href="/" margin={{ bottom: 'xsmall' }}>
+              <Anchor href="/" margin={{ bottom: 'small' }} size="large">
                 Blog
               </Anchor>
-              <Anchor href="/experience" margin={{ bottom: 'xsmall' }}>
+              <Anchor
+                href="/experience"
+                margin={{ bottom: 'small' }}
+                size="large"
+              >
                 Experience
               </Anchor>
             </Box>
@@ -50,7 +55,7 @@ class Layout extends React.Component {
           <Box
             gridArea="main"
             background="light-1"
-            pad="large"
+            pad={{ horizontal: 'xlarge', vertical: 'medium' }}
             style={{ overflow: 'scroll' }}
           >
             {children}

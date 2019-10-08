@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Anchor, Box, Image } from 'grommet';
+import { Anchor, Box, Grid, Heading, Paragraph } from 'grommet';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -14,30 +14,34 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Blog" />
-        <Box>
+        <Grid columns={['50%', '50%']} gap="medium">
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug;
-            const image = node.frontmatter.featured_image;
             return (
-              <article key={node.fields.slug}>
-                <Image src={image} alt={title} />
-                <header>
-                  <h3>
+              <Box
+                as="article"
+                key={node.fields.slug}
+                style={{ minHeight: 'unset' }}
+                margin={{ bottom: 'medium' }}
+              >
+                <Box as="header" margin={{ bottom: 'small' }}>
+                  <Heading level="2" margin={{ bottom: 'small' }}>
                     <Anchor href={node.fields.slug}>{title}</Anchor>
-                  </h3>
+                  </Heading>
                   <small>{node.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
+                </Box>
+                <Box as="section">
+                  <Paragraph
+                    margin="none"
                     dangerouslySetInnerHTML={{
                       __html: node.frontmatter.description || node.excerpt,
                     }}
                   />
-                </section>
-              </article>
+                </Box>
+              </Box>
             );
           })}
-        </Box>
+        </Grid>
       </Layout>
     );
   }
@@ -63,7 +67,6 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
-            featured_image
           }
         }
       }

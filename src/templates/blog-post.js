@@ -29,9 +29,9 @@ class BlogPostTemplate extends React.Component {
             <Image src={featured_image} alt={title} />
             <Box dangerouslySetInnerHTML={{ __html: post.html }}></Box>
           </Box>
-        </Box>
-        <Box as="footer" style={{ minHeight: 'unset' }}>
-          <Pager previous={previous} next={next} />
+          <Box as="footer" style={{ minHeight: 'unset' }}>
+            <Pager previous={previous} next={next} />
+          </Box>
         </Box>
       </Layout>
     );

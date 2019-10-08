@@ -11,7 +11,7 @@ export default {
     font: {
       family: 'Montserrat',
       size: '18px',
-      height: '24px',
+      height: '1.7',
     },
   },
   anchor: {
