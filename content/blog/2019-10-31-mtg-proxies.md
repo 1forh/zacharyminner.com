@@ -10,4 +10,4 @@ MTG Proxies allows you to proxy Magic: The Gathering tokens to use for your deck
 
 There is currently 1,086 tokens to choose from and I will be adding more in the coming weeks.
 
-[View mtg-proxies.com](mtg-proxies.com)
+[View mtg-proxies.com](https://www.mtg-proxies.com)
