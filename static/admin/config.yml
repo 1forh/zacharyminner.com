@@ -25,3 +25,20 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Featured Image', name: 'featured_image', widget: 'image' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'experience'
+    label: 'Experience'
+    folder: 'content/experience'
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Start Date', name: 'start_date', widget: 'datetime' }
+      - {
+          label: 'End Date',
+          name: 'end_date',
+          widget: 'datetime',
+          required: false,
+        }
+      - { label: 'Position', name: 'position', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
