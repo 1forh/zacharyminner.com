@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
   },
   extends: ['plugin:vue/essential', '@vue/prettier'],
   rules: {
@@ -12,11 +12,11 @@ module.exports = {
       {
         singleQuote: true,
         semi: true,
-        trailingComma: 'none'
-      }
-    ]
+        trailingComma: 'es5',
+      },
+    ],
   },
   parserOptions: {
-    parser: 'babel-eslint'
-  }
+    parser: 'babel-eslint',
+  },
 };
