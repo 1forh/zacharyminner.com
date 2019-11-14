@@ -1,26 +1,47 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-  </div>
+  <article class="home">
+    <AppHero
+      title="Heyo, I'm Zach Minner."
+      subtitle="I make websites and web applications for <a href='https://www.skycatchfire.com'>SKYCATCHFIRE</a>."
+    />
+    <HomeProjects :projects="projects" />
+  </article>
 </template>
 
 <script>
+import AppHero from '@/components/AppHero.vue';
+import HomeProjects from '@/components/HomeProjects.vue';
+
 export default {
-  name: "home",
+  name: 'home',
+  components: { AppHero, HomeProjects },
   data() {
     return {
-      articles: []
+      articles: null,
+      projects: null,
     };
   },
   async mounted() {
     try {
       this.articles = await this.$flamelink.content.get({
-        schemaKey: "articles"
+        schemaKey: 'articles',
       });
-      console.log("All of your articles:", this.articles);
+      console.log('All of your articles:', this.articles);
     } catch (error) {
       console.log(error);
     }
-  }
+
+    try {
+      this.projects = await this.$flamelink.content.get({
+        schemaKey: 'projects',
+      });
+      console.log('All of your projects:', this.projects);
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };
 </script>
+
+<style lang="scss" scoped>
+</style>
