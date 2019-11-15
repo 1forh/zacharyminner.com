@@ -21,25 +21,6 @@ export default {
       projects: null,
     };
   },
-  async mounted() {
-    try {
-      this.articles = await this.$flamelink.content.get({
-        schemaKey: 'articles',
-      });
-      console.log('All of your articles:', this.articles);
-    } catch (error) {
-      console.log(error);
-    }
-
-    try {
-      this.projects = await this.$flamelink.content.get({
-        schemaKey: 'projects',
-      });
-      console.log('All of your projects:', this.projects);
-    } catch (error) {
-      console.log(error);
-    }
-  },
 };
 </script>
 

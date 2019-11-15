@@ -20,5 +20,5 @@ yarn-error.log*
 *.sln
 *.sw?
 
-# Firebase
-.Firebase
+# lock files
+package-lock.json
