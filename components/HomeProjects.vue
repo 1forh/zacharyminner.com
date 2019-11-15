@@ -2,7 +2,7 @@
   <component :is="type" class="home-projects vh-100">
     <!-- <div class="home-projects__background bg-gradient-radial"></div> -->
     <div class="home-projects__content">
-      <AppHeading level="h2" variation="display-2" align="center">Projects</AppHeading>
+      <AppHeading level="h2" variation="display-2" align="center" text="Projects" />
       <!-- <ul>
       <li v-for="(project, index) in projects" :key="index">
         <pre><code>{{ project }}</code></pre>

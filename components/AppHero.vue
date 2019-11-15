@@ -3,8 +3,8 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <AppHeading level="h1" variation="display-1" v-html="title" class="mb-3" />
-          <AppHeading level="h2" variation="h2" weight="normal" v-html="subtitle" />
+          <AppHeading level="h1" variation="display-1" :text="title" class="mb-3" />
+          <AppHeading level="h2" variation="h2" weight="normal" :text="subtitle" />
         </div>
       </div>
     </div>
