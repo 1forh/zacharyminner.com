@@ -1,12 +1,8 @@
 <template>
   <footer class="app-footer py-3 text-center">
     &copy; {{ currentYear }}. Built with
-    <a
-      href="https://vuejs.org"
-      target="_blank"
-      class="text-white"
-    >Vue.js</a> and
-    <a href="https://firebase.google.com/products" target="_blank" class="text-white">Firebase</a>.
+    <a href="https://nuxtjs.org/" target="_blank" class="text-white">Nuxt.js</a> and
+    <a href="https://bootstrap-vue.js.org" target="_blank" class="text-white">Bootstrap Vue</a>.
   </footer>
 </template>
 

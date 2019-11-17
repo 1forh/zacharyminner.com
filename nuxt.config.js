@@ -43,6 +43,7 @@ module.exports = {
     'bootstrap-vue/nuxt',
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
+    'vue-balance-text/nuxt/module',
   ],
   /*
    ** Build configuration
@@ -52,5 +53,10 @@ module.exports = {
      ** You can extend webpack config here
      */
     extend(config, ctx) {},
+  },
+  generate: {},
+  bootstrapVue: {
+    bootstrapCSS: false, // Or `css: false`
+    bootstrapVueCSS: false, // Or `bvCSS: false`
   },
 };

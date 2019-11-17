@@ -42,6 +42,22 @@ $grays: map-merge(
   $grays
 );
 
+// duplicate of $grays colors with `gray-` prefix
+$grays: map-merge(
+  (
+    'gray-100': $gray-100,
+    'gray-200': $gray-200,
+    'gray-300': $gray-300,
+    'gray-400': $gray-400,
+    'gray-500': $gray-500,
+    'gray-600': $gray-600,
+    'gray-700': $gray-700,
+    'gray-800': $gray-800,
+    'gray-900': $gray-900,
+  ),
+  $grays
+);
+
 $blue: #1b7cc5;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
@@ -76,12 +92,13 @@ $colors: map-merge(
 
 $primary: $blue;
 $secondary: #3ab3e4;
+$accent: #6bd5ff;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
-$light: $gray-100 !default;
-$dark: $gray-800 !default;
+$light: $gray-200;
+$dark: $gray-800;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -89,15 +106,20 @@ $theme-colors: map-merge(
   (
     'primary': $primary,
     'secondary': $secondary,
+    'accent': $accent,
     'success': $success,
     'info': $info,
     'warning': $warning,
     'danger': $danger,
-    d 'light': $light,
+    'light': $light,
     'dark': $dark,
+    // 'gray-200': $gray-200,
+      // 'gray-500': $gray-500,,,,,,,,
   ),
   $theme-colors
 );
+
+$theme-colors: map-merge($grays, $theme-colors);
 
 // // Set a specific jump point for requesting color jumps
 // $theme-color-interval: 8% !default;
@@ -151,6 +173,9 @@ $spacers: map-merge(
     ),
     5: (
       $spacer * 3,
+    ),
+    6: (
+      $spacer * 5,
     ),
   ),
   $spacers
@@ -247,8 +272,8 @@ $body-color: $gray-200;
 // $rounded-pill: 50rem !default;
 
 // $box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
-// $box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
-// $box-shadow-lg: 0 1rem 3rem rgba($black, 0.175) !default;
+$box-shadow: 0 0.5rem 1rem rgba($black, 0.15);
+$box-shadow-lg: 0 5px 15px rgba($black, 0.175);
 
 // $component-active-color: $white !default;
 // $component-active-bg: theme-color('primary') !default;
@@ -270,8 +295,9 @@ $body-color: $gray-200;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-  'Noto Color Emoji';
+$font-family-sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol', 'Noto Color Emoji';
 // $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
 // $font-family-base: $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
@@ -313,8 +339,8 @@ $display3-weight: $font-weight-bolder;
 $display4-weight: $font-weight-bolder;
 $display-line-height: $headings-line-height;
 
-// $lead-font-size: $font-size-base * 1.25 !default;
-// $lead-font-weight: 300 !default;
+$lead-font-size: $font-size-base * 1.4;
+$lead-font-weight: 300;
 
 // $small-font-size: 80% !default;
 

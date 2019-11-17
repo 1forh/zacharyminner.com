@@ -1,7 +1,9 @@
 <template>
-  <component :is="level" :class="['heading', variation, `font-weight-${weight}`, `text-${align}`]">
-    {{ text }}
-  </component>
+  <component
+    :is="level"
+    :class="['heading', variation, `font-weight-${weight}`, `text-${align}`]"
+    v-html="text"
+  ></component>
 </template>
 
 <script>
