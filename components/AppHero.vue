@@ -30,8 +30,7 @@ export default {
 
 <style lang="scss">
 .hero {
-  padding-top: 14rem;
-  padding-bottom: 12rem;
+  padding: 14rem 0;
 
   a {
     color: $white;

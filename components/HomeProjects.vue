@@ -1,6 +1,18 @@
 <template>
   <component :is="type" class="home-projects">
-    <div class="home-projects__background bg-gradient-radial"></div>
+    <div class="home-projects__background"></div>
+    <div class="home-projects__social">
+      <b-container>
+        <b-row>
+          <a
+            href="https://github.com/1forh"
+            target="_blank"
+            class="text-white mr-5"
+          >github.com/1forh</a>
+          <a href="#" target="_blank" class="text-white">codepen.io/1forh</a>
+        </b-row>
+      </b-container>
+    </div>
     <div class="home-projects__content">
       <AppHeading level="h2" variation="display-3" align="center" text="Projects" class="mb-6" />
       <b-container>
@@ -46,12 +58,41 @@ export default {
   &__background {
     position: absolute;
     z-index: 1;
-    top: -12rem;
-    left: -10vw;
-    width: 200vw;
-    height: 865px;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 800px;
     transform: rotate(-15deg);
-    box-shadow: 0 9px 20px 0 rgba(0, 0, 0, 0.81);
+
+    &::before {
+      @include cover-absolute;
+      @include bg-gradient-radial;
+      left: 50%;
+      content: '';
+      width: 200vw;
+      height: 100%;
+      box-shadow: 0 9px 20px 0 rgba(0, 0, 0, 0.81);
+      transform: translateX(-50%);
+    }
+  }
+
+  &__social {
+    position: absolute;
+    z-index: 3;
+    top: -3.8rem;
+    left: 50%;
+    width: 100%;
+    padding-left: 0;
+    transform: translateX(-50%) rotate(-15deg);
+    font-size: 1.5rem;
+
+    .container {
+      padding: 0;
+    }
+
+    .row {
+      padding-left: 0.8rem;
+    }
   }
 
   &__content {

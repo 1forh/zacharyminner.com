@@ -2,7 +2,7 @@
 // BACKGROUNDS
 // ==========================================================================
 .bg-gradient-radial {
-  background: radial-gradient(circle, $secondary 0%, $primary 100%);
+  @include bg-gradient-radial;
 }
 
 // ==========================================================================
