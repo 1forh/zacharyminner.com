@@ -1,7 +1,7 @@
 <script>
 export default {
   computed: {
-    blogPosts() {
+    articles() {
       return this.$store.state.articles;
     },
   },
