@@ -10,6 +10,7 @@ collections:
     label: 'Article'
     folder: 'assets/content/articles'
     create: true
+    format: 'json'
     slug: '{{slug}}'
     editor:
       preview: false
@@ -23,6 +24,7 @@ collections:
     label: 'Project'
     folder: 'assets/content/projects'
     create: true
+    format: 'json'
     slug: '{{slug}}'
     editor:
       preview: false
@@ -36,6 +38,7 @@ collections:
     label: 'Experience'
     folder: 'assets/content/experience'
     create: true
+    format: 'json'
     editor:
       preview: false
     fields:
