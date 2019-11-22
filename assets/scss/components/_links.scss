@@ -14,7 +14,6 @@
     &::after,
     &::before {
       content: '';
-      // @include bg-gradient-radial;
       position: absolute;
       top: -2px;
       bottom: -2px;
