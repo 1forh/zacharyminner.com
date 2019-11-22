@@ -30,7 +30,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/filters/date', '~/plugins/vue-meta'],
+  plugins: ['~/plugins/filters/date', '~/plugins/libs/vue-meta', '~/plugins/libs/vue-rellax'],
   /*
    ** Nuxt.js dev-modules
    */

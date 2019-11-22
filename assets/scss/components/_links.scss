@@ -1,0 +1,37 @@
+@each $color, $value in $theme-colors {
+  .link-#{$color} {
+    position: relative;
+    padding: 0.2rem 0.3rem;
+    text-decoration: none !important;
+
+    &:hover {
+      &::after {
+        transform: skew(-12deg) rotate(-2deg) translateY(0);
+        opacity: 1;
+      }
+    }
+
+    &::after,
+    &::before {
+      content: '';
+      // @include bg-gradient-radial;
+      position: absolute;
+      top: -2px;
+      bottom: -2px;
+      right: -2px;
+      left: -2px;
+      z-index: -2;
+      transform: skew(-12deg) rotate(-2deg);
+      background-color: $value;
+      pointer-events: none;
+    }
+
+    &::after {
+      transform: skew(-12deg) rotate(-2deg) translateY(50%);
+      background-color: $primary;
+      z-index: -1;
+      transition: transform 0.3s, opacity 0.3s;
+      opacity: 0;
+    }
+  }
+}
