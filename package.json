@@ -20,7 +20,8 @@
     "express": "^4.16.4",
     "moment": "^2.24.0",
     "nuxt": "^2.0.0",
-    "vue-balance-text": "^1.2.3"
+    "vue-balance-text": "^1.2.3",
+    "vue-meta": "^2.3.1"
   },
   "devDependencies": {
     "@nuxt/webpack": "^2.10.2",
