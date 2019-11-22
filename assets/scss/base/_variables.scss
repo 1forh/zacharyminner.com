@@ -114,7 +114,7 @@ $theme-colors: map-merge(
     'light': $light,
     'dark': $dark,
     // 'gray-200': $gray-200,
-      // 'gray-500': $gray-500,,,,,,,,
+      // 'gray-500': $gray-500,,,,,,,,,,,,,,,,
   ),
   $theme-colors
 );
@@ -1149,8 +1149,8 @@ $lead-font-weight: 300;
 
 // // Code
 
-// $code-font-size: 87.5% !default;
-// $code-color: $pink !default;
+$code-font-size: 1em;
+$code-color: $gray-dark;
 
 // $kbd-padding-y: 0.2rem !default;
 // $kbd-padding-x: 0.4rem !default;

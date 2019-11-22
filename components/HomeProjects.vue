@@ -4,11 +4,9 @@
     <div class="home-projects__social">
       <b-container>
         <b-row>
-          <a
-            href="https://github.com/1forh"
-            target="_blank"
-            class="text-white mr-5"
-          >github.com/1forh</a>
+          <a href="https://github.com/1forh" target="_blank" class="text-white mr-5"
+            >github.com/1forh</a
+          >
           <a href="#" target="_blank" class="text-white">codepen.io/1forh</a>
         </b-row>
       </b-container>
@@ -18,7 +16,11 @@
       <b-container>
         <b-row>
           <b-col v-for="(project, index) in projects" :key="index" cols="4">
-            <ProjectTeaser :href="project.href" :title="project.title" :image="project.image" />
+            <ProjectTeaser
+              :href="`/projects/${project.slug}`"
+              :title="project.title"
+              :image="project.featured_image"
+            />
           </b-col>
           <b-col cols="12" class="d-flex justify-content-center mt-6">
             <b-button variant="primary" href="/projects" size="lg">View all projects</b-button>

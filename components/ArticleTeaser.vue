@@ -4,13 +4,13 @@
       <AppHeading :text="title" level="h3" variation="h3" class="text-dark mb-2" v-balance-text />
     </router-link>
     <AppHeading
-      :text="date"
+      :text="date | date"
       level="h4"
       variation="h6"
       weight="normal"
       class="text-gray-500 mb-3 "
     />
-    <p class="lead">{{ summary }}</p>
+    <div class="lead" v-html="$md.render(summary)"></div>
     <div class="article-teaser__tags">
       <b-badge variant="primary" v-for="(tag, index) in tags" :key="index">{{ tag }}</b-badge>
     </div>

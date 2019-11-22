@@ -1,9 +1,13 @@
 <template>
   <div class="experience">
-    <h1>This is an experience page.</h1>
+    <AppHeading text="Experience" />
   </div>
 </template>
 
 <script>
-export default {};
+import AppHeading from '~/components/AppHeading';
+
+export default {
+  components: { AppHeading },
+};
 </script>

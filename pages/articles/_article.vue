@@ -8,11 +8,12 @@
 <script>
 export default {
   async asyncData({ params, payload }) {
+    console.log(params);
     if (payload) {
       return { article: payload };
     } else {
       return {
-        article: await require(`~/assets/content/articles/${params.articles}.json`),
+        article: await require(`~/assets/content/articles/${params.article}.json`),
       };
     }
   },

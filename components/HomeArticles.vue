@@ -13,7 +13,7 @@
         <b-row>
           <b-col v-for="(article, index) in articles" :key="index" cols="8" offset="2">
             <ArticleTeaser
-              :href="article.href"
+              :href="`/articles/${article.slug}`"
               :title="article.title"
               :date="article.date"
               :summary="article.summary"
