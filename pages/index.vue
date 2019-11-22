@@ -34,21 +34,21 @@ export default {
         },
       ],
       projects: [
-        {
-          href: '/projects/mtg-proxies',
-          title: 'MTG Proxies',
-          image: '/images/projects/mtg-proxies.png',
-        },
-        {
-          href: '/projects/bootstrap-grid-overlay',
-          title: 'Bootstrap Grid Overlay',
-          image: '/images/projects/bootstrap-grid-overlay.png',
-        },
-        {
-          href: '/projects/unnofficial-tesla-news',
-          title: 'Unnoficial Tesla News',
-          image: '/images/projects/unofficial-tesla-news.png',
-        },
+        // {
+        //   href: '/projects/mtg-proxies',
+        //   title: 'MTG Proxies',
+        //   image: '/images/projects/mtg-proxies.png',
+        // },
+        // {
+        //   href: '/projects/bootstrap-grid-overlay',
+        //   title: 'Bootstrap Grid Overlay',
+        //   image: '/images/projects/bootstrap-grid-overlay.png',
+        // },
+        // {
+        //   href: '/projects/unnofficial-tesla-news',
+        //   title: 'Unnoficial Tesla News',
+        //   image: '/images/projects/unofficial-tesla-news.png',
+        // },
       ],
     };
   },

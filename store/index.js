@@ -17,12 +17,12 @@ export const actions = {
     const articleFiles = await require.context('~/assets/content/articles/', false, /\.json$/);
     const projectFiles = await require.context('~/assets/content/projects/', false, /\.json$/);
     const articles = articleFiles.keys().map((key) => {
-      let res = files(key);
+      let res = articleFiles(key);
       res.slug = key.slice(2, -5);
       return res;
     });
     const projects = projectFiles.keys().map((key) => {
-      let res = files(key);
+      let res = projectFiles(key);
       res.slug = key.slice(2, -5);
       return res;
     });

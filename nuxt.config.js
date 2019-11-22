@@ -43,6 +43,7 @@ module.exports = {
     'bootstrap-vue/nuxt',
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
+    '@nuxtjs/markdownit',
     'vue-balance-text/nuxt/module',
   ],
   /*
@@ -54,9 +55,22 @@ module.exports = {
      */
     extend(config, ctx) {},
   },
-  generate: {},
+  generate: {
+    routes: function() {
+      const fs = require('fs');
+      return fs.readdirSync('./assets/content/articles').map((file) => {
+        return {
+          route: `/articles/${file.slice(2, -5)}`, // Remove the .json from the end of the filename
+          payload: require(`./assets/content/articles/${file}`),
+        };
+      });
+    },
+  },
   bootstrapVue: {
     bootstrapCSS: false, // Or `css: false`
     bootstrapVueCSS: false, // Or `bvCSS: false`
+  },
+  markdownit: {
+    injected: true,
   },
 };
