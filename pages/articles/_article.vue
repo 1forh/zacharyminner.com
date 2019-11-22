@@ -12,7 +12,7 @@ export default {
       return { article: payload };
     } else {
       return {
-        articles: await require(`~/assets/content/articles/${params.articles}.json`),
+        article: await require(`~/assets/content/articles/${params.articles}.json`),
       };
     }
   },

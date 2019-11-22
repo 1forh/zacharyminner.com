@@ -12,7 +12,7 @@ export default {
       return { project: payload };
     } else {
       return {
-        projects: await require(`~/assets/content/projects/${params.projects}.json`),
+        project: await require(`~/assets/content/projects/${params.projects}.json`),
       };
     }
   },
