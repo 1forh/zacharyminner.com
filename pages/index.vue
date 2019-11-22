@@ -15,6 +15,11 @@ import HomeProjects from '~/components/HomeProjects.vue';
 import HomeArticles from '~/components/HomeArticles.vue';
 
 export default {
+  head() {
+    return {
+      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
+    };
+  },
   components: { AppHero, HomeProjects, HomeArticles },
   data() {
     return {
