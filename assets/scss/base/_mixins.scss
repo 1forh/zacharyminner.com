@@ -1,0 +1,22 @@
+// ==========================================================================
+// BACKGROUND GRADIENTS
+// ==========================================================================
+@mixin bg-gradient-radial {
+  background: radial-gradient(circle, $secondary 0%, $primary 100%);
+}
+
+// ==========================================================================
+// UTILITY MIXINS
+// ==========================================================================
+@mixin maintain-ratio($divisor: 1.43, $dividend: 1) {
+  width: 100%;
+  padding-bottom: $dividend / $divisor * 100%;
+}
+
+@mixin cover-absolute() {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

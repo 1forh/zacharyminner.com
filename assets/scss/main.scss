@@ -1,0 +1,15 @@
+@import './base/index';
+
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/utilities';
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/badge';
+@import '~bootstrap-vue/src/index.scss';
+
+@import './helpers';
+
+body {
+  overflow-x: hidden;
+}
