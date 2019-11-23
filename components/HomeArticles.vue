@@ -22,7 +22,7 @@
           </b-col>
           <!-- <b-col cols="12" class="d-flex justify-content-center mt-6">
             <b-button variant="primary" href="/articles" size="lg">View all articles</b-button>
-          </b-col> -->
+          </b-col>-->
         </b-row>
       </b-container>
     </div>
@@ -42,9 +42,6 @@ export default {
       default: 'section',
     },
     articles: Array,
-  },
-  mounted() {
-    console.log(this.articles);
   },
 };
 </script>

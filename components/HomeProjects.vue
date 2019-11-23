@@ -4,9 +4,11 @@
     <div class="home-projects__social">
       <b-container>
         <b-row>
-          <a href="https://github.com/1forh" target="_blank" class="text-white mr-5"
-            >github.com/1forh</a
-          >
+          <a
+            href="https://github.com/1forh"
+            target="_blank"
+            class="text-white mr-5"
+          >github.com/1forh</a>
           <a href="#" target="_blank" class="text-white">codepen.io/1forh</a>
         </b-row>
       </b-container>
@@ -44,9 +46,6 @@ export default {
       default: 'section',
     },
     projects: Array,
-  },
-  mounted() {
-    console.log(this.projects);
   },
 };
 </script>

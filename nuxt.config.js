@@ -4,14 +4,15 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || 'Zach Minner',
+    title: 'Zach Minner | Frontend Web Developer in Canton, Ohio',
     meta: [
       { charset: 'utf-8' },
+      { lang: 'en' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content: '',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -30,7 +31,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/filters/date', '~/plugins/libs/vue-meta', '~/plugins/libs/vue-rellax'],
+  plugins: ['~/plugins/filters/date', '~/plugins/libs/vue-rellax'],
   /*
    ** Nuxt.js dev-modules
    */

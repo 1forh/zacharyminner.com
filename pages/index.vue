@@ -17,23 +17,16 @@ import HomeArticles from '~/components/HomeArticles.vue';
 export default {
   head() {
     return {
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            "Heyo, I'm Zach! I'm a frontend web developer from Canton, Ohio. I make websites and web applications for SKYCATCHFIRE.",
+        },
+      ],
       script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
     };
-  },
-  metaInfo: {
-    title: 'Zach Minner | Frontend Web Developer',
-    htmlAttrs: {
-      lang: 'en',
-      amp: true,
-    },
-    meta: [
-      { charset: 'utf-8' },
-      {
-        name: 'description',
-        content:
-          "Heyo, I'm Zach! I'm a frontend web developer from Canton, Ohio. I make websites and web applications for SKYCATCHFIRE.",
-      },
-    ],
   },
   components: { AppHero, HomeProjects, HomeArticles },
   computed: {

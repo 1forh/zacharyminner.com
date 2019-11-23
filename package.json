@@ -22,7 +22,6 @@
     "nuxt": "^2.0.0",
     "rellax": "^1.10.0",
     "vue-balance-text": "^1.2.3",
-    "vue-meta": "^2.3.1",
     "vue-rellax": "^0.1.0"
   },
   "devDependencies": {
