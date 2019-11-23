@@ -57,13 +57,23 @@ module.exports = {
   },
   generate: {
     routes: function() {
+      function generateRoutes(type) {
+        return fs.readdirSync(`./assets/content/${type}`).map((file) => {
+          return {
+            route: `/${type}/${file.replace(/(.json)/, '')}`, // Remove the .json from the end of the filename
+            payload: require(`./assets/content/${type}/${file}`),
+          };
+        });
+      }
+
       const fs = require('fs');
-      return fs.readdirSync('./assets/content/articles').map((file) => {
-        return {
-          route: `/articles/${file.slice(2, -5)}`, // Remove the .json from the end of the filename
-          payload: require(`./assets/content/articles/${file}`),
-        };
-      });
+      const articles = generateRoutes('articles');
+      const projects = generateRoutes('projects');
+      const routes = [].concat(articles).concat(projects);
+
+      console.log('Routes: ', routes);
+
+      return routes;
     },
   },
   bootstrapVue: {

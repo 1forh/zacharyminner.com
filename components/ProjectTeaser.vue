@@ -1,6 +1,6 @@
 <template>
   <article class="project-teaser">
-    <router-link
+    <nuxt-link
       :to="href"
       class="text-white hover-text-secondary rounded-lg overflow-hidden shadow-lg"
     >
@@ -8,7 +8,7 @@
       <div class="project-teaser__content">
         <AppHeading :text="title" level="h3" variation="h4" class="text-center"></AppHeading>
       </div>
-    </router-link>
+    </nuxt-link>
   </article>
 </template>
 
