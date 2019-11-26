@@ -16,3 +16,7 @@ ul,
 ol {
   margin-bottom: $paragraph-margin-bottom;
 }
+
+img {
+  @include img-fluid;
+}

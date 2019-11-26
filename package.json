@@ -23,6 +23,7 @@
     "nuxt-webfontloader": "^1.1.0",
     "prismjs": "^1.17.1",
     "rellax": "^1.10.0",
+    "rfs": "^9.0.2",
     "vue-balance-text": "^1.2.3",
     "vue-rellax": "^0.1.0"
   },

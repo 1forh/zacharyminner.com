@@ -5,7 +5,7 @@
         <b-col lg="8" offset-lg="2">
           <AppHeading level="h1" :text="title" class="mb-5" v-balance-text />
           <div class="mb-5">
-            <img :src="image" :alt="title" class="img-fluid" />
+            <img :src="image" :alt="title" />
           </div>
           <b-button :href="website" class="mb-5">View website</b-button>
           <div v-html="body" />

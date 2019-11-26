@@ -30,6 +30,6 @@ export default {
 
 <style lang="scss">
 .hero {
-  padding: 12rem 0 10rem;
+  padding: 8rem 0 10rem;
 }
 </style>
