@@ -1,6 +1,6 @@
 <template>
   <header class="app-navbar">
-    <nuxt-link to="/" v-if="isNotHome" class="app-navbar__logo p-3">Heyo, I'm Zach Minner.</nuxt-link>
+    <nuxt-link to="/" v-if="!isHome" class="app-navbar__logo p-3">Heyo, I'm Zach Minner.</nuxt-link>
     <nav class="d-flex justify-content-end p-3">
       <nuxt-link
         :to="link.href"
@@ -26,9 +26,8 @@ export default {
     };
   },
   computed: {
-    isNotHome() {
-      console.log(this.$nuxt.$route.path);
-      return this.$nuxt.$route.path !== '/';
+    isHome() {
+      return this.$nuxt.$route.name === 'index';
     },
   },
 };
