@@ -84,7 +84,7 @@ export default {
   &__social {
     position: absolute;
     z-index: 3;
-    top: -3.8rem;
+    top: -4rem;
     left: 50%;
     width: 100%;
     padding-left: 0;

@@ -1,13 +1,17 @@
 <template>
   <header class="app-navbar">
+    <nuxt-link to="/" v-if="!isHome" class="app-navbar__logo p-3">
+      Heyo, I'm Zach Minner.
+    </nuxt-link>
     <nav class="d-flex justify-content-end p-3">
       <nuxt-link
         :to="link.href"
         v-for="(link, index) in links"
         :key="index"
-        class="text-light px-3"
-        >{{ link.name }}</nuxt-link
+        class="px-3 ml-3 link-accent-secondary"
       >
+        {{ link.name }}
+      </nuxt-link>
     </nav>
   </header>
 </template>
@@ -25,44 +29,53 @@ export default {
       ],
     };
   },
+  computed: {
+    isHome() {
+      return this.$nuxt.$route.path === '/';
+    },
+  },
 };
 </script>
 
 <style lang="scss">
 .app-navbar {
-  a {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    @include font-size(24px);
+    font-weight: $font-weight-bold;
+    color: $white;
 
     &:hover,
     &:focus,
     &:active {
-      color: $white !important;
-
-      &::after {
-        opacity: 1;
-        width: 100%;
-      }
+      color: $white;
+      text-decoration: none;
     }
+  }
 
-    &.nuxt-link-exact-active {
+  nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    a {
       color: $white;
 
-      &::after {
-        opacity: 1;
-        width: 100%;
-      }
-    }
+      &.nuxt-link-exact-active {
+        color: $white;
 
-    &::after {
-      content: '';
-      margin-top: 0.3rem;
-      width: 0;
-      height: 3px;
-      background-color: $primary;
-      // opacity: 0;
-      transition: width 0.3s, opacity 0.3s;
+        &::after {
+          transform: skew(-12deg) rotate(-2deg) translateY(0);
+          opacity: 1;
+        }
+      }
+
+      &::before {
+        display: none;
+      }
     }
   }
 }

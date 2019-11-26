@@ -19,6 +19,6 @@ export default {
 
 <style lang="scss">
 .app-footer {
-  border-top: 3px solid $primary;
+  border-top: 2px solid $gray-600;
 }
 </style>

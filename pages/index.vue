@@ -2,7 +2,7 @@
   <article class="home">
     <AppHero
       title="Heyo, I'm Zach Minner."
-      subtitle="I make websites and web applications for <a href='https://www.skycatchfire.com' class='link-accent-secondary' target='_blank'>SKYCATCHFIRE</a>."
+      subtitle="I make websites and web applications for <a href='https://www.skycatchfire.com' class='link-accent-secondary px-2' target='_blank'>SKYCATCHFIRE</a>."
     />
     <HomeProjects :projects="projects" />
     <HomeArticles :articles="articles" />
