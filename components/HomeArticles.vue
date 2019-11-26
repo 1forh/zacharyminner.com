@@ -1,17 +1,11 @@
 <template>
   <component :is="type" class="home-articles">
-    <div class="home-articles__background bg-gray-200"></div>
+    <!-- <div class="home-articles__background bg-gray-200"></div> -->
     <div class="home-articles__content">
-      <AppHeading
-        level="h2"
-        variation="display-3"
-        align="center"
-        text="Articles"
-        class="mb-6 text-dark"
-      />
-      <b-container>
+      <AppHeading level="h2" variation="display-3" align="center" text="Articles" class="mb-6" />
+      <b-container fluid>
         <b-row>
-          <b-col v-for="(article, index) in articles" :key="index" cols="8" offset="2">
+          <b-col v-for="(article, index) in articles" :key="index" cols="6" offset="3">
             <ArticleTeaser
               :href="`/articles/${article.slug}`"
               :title="article.title"
@@ -51,18 +45,7 @@ export default {
   position: relative;
   z-index: 2;
   padding-top: 6rem;
-  padding-bottom: 15rem;
-  background-color: $gray-200;
-
-  // &__background {
-  //   position: absolute;
-  //   z-index: 1;
-  //   top: 8rem;
-  //   width: 200vw;
-  //   height: 600px;
-  //   transform: rotate(15deg);
-  //   box-shadow: 0 -5px 20px 0 rgba(0, 0, 0, 0.7);
-  // }
+  padding-bottom: 10rem;
 
   &__content {
     position: relative;

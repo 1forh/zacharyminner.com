@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="site-wrapper">
     <AppNavbar></AppNavbar>
     <main>
       <nuxt />
@@ -17,4 +17,14 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  main {
+    flex-grow: 1;
+  }
+}
+</style>

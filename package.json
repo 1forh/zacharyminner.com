@@ -20,6 +20,8 @@
     "express": "^4.16.4",
     "moment": "^2.24.0",
     "nuxt": "^2.0.0",
+    "nuxt-webfontloader": "^1.1.0",
+    "prismjs": "^1.17.1",
     "rellax": "^1.10.0",
     "vue-balance-text": "^1.2.3",
     "vue-rellax": "^0.1.0"

@@ -3,7 +3,7 @@
     :is="level"
     :class="['heading', variation, `font-weight-${weight}`, `text-${align}`]"
     v-html="text"
-  ></component>
+  />
 </template>
 
 <script>

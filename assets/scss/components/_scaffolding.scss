@@ -1,0 +1,18 @@
+body {
+  overflow-x: hidden;
+}
+
+::selection {
+  background: $primary;
+  color: $white;
+}
+
+::-moz-selection {
+  background: $primary;
+  color: $white;
+}
+
+ul,
+ol {
+  margin-bottom: $paragraph-margin-bottom;
+}

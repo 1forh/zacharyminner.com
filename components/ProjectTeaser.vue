@@ -1,12 +1,9 @@
 <template>
   <article class="project-teaser">
-    <nuxt-link
-      :to="href"
-      class="text-white hover-text-secondary rounded-lg overflow-hidden shadow-lg"
-    >
+    <nuxt-link :to="href" class="text-light overflow-hidden shadow-lg">
       <div class="project-teaser__image" :style="{ 'background-image': `url(${image})` }"></div>
       <div class="project-teaser__content">
-        <AppHeading :text="title" level="h3" variation="h4" class="text-center"></AppHeading>
+        <AppHeading :text="title" level="h3" variation="h4" class="text-center" v-balance-text />
       </div>
     </nuxt-link>
   </article>
@@ -32,8 +29,10 @@ export default {
     display: block;
 
     &:hover {
+      color: $secondary !important;
+
       #{$this}__image::after {
-        background-color: rgba($gray-800, 0.9);
+        background-color: $black;
       }
     }
   }
@@ -48,7 +47,7 @@ export default {
       @include cover-absolute;
       content: '';
       z-index: 2;
-      background-color: rgba($gray-800, 0.6);
+      background-color: rgba($black, 0.6);
       mix-blend-mode: multiply;
       transition: background-color 0.3s;
     }
@@ -60,9 +59,6 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  &__heading {
   }
 }
 </style>

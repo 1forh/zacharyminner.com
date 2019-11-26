@@ -7,12 +7,9 @@
 @import '~bootstrap/scss/buttons';
 @import '~bootstrap/scss/badge';
 @import '~bootstrap/scss/code';
+@import '~bootstrap/scss/images';
 @import '~bootstrap-vue/src/index.scss';
 
 @import './helpers';
-
-body {
-  overflow-x: hidden;
-}
 
 @import './components/index';

@@ -21,9 +21,9 @@ $gray-400: #ced4da;
 $gray-500: #adb5bd;
 $gray-600: #6c757d;
 $gray-700: #495057;
-$gray-800: $gray-dark;
+$gray-800: #666666;
 $gray-900: #212529;
-$black: #000;
+$black: $gray-dark;
 
 $grays: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -85,20 +85,19 @@ $colors: map-merge(
     'cyan': $cyan,
     'white': $white,
     'gray': $gray-600,
-    'gray-dark': $gray-800,
+    'gray-dark': $black,
   ),
   $colors
 );
 
-$primary: $blue;
-$secondary: #3ab3e4;
-$accent: #6bd5ff;
+$primary: #f7541e;
+$secondary: #f9cf00;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
 $light: $gray-200;
-$dark: $gray-800;
+$dark: $black;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -106,7 +105,6 @@ $theme-colors: map-merge(
   (
     'primary': $primary,
     'secondary': $secondary,
-    'accent': $accent,
     'success': $success,
     'info': $info,
     'warning': $warning,
@@ -114,7 +112,7 @@ $theme-colors: map-merge(
     'light': $light,
     'dark': $dark,
     // 'gray-200': $gray-200,
-      // 'gray-500': $gray-500,,,,,,,,,,,,,,,,
+      // 'gray-500': $gray-500,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
   ),
   $theme-colors
 );
@@ -131,9 +129,9 @@ $theme-colors: map-merge($grays, $theme-colors);
 // $yiq-text-dark: $gray-900 !default;
 // $yiq-text-light: $white !default;
 
-// // Options
-// //
-// // Quickly modify global styling by enabling or disabling optional features.
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
 
 // $enable-caret: true !default;
 // $enable-rounded: true !default;
@@ -195,34 +193,34 @@ $spacers: map-merge(
 //   $sizes
 // );
 
-// // Body
-// //
-// // Settings for the `<body>` element.
+// Body
+//
+// Settings for the `<body>` element.
 
-$body-bg: $gray-800;
+$body-bg: $black;
 $body-color: $gray-200;
 
-// // Links
-// //
-// // Style anchor elements.
+// Links
+//
+// Style anchor elements.
 
-// $link-color: theme-color('primary') !default;
+$link-color: theme-color('secondary');
 // $link-decoration: none !default;
 // $link-hover-color: darken($link-color, 15%) !default;
 // $link-hover-decoration: underline !default;
 // // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 // $emphasized-link-hover-darken-percentage: 15% !default;
 
-// // Paragraphs
-// //
-// // Style p element.
+// Paragraphs
+//
+// Style p element.
 
-// $paragraph-margin-bottom: 1rem !default;
+$paragraph-margin-bottom: 2rem;
 
-// // Grid breakpoints
-// //
-// // Define the minimum dimensions at which your layout will change,
-// // adapting to different screen sizes, for use in media queries.
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
 
 // $grid-breakpoints: (
 //   xs: 0,
@@ -253,7 +251,7 @@ $body-color: $gray-200;
 // // Set the number of columns and specify the width of the gutters.
 
 // $grid-columns: 12 !default;
-// $grid-gutter-width: 30px !default;
+$grid-gutter-width: 50px !default;
 
 // // Components
 // //
@@ -265,15 +263,15 @@ $body-color: $gray-200;
 // $border-width: 1px !default;
 // $border-color: $gray-300 !default;
 
-// $border-radius: 0.25rem !default;
-// $border-radius-lg: 0.3rem !default;
+$border-radius: 0.25rem;
+$border-radius-lg: 0.5rem;
 // $border-radius-sm: 0.2rem !default;
 
 // $rounded-pill: 50rem !default;
 
 // $box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
 $box-shadow: 0 0.5rem 1rem rgba($black, 0.15);
-$box-shadow-lg: 0 5px 15px rgba($black, 0.175);
+$box-shadow-lg: 0 8px 12px 3px rgba($black, 0.3);
 
 // $component-active-color: $white !default;
 // $component-active-bg: theme-color('primary') !default;
@@ -302,7 +300,7 @@ $font-family-sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', 
 // $font-family-base: $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
-$font-size-base: 1.0625rem;
+$font-size-base: 1.125rem;
 $font-size-lg: $font-size-base * 1.25;
 $font-size-sm: $font-size-base * 0.875;
 
@@ -313,7 +311,7 @@ $font-weight-bold: 700;
 $font-weight-bolder: 900;
 
 // $font-weight-base: $font-weight-normal !default;
-// $line-height-base: 1.5 !default;
+$line-height-base: 1.7;
 
 $h1-font-size: $font-size-base * 2.5 !default;
 $h2-font-size: $font-size-base * 2 !default;
@@ -322,9 +320,9 @@ $h4-font-size: $font-size-base * 1.5 !default;
 $h5-font-size: $font-size-base * 1.25 !default;
 $h6-font-size: $font-size-base !default;
 
-// $headings-margin-bottom: $spacer / 2 !default;
+$headings-margin-bottom: 1.5rem;
 $headings-font-family: $font-family-sans-serif;
-// $headings-font-weight: 500 !default;
+$headings-font-weight: 700;
 $headings-line-height: 1.2;
 // $headings-color: null !default;
 
@@ -447,7 +445,7 @@ $lead-font-weight: 300;
 // $btn-font-size-lg: $input-btn-font-size-lg !default;
 // $btn-line-height-lg: $input-btn-line-height-lg !default;
 
-// $btn-border-width: $input-btn-border-width !default;
+$btn-border-width: 4px;
 
 // $btn-font-weight: $font-weight-normal !default;
 // $btn-box-shadow: inset 0 1px 0 rgba($white, 0.15), 0 1px 1px rgba($black, 0.075) !default;
@@ -460,10 +458,10 @@ $lead-font-weight: 300;
 
 // $btn-block-spacing-y: 0.5rem !default;
 
-// // Allows for customizing button radius independently from global border radius
-// $btn-border-radius: $border-radius !default;
-// $btn-border-radius-lg: $border-radius-lg !default;
-// $btn-border-radius-sm: $border-radius-sm !default;
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius: 0;
+$btn-border-radius-lg: 0;
+// $btn-border-radius-sm: $border-radius-sm;
 
 // $btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
 //   box-shadow 0.15s ease-in-out !default;
@@ -1149,8 +1147,8 @@ $lead-font-weight: 300;
 
 // // Code
 
-$code-font-size: 1em;
-$code-color: $gray-dark;
+$code-font-size: 0.8em;
+$code-color: $white;
 
 // $kbd-padding-y: 0.2rem !default;
 // $kbd-padding-x: 0.4rem !default;

@@ -31,7 +31,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/filters/date', '~/plugins/libs/vue-rellax'],
+  plugins: ['~/plugins/filters/date', '~/plugins/libs/vue-rellax', '~/plugins/libs/prism'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -83,5 +83,10 @@ module.exports = {
   },
   markdownit: {
     injected: true,
+  },
+  webfontloader: {
+    google: {
+      families: ['Lato:400,700,900'],
+    },
   },
 };

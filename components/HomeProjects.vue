@@ -2,20 +2,24 @@
   <component :is="type" class="home-projects">
     <div class="home-projects__background"></div>
     <div class="home-projects__social">
-      <b-container>
+      <b-container fluid>
         <b-row>
-          <a
-            href="https://github.com/1forh"
-            target="_blank"
-            class="text-white mr-5"
-          >github.com/1forh</a>
-          <a href="#" target="_blank" class="text-white">codepen.io/1forh</a>
+          <a href="https://github.com/1forh" target="_blank" class="text-light mr-5"
+            >github.com/1forh</a
+          >
+          <a href="#" target="_blank" class="text-light">codepen.io/1forh</a>
         </b-row>
       </b-container>
     </div>
     <div class="home-projects__content">
-      <AppHeading level="h2" variation="display-3" align="center" text="Projects" class="mb-6" />
-      <b-container>
+      <AppHeading
+        level="h2"
+        variation="display-3"
+        align="center"
+        text="Projects"
+        class="mb-6 text-dark"
+      />
+      <b-container fluid>
         <b-row>
           <b-col v-for="(project, index) in projects" :key="index" cols="4">
             <ProjectTeaser
@@ -62,7 +66,7 @@ export default {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 800px;
+    height: 55vw;
     transform: rotate(-15deg);
 
     &::before {
@@ -87,12 +91,8 @@ export default {
     transform: translateX(-50%) rotate(-15deg);
     font-size: 1.5rem;
 
-    .container {
-      padding: 0;
-    }
-
-    .row {
-      padding-left: 0.8rem;
+    .container-fluid {
+      padding-left: 1.5rem;
     }
   }
 

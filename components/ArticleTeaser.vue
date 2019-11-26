@@ -1,14 +1,14 @@
 <template>
-  <article class="article-teaser text-dark">
+  <article class="article-teaser">
     <nuxt-link :to="href" class="text-decoration-none">
-      <AppHeading :text="title" level="h3" variation="h3" class="text-dark mb-2" v-balance-text />
+      <AppHeading :text="title" level="h3" variation="h3" class="mb-2" v-balance-text />
     </nuxt-link>
     <AppHeading
       :text="date | date"
       level="h4"
       variation="h6"
       weight="normal"
-      class="text-gray-500 mb-3"
+      class="mb-3 text-gray-500"
     />
     <div class="lead" v-html="$md.render(summary)"></div>
     <div class="article-teaser__tags">

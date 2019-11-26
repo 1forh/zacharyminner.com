@@ -1,6 +1,12 @@
 <template>
-  <div class="experience">
-    <AppHeading text="Experience" />
+  <div class="experience pt-3 pb-5">
+    <b-container>
+      <b-row>
+        <b-col>
+          <AppHeading text="Experience" />
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 

@@ -1,13 +1,13 @@
 <template>
   <component :is="type" class="hero">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
+    <b-container fluid>
+      <b-row>
+        <b-col cols="12">
           <AppHeading level="h1" variation="display-1" :text="title" class="mb-3" />
-          <AppHeading level="h2" variation="h2" weight="normal" :text="subtitle" />
-        </div>
-      </div>
-    </div>
+          <AppHeading level="h2" variation="h2" weight="light" :text="subtitle" />
+        </b-col>
+      </b-row>
+    </b-container>
   </component>
 </template>
 
@@ -30,11 +30,6 @@ export default {
 
 <style lang="scss">
 .hero {
-  padding: 14rem 0;
-
-  a {
-    color: $white;
-    font-weight: $font-weight-bold;
-  }
+  padding: 12rem 0 10rem;
 }
 </style>
