@@ -17,10 +17,13 @@ module.exports = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
+  router: {
+    middleware: 'pages',
+  },
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: '#f9cf00' },
   /*
    ** Global CSS
    */

@@ -1,9 +1,16 @@
 <template>
   <article class="home">
-    <AppHero
-      title="Heyo, I'm Zach Minner."
-      subtitle="I make websites and web applications for <a href='https://www.skycatchfire.com' class='link-accent-secondary px-2' target='_blank'>SKYCATCHFIRE</a>."
-    />
+    <AppHero>
+      <AppHeading level="h1" variation="display-1" class="mb-3">
+        Heyo, I'm Zach Minner.
+      </AppHeading>
+      <AppHeading level="h2" variation="h2" weight="light">
+        I make websites and web applications for
+        <a href="https://www.skycatchfire.com" class="link-accent-secondary px-2" target="_blank">
+          SKYCATCHFIRE</a
+        >.
+      </AppHeading>
+    </AppHero>
     <HomeProjects :projects="projects" />
     <HomeArticles :articles="articles" />
   </article>
@@ -11,6 +18,7 @@
 
 <script>
 import AppHero from '~/components/AppHero.vue';
+import AppHeading from '~/components/AppHeading.vue';
 import HomeProjects from '~/components/HomeProjects.vue';
 import HomeArticles from '~/components/HomeArticles.vue';
 
@@ -28,7 +36,7 @@ export default {
       script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
     };
   },
-  components: { AppHero, HomeProjects, HomeArticles },
+  components: { AppHero, AppHeading, HomeProjects, HomeArticles },
   computed: {
     projects() {
       return this.$store.state.projects;

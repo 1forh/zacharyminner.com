@@ -3,8 +3,7 @@
     <b-container fluid>
       <b-row>
         <b-col cols="12">
-          <AppHeading level="h1" variation="display-1" :text="title" class="mb-3" />
-          <AppHeading level="h2" variation="h2" weight="light" :text="subtitle" />
+          <slot />
         </b-col>
       </b-row>
     </b-container>

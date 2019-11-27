@@ -3,7 +3,9 @@
     <nuxt-link :to="href" class="text-light overflow-hidden shadow-lg">
       <div class="project-teaser__image" :style="{ 'background-image': `url(${image})` }"></div>
       <div class="project-teaser__content">
-        <AppHeading :text="title" level="h3" variation="h4" class="text-center" v-balance-text />
+        <AppHeading level="h3" variation="h4" class="text-center" v-balance-text>
+          {{ title }}
+        </AppHeading>
       </div>
     </nuxt-link>
   </article>

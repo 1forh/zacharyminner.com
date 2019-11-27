@@ -1,7 +1,9 @@
 <template>
   <article class="article-teaser">
     <nuxt-link :to="href" class="text-decoration-none">
-      <AppHeading :text="title" level="h3" variation="h3" class="mb-2" v-balance-text />
+      <AppHeading level="h3" variation="h3" class="mb-2" v-balance-text>
+        {{ title }}
+      </AppHeading>
     </nuxt-link>
     <AppHeading
       :text="date | date"

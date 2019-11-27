@@ -3,7 +3,9 @@
     <b-container>
       <b-row>
         <b-col lg="8" offset-lg="2">
-          <AppHeading level="h1" :text="title" class="mb-5" v-balance-text />
+          <AppHeading level="h1" class="mb-5" v-balance-text>
+            {{ title }}
+          </AppHeading>
           <div class="mb-5">
             <img :src="image" :alt="title" />
           </div>

@@ -1,9 +1,7 @@
 <template>
-  <component
-    :is="level"
-    :class="['heading', variation, `font-weight-${weight}`, `text-${align}`]"
-    v-html="text"
-  />
+  <component :is="level" :class="['heading', variation, `font-weight-${weight}`, `text-${align}`]">
+    <slot />
+  </component>
 </template>
 
 <script>
@@ -30,10 +28,6 @@ export default {
       type: String,
       default: 'left',
       validator: (value) => value.match(/(left|center|right)/),
-    },
-    text: {
-      type: String,
-      required: true,
     },
   },
 };

@@ -12,13 +12,9 @@
       </b-container>
     </div>
     <div class="home-projects__content">
-      <AppHeading
-        level="h2"
-        variation="display-3"
-        align="center"
-        text="Projects"
-        class="mb-6 text-dark"
-      />
+      <AppHeading level="h2" variation="display-3" align="center" class="mb-6 text-dark">
+        Projects
+      </AppHeading>
       <b-container fluid>
         <b-row>
           <b-col v-for="(project, index) in projects" :key="index" cols="4">

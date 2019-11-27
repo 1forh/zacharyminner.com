@@ -1,9 +1,13 @@
 export const state = () => ({
+  page: 'index',
   articles: [],
   projects: [],
 });
 
 export const mutations = {
+  updatePage(state, pageName) {
+    state.page = pageName;
+  },
   setArticles(state, list) {
     state.articles = list;
   },

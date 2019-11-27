@@ -3,7 +3,7 @@
     <b-container>
       <b-row>
         <b-col>
-          <AppHeading text="Projects" />
+          <AppHeading>Projects</AppHeading>
         </b-col>
       </b-row>
     </b-container>

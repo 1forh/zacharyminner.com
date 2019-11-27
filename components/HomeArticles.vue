@@ -2,7 +2,9 @@
   <component :is="type" class="home-articles">
     <!-- <div class="home-articles__background bg-gray-200"></div> -->
     <div class="home-articles__content">
-      <AppHeading level="h2" variation="display-3" align="center" text="Articles" class="mb-6" />
+      <AppHeading level="h2" variation="display-3" align="center" class="mb-6">
+        Articles
+      </AppHeading>
       <b-container fluid>
         <b-row>
           <b-col v-for="(article, index) in articles" :key="index" cols="6" offset="3">

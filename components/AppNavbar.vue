@@ -1,18 +1,23 @@
 <template>
   <header class="app-navbar">
-    <nuxt-link to="/" v-if="!isHome" class="app-navbar__logo p-3">Heyo, I'm Zach Minner.</nuxt-link>
+    <nuxt-link to="/" v-if="page !== 'index'" class="app-navbar__logo p-3">
+      Heyo, I'm Zach Minner.
+    </nuxt-link>
     <nav class="d-flex justify-content-end p-3">
       <nuxt-link
         :to="link.href"
         v-for="(link, index) in links"
         :key="index"
         class="px-3 ml-3 link-accent-secondary"
-      >{{ link.name }}</nuxt-link>
+        >{{ link.name }}</nuxt-link
+      >
     </nav>
   </header>
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   name: 'AppNavbar',
   data() {
@@ -26,9 +31,7 @@ export default {
     };
   },
   computed: {
-    isHome() {
-      return this.$nuxt.$route.name === 'index';
-    },
+    ...mapState(['page']),
   },
 };
 </script>
