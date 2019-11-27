@@ -45,7 +45,9 @@ module.exports = {
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
     '@nuxtjs/markdownit',
+    '@nuxtjs/sitemap',
     'vue-balance-text/nuxt/module',
+    '@nuxtjs/sitemap',
   ],
   /*
    ** Build configuration
@@ -72,8 +74,6 @@ module.exports = {
       const projects = generateRoutes('projects');
       const routes = [].concat(articles).concat(projects);
 
-      console.log('Routes: ', routes);
-
       return routes;
     },
   },
@@ -88,5 +88,9 @@ module.exports = {
     google: {
       families: ['Lato:400,700,900'],
     },
+  },
+  sitemap: {
+    hostname: 'https://www.zacharyminner.com/',
+    gzip: true,
   },
 };
