@@ -1,13 +1,16 @@
 <template>
-  <header class="app-navbar">
-    <nuxt-link to="/" v-if="page !== 'index'" class="app-navbar__logo p-3">Heyo, I'm Zach Minner.</nuxt-link>
-    <nav class="d-flex justify-content-end p-3">
+  <header class="app-navbar mb-2 mb-md-0">
+    <nuxt-link to="/" v-if="page !== 'index'" class="app-navbar__logo p-2 p-md-3"
+      >Heyo, I'm Zach Minner.</nuxt-link
+    >
+    <nav class="d-flex justify-content-end p-2 p-md-3">
       <nuxt-link
         :to="link.href"
         v-for="(link, index) in links"
         :key="index"
-        class="px-3 ml-3 link-accent-secondary"
-      >{{ link.name }}</nuxt-link>
+        class="px-md-3 link-accent-secondary"
+        >{{ link.name }}</nuxt-link
+      >
     </nav>
   </header>
 </template>
@@ -39,6 +42,10 @@ export default {
   justify-content: space-between;
   align-items: center;
 
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+
   &__logo {
     @include font-size(24px);
     font-weight: $font-weight-bold;
@@ -58,7 +65,12 @@ export default {
     justify-content: flex-end;
 
     a {
+      margin-left: 1.5rem;
       color: $white;
+
+      &:first-child {
+        margin-left: 0;
+      }
 
       &.nuxt-link-exact-active {
         color: $white;
