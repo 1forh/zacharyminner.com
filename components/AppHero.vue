@@ -37,8 +37,10 @@ export default {
   }
 
   .heading.h2 {
-    @include font-size(24px);
-    line-height: 1.5;
+    @include media-breakpoint-down(sm) {
+      @include font-size(24px);
+      line-height: 1.5;
+    }
   }
 }
 </style>
