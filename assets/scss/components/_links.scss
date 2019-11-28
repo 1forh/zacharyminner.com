@@ -1,7 +1,7 @@
 @each $color, $value in $theme-colors {
   .link-accent-#{$color} {
     position: relative;
-    padding: 0.2rem 0.3rem;
+    padding: 0.2rem 0.7rem;
     text-decoration: none !important;
     color: color-yiq($value);
     font-weight: $font-weight-bold;
@@ -28,6 +28,7 @@
       transform: skew(-12deg) rotate(-2deg);
       background-color: $value;
       pointer-events: none;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
     }
 
     &::after {

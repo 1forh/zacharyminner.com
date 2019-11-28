@@ -1,7 +1,11 @@
 <template>
   <footer class="app-footer py-3 text-center">
     &copy; {{ currentYear }}. Built with
-    <a href="https://nuxtjs.org/" target="_blank" class="text-light">Nuxt.js</a> and
+    <a
+      href="https://nuxtjs.org/"
+      target="_blank"
+      class="text-light"
+    >Nuxt.js</a> and
     <a href="https://bootstrap-vue.js.org" target="_blank" class="text-light">Bootstrap Vue</a>.
   </footer>
 </template>
@@ -19,6 +23,5 @@ export default {
 
 <style lang="scss">
 .app-footer {
-  border-top: 2px solid $gray-600;
 }
 </style>

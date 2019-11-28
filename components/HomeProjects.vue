@@ -4,17 +4,17 @@
     <div class="home-projects__social">
       <b-container fluid>
         <b-row>
-          <a href="https://github.com/1forh" target="_blank" class="text-light mr-5"
-            >github.com/1forh</a
-          >
+          <a
+            href="https://github.com/1forh"
+            target="_blank"
+            class="text-light mr-5"
+          >github.com/1forh</a>
           <a href="#" target="_blank" class="text-light">codepen.io/1forh</a>
         </b-row>
       </b-container>
     </div>
     <div class="home-projects__content">
-      <AppHeading level="h2" variation="display-3" align="center" class="mb-6 text-dark">
-        Projects
-      </AppHeading>
+      <AppHeading level="h2" variation="display-3" align="center" class="mb-6 text-dark">Projects</AppHeading>
       <b-container fluid>
         <b-row>
           <b-col v-for="(project, index) in projects" :key="index" cols="4">
@@ -55,6 +55,10 @@ export default {
   position: relative;
   padding-top: 4rem;
   padding-bottom: 11rem;
+
+  @include media-breakpoint-up(xxl) {
+    padding-top: 10rem;
+  }
 
   &__background {
     position: absolute;

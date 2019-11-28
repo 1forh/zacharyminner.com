@@ -23,7 +23,7 @@ export default {
         { href: '/', name: 'Home' },
         { href: '/projects', name: 'Projects' },
         { href: '/articles', name: 'Articles' },
-        // { href: '/experience', name: 'Experience' },
+        { href: '/experience', name: 'Experience' },
       ],
     };
   },

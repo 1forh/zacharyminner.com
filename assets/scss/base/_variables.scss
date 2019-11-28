@@ -112,7 +112,7 @@ $theme-colors: map-merge(
     'light': $light,
     'dark': $dark,
     // 'gray-200': $gray-200,
-      // 'gray-500': $gray-500,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+      // 'gray-500': $gray-500,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
   ),
   $theme-colors
 );
@@ -222,13 +222,14 @@ $paragraph-margin-bottom: 2rem;
 // Define the minimum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
 
-// $grid-breakpoints: (
-//   xs: 0,
-//   sm: 576px,
-//   md: 768px,
-//   lg: 992px,
-//   xl: 1200px,
-// ) !default;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1500px,
+);
 
 // @include _assert-ascending($grid-breakpoints, '$grid-breakpoints');
 // @include _assert-starts-at-zero($grid-breakpoints, '$grid-breakpoints');

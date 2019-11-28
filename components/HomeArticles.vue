@@ -2,9 +2,7 @@
   <component :is="type" class="home-articles">
     <!-- <div class="home-articles__background bg-gray-200"></div> -->
     <div class="home-articles__content">
-      <AppHeading level="h2" variation="display-3" align="center" class="mb-6">
-        Articles
-      </AppHeading>
+      <AppHeading level="h2" variation="display-3" align="center" class="mb-6">Articles</AppHeading>
       <b-container fluid>
         <b-row>
           <b-col v-for="(article, index) in articles" :key="index" cols="6" offset="3">
@@ -48,6 +46,10 @@ export default {
   z-index: 2;
   padding-top: 6rem;
   padding-bottom: 10rem;
+
+  @include media-breakpoint-up(xxl) {
+    padding-top: 8vw;
+  }
 
   &__content {
     position: relative;
