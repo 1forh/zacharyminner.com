@@ -1,16 +1,13 @@
 <template>
   <header class="app-navbar">
-    <nuxt-link to="/" v-if="page !== 'index'" class="app-navbar__logo p-3">
-      Heyo, I'm Zach Minner.
-    </nuxt-link>
+    <nuxt-link to="/" v-if="page !== 'index'" class="app-navbar__logo p-3">Heyo, I'm Zach Minner.</nuxt-link>
     <nav class="d-flex justify-content-end p-3">
       <nuxt-link
         :to="link.href"
         v-for="(link, index) in links"
         :key="index"
         class="px-3 ml-3 link-accent-secondary"
-        >{{ link.name }}</nuxt-link
-      >
+      >{{ link.name }}</nuxt-link>
     </nav>
   </header>
 </template>
@@ -26,7 +23,7 @@ export default {
         { href: '/', name: 'Home' },
         { href: '/projects', name: 'Projects' },
         { href: '/articles', name: 'Articles' },
-        { href: '/experience', name: 'Experience' },
+        // { href: '/experience', name: 'Experience' },
       ],
     };
   },

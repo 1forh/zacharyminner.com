@@ -3,14 +3,14 @@
     <b-container>
       <b-row>
         <b-col lg="8" offset-lg="2">
-          <AppHeading level="h1" class="mb-5" v-balance-text>
-            {{ title }}
-          </AppHeading>
-          <div class="mb-5">
+          <AppHeading level="h1" class="mb-5" v-balance-text>{{ title }}</AppHeading>
+          <div class="mb-5" v-if="image">
             <img :src="image" :alt="title" />
           </div>
           <b-button :href="website" class="mb-5">View website</b-button>
-          <div v-html="body" />
+          <div v-html="body">
+            <slot />
+          </div>
         </b-col>
       </b-row>
     </b-container>
