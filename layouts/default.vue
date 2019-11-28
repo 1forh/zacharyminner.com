@@ -1,5 +1,5 @@
 <template>
-  <div class="site-wrapper">
+  <div :class="['site-wrapper', { 'is-home': page === 'index' }]">
     <AppNavbar></AppNavbar>
     <main>
       <nuxt />
@@ -10,11 +10,15 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import AppNavbar from '~/components/AppNavbar.vue';
 import AppFooter from '~/components/AppFooter.vue';
 
 export default {
   components: { AppNavbar, AppFooter },
+  computed: {
+    ...mapState(['page']),
+  },
 };
 </script>
 
@@ -26,6 +30,7 @@ export default {
   min-height: 100vh;
   overflow: hidden;
 
+  // near footer
   &::after {
     @include bg-gradient-radial;
     content: '';
@@ -36,6 +41,7 @@ export default {
     width: 50vw;
     height: 50vw;
     transform: rotate(-45deg);
+    pointer-events: none;
     box-shadow: 0 9px 20px 0 rgba(0, 0, 0, 0.81);
   }
 
