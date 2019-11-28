@@ -1,46 +1,48 @@
 @each $color, $value in $theme-colors {
   .link-accent-#{$color} {
-    position: relative;
-    padding: 0.2rem 0.7rem;
-    text-decoration: none !important;
-    color: color-yiq($value);
-    font-weight: $font-weight-bold;
-    transition: color 0.3s;
+    @include media-breakpoint-up(lg) {
+      position: relative;
+      padding: 0.2rem 0.7rem;
+      text-decoration: none !important;
+      color: color-yiq($value);
+      font-weight: $font-weight-bold;
+      transition: color 0.3s;
 
-    &:hover {
-      color: $white;
+      &:hover {
+        color: $white;
+
+        &::after {
+          transform: skew(-12deg) rotate(-2deg) translateY(0);
+          opacity: 1;
+        }
+      }
+
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        bottom: -2px;
+        right: -2px;
+        left: -2px;
+        z-index: -2;
+        transform: skew(-12deg) rotate(-2deg);
+        background-color: $value;
+        pointer-events: none;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+      }
 
       &::after {
-        transform: skew(-12deg) rotate(-2deg) translateY(0);
-        opacity: 1;
+        z-index: -1;
+        top: -3px;
+        bottom: -3px;
+        right: -3px;
+        left: -3px;
+        transform: skew(-12deg) rotate(-2deg) translateY(50%);
+        background-color: $primary;
+        transition: transform 0.3s, opacity 0.3s;
+        opacity: 0;
       }
-    }
-
-    &::after,
-    &::before {
-      content: '';
-      position: absolute;
-      top: -2px;
-      bottom: -2px;
-      right: -2px;
-      left: -2px;
-      z-index: -2;
-      transform: skew(-12deg) rotate(-2deg);
-      background-color: $value;
-      pointer-events: none;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
-    }
-
-    &::after {
-      z-index: -1;
-      top: -3px;
-      bottom: -3px;
-      right: -3px;
-      left: -3px;
-      transform: skew(-12deg) rotate(-2deg) translateY(50%);
-      background-color: $primary;
-      transition: transform 0.3s, opacity 0.3s;
-      opacity: 0;
     }
   }
 }

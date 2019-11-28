@@ -5,7 +5,7 @@
         <b-col lg="8" offset-lg="2" cols="12">
           <AppHeading class="mb-5">Projects</AppHeading>
           <b-row>
-            <b-col v-for="(project, index) in projects" :key="index" cols="6" class="mb-5">
+            <b-col v-for="(project, index) in projects" :key="index" md="6" class="mb-5">
               <ProjectTeaser
                 :href="`/projects/${project.slug}`"
                 :title="project.title"

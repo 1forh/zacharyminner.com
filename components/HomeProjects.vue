@@ -14,17 +14,24 @@
       </b-container>
     </div>
     <div class="home-projects__content">
-      <AppHeading level="h2" variation="display-3" align="center" class="mb-6 text-dark">Projects</AppHeading>
       <b-container fluid>
         <b-row>
-          <b-col v-for="(project, index) in projects" :key="index" cols="4">
+          <b-col cols="12">
+            <AppHeading
+              level="h2"
+              variation="display-3"
+              align="center"
+              class="mb-5 mb-md-6 text-dark"
+            >Projects</AppHeading>
+          </b-col>
+          <b-col v-for="(project, index) in projects" :key="index" xl="4" class="mb-5 mb-md-0">
             <ProjectTeaser
               :href="`/projects/${project.slug}`"
               :title="project.title"
               :image="project.featured_image"
             />
           </b-col>
-          <b-col cols="12" class="d-flex justify-content-center mt-6">
+          <b-col cols="12" class="d-flex justify-content-center mt-0 mt-md-6">
             <b-button variant="primary" href="/projects" size="lg">View all projects</b-button>
           </b-col>
         </b-row>
@@ -60,6 +67,18 @@ export default {
     padding-top: 10rem;
   }
 
+  @include media-breakpoint-down(sm) {
+    padding-top: 2rem;
+    padding-bottom: 0;
+  }
+
+  .heading {
+    @include media-breakpoint-down(sm) {
+      color: $white !important;
+      text-align: left !important;
+    }
+  }
+
   &__background {
     position: absolute;
     z-index: 1;
@@ -68,6 +87,10 @@ export default {
     width: 100vw;
     height: 55vw;
     transform: rotate(-15deg);
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
 
     &::before {
       @include cover-absolute;
@@ -90,6 +113,10 @@ export default {
     padding-left: 0;
     transform: translateX(-50%) rotate(-15deg);
     font-size: 1.5rem;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
 
     .container-fluid {
       padding-left: 1.5rem;

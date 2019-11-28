@@ -23,5 +23,8 @@ export default {
 
 <style lang="scss">
 .app-footer {
+  @include media-breakpoint-down(sm) {
+    border-top: 1px solid $gray-800;
+  }
 }
 </style>

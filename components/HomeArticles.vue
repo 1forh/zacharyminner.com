@@ -2,10 +2,17 @@
   <component :is="type" class="home-articles">
     <!-- <div class="home-articles__background bg-gray-200"></div> -->
     <div class="home-articles__content">
-      <AppHeading level="h2" variation="display-3" align="center" class="mb-6">Articles</AppHeading>
       <b-container fluid>
         <b-row>
-          <b-col v-for="(article, index) in articles" :key="index" cols="6" offset="3">
+          <b-col cols="12">
+            <AppHeading
+              level="h2"
+              variation="display-3"
+              align="center"
+              class="mb-5 mb-md-6"
+            >Articles</AppHeading>
+          </b-col>
+          <b-col v-for="(article, index) in articles" :key="index" lg="6" offset-lg="3">
             <ArticleTeaser
               :href="`/articles/${article.slug}`"
               :title="article.title"
@@ -49,6 +56,16 @@ export default {
 
   @include media-breakpoint-up(xxl) {
     padding-top: 8vw;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 2rem;
+  }
+
+  .heading {
+    @include media-breakpoint-down(sm) {
+      text-align: left !important;
+    }
   }
 
   &__content {
