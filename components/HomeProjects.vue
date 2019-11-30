@@ -4,11 +4,9 @@
     <div class="home-projects__social">
       <b-container fluid>
         <b-row>
-          <a
-            href="https://github.com/1forh"
-            target="_blank"
-            class="text-light mr-5"
-          >github.com/1forh</a>
+          <a href="https://github.com/1forh" target="_blank" class="text-light mr-5">
+            github.com/1forh
+          </a>
           <a href="#" target="_blank" class="text-light">codepen.io/1forh</a>
         </b-row>
       </b-container>
@@ -22,7 +20,8 @@
               variation="display-3"
               align="center"
               class="mb-5 mb-md-6 text-dark"
-            >Projects</AppHeading>
+              >Projects</AppHeading
+            >
           </b-col>
           <b-col v-for="(project, index) in projects" :key="index" xl="4" class="mb-5 mb-md-0">
             <ProjectTeaser

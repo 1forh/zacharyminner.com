@@ -4,11 +4,9 @@
       <AppHeading level="h1" variation="display-1" class="mb-3">Heyo, I'm Zach Minner.</AppHeading>
       <AppHeading level="h2" variation="h2" weight="light" v-balance-text>
         I make websites and web applications for
-        <a
-          href="https://www.skycatchfire.com"
-          class="link-accent-secondary px-md-2"
-          target="_blank"
-        >SKYCATCHFIRE</a>.
+        <a href="https://www.skycatchfire.com" class="link-accent-secondary px-md-2" target="_blank"
+          >SKYCATCHFIRE</a
+        >.
       </AppHeading>
     </AppHero>
     <HomeProjects :projects="projects" />

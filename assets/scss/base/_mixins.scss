@@ -1,8 +1,8 @@
 // ==========================================================================
 // BACKGROUND GRADIENTS
 // ==========================================================================
-@mixin bg-gradient-radial {
-  background: radial-gradient(circle, $secondary 0%, $primary 100%);
+@mixin bg-gradient-radial($first: $secondary, $second: $primary) {
+  background: radial-gradient(circle, $first 0%, $second 100%);
 }
 
 // ==========================================================================

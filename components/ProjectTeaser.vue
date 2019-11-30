@@ -1,5 +1,10 @@
 <template>
   <article class="project-teaser">
+    <div
+      class="project-teaser__accent"
+      v-if="showAccent"
+      :style="{ transform: `rotate(${getRotation()})` }"
+    />
     <nuxt-link :to="href" class="text-light overflow-hidden shadow-lg">
       <div class="project-teaser__image" :style="{ 'background-image': `url(${image})` }"></div>
       <div class="project-teaser__content">
@@ -17,13 +22,37 @@ import AppHeading from '~/components/AppHeading';
 export default {
   name: 'ProjectTeaser',
   components: { AppHeading },
-  props: ['href', 'title', 'image'],
+  props: ['href', 'title', 'image', 'showAccent'],
+  methods: {
+    getRotation() {
+      const number = Math.ceil(Math.random() * 5);
+      const isNegative = Math.random() < 0.5 ? true : false;
+
+      if (isNegative) {
+        return `-${number}deg`;
+      } else {
+        return `${number}deg`;
+      }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .project-teaser {
+  position: relative;
   $this: &;
+
+  &__accent {
+    @include bg-gradient-radial($primary, $secondary);
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    z-index: -1;
+    box-shadow: $box-shadow-lg;
+  }
 
   a {
     @include maintain-ratio(4, 3);

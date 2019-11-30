@@ -10,6 +10,7 @@
                 :href="`/projects/${project.slug}`"
                 :title="project.title"
                 :image="project.featured_image"
+                :show-accent="true"
               />
             </b-col>
           </b-row>
