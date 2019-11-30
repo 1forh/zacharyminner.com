@@ -26,6 +26,7 @@ import ArticleTeaser from '~/components/ArticleTeaser.vue';
 export default {
   components: { AppHeading, ArticleTeaser },
   head: {
+    title: 'Articles | Zach Minner',
     meta: [
       {
         hid: 'description',

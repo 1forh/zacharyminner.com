@@ -66,6 +66,7 @@ import AppHeading from '~/components/AppHeading';
 export default {
   components: { AppHeading },
   head: {
+    title: 'Experience | Zach Minner',
     meta: [
       {
         hid: 'description',
