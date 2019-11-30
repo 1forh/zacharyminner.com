@@ -25,6 +25,15 @@ import ArticleTeaser from '~/components/ArticleTeaser.vue';
 
 export default {
   components: { AppHeading, ArticleTeaser },
+  head: {
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Articles discussing tips, tricks, and my thoughts on select web topics.',
+      },
+    ],
+  },
   computed: {
     articles() {
       return this.$store.state.articles;

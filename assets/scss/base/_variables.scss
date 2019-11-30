@@ -112,7 +112,7 @@ $theme-colors: map-merge(
     'light': $light,
     'dark': $dark,
     // 'gray-200': $gray-200,
-      // 'gray-500': $gray-500,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+      // 'gray-500': $gray-500,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
   ),
   $theme-colors
 );
@@ -174,6 +174,9 @@ $spacers: map-merge(
     ),
     6: (
       $spacer * 5,
+    ),
+    7: (
+      $spacer * 7,
     ),
   ),
   $spacers
@@ -343,7 +346,7 @@ $lead-font-weight: 300;
 
 // $small-font-size: 80% !default;
 
-// $text-muted: $gray-600 !default;
+$text-muted: $gray-500;
 
 // $blockquote-small-color: $gray-600 !default;
 // $blockquote-small-font-size: $small-font-size !default;

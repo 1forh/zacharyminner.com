@@ -75,6 +75,11 @@ export default {
       &.nuxt-link-exact-active {
         color: $white;
 
+        @include media-breakpoint-down(sm) {
+          text-decoration: none !important;
+          border-bottom: 2px solid $primary;
+        }
+
         &::after {
           transform: skew(-12deg) rotate(-2deg) translateY(0);
           opacity: 1;

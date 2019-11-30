@@ -5,13 +5,9 @@
         {{ title }}
       </AppHeading>
     </nuxt-link>
-    <AppHeading
-      :text="date | date"
-      level="h4"
-      variation="h6"
-      weight="normal"
-      class="mb-3 text-gray-500"
-    />
+    <AppHeading level="h4" variation="h6" weight="normal" class="mb-3 text-muted">
+      {{ date | date }}
+    </AppHeading>
     <div class="lead" v-html="$md.render(summary)"></div>
     <div class="article-teaser__tags">
       <b-badge variant="primary" v-for="(tag, index) in tags" :key="index">{{ tag }}</b-badge>
