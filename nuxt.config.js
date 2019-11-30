@@ -14,8 +14,22 @@ module.exports = {
         name: 'description',
         content: '',
       },
+      {
+        name: 'msapplication-TileColor',
+        content: '#f7541e',
+      },
+      {
+        name: 'theme-color',
+        content: '#ffffff',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-32x32.png' },
+      { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#f7541e' },
+    ],
   },
   router: {
     middleware: 'pages',
