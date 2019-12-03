@@ -7,7 +7,7 @@
           <div class="mb-5" v-if="image">
             <img :src="image" :alt="title" />
           </div>
-          <b-button :href="website" class="mb-5">View website</b-button>
+          <b-button :href="website" class="mb-5" v-if="website">View website</b-button>
           <div v-html="body">
             <slot />
           </div>
