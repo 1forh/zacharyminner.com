@@ -65,6 +65,7 @@ module.exports = {
     '@nuxtjs/sitemap',
     'vue-balance-text/nuxt/module',
     '@nuxtjs/sitemap',
+    '@nuxtjs/google-analytics',
   ],
   /*
    ** Build configuration
@@ -109,5 +110,8 @@ module.exports = {
   sitemap: {
     hostname: 'https://www.zacharyminner.com/',
     gzip: true,
+  },
+  googleAnalytics: {
+    id: 'UA-59393507-16',
   },
 };
