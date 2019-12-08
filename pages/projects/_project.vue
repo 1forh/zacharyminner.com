@@ -21,8 +21,5 @@ export default {
       };
     }
   },
-  mounted() {
-    console.log(this.project);
-  },
 };
 </script>
