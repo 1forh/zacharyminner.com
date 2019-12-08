@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import { shuffle } from '@/utilities/shuffle';
 import AppHero from '~/components/AppHero.vue';
 import AppHeading from '~/components/AppHeading.vue';
 import HomeProjects from '~/components/HomeProjects.vue';
@@ -37,7 +38,7 @@ export default {
   components: { AppHero, AppHeading, HomeProjects, HomeArticles },
   computed: {
     projects() {
-      return this.$store.state.projects.slice(0, 3);
+      return shuffle(this.$store.state.projects).slice(0, 3);
     },
     articles() {
       return this.$store.state.articles;
