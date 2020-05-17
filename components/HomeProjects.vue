@@ -7,7 +7,7 @@
           <a href="https://github.com/1forh" target="_blank" class="text-light mr-5">
             github.com/1forh
           </a>
-          <a href="#" target="_blank" class="text-light">codepen.io/1forh</a>
+          <a href="https://codepen.io/1forh" target="_blank" class="text-light">codepen.io/1forh</a>
         </b-row>
       </b-container>
     </div>
