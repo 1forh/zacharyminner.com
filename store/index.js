@@ -3,6 +3,7 @@ export const state = () => ({
   articles: [],
   projects: [],
   jobs: [],
+  games: [],
 });
 
 export const mutations = {
@@ -18,6 +19,9 @@ export const mutations = {
   setJobs(state, list) {
     state.jobs = list;
   },
+  setGames(state, list) {
+    state.games = list;
+  },
 };
 
 export const actions = {
@@ -25,6 +29,7 @@ export const actions = {
     const articleFiles = await require.context('~/assets/content/articles/', false, /\.json$/);
     const projectFiles = await require.context('~/assets/content/projects/', false, /\.json$/);
     const experienceFiles = await require.context('~/assets/content/experience/', false, /\.json$/);
+    const gameFiles = await require.context('~/assets/content/games/', false, /\.json$/);
     const articles = articleFiles.keys().map((key) => {
       let res = articleFiles(key);
       res.slug = key.slice(2, -5);
@@ -40,8 +45,14 @@ export const actions = {
       res.slug = key.slice(2, -5);
       return res;
     });
+    const games = gameFiles.keys().map((key) => {
+      let res = gameFiles(key);
+      res.slug = key.slice(2, -5);
+      return res;
+    });
     await commit('setArticles', articles);
     await commit('setProjects', projects);
     await commit('setJobs', jobs.reverse());
+    await commit('setGames', games);
   },
 };

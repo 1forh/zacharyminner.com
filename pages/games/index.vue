@@ -3,13 +3,13 @@
     <b-container fluid>
       <b-row>
         <b-col lg="8" offset-lg="2" cols="12">
-          <AppHeading class="mb-5">Projects</AppHeading>
+          <AppHeading class="mb-5">Games</AppHeading>
           <b-row>
-            <b-col v-for="(project, index) in projects" :key="index" md="6" class="mb-5">
+            <b-col v-for="(game, index) in games" :key="index" md="6" class="mb-5">
               <ProjectTeaser
-                :href="`/projects/${project.slug}`"
-                :title="project.title"
-                :image="project.featured_image"
+                :href="`/games/${game.slug}`"
+                :title="game.title"
+                :image="game.featured_image"
                 :show-accent="true"
               />
             </b-col>
@@ -28,20 +28,20 @@ export default {
   components: { AppHeading, ProjectTeaser },
   head() {
     return {
-      title: 'Projects | Zach Minner',
+      title: 'Games | Zach Minner',
       meta: [
         {
           hid: 'description',
           name: 'description',
           content:
-            "Here are various web projects that I've built ranging from Vue.js and Angular applications to Chrome extensions.",
+            "Here are all of the games that I've built. Among them are custom built games as well as games built while following along with tutorials and courses.",
         },
       ],
     };
   },
   computed: {
-    projects() {
-      return this.$store.state.projects;
+    games() {
+      return this.$store.state.games;
     },
   },
 };

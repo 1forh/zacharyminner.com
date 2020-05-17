@@ -6,7 +6,7 @@
       :style="{ transform: `rotate(${getRotation()})` }"
     />
     <nuxt-link :to="href" class="text-light overflow-hidden shadow-lg">
-      <div class="project-teaser__image" :style="{ 'background-image': `url(${image})` }"></div>
+      <div class="project-teaser__image" :style="{ 'background-image': `url(${image})` }" role="img" :aria-label="`${title} screenshot`"></div>
       <div class="project-teaser__content">
         <AppHeading level="h3" variation="h4" class="text-center" v-balance-text>
           {{ title }}

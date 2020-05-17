@@ -34,6 +34,20 @@ collections:
       - { label: 'Featured Image', name: 'featured_image', widget: 'image' }
       - { label: 'Website', name: 'website', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'games'
+    label: 'Game'
+    folder: 'assets/content/games'
+    create: true
+    format: 'json'
+    slug: '{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Featured Image', name: 'featured_image', widget: 'image' }
+      - { label: 'Website', name: 'website', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'experience'
     label: 'Experience'
     folder: 'assets/content/experience'

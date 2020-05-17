@@ -3,7 +3,12 @@
     <nuxt-link to="/" v-if="page !== 'index'" class="app-navbar__logo p-2 p-md-3"
       >Heyo, I'm Zach Minner.</nuxt-link
     >
-    <nav class="d-flex justify-content-end p-2 p-md-3">
+    <nav class="d-flex flex-wrap justify-content-md-end p-2 p-md-3">
+      <nuxt-link
+        to="/"
+        v-if="!homeIsCurrentPage"
+        class="px-md-3 link-accent-secondary is-home-link"
+        >Home</nuxt-link>
       <nuxt-link
         :to="link.href"
         v-for="(link, index) in links"
@@ -23,12 +28,18 @@ export default {
   data() {
     return {
       links: [
-        { href: '/', name: 'Home' },
         { href: '/projects', name: 'Projects' },
+        { href: '/games', name: 'Games' },
         { href: '/articles', name: 'Articles' },
         { href: '/experience', name: 'Experience' },
       ],
+      homeIsCurrentPage: true,
     };
+  },
+  watch: {
+    $route(to, from) {
+      this.homeIsCurrentPage = this.$router.currentRoute.name === 'index';
+    },
   },
   computed: {
     ...mapState(['page']),
@@ -62,17 +73,22 @@ export default {
   nav {
     flex-grow: 1;
     display: flex;
-    justify-content: flex-end;
 
     a {
       margin-left: 1.5rem;
       color: $white;
 
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 0.75rem;
+        margin-left: 0;
+        margin-right: 1.5rem;
+      }
+
       &:first-child {
         margin-left: 0;
       }
 
-      &.nuxt-link-exact-active {
+      &:not(.is-home-link).nuxt-link-active {
         color: $white;
 
         @include media-breakpoint-down(sm) {
