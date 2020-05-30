@@ -1,0 +1,7 @@
+{
+  "date": "2020-05-30T16:48:24.464Z",
+  "title": "Project Boost",
+  "website": "https://project-boost.netlify.app/",
+  "featured_image": "/images/uploads/screen-shot-2020-05-30-at-12.48.31-pm.png",
+  "body": "This game was built following along with the[](https://www.udemy.com/course/the-ultimate-guide-to-game-development-with-unity/) [Complete C# Unity Developer 3D: Learn to Code Making Games](https://www.udemy.com/course/unitycourse2/) course on Udemy. It is the second game that you make in the course.\n\nThe player must successfully navigate around the environment to get to the green landing pad. The game utilizes particle systems and audio clips to enhance the experience a bit.\n\nHold the space bar to launch and try to make it to the other side!"
+}
