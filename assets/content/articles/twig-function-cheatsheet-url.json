@@ -2,6 +2,6 @@
   "date": "2020-06-11T19:35:53.630Z",
   "title": "Twig Function Cheatsheet - URL",
   "summary": "Cheatsheet for the `url()` twig function in Drupal 8",
-  "body": "[Functions in Twig Templates Documentation](https://www.drupal.org/docs/theming-drupal/twig-in-drupal/functions-in-twig-templates#s-urlname-parameters-options)\n\n- - -\n\n### Keys\n\n#### User\n\n* user.login\n* user.pass\n* user.register\n* entity.user.canonical\n\n#### Misc\n\n* \\<current\\>\n* \\<front\\>\n\n- - -\n\n### Example Usage\n\n```html\n<a href=\"{{ url('user.password') }}\">Reset Password<a>\n```",
+  "body": "[Functions in Twig Templates Documentation](https://www.drupal.org/docs/theming-drupal/twig-in-drupal/functions-in-twig-templates#s-urlname-parameters-options)\n\n- - -\n\n### Keys\n\n#### User\n\n* user.login\n* user.pass\n* user.register\n* entity.user.canonical\n\n#### Misc\n\n* \\<current\\>\n* \\<front\\>\n\n- - -\n\n### Example Usage\n\n```html\n<a href=\"{{ url('user.pass') }}\">Reset Password<a>\n```",
   "featured_image": ""
 }
