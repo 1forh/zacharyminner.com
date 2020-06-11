@@ -3,5 +3,5 @@
   "title": "Twig Function Cheatsheet - URL",
   "summary": "Cheatsheet for the `url()` twig function in Drupal 8",
   "body": "[Functions - In Twig Templates Documentation](https://www.drupal.org/docs/theming-drupal/twig-in-drupal/functions-in-twig-templates#s-urlname-parameters-options)\n\n### **Keys**\n\n**User**\n\n* user.pass\n* user.register\n\n### Example Usage\n\n```\n{{ url('user.password') }}\n```",
-  "featured_image": "/images/uploads/placeholder-default.png"
+  "featured_image": ""
 }
