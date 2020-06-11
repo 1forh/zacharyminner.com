@@ -85,7 +85,11 @@ module.exports = {
       const fs = require('fs');
       const articles = generateRoutes('articles');
       const projects = generateRoutes('projects');
-      const routes = [].concat(articles).concat(projects);
+      const games = generateRoutes('games');
+      const routes = []
+        .concat(articles)
+        .concat(projects)
+        .concat(games);
 
       return routes;
     },
