@@ -2,6 +2,6 @@
   "date": "2020-06-11T19:35:53.630Z",
   "title": "Twig Function Cheatsheet",
   "summary": "Cheatsheet for various twig functions in Drupal 8",
-  "body": "[Functions in Twig Templates Documentation](https://www.drupal.org/docs/theming-drupal/twig-in-drupal/functions-in-twig-templates)\n\n### `url()`\n\n```html\n{{ url('user.login') }}\n\n{{ url('user.pass') }}\n\n{{ url('user.register') }}\n\n{{ url('entity.user.canonical') }}\n\n{{ url('<current>') }}\n\n{{ url('<front>') }}\n```\n\n---\n\n### `path()`\n\n```html\n{{ path('view.frontpage.page_1') }}\n\n{{ path('entity.user.canonical', {'user': user.id}) }}\n\n{{ path('entity.node.canonical', {'node': node.id}) }}\n```",
+  "body": "[Functions in Twig Templates Documentation](https://www.drupal.org/docs/theming-drupal/twig-in-drupal/functions-in-twig-templates)\n\n### `url()`\n\n```html\n{{ url('user.login') }}\n\n{{ url('user.pass') }}\n\n{{ url('user.register') }}\n\n{{ url('entity.user.canonical') }}\n\n{{ url('<current>') }}\n\n{{ url('<front>') }}\n```\n\n---\n\n### `path()`\n\n```html\n{{ path('view.frontpage.page_1') }}\n\n{{ path('entity.user.canonical', {'user': user.id}) }}\n\n{{ path('entity.node.canonical', {'node': node.id}) }}\n\n{{ path('node.add', {'node_type' : '<node_type>'}) }}\n```",
   "featured_image": ""
 }
