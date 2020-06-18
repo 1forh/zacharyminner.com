@@ -1,7 +1,0 @@
-{
-  "title": "Disable taxonomy term pager in Drupal 8",
-  "date": "2019-09-29T21:41:00.000Z",
-  "summary": "In order to disable the pager on a taxonomy term page, you can set the `terms_per_page_admin` setting to a really high number.",
-  "featured_image": "/images/uploads/drupal-8-pager.jpg",
-  "body": "In order to disable the pager on a taxonomy term list page, you can set the `terms_per_page_admin` setting to a really high number.\t\n\nIn your `settings.php` file, add the below line and tweak to your liking.\t\n\n```php\t\n$config['taxonomy.settings']['terms_per_page_admin'] = 1000;\t\n```"
-}
