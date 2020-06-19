@@ -3,8 +3,9 @@ import { graphql } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Link } from 'gatsby';
+import Image from '../components/image';
 
-const shortcodes = { Link }; // Provide common components here
+const shortcodes = { Link, Image };
 
 export default function LayoutGarden({ data: { mdx } }) {
   return (

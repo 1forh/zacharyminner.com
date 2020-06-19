@@ -9,7 +9,6 @@ const IndexPage = ({ data }) => (
     <SEO title="Zach's Digital Garden" />
     <div className="container grid grid-cols-12 py-20 mx-auto">
       <div className="col-span-6 col-start-4 space-y-8">
-        testing
         {data.allMdx.edges.map(({ node }) => (
           <Link to={node.fields.slug} key={node.id} className="block p-4 bg-gray-200 border border-gray-300">
             <h3>
