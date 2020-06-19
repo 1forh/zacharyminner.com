@@ -3,5 +3,4 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
-
 import './src/assets/css/main.css';

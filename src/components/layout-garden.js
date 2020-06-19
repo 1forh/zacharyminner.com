@@ -4,8 +4,9 @@ import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Link } from 'gatsby';
 import Image from '../components/image';
+import CodeBlock from '../components/code-block';
 
-const shortcodes = { Link, Image };
+const shortcodes = { Link, Image, CodeBlock };
 
 export default function LayoutGarden({ data: { mdx } }) {
   return (
