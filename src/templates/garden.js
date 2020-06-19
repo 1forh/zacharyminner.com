@@ -17,9 +17,15 @@ export default function Garden({ data }) {
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
+      id
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
+        summary
+        date
       }
     }
   }
