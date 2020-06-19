@@ -6,13 +6,13 @@ import { Link } from 'gatsby';
 import Image from '../components/image';
 import CodeBlock from '../components/code-block';
 
-const shortcodes = { Link, Image, CodeBlock };
+const components = { Link, Image, code: CodeBlock };
 
 export default function LayoutGarden({ data: { mdx } }) {
   return (
     <div>
       <h1>{mdx.frontmatter.title}</h1>
-      <MDXProvider components={shortcodes}>
+      <MDXProvider components={components}>
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </MDXProvider>
     </div>
