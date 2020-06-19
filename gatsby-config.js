@@ -5,6 +5,7 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -31,32 +32,6 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/assets/images`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: `${__dirname}/src/garden/articles`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: `${__dirname}/src/garden/games`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: `${__dirname}/src/garden/projects`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        defaultLayouts: {
-          default: require.resolve('./src/components/layout-garden.js'),
-        },
       },
     },
     `gatsby-plugin-postcss`,
