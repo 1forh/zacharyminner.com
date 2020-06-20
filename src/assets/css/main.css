@@ -82,19 +82,19 @@ hr {
   @apply my-6;
 }
 
+a {
+  @apply duration-300 transition-all;
+}
+
 /* Code for Firefox */
 ::-moz-selection {
-  @apply bg-purple-800;
+  @apply bg-gray-800;
   @apply text-white;
 }
 
 ::selection {
-  @apply bg-purple-800;
+  @apply bg-gray-800;
   @apply text-white;
-}
-
-a {
-  @apply font-medium text-purple-600;
 }
 
 .gatsby-highlight {
@@ -109,17 +109,4 @@ a {
   padding: 0;
   padding-left: 2.8em;
   overflow: initial;
-}
-
-.layout-garden {
-  p,
-  ul,
-  ol,
-  h1,
-  h2,
-  h3,
-  h4,
-  h6 {
-    @apply mb-5;
-  }
 }

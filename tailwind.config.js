@@ -1,6 +1,28 @@
 module.exports = {
   purge: ['./src/**/*.js'],
   theme: {
+    colors: {
+      black: '#000',
+      white: '#fff',
+
+      gray: {
+        100: '#F5F5F5',
+        200: '#E7E7E7',
+        300: '#D8D8D8',
+        400: '#BBBBBB',
+        500: '#9E9E9E',
+        600: '#8E8E8E',
+        700: '#5F5F5F',
+        800: '#474747',
+        900: '#2F2F2F',
+      },
+
+      primary: {
+        500: '#ED2B33',
+        800: '#bc1017',
+      },
+      secondary: '#E9DCC9',
+    },
     container: {
       center: true,
       padding: '1rem',

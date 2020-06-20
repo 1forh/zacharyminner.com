@@ -10,9 +10,9 @@ import PropTypes from 'prop-types';
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <div class="bg-secondary min-h-screen">
       <main>{children}</main>
-    </>
+    </div>
   );
 };
 

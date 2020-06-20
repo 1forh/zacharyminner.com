@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => (
     <div className="container grid grid-cols-12 py-10">
       <div className="col-span-6 col-start-4 space-y-8">
         {data.allMdx.edges.map(({ node }) => (
-          <Link to={node.fields.slug} key={node.id} className="block p-4 text-gray-900 bg-gray-100 border border-gray-300">
+          <Link to={node.fields.slug} key={node.id} className="block p-4 text-gray-900">
             <h2 class="mb-1">{node.frontmatter.title}</h2>
             <p>{node.frontmatter.summary}</p>
           </Link>
