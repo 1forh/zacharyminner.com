@@ -5,16 +5,25 @@
  */
 
 const { createFilePath } = require('gatsby-source-filesystem');
+const _ = require('lodash');
 const path = require('path');
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   if (node.internal.type === 'Mdx') {
     const value = createFilePath({ node, getNode });
+    const parent = getNode(_.get(node, 'parent'));
+
     createNodeField({
       name: 'slug',
       node,
       value,
+    });
+
+    createNodeField({
+      node,
+      name: 'category',
+      value: _.get(parent, 'sourceInstanceName'),
     });
   }
 };

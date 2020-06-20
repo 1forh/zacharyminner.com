@@ -7,10 +7,12 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import Header from './header';
 
 const Layout = ({ children }) => {
   return (
-    <div class="bg-secondary min-h-screen">
+    <div className="min-h-screen bg-secondary">
+      <Header />
       <main>{children}</main>
     </div>
   );

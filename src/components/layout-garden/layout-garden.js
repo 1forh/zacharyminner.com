@@ -18,8 +18,13 @@ export default function LayoutGarden({ data: { mdx } }) {
       <SEO title={mdx.frontmatter.title} />
       <div className="container py-10 wizzy">
         <div className="grid grid-cols-12">
-          <div className="col-span-6 col-start-4">
+          <div className="col-span-12 md:col-span-6 md:col-start-4">
             <h1 className="mb-4">{mdx.frontmatter.title}</h1>
+            {mdx.frontmatter.website && (
+              <Link to={mdx.frontmatter.website} className="inline-flex mb-6" target="_blank">
+                View website
+              </Link>
+            )}
             <MDXProvider components={components}>
               <MDXRenderer>{mdx.body}</MDXRenderer>
             </MDXProvider>
@@ -37,6 +42,7 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
+        website
       }
     }
   }

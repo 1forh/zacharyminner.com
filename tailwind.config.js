@@ -18,6 +18,7 @@ module.exports = {
       },
 
       primary: {
+        400: '#f0555b',
         500: '#ED2B33',
         800: '#bc1017',
       },
@@ -40,6 +41,8 @@ module.exports = {
     },
     extend: {},
   },
-  variants: {},
+  variants: {
+    textColor: ['responsive', 'hover', 'focus', 'active', 'group-hover', 'visited'],
+  },
   plugins: [],
 };
