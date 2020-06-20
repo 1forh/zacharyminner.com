@@ -47,6 +47,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `snippets`,
+        path: `${__dirname}/src/garden/snippets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/assets/images`,
       },

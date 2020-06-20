@@ -51,6 +51,20 @@ const IndexPage = ({ data }) => (
               ))}
           </ul>
         </div>
+        <div>
+          <h2 className="mb-4">Snippets</h2>
+          <ul className="pl-5 list-disc list-outside">
+            {data.allMdx.edges
+              .filter((edge) => edge.node.fields.category === 'snippets')
+              .map(({ node }) => (
+                <li key={node.id}>
+                  <Link to={node.fields.slug} key={node.id} className="font-bold text-green-700">
+                    {node.frontmatter.title}
+                  </Link>
+                </li>
+              ))}
+          </ul>
+        </div>
       </div>
     </div>
   </Layout>
