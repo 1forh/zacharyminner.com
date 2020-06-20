@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => (
     <div className="container grid grid-cols-12 py-10">
       <div className="col-span-12 space-y-8 md:col-span-6 md:col-start-4">
         <div>
-          <h2 className="mb-4">Articles</h2>
+          <h2 className="mb-4">Notes</h2>
           <ul className="pl-5 list-disc list-outside">
             {data.allMdx.edges
               .filter((edge) => edge.node.fields.category === 'articles')
@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => (
           </ul>
         </div>
         <div>
-          <h2 className="mb-4">Games</h2>
+          <h2 className="mb-4">Games Made With Unity</h2>
           <ul className="pl-5 list-disc list-outside">
             {data.allMdx.edges
               .filter((edge) => edge.node.fields.category === 'games')
@@ -38,7 +38,7 @@ const IndexPage = ({ data }) => (
           </ul>
         </div>
         <div>
-          <h2 className="mb-4">Projects</h2>
+          <h2 className="mb-4">Web Projects</h2>
           <ul className="pl-5 list-disc list-outside">
             {data.allMdx.edges
               .filter((edge) => edge.node.fields.category === 'projects')
@@ -52,7 +52,7 @@ const IndexPage = ({ data }) => (
           </ul>
         </div>
         <div>
-          <h2 className="mb-4">Snippets</h2>
+          <h2 className="mb-4">Code Snippets</h2>
           <ul className="pl-5 list-disc list-outside">
             {data.allMdx.edges
               .filter((edge) => edge.node.fields.category === 'snippets')
