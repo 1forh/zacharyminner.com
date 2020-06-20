@@ -1,12 +1,12 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 
+import Seo from '../components/seo';
 import Layout from '../components/layout/layout';
-import SEO from '../components/seo';
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Zach's Digital Garden" />
+    <Seo title="Projects, games, ideas" />
     <div className="container grid grid-cols-12 py-10">
       <div className="col-span-12 space-y-8 md:col-span-6 md:col-start-4">
         <div>

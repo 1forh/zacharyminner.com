@@ -39,7 +39,11 @@ module.exports = {
       28: ['1.75rem', '2.125rem'],
       34: ['2.125rem', '2.5rem'],
     },
-    extend: {},
+    extend: {
+      borderWidth: {
+        '3': '3px',
+      },
+    },
   },
   variants: {
     textColor: ['responsive', 'hover', 'focus', 'active', 'group-hover', 'visited'],

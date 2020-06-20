@@ -15,7 +15,7 @@ const components = { Link, Image, code: CodeBlock };
 export default function LayoutGarden({ data: { mdx } }) {
   return (
     <Layout>
-      <SEO title={mdx.frontmatter.title} />
+      <SEO title={mdx.frontmatter.title} description={mdx.frontmatter.summary} />
       <div className="container py-10 wizzy">
         <div className="grid grid-cols-12">
           <div className="col-span-12 md:col-span-6 md:col-start-4">
@@ -43,6 +43,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         website
+        summary
       }
     }
   }
