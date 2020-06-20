@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 
-import Layout from '../components/layout';
+import Layout from '../components/layout/layout';
 import SEO from '../components/seo';
 
 const IndexPage = ({ data }) => (
@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => (
               .filter((edge) => edge.node.fields.category === 'articles')
               .map(({ node }) => (
                 <li key={node.id}>
-                  <Link to={node.fields.slug} key={node.id} className="font-bold text-primary-500 hover:text-primary-800 visited:text-primary-400">
+                  <Link to={node.fields.slug} key={node.id} className="font-bold text-green-700">
                     {node.frontmatter.title}
                   </Link>
                 </li>
@@ -30,7 +30,7 @@ const IndexPage = ({ data }) => (
               .filter((edge) => edge.node.fields.category === 'games')
               .map(({ node }) => (
                 <li key={node.id}>
-                  <Link to={node.fields.slug} key={node.id} className="font-bold text-primary-500 hover:text-primary-800 visited:text-primary-400">
+                  <Link to={node.fields.slug} key={node.id} className="font-bold text-green-700">
                     {node.frontmatter.title}
                   </Link>
                 </li>
@@ -44,7 +44,7 @@ const IndexPage = ({ data }) => (
               .filter((edge) => edge.node.fields.category === 'projects')
               .map(({ node }) => (
                 <li key={node.id}>
-                  <Link to={node.fields.slug} key={node.id} className="font-bold text-primary-500 hover:text-primary-800 visited:text-primary-400">
+                  <Link to={node.fields.slug} key={node.id} className="font-bold text-green-700">
                     {node.frontmatter.title}
                   </Link>
                 </li>

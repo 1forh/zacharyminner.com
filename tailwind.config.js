@@ -17,11 +17,11 @@ module.exports = {
         900: '#2F2F2F',
       },
 
-      primary: {
-        400: '#f0555b',
-        500: '#ED2B33',
-        800: '#bc1017',
+      green: {
+        500: '#8bc34a',
+        700: '#558b2f',
       },
+
       secondary: '#E9DCC9',
     },
     container: {

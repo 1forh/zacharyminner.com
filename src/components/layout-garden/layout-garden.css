@@ -27,9 +27,9 @@
 }
 
 .wizzy a {
-  @apply font-bold text-primary-500;
+  @apply font-bold text-green-700;
 }
 
 .wizzy a:hover {
-  @apply text-primary-800;
+  @apply text-green-700;
 }
