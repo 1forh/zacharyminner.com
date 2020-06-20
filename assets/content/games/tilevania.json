@@ -1,7 +1,0 @@
-{
-  "date": "2020-06-11T19:18:07.273Z",
-  "title": "TileVania",
-  "website": "https://tilevania.netlify.app/",
-  "body": "TileVania was  built following along the [Complete C# Unity Developer 2D: Learn to Code Making Games](https://www.udemy.com/course/unitycourse/) course on Udemy. It is the 7th and final game you build in the course.\n\nThis platformer utilizes tilemaps and Cinemachine. This is a step up from the [Platformer Prototype](https://www.zacharyminner.com/games/platformer-prototype) that I build earlier. \n\nI plan to add more levels and features like enemies, powerups, and more.",
-  "featured_image": "/images/uploads/tilevania.png"
-}

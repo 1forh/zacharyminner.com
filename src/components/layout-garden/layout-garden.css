@@ -1,0 +1,35 @@
+.wizzy {
+  @apply text-18;
+}
+
+.wizzy h1,
+.wizzy p,
+.wizzy ul,
+.wizzy ol,
+.wizzy img {
+  @apply mb-6;
+}
+
+.wizzy h2,
+.wizzy h3,
+.wizzy h4,
+.wizzy h6 {
+  @apply mt-10;
+  @apply mb-6;
+}
+
+.wizzy ul {
+  @apply list-disc list-outside pl-8;
+}
+
+.wizzy ol {
+  @apply list-inside list-decimal;
+}
+
+.wizzy a {
+  @apply font-bold text-green-700;
+}
+
+.wizzy a:hover {
+  @apply text-green-700;
+}

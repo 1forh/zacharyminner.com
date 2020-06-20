@@ -1,0 +1,112 @@
+/*! purgecss start ignore */
+@tailwind base;
+/*! purgecss end ignore */
+
+@tailwind components;
+
+@tailwind utilities;
+
+html,
+body {
+  @apply text-gray-900 text-16 leading-normal font-normal antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* @apply font-body; */
+  @apply font-bold;
+}
+
+h1 {
+  @apply text-34;
+}
+
+h2 {
+  @apply text-28;
+}
+
+h3 {
+  @apply text-26;
+}
+
+h4 {
+  @apply text-24;
+}
+
+h5 {
+  @apply text-20;
+}
+
+h6 {
+  @apply text-18;
+}
+
+.heading-1 {
+  @apply text-34;
+}
+
+.heading-2 {
+  @apply text-28;
+}
+
+.heading-3 {
+  @apply text-26;
+}
+
+.heading-4 {
+  @apply text-24;
+}
+
+.heading-5 {
+  @apply text-20;
+}
+
+.heading-6 {
+  @apply text-18;
+}
+
+img {
+  max-width: 100%;
+}
+
+pre {
+  @apply bg-gray-100 p-2 rounded-lg text-14 text-gray-800;
+}
+
+hr {
+  @apply my-6;
+}
+
+a {
+  @apply duration-300 transition-all;
+}
+
+/* Code for Firefox */
+::-moz-selection {
+  @apply bg-gray-800;
+  @apply text-white;
+}
+
+::selection {
+  @apply bg-gray-800;
+  @apply text-white;
+}
+
+.gatsby-highlight {
+  background-color: #fdf6e3;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+}
+
+.gatsby-highlight pre[class*='language-'].line-numbers {
+  padding: 0;
+  padding-left: 2.8em;
+  overflow: initial;
+}
