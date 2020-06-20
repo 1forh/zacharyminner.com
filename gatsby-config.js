@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Zach's Garden`,
     description: `Projects, articles and other random stuff by Zach Minner.`,
+    siteUrl: 'https://www.zacharyminner.com',
   },
   plugins: [
     `gatsby-plugin-postcss`,
@@ -63,5 +64,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    `gatsby-plugin-sitemap`,
   ],
 };
