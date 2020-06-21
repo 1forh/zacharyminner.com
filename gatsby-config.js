@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Zach's Garden`,
+    title: `Zach Minner`,
     description: `Projects, articles and other random stuff by Zach Minner.`,
     siteUrl: 'https://www.zacharyminner.com',
   },
