@@ -9,7 +9,7 @@ class Plant extends React.Component {
   render() {
     return (
       <div className="fixed bottom-0 right-0 flex-col items-center hidden mr-10 -mb-10 lg:flex">
-        <div class="relative w-48 h-48">
+        <div className="relative w-48 h-48">
           <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="absolute top-0 left-0 text-green-700">
             <path
               fill="currentColor"
