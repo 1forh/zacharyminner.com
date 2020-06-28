@@ -26,8 +26,6 @@ const Image = (props) => (
         return n.node.relativePath.includes(props.filename);
       });
 
-      console.log(image);
-
       if (!image) {
         return null;
       }

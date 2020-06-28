@@ -59,13 +59,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `icons`,
-        path: `${__dirname}/src/assets/icons`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `zacharyminner.com`,

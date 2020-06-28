@@ -43,6 +43,9 @@ module.exports = {
       borderWidth: {
         '3': '3px',
       },
+      inset: {
+        '1/2': '50%',
+      },
     },
   },
   variants: {
