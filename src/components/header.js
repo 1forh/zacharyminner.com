@@ -11,7 +11,7 @@ const Header = () => {
           <strong>Zach</strong> <span className="font-light">Minner</span>
         </Link>
 
-        <div class="absolute top-1/2 transform -translate-y-1/2 right-0 mr-4 space-x-5 flex items-center">
+        <div className="absolute right-0 flex items-center mr-4 space-x-5 transform -translate-y-1/2 top-1/2">
           <Link to={CONFIG.social.instagram} className="flex items-center hover:text-green-500" target="_blank">
             <FontAwesomeIcon icon={['fab', 'instagram']} className="text-28" />
           </Link>
