@@ -11,5 +11,3 @@ fields:
 - type: text
   name: summary
   label: summary
-pages:
-- src/garden/articles/test/testing.md
