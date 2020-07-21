@@ -9,8 +9,9 @@ sections:
   label: Garden
   create: all
   match: "**/*"
-upload_dir: uploads
-public_path: "/uploads"
+  new_doc_ext: ".mdx"
+upload_dir: src/uploads
+public_path: src/uploads
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
