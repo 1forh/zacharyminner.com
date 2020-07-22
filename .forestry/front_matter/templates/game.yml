@@ -5,9 +5,15 @@ fields:
 - type: text
   name: title
   label: title
-- type: text
-  name: date
+- name: date
+  type: datetime
   label: date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
 - type: text
   name: website
   label: website
