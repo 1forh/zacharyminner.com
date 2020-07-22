@@ -6,7 +6,8 @@
 .wizzy p,
 .wizzy ul,
 .wizzy ol,
-.wizzy img {
+.wizzy img,
+.wizzy > pre {
   @apply mb-6;
 }
 

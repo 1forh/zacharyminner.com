@@ -16,9 +16,9 @@ export default function LayoutGarden({ data: { mdx } }) {
   return (
     <Layout>
       <SEO title={mdx.frontmatter.title} description={mdx.frontmatter.summary} />
-      <div className="container py-10 wizzy">
+      <div className="container py-10 ">
         <div className="grid grid-cols-12">
-          <div className="col-span-12 md:col-span-6 md:col-start-4">
+          <div className="col-span-12 md:col-span-6 md:col-start-4 wizzy">
             <h1 className="mb-4">{mdx.frontmatter.title}</h1>
             {mdx.frontmatter.website && (
               <Link to={mdx.frontmatter.website} className="inline-flex mb-6" target="_blank">

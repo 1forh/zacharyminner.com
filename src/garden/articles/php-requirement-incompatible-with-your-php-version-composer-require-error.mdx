@@ -1,14 +1,15 @@
 ---
 title: 'Composer Error: PHP requirement incompatible with your PHP Version'
 date: 2020-07-22T04:00:00Z
-summary: Add `--ignore-platform-reqs` flag to composer require command to get around
-  this.
-
+summary: 'Add `--ignore-platform-reqs` flag to composer require command to get around this.'
 ---
+
 ![](../uploads/screen-shot-2020-07-22-at-9-54-28-am.png)
 
-Add \`--ignore-platform-reqs\` flag to composer require command to get around this.
+Add `--ignore-platform-reqs` flag to composer require command to get around this.
 
-    composer require drupal/date_recur:^2.0 --ignore-platform-reqs
+```bash
+composer require drupal/date_recur:^2.0 --ignore-platform-reqs
+```
 
-Solution was found here: [https://magento.stackexchange.com/questions/207318/php-requirement-incompatible-with-your-php-version-composer-module-installatio](https://magento.stackexchange.com/questions/207318/php-requirement-incompatible-with-your-php-version-composer-module-installatio "https://magento.stackexchange.com/questions/207318/php-requirement-incompatible-with-your-php-version-composer-module-installatio")
+[Solution source](https://magento.stackexchange.com/questions/207318/php-requirement-incompatible-with-your-php-version-composer-module-installatio)
