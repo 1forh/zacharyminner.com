@@ -7,8 +7,8 @@ import Layout from '../components/layout/layout';
 const IndexPage = ({ data }) => (
   <Layout>
     <Seo title="Projects, games, ideas" />
-    <div className="container grid grid-cols-12 py-10">
-      <div className="col-span-12 space-y-8 md:col-span-6 md:col-start-4">
+    <div className="container py-10">
+      <div className="grid grid-cols-1 space-y-8 lg:grid-cols-2 md:col-span-6 md:col-start-4">
         <div>
           <h2 className="mb-4">Notes</h2>
           <ul className="pl-5 list-disc list-outside">
