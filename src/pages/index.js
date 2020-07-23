@@ -24,10 +24,10 @@ const IndexPage = ({ data }) => (
           </ul>
         </div>
         <div>
-          <h2 className="mb-4">Games Made With Unity</h2>
+          <h2 className="mb-4">Web Projects</h2>
           <ul className="pl-5 list-disc list-outside">
             {data.allMdx.edges
-              .filter((edge) => edge.node.fields.category === 'games')
+              .filter((edge) => edge.node.fields.category === 'projects')
               .map(({ node }) => (
                 <li key={node.id}>
                   <Link to={node.fields.slug} key={node.id} className="font-bold text-green-700">
@@ -38,10 +38,10 @@ const IndexPage = ({ data }) => (
           </ul>
         </div>
         <div>
-          <h2 className="mb-4">Web Projects</h2>
+          <h2 className="mb-4">Games Made With Unity</h2>
           <ul className="pl-5 list-disc list-outside">
             {data.allMdx.edges
-              .filter((edge) => edge.node.fields.category === 'projects')
+              .filter((edge) => edge.node.fields.category === 'games')
               .map(({ node }) => (
                 <li key={node.id}>
                   <Link to={node.fields.slug} key={node.id} className="font-bold text-green-700">
