@@ -1,0 +1,21 @@
+---
+label: Game
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- name: date
+  type: datetime
+  label: date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- type: text
+  name: website
+  label: website
+pages:
+- src/garden/games/zombies.mdx
