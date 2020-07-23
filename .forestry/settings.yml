@@ -7,7 +7,7 @@ sections:
 - type: directory
   path: src/garden
   label: Plant
-  create: all
+  create: documents
   match: "**/*"
   new_doc_ext: mdx
 upload_dir: src/garden/uploads
