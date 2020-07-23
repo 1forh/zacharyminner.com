@@ -8,7 +8,7 @@ const IndexPage = ({ data }) => (
   <Layout>
     <Seo title="Projects, games, ideas" />
     <div className="container py-10">
-      <div className="grid grid-cols-1 space-y-8 lg:grid-cols-2 md:col-span-6 md:col-start-4">
+      <div className="grid grid-cols-1 mx-auto space-y-8 lg:gap-8 lg:grid-cols-2 lg:max-w-screen-lg">
         <div>
           <h2 className="mb-4">Notes</h2>
           <ul className="pl-5 list-disc list-outside">
