@@ -7,6 +7,7 @@ import { Link } from 'gatsby';
 import Layout from '../layout/layout';
 import SEO from '../seo';
 import Image from '../image';
+import Back from '../back';
 import CodeBlock from '../code-block';
 import './layout-garden.css';
 
@@ -16,18 +17,21 @@ export default function LayoutGarden({ data: { mdx } }) {
   return (
     <Layout>
       <SEO title={mdx.frontmatter.title} description={mdx.frontmatter.summary} />
-      <div className="container py-10 ">
+      <div className="container pt-6 pb-10">
         <div className="grid grid-cols-12">
-          <div className="col-span-12 md:col-span-6 md:col-start-4 wizzy">
-            <h1 className="mb-4">{mdx.frontmatter.title}</h1>
-            {mdx.frontmatter.website && (
-              <Link to={mdx.frontmatter.website} className="inline-flex mb-6" target="_blank">
-                View website
-              </Link>
-            )}
-            <MDXProvider components={components}>
-              <MDXRenderer>{mdx.body}</MDXRenderer>
-            </MDXProvider>
+          <div className="col-span-12 md:col-span-6 md:col-start-4">
+            <Back />
+            <div className="wizzy">
+              <h1 className="mb-4">{mdx.frontmatter.title}</h1>
+              {mdx.frontmatter.website && (
+                <Link to={mdx.frontmatter.website} className="inline-flex mb-6" target="_blank">
+                  View website
+                </Link>
+              )}
+              <MDXProvider components={components}>
+                <MDXRenderer>{mdx.body}</MDXRenderer>
+              </MDXProvider>
+            </div>
           </div>
         </div>
       </div>
