@@ -9,13 +9,10 @@ const Image = (props) => (
         images: allFile {
           edges {
             node {
-              relativePath
+              id
               name
-              childImageSharp {
-                sizes(maxWidth: 600) {
-                  ...GatsbyImageSharpSizes
-                }
-              }
+              relativePath
+              publicURL
             }
           }
         }
@@ -30,8 +27,9 @@ const Image = (props) => (
         return null;
       }
 
-      const imageSizes = image.node.childImageSharp.sizes;
-      return <Img alt={props.alt} sizes={imageSizes} />;
+      // const imageSizes = image.node.childImageSharp.sizes;
+      // return <Img alt={props.alt} sizes={imageSizes} />;
+      return <Img alt={props.alt} />;
     }}
   />
 );

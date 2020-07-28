@@ -6,12 +6,11 @@ import { Link } from 'gatsby';
 
 import Layout from '../layout/layout';
 import SEO from '../seo';
-import Image from '../image';
 import Back from '../back';
 import CodeBlock from '../code-block';
 import './layout-garden.css';
 
-const components = { Link, Image, code: CodeBlock };
+const components = { Link, code: CodeBlock };
 
 export default function LayoutGarden({ data: { mdx } }) {
   return (
