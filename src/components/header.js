@@ -8,7 +8,10 @@ const Header = () => {
     <div className="py-3">
       <div className="container relative flex justify-center">
         <Link to="/" className="pb-1 font-bold border-green-500 border-b-3 text-24 hover:text-green-700 hover:border-green-700">
-          <span className="font-light">Heyo, I'm</span> <strong>Zach</strong> <span className="font-light">Minner!</span>
+          <span className="hidden font-light md:inline">Heyo, I'm</span> <strong>Zach</strong>{' '}
+          <span className="font-light">
+            Minner<span className="hidden md:inline">!</span>
+          </span>
         </Link>
 
         <div className="absolute right-0 flex items-center mr-4 space-x-5 transform -translate-y-1/2 top-1/2">
