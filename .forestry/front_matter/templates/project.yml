@@ -17,4 +17,5 @@ fields:
     required: false
   label: summary
 pages:
+- src/garden/projects/tally-mark-tracker.mdx
 - src/garden/projects/unofficial-tesla-news.mdx
