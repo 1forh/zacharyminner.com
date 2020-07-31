@@ -1,4 +1,27 @@
 ---
 label: Experience
 hide_body: false
-fields: []
+fields:
+- name: company
+  type: text
+  config:
+    required: false
+  label: company
+- name: start_date
+  type: datetime
+  label: start date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: end_date
+  type: datetime
+  label: end date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
