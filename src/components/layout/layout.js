@@ -16,12 +16,12 @@ import Header from '../header';
 import Plant from '../plant';
 import './layout.css';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, isHome }) => {
   library.add(faInstagram, faGithub, faChevronLeft);
 
   return (
     <div className="min-h-screen bg-secondary">
-      <Header />
+      <Header isHome={isHome} />
       <main>{children}</main>
       <Plant />
     </div>
@@ -30,6 +30,7 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  isHome: PropTypes.bool,
 };
 
 export default Layout;
