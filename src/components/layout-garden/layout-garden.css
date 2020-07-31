@@ -30,7 +30,3 @@
 .wizzy a {
   @apply font-bold text-green-700;
 }
-
-.wizzy a:hover {
-  @apply text-green-700;
-}

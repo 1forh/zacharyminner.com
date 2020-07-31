@@ -1,6 +1,8 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import BalanceText from 'react-balance-text';
 
+import Divider from '../components/divider';
 import Seo from '../components/seo';
 import Layout from '../components/layout/layout';
 
@@ -8,23 +10,47 @@ const IndexPage = ({ data }) => (
   <Layout>
     <Seo title="Projects, games, ideas" />
     <div className="container py-10">
-      <div className="grid grid-cols-1 mx-auto space-y-8 lg:gap-8 lg:grid-cols-2 lg:max-w-screen-lg">
+      <div className="grid grid-cols-1 gap-6">
         <div>
-          <h2 className="mb-4">Notes</h2>
-          <ul className="pl-5 list-disc list-outside">
+          <h2 className="mb-5 font-black text-24">Notes</h2>
+          <ul className="grid grid-cols-2 row-gap-6 col-gap-16">
             {data.allMdx.edges
               .filter((edge) => edge.node.fields.category === 'articles')
               .map(({ node }) => (
                 <li key={node.id}>
-                  <Link to={node.fields.slug} key={node.id} className="font-bold text-green-700">
-                    {node.frontmatter.title}
-                  </Link>
+                  <h3 className="mb-2">
+                    <Link to={node.fields.slug} key={node.id} className="font-bold text-20 balance-text">
+                      <BalanceText>{node.frontmatter.title}</BalanceText>
+                    </Link>
+                  </h3>
+                  <div>{node.frontmatter.summary}</div>
                 </li>
               ))}
           </ul>
         </div>
+
+        <Divider />
+
         <div>
-          <h2 className="mb-4">Web Projects</h2>
+          <h2 className="mb-5 font-black text-24">Web Projects</h2>
+          <ul className="grid grid-cols-2 row-gap-6 col-gap-16">
+            {data.allMdx.edges
+              .filter((edge) => edge.node.fields.category === 'projects')
+              .map(({ node }) => (
+                <li key={node.id}>
+                  <h3 className="mb-2">
+                    <Link to={node.fields.slug} key={node.id} className="font-bold text-20 balance-text">
+                      <BalanceText>{node.frontmatter.title}</BalanceText>
+                    </Link>
+                  </h3>
+                  <div>{node.frontmatter.summary}</div>
+                </li>
+              ))}
+          </ul>
+        </div>
+
+        {/* <div>
+          <h2 className="mb-4 font-black text-24">Web Projects</h2>
           <ul className="pl-5 list-disc list-outside">
             {data.allMdx.edges
               .filter((edge) => edge.node.fields.category === 'projects')
@@ -36,9 +62,9 @@ const IndexPage = ({ data }) => (
                 </li>
               ))}
           </ul>
-        </div>
+        </div> */}
         <div>
-          <h2 className="mb-4">Games Made With Unity</h2>
+          <h2 className="mb-4 font-black text-24">Games Made With Unity</h2>
           <ul className="pl-5 list-disc list-outside">
             {data.allMdx.edges
               .filter((edge) => edge.node.fields.category === 'games')
@@ -52,7 +78,7 @@ const IndexPage = ({ data }) => (
           </ul>
         </div>
         <div>
-          <h2 className="mb-4">Code Snippets</h2>
+          <h2 className="mb-4 font-black text-24">Code Snippets</h2>
           <ul className="pl-5 list-disc list-outside">
             {data.allMdx.edges
               .filter((edge) => edge.node.fields.category === 'snippets')

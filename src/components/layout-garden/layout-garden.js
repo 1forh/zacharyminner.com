@@ -18,7 +18,7 @@ export default function LayoutGarden({ data: { mdx } }) {
       <SEO title={mdx.frontmatter.title} description={mdx.frontmatter.summary} />
       <div className="container pt-6 pb-10">
         <div className="grid grid-cols-12">
-          <div className="col-span-12 md:col-span-6 md:col-start-4">
+          <div className="col-span-12 md:col-span-10 md:col-start-2">
             <Back />
             <div className="wizzy">
               <h1 className="mb-4">{mdx.frontmatter.title}</h1>

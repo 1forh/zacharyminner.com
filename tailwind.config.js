@@ -1,6 +1,11 @@
 module.exports = {
   purge: ['./src/**/*.js'],
   theme: {
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+    },
     colors: {
       black: '#000',
       white: '#fff',
