@@ -2,11 +2,11 @@
 label: Experience
 hide_body: false
 fields:
-- name: company
+- name: title
   type: text
   config:
     required: true
-  label: company
+  label: title
 - name: start_date
   type: datetime
   label: start date
