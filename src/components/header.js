@@ -12,13 +12,9 @@ const Header = () => {
           <Link to="/" className="inline-block mb-4 font-black text-34">
             <span className="hidden md:inline">Heyo, I'm</span> <strong>Zach</strong> Minner<span className="hidden md:inline">!</span>
           </Link>
-
+          {/* prettier-ignore */}
           <p className="leading-normal text-18">
-            I'm a web developer building websites and applications at{' '}
-            <Link href="https://www.skycatchfire.com/" target="_blank" rel="noreferrer" className="font-bold">
-              SKYCATCHFIRE
-            </Link>
-            . I live in North Canton with my beautiful girlfriend Haley and my asshole cat Ava. I'm a Zach of all trades and I'm always trying to learn more about myself and everything else.
+            I'm a web developer building websites and applications at <Link href="https://www.skycatchfire.com/" target="_blank" rel="noreferrer" className="font-bold">SKYCATCHFIRE</Link>. I live in North Canton with my beautiful girlfriend Haley and my asshole cat Ava. I'm a Zach of all trades and I'm always trying to learn more about myself and everything else.
           </p>
         </header>
 
