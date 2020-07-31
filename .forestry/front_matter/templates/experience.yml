@@ -5,14 +5,14 @@ fields:
 - name: company
   type: text
   config:
-    required: false
+    required: true
   label: company
 - name: start_date
   type: datetime
   label: start date
   description: ''
   config:
-    required: false
+    required: true
     date_format: 
     time_format: 
     display_utc: false
