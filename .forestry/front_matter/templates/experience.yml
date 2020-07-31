@@ -26,4 +26,5 @@ fields:
     time_format: 
     display_utc: false
 pages:
+- src/garden/experience/haines-local-search.mdx
 - src/garden/experience/skycatchfire.mdx
