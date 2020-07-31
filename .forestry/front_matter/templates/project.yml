@@ -16,3 +16,5 @@ fields:
   config:
     required: false
   label: summary
+pages:
+- src/garden/projects/unofficial-tesla-news.mdx
