@@ -5,17 +5,22 @@ fields:
 - type: text
   name: title
   label: title
+  config:
+    required: true
 - name: date
   type: datetime
   label: date
   description: ''
   config:
-    required: false
+    required: true
     date_format: 
     time_format: 
     display_utc: false
+  default: now
 - type: text
   name: website
   label: website
+  config:
+    required: true
 pages:
 - src/garden/games/zombies.mdx
