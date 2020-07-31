@@ -11,3 +11,8 @@ fields:
 - type: text
   name: website
   label: website
+- name: summary
+  type: text
+  config:
+    required: false
+  label: summary
