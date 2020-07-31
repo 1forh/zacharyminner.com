@@ -17,6 +17,7 @@ fields:
     required: false
   label: summary
 pages:
+- src/garden/projects/bootstrap-grid-overlay.mdx
 - src/garden/projects/campaign-journal.mdx
 - src/garden/projects/fire-drupal-8-theme.mdx
 - src/garden/projects/mtg-proxies.mdx
