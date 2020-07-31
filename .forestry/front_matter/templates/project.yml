@@ -7,11 +7,16 @@ fields:
   label: title
   config:
     required: true
-- type: text
-  name: date
-  label: date
+- name: date
+  type: datetime
+  description: ''
   config:
     required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  label: date
+  default: now
 - type: text
   name: website
   label: website
