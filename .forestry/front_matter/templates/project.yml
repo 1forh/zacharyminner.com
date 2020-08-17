@@ -30,6 +30,7 @@ fields:
 pages:
 - src/garden/projects/bootstrap-grid-overlay.mdx
 - src/garden/projects/campaign-journal.mdx
+- src/garden/projects/ditcher.mdx
 - src/garden/projects/fire-drupal-8-theme.mdx
 - src/garden/projects/mtg-proxies.mdx
 - src/garden/projects/pomodoro-timer.mdx
