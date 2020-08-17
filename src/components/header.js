@@ -9,9 +9,19 @@ const Header = ({ isHome }) => {
     <div className="pt-8">
       <div className="container relative flex items-center">
         <header className="md:mr-24 lg:mr-32">
-          <Link to="/" className="inline-block mb-4 font-black text-34">
-            <span className="hidden md:inline">Heyo, I'm</span> <strong>Zach</strong> Minner<span className="hidden md:inline">!</span>
-          </Link>
+          {isHome && (
+            <h1>
+              <Link to="/" className="inline-block mb-4 font-black text-34">
+                <span className="hidden md:inline">Heyo, I'm</span> <strong>Zach</strong> Minner<span className="hidden md:inline">!</span>
+              </Link>
+            </h1>
+          )}
+          {!isHome && (
+            <Link to="/" className="inline-block mb-4 font-black text-34">
+              <span className="hidden md:inline">Heyo, I'm</span> <strong>Zach</strong> Minner<span className="hidden md:inline">!</span>
+            </Link>
+          )}
+
           {/* prettier-ignore */}
           {isHome && (
             <div className="leading-normal text-18">
