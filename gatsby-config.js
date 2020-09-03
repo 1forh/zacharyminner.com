@@ -75,6 +75,13 @@ module.exports = {
         theme_color: `#ffffff`,
         display: `minimal-ui`,
         icon: `src/assets/images/plant-icon.png`, // This path is relative to the root of the site.
+        shortcuts: [
+          {
+            name: 'Meditations',
+            description: 'A list of daily reminders for myself',
+            url: '/meditations',
+          },
+        ],
       },
     },
     `gatsby-plugin-offline`,
