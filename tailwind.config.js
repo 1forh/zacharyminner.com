@@ -1,6 +1,31 @@
 module.exports = {
-  purge: ['./src/**/*.js'],
+  purge: {
+    mode: 'all',
+    content: ['./src/**/*.js'],
+    options: {
+      whitelist: ['h1', 'h2', 'h3', 'p', 'blockquote', 'strong'],
+    },
+  },
   theme: {
+    typography: {
+      default: {
+        css: {
+          color: '#2F2F2F',
+          a: {
+            color: '#3182ce',
+            '&:hover': {
+              color: '#2c5282',
+            },
+          },
+          'ol > li::before': {
+            color: '#5F5F5F',
+          },
+          'ul > li::before': {
+            backgroundColor: '#5F5F5F',
+          },
+        },
+      },
+    },
     screens: {
       sm: '640px',
       md: '768px',
@@ -56,5 +81,5 @@ module.exports = {
   variants: {
     textColor: ['responsive', 'hover', 'focus', 'active', 'group-hover', 'visited'],
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };

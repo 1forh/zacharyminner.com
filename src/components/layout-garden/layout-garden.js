@@ -20,10 +20,10 @@ export default function LayoutGarden({ data: { mdx } }) {
         <div className="grid grid-cols-12">
           <div className="col-span-12 md:col-span-10 md:col-start-2">
             <Back />
-            <div className="wizzy">
+            <div className="prose prose-lg">
               <h1 className="mb-4">{mdx.frontmatter.title}</h1>
               {mdx.frontmatter.website && (
-                <Link to={mdx.frontmatter.website} className="inline-flex mb-6" target="_blank">
+                <Link to={mdx.frontmatter.website} className="inline-flex mb-4" target="_blank">
                   View website
                 </Link>
               )}
