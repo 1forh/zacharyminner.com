@@ -18,5 +18,6 @@ fields:
   label: summary
 pages:
 - src/garden/articles/how-to-deploy-one-function-to-firebase.mdx
+- src/garden/articles/meditations.mdx
 - src/garden/articles/php-requirement-incompatible-with-your-php-version-composer-require-error.mdx
 - src/garden/articles/testing.mdx
