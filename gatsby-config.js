@@ -71,9 +71,9 @@ module.exports = {
         name: `zacharyminner.com`,
         short_name: `zacharyminner.com`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#ffffff`,
-        display: `minimal-ui`,
+        background_color: `#E9DCC9`,
+        theme_color: `#558b2f`,
+        display: `standalone`,
         icon: `src/assets/images/plant-icon.png`, // This path is relative to the root of the site.
         shortcuts: [
           {
