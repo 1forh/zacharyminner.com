@@ -12,9 +12,7 @@ const IndexPage = ({ data, location }) => {
     <Layout isHome={isHome}>
       <Seo title="Projects, games, ideas" />
       <div className="container pb-10">
-        <div className="grid grid-cols-1">
-          <Divider />
-
+        <div className="grid grid-cols-1 mt-10">
           <div>
             <h2 className="mb-8 font-black text-24">Notes</h2>
             <ul className="grid row-gap-10 col-gap-16 md:grid-cols-2">
