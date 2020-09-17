@@ -17,6 +17,7 @@ fields:
   name: summary
   label: summary
 pages:
+- src/garden/articles/exporting-index-rules-from-firestore.mdx
 - src/garden/articles/how-to-deploy-one-function-to-firebase.mdx
 - src/garden/articles/meditations.mdx
 - src/garden/articles/php-requirement-incompatible-with-your-php-version-composer-require-error.mdx
