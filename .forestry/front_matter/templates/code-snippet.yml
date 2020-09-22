@@ -5,5 +5,3 @@ fields:
 - type: text
   name: title
   label: title
-pages:
-- src/garden/snippets/.prettierrc.mdx
