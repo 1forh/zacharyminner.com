@@ -7,3 +7,4 @@ fields:
   label: title
 pages:
 - src/garden/snippets/.prettierrc.mdx
+- src/garden/snippets/development.services.yml.mdx
