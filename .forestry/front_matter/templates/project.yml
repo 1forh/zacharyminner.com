@@ -24,13 +24,7 @@ fields:
     required: true
 - name: tags
   type: tag_list
-  default:
-  - Drupal 8
-  - Vue.js
-  - Nuxt.js
-  - Web
-  - Unity
-  - Firebase
+  default: []
   label: Tags
 - name: summary
   type: text
