@@ -110,3 +110,8 @@ a {
   padding-left: 2.8em;
   overflow: initial;
 }
+
+.prose .gatsby-resp-image-wrapper {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}

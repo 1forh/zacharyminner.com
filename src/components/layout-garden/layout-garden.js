@@ -22,11 +22,11 @@ export default function LayoutGarden({ data: { mdx } }) {
         <div className="pt-6 pb-10 mx-auto md:pt-10 max-w-prose">
           <div className="mb-4">
             {/* <Back /> */}
-            <div class="text-lg max-w-prose mx-auto mb-4">
-              <h1 class="text-3xl text-center font-extrabold tracking-tight sm:text-4xl sm:leading-10 flex items-center justify-center">
+            <div className="mx-auto mb-4 text-lg max-w-prose">
+              <h1 className="flex items-center justify-center text-3xl font-extrabold tracking-tight text-center sm:text-4xl sm:leading-10">
                 <BalanceText>{mdx.frontmatter.title}</BalanceText>
                 {mdx.frontmatter.website && (
-                  <Link to={mdx.frontmatter.website} className="flex items-center p-3">
+                  <Link to={mdx.frontmatter.website} className="flex items-center p-3" target="_blank">
                     <FontAwesomeIcon icon={['fas', 'link']} className="text-20" />
                   </Link>
                 )}
