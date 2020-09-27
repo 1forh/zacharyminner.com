@@ -22,6 +22,10 @@ fields:
   label: website
   config:
     required: true
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
 - name: summary
   type: text
   config:
