@@ -48,37 +48,6 @@ module.exports = {
       md: '768px',
       lg: '1024px',
     },
-    colors: {
-      black: '#000',
-      white: '#fff',
-
-      gray: {
-        100: '#F5F5F5',
-        200: '#E7E7E7',
-        300: '#D8D8D8',
-        400: '#BBBBBB',
-        500: '#9E9E9E',
-        600: '#8E8E8E',
-        700: '#5F5F5F',
-        800: '#474747',
-        900: '#2F2F2F',
-      },
-
-      green: {
-        50: '#F9FCF6',
-        100: '#F3F9ED',
-        200: '#E2F0D2',
-        300: '#D1E7B7',
-        400: '#AED580',
-        500: '#8BC34A',
-        600: '#7DB043',
-        700: '#53752C',
-        800: '#3F5821',
-        900: '#2A3B16',
-      },
-
-      secondary: '#E9DCC9',
-    },
     container: {
       center: true,
       padding: '1rem',
@@ -95,6 +64,44 @@ module.exports = {
       34: ['2.125rem', '2.5rem'],
     },
     extend: {
+      colors: {
+        black: '#000',
+        white: '#fff',
+
+        gray: {
+          100: '#F5F5F5',
+          200: '#E7E7E7',
+          300: '#D8D8D8',
+          400: '#BBBBBB',
+          500: '#9E9E9E',
+          600: '#8E8E8E',
+          700: '#5F5F5F',
+          800: '#474747',
+          900: '#2F2F2F',
+        },
+
+        green: {
+          50: '#F9FCF6',
+          100: '#F3F9ED',
+          200: '#E2F0D2',
+          300: '#D1E7B7',
+          400: '#AED580',
+          500: '#8BC34A',
+          600: '#7DB043',
+          700: '#53752C',
+          800: '#3F5821',
+          900: '#2A3B16',
+        },
+
+        secondary: '#E9DCC9',
+
+        vue: '#42b983',
+        unity: '#000000',
+        javscript: '#F6DE3B',
+        nuxt: '#00c58e',
+        drupal: '#32AADE',
+        firebase: '#F38227',
+      },
       borderWidth: {
         '3': '3px',
       },
@@ -106,5 +113,5 @@ module.exports = {
   variants: {
     textColor: ['responsive', 'hover', 'focus', 'active', 'group-hover', 'visited'],
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/ui')],
 };

@@ -38,7 +38,7 @@ const IndexPage = ({ data, location }) => {
                 .map(({ node }) => (
                   <li key={node.id}>
                     <h3 className="flex mb-2">
-                      <Link to={node.fields.slug} key={node.id} className="inline-block font-bold text-20 balance-text">
+                      <Link to={node.fields.slug} key={node.id} className="inline-block font-bold text-20">
                         <BalanceText>{node.frontmatter.title}</BalanceText>
                       </Link>
                     </h3>
@@ -56,13 +56,22 @@ const IndexPage = ({ data, location }) => {
               {data.allMdx.edges
                 .filter((edge) => edge.node.fields.category === 'projects')
                 .map(({ node }) => (
-                  <li key={node.id}>
-                    <h3 className="flex mb-2">
+                  <li key={node.id} className="space-y-3">
+                    <h3 className="flex">
                       <Link to={node.fields.slug} key={node.id} className="inline-block font-bold text-20 balance-text">
                         <BalanceText>{node.frontmatter.title}</BalanceText>
                       </Link>
                     </h3>
+
                     <div>{node.frontmatter.summary}</div>
+
+                    <div className="flex items-center space-x-4">
+                      {node.frontmatter.tags.map((tag) => (
+                        <div key={tag} className="inline-flex items-center px-3 py-0.5 rounded-full text-12 font-medium leading-5 bg-indigo-100 text-indigo-800">
+                          {tag}
+                        </div>
+                      ))}
+                    </div>
                   </li>
                 ))}
             </ul>
@@ -104,6 +113,7 @@ export const query = graphql`
             title
             summary
             date
+            tags
           }
           fields {
             slug
