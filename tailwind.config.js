@@ -1,8 +1,13 @@
 const mdx = require('@mdx-js/mdx');
 
 module.exports = {
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
   purge: {
     mode: 'all',
+    layers: ['utilities'],
     content: ['./src/**/*.{js,mdx}'],
     options: {
       extractors: [

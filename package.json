@@ -39,7 +39,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "react-live": "^2.2.2",
-    "tailwindcss": "^1.7.6"
+    "tailwindcss": "^1.8.10"
   },
   "devDependencies": {
     "prettier": "2.0.5"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 import Divider from '../components/divider';
 import Seo from '../components/seo';
@@ -28,12 +28,16 @@ const IndexPage = ({ data, location }) => {
           </div>
         </div>
 
+        <div>
+          <Link to="/">Experience</Link>
+        </div>
+
         <Divider />
 
         <div className="grid grid-cols-1">
           <div>
             <h2 className="mb-8 font-black text-24">Notes</h2>
-            <ul className="grid row-gap-10 col-gap-16 md:grid-cols-2">
+            <ul className="grid gap-y-10 gap-x-16 md:grid-cols-2">
               {data.allMdx.edges
                 .filter((edge) => edge.node.fields.category === 'articles')
                 .map(({ node }) => (
@@ -48,7 +52,7 @@ const IndexPage = ({ data, location }) => {
 
           <div>
             <h2 className="mb-8 font-black text-24">Projects</h2>
-            <ul className="grid row-gap-10 col-gap-16 md:grid-cols-2">
+            <ul className="grid gap-y-10 gap-x-16 md:grid-cols-2">
               {data.allMdx.edges
                 .filter((edge) => edge.node.fields.category === 'projects')
                 .map(({ node }) => (
