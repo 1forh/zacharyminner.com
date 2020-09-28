@@ -31,6 +31,9 @@ const Header = ({ isHome }) => {
           <Link to={CONFIG.social.twitter} className="flex items-center text-gray-800 hover:text-green-500" target="_blank">
             <FontAwesomeIcon icon={['fab', 'twitter']} className="text-28" />
           </Link>
+          <Link to={CONFIG.social.linkedin} className="flex items-center text-gray-800 hover:text-green-500" target="_blank">
+            <FontAwesomeIcon icon={['fab', 'linkedin-in']} className="text-28" />
+          </Link>
           <Link to={CONFIG.social.github} className="flex items-center text-gray-800 hover:text-green-500" target="_blank">
             <FontAwesomeIcon icon={['fab', 'github']} className="text-28" />
           </Link>

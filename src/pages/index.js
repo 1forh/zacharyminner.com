@@ -28,10 +28,6 @@ const IndexPage = ({ data, location }) => {
           </div>
         </div>
 
-        {/* <div>
-          <Link to="/">Experience</Link>
-        </div> */}
-
         <Divider />
 
         <div className="grid grid-cols-1">

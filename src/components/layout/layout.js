@@ -10,13 +10,13 @@ import PropTypes from 'prop-types';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faChevronLeft, faLink } from '@fortawesome/free-solid-svg-icons';
-import { faInstagram, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faGithub, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 import Header from '../header';
 import './layout.css';
 
 const Layout = ({ children, isHome }) => {
-  library.add(faInstagram, faGithub, faChevronLeft, faTwitter, faLink);
+  library.add(faInstagram, faGithub, faChevronLeft, faTwitter, faLink, faLinkedinIn);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50">
