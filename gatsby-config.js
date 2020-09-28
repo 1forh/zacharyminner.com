@@ -20,6 +20,9 @@ module.exports = {
               maxWidth: 1200,
             },
           },
+          {
+            resolve: 'gatsby-remark-code-buttons',
+          },
         ],
       },
     },
@@ -28,13 +31,6 @@ module.exports = {
       options: {
         name: `articles`,
         path: `${__dirname}/src/garden/articles`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `games`,
-        path: `${__dirname}/src/garden/games`,
       },
     },
     {

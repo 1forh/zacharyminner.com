@@ -1,10 +1,11 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
-import BalanceText from 'react-balance-text';
+import { graphql } from 'gatsby';
+
 import Divider from '../components/divider';
 import Seo from '../components/seo';
 import Layout from '../components/layout/layout';
 import Image from '../components/image';
+import ContentPreview from '../components/content-preview';
 
 const IndexPage = ({ data, location }) => {
   const isHome = location.pathname === '/';
@@ -37,12 +38,7 @@ const IndexPage = ({ data, location }) => {
                 .filter((edge) => edge.node.fields.category === 'articles')
                 .map(({ node }) => (
                   <li key={node.id}>
-                    <h3 className="flex mb-2">
-                      <Link to={node.fields.slug} key={node.id} className="inline-block font-bold text-20">
-                        <BalanceText>{node.frontmatter.title}</BalanceText>
-                      </Link>
-                    </h3>
-                    <div>{node.frontmatter.summary}</div>
+                    <ContentPreview slug={node.fields.slug} title={node.frontmatter.title} date={node.frontmatter.date} summary={node.frontmatter.summary} />
                   </li>
                 ))}
             </ul>
@@ -56,22 +52,8 @@ const IndexPage = ({ data, location }) => {
               {data.allMdx.edges
                 .filter((edge) => edge.node.fields.category === 'projects')
                 .map(({ node }) => (
-                  <li key={node.id} className="space-y-3">
-                    <h3 className="flex">
-                      <Link to={node.fields.slug} key={node.id} className="inline-block font-bold text-20 balance-text">
-                        <BalanceText>{node.frontmatter.title}</BalanceText>
-                      </Link>
-                    </h3>
-
-                    <div>{node.frontmatter.summary}</div>
-
-                    <div className="flex items-center space-x-4">
-                      {node.frontmatter.tags.map((tag) => (
-                        <div key={tag} className="inline-flex items-center px-3 py-0.5 rounded-full text-12 font-medium leading-5 bg-indigo-100 text-indigo-800">
-                          {tag}
-                        </div>
-                      ))}
-                    </div>
+                  <li key={node.id}>
+                    <ContentPreview slug={node.fields.slug} title={node.frontmatter.title} date={node.frontmatter.date} summary={node.frontmatter.summary} tags={node.frontmatter.tags} />
                   </li>
                 ))}
             </ul>
@@ -86,11 +68,7 @@ const IndexPage = ({ data, location }) => {
                 .filter((edge) => edge.node.fields.category === 'snippets')
                 .map(({ node }) => (
                   <li key={node.id}>
-                    <h3 className="flex mb-2">
-                      <Link to={node.fields.slug} key={node.id} className="inline-block font-bold text-20 balance-text">
-                        <BalanceText>{node.frontmatter.title}</BalanceText>
-                      </Link>
-                    </h3>
+                    <ContentPreview slug={node.fields.slug} title={node.frontmatter.title} />
                   </li>
                 ))}
             </ul>

@@ -5,6 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import BalanceText from 'react-balance-text';
+import moment from 'moment';
 
 import Layout from '../layout/layout';
 import SEO from '../seo';
@@ -23,6 +24,7 @@ export default function LayoutGarden({ data: { mdx } }) {
           <div className="mb-4">
             {/* <Back /> */}
             <div className="mx-auto mb-4 text-lg max-w-prose">
+              <p className="mb-1 text-center text-gray-700">{moment(new Date(mdx.frontmatter.date)).format('MMMM D, YYYY')}</p>
               <h1 className="flex items-center justify-center text-3xl font-extrabold tracking-tight text-center sm:text-4xl sm:leading-10">
                 <BalanceText>{mdx.frontmatter.title}</BalanceText>
                 {mdx.frontmatter.website && (
@@ -59,6 +61,7 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
+        date
         website
         summary
         tags
