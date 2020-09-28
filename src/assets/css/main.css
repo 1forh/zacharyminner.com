@@ -6,6 +6,7 @@
 
 @tailwind utilities;
 
+/*! purgecss start ignore */
 html,
 body {
   @apply text-gray-900 text-16 leading-normal font-normal antialiased;
@@ -97,21 +98,8 @@ a {
   @apply text-white;
 }
 
-.gatsby-highlight {
-  background-color: #fdf6e3;
-  border-radius: 0.3em;
-  margin: 0.5em 0;
-  padding: 1em;
-  overflow: auto;
-}
-
-.gatsby-highlight pre[class*='language-'].line-numbers {
-  padding: 0;
-  padding-left: 2.8em;
-  overflow: initial;
-}
-
 .prose .gatsby-resp-image-wrapper {
   margin-top: 2em;
   margin-bottom: 2em;
 }
+/*! purgecss end ignore */
