@@ -28,9 +28,9 @@ const IndexPage = ({ data, location }) => {
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <Link to="/">Experience</Link>
-        </div>
+        </div> */}
 
         <Divider />
 
