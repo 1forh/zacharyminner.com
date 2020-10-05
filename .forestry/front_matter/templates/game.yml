@@ -22,5 +22,3 @@ fields:
   label: website
   config:
     required: true
-pages:
-- src/garden/games/zombies.mdx
