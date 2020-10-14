@@ -13,6 +13,10 @@ fields:
   config:
     required: true
   default: now
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
 - type: text
   name: summary
   label: summary
