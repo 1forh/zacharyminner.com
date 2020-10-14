@@ -21,6 +21,7 @@ fields:
   name: summary
   label: summary
 pages:
+- src/garden/articles/11-questions.mdx
 - src/garden/articles/create-a-search-page-using-search-api-drupal-8.mdx
 - src/garden/articles/disable-taxonomy-term-pager-in-drupal-8.mdx
 - src/garden/articles/exporting-index-rules-from-firestore.mdx
