@@ -1,3 +1,7 @@
 .prose a {
   @apply font-bold text-green-700;
 }
+
+.prose hr {
+  @apply my-5;
+}

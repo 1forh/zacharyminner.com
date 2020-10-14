@@ -46,7 +46,7 @@ export default function LayoutGarden({ data: { mdx } }) {
                 ))}
             </div>
           </div>
-          <div className="prose">
+          <div className="mt-8 prose">
             <MDXProvider components={components}>
               <MDXRenderer>{mdx.body}</MDXRenderer>
             </MDXProvider>
