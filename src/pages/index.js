@@ -38,7 +38,7 @@ const IndexPage = ({ data, location }) => {
                 .filter((edge) => edge.node.fields.category === 'articles')
                 .map(({ node }) => (
                   <li key={node.id}>
-                    <ContentPreview slug={node.fields.slug} title={node.frontmatter.title} date={node.frontmatter.date} summary={node.frontmatter.summary} />
+                    <ContentPreview slug={node.fields.slug} title={node.frontmatter.title} date={node.frontmatter.date} summary={node.frontmatter.summary} tags={node.frontmatter.tags} />
                   </li>
                 ))}
             </ul>
