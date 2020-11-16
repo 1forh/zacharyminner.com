@@ -1,0 +1,19 @@
+---
+date: 2020-11-16T18:30:48Z
+tags:
+- WordPress
+- PHP
+- " Gutenberg"
+title: How to remove the default Gutenberg block patterns
+summary: Quick explanation of how to remove the default Gutenberg block patterns.
+
+---
+```php
+function fire_theme_support() {
+	remove_theme_support('core-block-patterns');
+}
+
+add_action('after_setup_theme', 'fire_theme_support');
+```
+
+[**Solution source**](https://fullsiteediting.com/lessons/block-patterns-tips/)
