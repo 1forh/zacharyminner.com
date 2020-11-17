@@ -12,9 +12,6 @@ module.exports = {
       'not-allowed': 'not-allowed',
       move: 'move',
     },
-    fontFamily: {
-      body: ['Arial', 'sans-serif'],
-    },
     fontWeight: {
       light: '300',
       normal: '400',
@@ -32,12 +29,11 @@ module.exports = {
       32: ['2rem', '1.3'],
       36: ['2.25rem', '1.3'],
     },
-    extend: {},
-  },
-  variants: {
-    colors: {
-      primary: { ...theme.colors.blue },
-      secondary: { ...theme.colors.indigo },
+    extend: {
+      colors: {
+        primary: { ...theme.colors.orange },
+        secondary: { ...theme.colors.indigo },
+      },
     },
   },
   plugins: [require('@tailwindcss/ui')],

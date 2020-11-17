@@ -1,62 +1,41 @@
 <template>
-  <div>
+  <main>
+    <the-navbar class="mb-5" />
     <Nuxt />
-  </div>
+  </main>
 </template>
 
-<style>
-html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+<style lang="postcss">
+html,
+body {
+  @apply text-gray-900 text-16 leading-normal font-normal antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
+img {
+  max-width: 100%;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+pre {
+  @apply bg-gray-100 p-2 rounded-lg text-14 text-gray-800;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+hr {
+  @apply my-6;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+a {
+  @apply duration-300 transition-all;
 }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+/* Code for Firefox */
+::-moz-selection {
+  @apply bg-gray-800;
+  @apply text-white;
+}
+
+::selection {
+  @apply bg-gray-800;
+  @apply text-white;
 }
 </style>
