@@ -1,7 +1,0 @@
-.header-image .gatsby-image-wrapper {
-  margin-top: -25px;
-}
-
-a:hover {
-  @apply text-green-700;
-}
