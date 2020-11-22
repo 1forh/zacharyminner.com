@@ -57,6 +57,8 @@ export default {
     '@nuxt/content',
     // https://github.com/BKWLD/vue-balance-text
     'vue-balance-text/nuxt/module',
+    // https://www.npmjs.com/package/@nuxtjs/sitemap
+    '@nuxtjs/sitemap',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -94,5 +96,9 @@ export default {
 
   googleAnalytics: {
     id: 'UA-59393507-16',
+  },
+
+  sitemap: {
+    hostname: CONFIG.site_url,
   },
 };
