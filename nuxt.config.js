@@ -1,10 +1,4 @@
-const CONFIG = {
-  site_url: 'https://www.zacharyminner.com',
-  site_name: 'Zachary Minner',
-  short_name: 'Zach Minner',
-  description: 'Projects, articles and other random stuff by Zach Minner.',
-  theme_color: '#ffffff',
-};
+import CONFIG from './zach.config';
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
@@ -35,7 +29,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: ['@/plugins/vue-tailwind/index.js'],
+  plugins: ['~/plugins/font-awesome.js'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -54,6 +48,8 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    // https://github.com/BKWLD/vue-balance-text
+    'vue-balance-text/nuxt/module',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)

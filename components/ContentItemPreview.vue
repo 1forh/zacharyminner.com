@@ -1,14 +1,19 @@
 <template>
-  <a :href="item.path" class="space-y-2">
-    <div>
-      <h3 class="text-20 font-semibold">{{ item.title }}</h3>
-      <p v-if="formattedDate" class="text-gray-500">{{ formattedDate }}</p>
+  <nuxt-link :to="item.path" class="px-5 py-8 relative block" v-if="item.path">
+    <div class="absolute w-full h-full inset-0 bg-gray-50 rounded-sm shadow-md transform-gpu rotate-2" />
+    <div class="relative z-10">
+      <div :class="{ 'mb-3': item.summary || item.tags }">
+        <p v-if="formattedDate" class="text-gray-500 text-sm">{{ formattedDate }}</p>
+        <h3 class="text-lg font-semibold">{{ item.title }}</h3>
+      </div>
+      <p class="text-sm text-gray-600 mb-5" v-if="item.summary">{{ item.summary }}</p>
+      <div v-if="item.tags" class="flex space-x-3">
+        <base-tag v-for="(tag, index) in item.tags" :key="index">
+          {{ tag }}
+        </base-tag>
+      </div>
     </div>
-    <p>{{ item.summary }}</p>
-    <div v-if="item.tags" class="flex space-x-3">
-      <div v-for="(tag, index) in item.tags" :key="index" class="bg-primary-200 text-primary-800 rounded-sm px-2 py-1 text-12 font-semibold">{{ tag }}</div>
-    </div>
-  </a>
+  </nuxt-link>
 </template>
 
 <script>

@@ -1,6 +1,7 @@
-const theme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 module.exports = {
+  darkMode: 'media',
   theme: {
     container: {
       center: true,
@@ -19,31 +20,32 @@ module.exports = {
       semibold: '600',
       bold: '700',
     },
-    fontSize: {
-      12: ['0.75rem', '1.16'],
-      14: ['0.875rem', '1.2'],
-      16: ['1rem', '1.5'],
-      18: ['1.125rem', '1.5'],
-      20: ['1.25rem', '1.3'],
-      24: ['1.5rem', '1.3'],
-      32: ['2rem', '1.3'],
-      36: ['2.25rem', '1.3'],
-    },
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            a: {
+              color: colors.orange[500],
+              '&:hover': {
+                color: colors.orange[800],
+              },
+            },
+          },
+        },
+      },
       colors: {
-        primary: { ...theme.colors.orange },
-        secondary: { ...theme.colors.indigo },
+        gray: colors.gray,
+        primary: colors.orange,
+        secondary: colors.blue,
+        skycatchfire: {
+          primary: '#6A55A3',
+        },
       },
     },
   },
-  plugins: [require('@tailwindcss/ui')],
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
   purge: {
     layers: ['utilities'],
-    enabled: process.env.NODE_ENV === 'production',
     content: ['components/**/*.vue', 'layouts/**/*.vue', 'pages/**/*.vue', 'plugins/**/*.js', 'mixins/**/*.js', 'nuxt.config.js'],
   },
 };

@@ -1,9 +1,24 @@
 <template>
-  <article class="container prose prose-sm sm:prose lg:prose-lg mx-auto py-6">
-    <h1>{{ article.title }}</h1>
-    <p>{{ article.description }}</p>
-    <nuxt-content :document="article" />
-  </article>
+  <div class="relative md:py-16 pb-16 pt-4">
+    <div class="relative px-4 sm:px-6 lg:px-8">
+      <div class="text-lg max-w-prose mx-auto">
+        <div v-if="article.tags" class="justify-center flex space-x-3">
+          <base-tag v-for="(tag, index) in article.tags" :key="index">
+            {{ tag }}
+          </base-tag>
+        </div>
+        <h1 class="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl" v-balance-text>
+          {{ article.title }}
+        </h1>
+        <p class="mt-8 text-xl text-gray-500 leading-8">
+          {{ article.summary }}
+        </p>
+      </div>
+      <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
+        <nuxt-content :document="article" />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>

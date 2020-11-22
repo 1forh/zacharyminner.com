@@ -1,9 +1,9 @@
 <template>
-  <div class="mb-12">
-    <div class="container max-w-4xl space-y-10">
+  <div class="pb-12">
+    <div class="container max-w-5xl space-y-16">
       <div>
-        <h2 class="text-32 font-bold mb-5">Notes</h2>
-        <div class="grid lg:grid-cols-2 gap-x-8 gap-y-10">
+        <h2 class="text-3xl font-bold mb-10">Notes</h2>
+        <div class="grid md:grid-cols-2 gap-x-8 gap-y-10">
           <div v-for="(article, index) in notes" :key="index">
             <content-item-preview :item="article" />
           </div>
@@ -11,8 +11,8 @@
       </div>
 
       <div>
-        <h2 class="text-32 font-bold mb-5">Projects</h2>
-        <div class="grid lg:grid-cols-2 gap-x-8 gap-y-10">
+        <h2 class="text-3xl font-bold mb-10">Projects</h2>
+        <div class="grid md:grid-cols-2 gap-x-8 gap-y-10">
           <div v-for="(project, index) in projects" :key="index">
             <content-item-preview :item="project" />
           </div>
@@ -20,8 +20,8 @@
       </div>
 
       <div>
-        <h2 class="text-32 font-bold mb-5">Snippets</h2>
-        <div>
+        <h2 class="text-3xl font-bold mb-10">Snippets</h2>
+        <div class="grid md:grid-cols-2 gap-x-8 gap-y-10">
           <div v-for="(snippet, index) in snippets" :key="index">
             <content-item-preview :item="snippet" />
           </div>
