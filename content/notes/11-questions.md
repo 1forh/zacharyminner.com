@@ -29,10 +29,18 @@ I started waking up at 5:30 am every single day. Every day, [Jocko Willink](http
 
 **What advice would you give to a smart, driven college student about to enter the “real world”? What advice should they ignore?**
 
+What are you motivations for going to college? If you're doing it for someone else, maybe you should rethink your options.
+
 **What are some bad recommendations you hear in your profession or area of expertise?**
+
+"I don't like to use libraries like Bootstrap or jQuery or Vue.js. You should code everything from scratch like a real developer." 🤣🤣
 
 **In the last five years, what have you become better at saying no to (distractions, invitations, etc.)? What new realizations and/or approaches helped? Any other tips?**
 
 **When you feel overwhelmed or unfocused, or have lost your focus temporarily, what do you do? (If helpful: What questions do you ask yourself?)**
 
 Take a walk or go for a run, meditate
+
+---
+
+[Get Tribe of Mentors](https://www.amazon.com/gp/product/1328994961/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1328994961&linkCode=as2&tag=zacharyminner-20&linkId=bc881266be8cad345580bc72ef61af90) by Tim Ferris
