@@ -38,6 +38,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // https://google-analytics.nuxtjs.org/
+    '@nuxtjs/google-analytics',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -83,5 +85,9 @@ export default {
       lang: 'en',
       display: 'standalone',
     },
+  },
+
+  googleAnalytics: {
+    id: 'UA-59393507-16',
   },
 };
