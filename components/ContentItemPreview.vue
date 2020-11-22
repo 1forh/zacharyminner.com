@@ -1,6 +1,6 @@
 <template>
-  <nuxt-link :to="item.path" class="px-5 py-8 relative block">
-    <div class="absolute w-full h-full inset-0 bg-gray-50 rounded-sm shadow-md transform-gpu" :class="[rotation]" />
+  <nuxt-link :to="item.path" class="px-5 py-8 relative block group">
+    <div class="absolute w-full h-full inset-0 bg-gray-50 rounded-sm shadow-md transform-gpu transition-transform" :class="[rotation, groupHoverRotation]" />
     <div class="relative z-10">
       <div :class="{ 'mb-3': item.summary || item.tags }">
         <p v-if="formattedDate" class="text-gray-500 text-sm">{{ formattedDate }}</p>
@@ -36,6 +36,14 @@ export default {
       const date = get(this.item, 'date');
       if (!date) return;
       return format(new Date(date), 'MMMM d, YYY');
+    },
+    groupHoverRotation() {
+      const isNegativeRotation = this.rotation.split('-')[0] === '';
+      if (isNegativeRotation) {
+        return `group-hover:rotate-1`;
+      } else {
+        return `group-hover:-rotate-1`;
+      }
     },
   },
 };
