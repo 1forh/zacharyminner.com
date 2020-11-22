@@ -45,4 +45,4 @@ Take a walk or go for a run, meditate
 
 ---
 
-[Get Tribe of Mentors](https://www.amazon.com/gp/product/1328994961/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1328994961&linkCode=as2&tag=zacharyminner-20&linkId=bc881266be8cad345580bc72ef61af90) by Tim Ferris
+[Click here](https://www.amazon.com/gp/product/1328994961/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1328994961&linkCode=as2&tag=zacharyminner-20&linkId=bc881266be8cad345580bc72ef61af90) to get [Tribe of Mentors](https://www.amazon.com/gp/product/1328994961/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1328994961&linkCode=as2&tag=zacharyminner-20&linkId=bc881266be8cad345580bc72ef61af90) by Tim Ferris

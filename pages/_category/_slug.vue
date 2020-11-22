@@ -1,7 +1,7 @@
 <template>
-  <div class="relative pb-16 pt-4">
+  <article class="relative pb-16 pt-4">
     <div class="relative px-4 sm:px-6 lg:px-8">
-      <div class="text-lg max-w-prose mx-auto">
+      <header class="text-lg max-w-prose mx-auto">
         <div v-if="article.tags" class="justify-center flex space-x-3">
           <base-tag v-for="(tag, index) in article.tags" :key="index">
             {{ tag }}
@@ -10,12 +10,12 @@
         <h1 class="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl" v-balance-text>
           {{ article.title }}
         </h1>
-      </div>
+      </header>
       <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
         <nuxt-content :document="article" />
       </div>
     </div>
-  </div>
+  </article>
 </template>
 
 <script>

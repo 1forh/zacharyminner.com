@@ -3,6 +3,7 @@
     <main>
       <the-navbar class="mb-5" />
       <Nuxt />
+      <the-footer class="mt-10" />
     </main>
   </the-wrapper>
 </template>
