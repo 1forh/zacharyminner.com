@@ -1,5 +1,5 @@
 <template>
-  <div class="relative md:py-16 pb-16 pt-4">
+  <div class="relative pb-16 pt-4">
     <div class="relative px-4 sm:px-6 lg:px-8">
       <div class="text-lg max-w-prose mx-auto">
         <div v-if="article.tags" class="justify-center flex space-x-3">

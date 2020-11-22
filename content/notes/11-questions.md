@@ -23,7 +23,7 @@ summary: My answers to the 11 questions from Tribe of Mentors by Tim Ferris
 
 I purchased [Why Buddhism Is True: The Science and Philosophy of Meditation and Enlightenment](https://www.audible.com/pd/Why-Buddhism-Is-True-Audiobook/B073XSBD8Z?ref=a_library_t_c5_libItem_&pf_rd_p=592f90bd-7f7b-4bfc-afa2-b002e52e7228&pf_rd_r=AXHK1Y6Q4AGRH87MY81T) on June 10th, 2018. Since then, I have started a meditation practice, learned more about Buddhism, and attempted to practice what I've learned daily.
 
-I started waking up at 6:00 am every single day. Every day, [Jocko Willink](https://twitter.com/jockowillink) posts a photo of his watch at 4:45 am. _Get after it_. Every day I get up, post a photo of my watch, go for a run, meditate. Waking up early gives me time to get the things done that I want to do (or don't want to do sometimes), and breath a little before going into the office.
+I started waking up at 5:30 am every single day. Every day, [Jocko Willink](https://twitter.com/jockowillink) posts a photo of his watch at 4:45 am. _Get after it_. Every day I get up, post a photo of my watch, go for a run, meditate. Waking up early gives me time to get the things done that I want to do (or don't want to do sometimes), and breath a little before going into the [office](https://www.skycatchfire.com).
 
 **What advice would you give to a smart, driven college student about to enter the “real world”? What advice should they ignore?**
 

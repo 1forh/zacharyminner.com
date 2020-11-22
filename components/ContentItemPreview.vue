@@ -1,6 +1,6 @@
 <template>
   <nuxt-link :to="item.path" class="px-5 py-8 relative block">
-    <div class="absolute w-full h-full inset-0 bg-gray-50 rounded-sm shadow-md transform-gpu rotate-2" />
+    <div class="absolute w-full h-full inset-0 bg-gray-50 rounded-sm shadow-md transform-gpu" :class="[rotation]" />
     <div class="relative z-10">
       <div :class="{ 'mb-3': item.summary || item.tags }">
         <p v-if="formattedDate" class="text-gray-500 text-sm">{{ formattedDate }}</p>
@@ -25,6 +25,10 @@ export default {
   props: {
     item: {
       type: Object,
+    },
+    rotation: {
+      type: String,
+      default: 'rotate-2',
     },
   },
   computed: {

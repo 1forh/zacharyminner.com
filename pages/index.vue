@@ -5,7 +5,7 @@
         <h2 class="text-3xl font-bold mb-10">Notes</h2>
         <div class="grid md:grid-cols-2 gap-x-8 gap-y-10">
           <div v-for="(article, index) in notes" :key="index">
-            <content-item-preview :item="article" />
+            <content-item-preview :item="article" :rotation="rotate()" />
           </div>
         </div>
       </div>
@@ -14,7 +14,7 @@
         <h2 class="text-3xl font-bold mb-10">Projects</h2>
         <div class="grid md:grid-cols-2 gap-x-8 gap-y-10">
           <div v-for="(project, index) in projects" :key="index">
-            <content-item-preview :item="project" />
+            <content-item-preview :item="project" :rotation="rotate()" />
           </div>
         </div>
       </div>
@@ -23,7 +23,7 @@
         <h2 class="text-3xl font-bold mb-10">Snippets</h2>
         <div class="grid md:grid-cols-2 gap-x-8 gap-y-10">
           <div v-for="(snippet, index) in snippets" :key="index">
-            <content-item-preview :item="snippet" />
+            <content-item-preview :item="snippet" :rotation="rotate()" />
           </div>
         </div>
       </div>
@@ -66,6 +66,30 @@ export default {
     } catch (error) {
       console.log(error);
     }
+  },
+  methods: {
+    rotate() {
+      let choice = Math.floor(Math.random() * Math.floor(4));
+      let theClass = '';
+
+      console.log(choice);
+
+      switch (choice) {
+        case 0:
+          theClass = 'rotate-2';
+          break;
+        case 1:
+          theClass = '-rotate-2';
+        case 2:
+          theClass = 'rotate-3';
+          break;
+        case 3:
+          theClass = '-rotate-3';
+          break;
+      }
+
+      return theClass;
+    },
   },
 };
 </script>
