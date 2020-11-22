@@ -1,12 +1,13 @@
 ---
 title: Create a Search page using Search API in Drupal 8
 date: 17 June 2020
-summary: Using Drupal 8's Search API, we'll quickly run through the steps for building
-  a search page.
+summary: Using Drupal 8's Search API, we'll quickly run through the steps for building a search page.
 tags:
   - Drupal 8
   - WIP
 ---
+
+Using Drupal 8's Search API, we'll quickly run through the steps for building a search page.
 
 ### Grab and enable the Fire Search module
 

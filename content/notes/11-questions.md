@@ -7,6 +7,8 @@ title: 11 Questions
 summary: My answers to the 11 questions from Tribe of Mentors by Tim Ferris
 ---
 
+My answers to the 11 questions from [Tribe of Mentors](https://www.amazon.com/gp/product/1328994961/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1328994961&linkCode=as2&tag=zacharyminner-20&linkId=bc881266be8cad345580bc72ef61af90) by Tim Ferris
+
 **What is the book (or books) you’ve given most as a gift, and why? Or what are one to three books that have greatly influenced your life?**
 
 - [No Mud, No Lotus: The Art of Transforming Suffering](https://www.amazon.com/gp/product/1937006859/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1937006859&linkCode=as2&tag=zacharyminner-20&linkId=8bf1454139b19d415fd4919a2042cd4e)

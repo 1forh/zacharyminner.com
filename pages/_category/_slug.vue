@@ -10,9 +10,6 @@
         <h1 class="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl" v-balance-text>
           {{ article.title }}
         </h1>
-        <p class="mt-8 text-xl text-gray-500 leading-8">
-          {{ article.summary }}
-        </p>
       </div>
       <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
         <nuxt-content :document="article" />

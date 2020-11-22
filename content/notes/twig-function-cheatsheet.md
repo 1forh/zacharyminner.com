@@ -3,14 +3,17 @@ title: Twig Function Cheatsheet
 date: 06/11/2020
 summary: Cheatsheet for various twig functions in Drupal 8
 tags:
-- 'Drupal 8 '
-- Twig
-
+  - 'Drupal 8 '
+  - Twig
 ---
+
+Cheatsheet for various twig functions in Drupal 8
+
 [Functions in Twig Templates Documentation](https://www.drupal.org/docs/theming-drupal/twig-in-drupal/functions-in-twig-templates)
 
 ### `url()`
 
+<!-- prettier-ignore -->
 ```html
 {{ url('user.login') }} 
 
@@ -29,6 +32,7 @@ tags:
 
 ### `path()`
 
+<!-- prettier-ignore -->
 ```html
 {{ path('view.frontpage.page_1') }}
 
