@@ -7,7 +7,7 @@ tags:
   - Emojis
 ---
 
-## What is Gitmoji
+## What is Gitmoji?
 
 [Gitmoji](https://gitmoji.carloscuesta.me/) is pretty dope. Put simply, it's a standard for using emojis in your commit messages.
 
