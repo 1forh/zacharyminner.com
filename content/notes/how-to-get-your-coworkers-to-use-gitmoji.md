@@ -11,7 +11,7 @@ tags:
 
 [Gitmoji](https://gitmoji.carloscuesta.me/) is pretty dope. Put simply, it's a standard for using emojis in your commit messages.
 
-Removing a file or a `console.log`? Add a 🔥 emoji to the beginning of your commit message. Fixed a layout bug in Safari? Add a 🐛 emoji. Added some sweet styles for that new Copy with Media component? Add a 💄 emoji.
+Removed a file or a leftover `console.log`? Add a 🔥 emoji to the beginning of your commit message. Fixed a layout bug in Safari? Add a 🐛 emoji. Added some sweet styles for that new Copy with Media component? Add a 💄 emoji.
 
 So easy. So effective. Another developer can review your pull request and gain a lot of context just by scanning your commit messages before diving deeper.
 
