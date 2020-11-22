@@ -22,6 +22,9 @@
 </template>
 
 <script>
+import get from 'lodash/get';
+import CONFIG from '@/zach.config';
+
 export default {
   async asyncData({ $content, params }) {
     const { slug, category } = params;
@@ -29,6 +32,19 @@ export default {
 
     return {
       article,
+    };
+  },
+  head() {
+    const title = `${get(this.article, 'title')} | ${CONFIG.site_name}`;
+    const description = get(this.article, 'summary');
+
+    return {
+      title: title,
+      meta: [
+        { hid: 'og-title', property: 'og:title', content: title },
+        { hid: 'description', name: 'description', content: description },
+        { hid: 'og:description', name: 'og:description', content: description },
+      ],
     };
   },
 };

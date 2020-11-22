@@ -10,8 +10,8 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { hid: 'viewport', name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui' },
-      { hid: 'og:title', name: 'og:title', content: CONFIG.site_name },
       { hid: 'og:site_name', name: 'og:site_name', content: CONFIG.site_name },
+      { hid: 'og:title', name: 'og:title', content: CONFIG.site_name },
       { hid: 'description', name: 'description', content: CONFIG.description },
       { hid: 'og:description', name: 'og:description', content: CONFIG.description },
       { hid: 'theme-color', name: 'theme-color', content: CONFIG.theme_color },
