@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="item.path" class="px-5 py-8 relative block" v-if="item.path">
+  <nuxt-link :to="item.path" class="px-5 py-8 relative block">
     <div class="absolute w-full h-full inset-0 bg-gray-50 rounded-sm shadow-md transform-gpu rotate-2" />
     <div class="relative z-10">
       <div :class="{ 'mb-3': item.summary || item.tags }">
@@ -36,5 +36,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

@@ -37,7 +37,7 @@ import get from 'lodash/get';
 export default {
   async asyncData({ $content }) {
     try {
-      let notes = await $content('notes').only(['title', 'slug', 'summary', 'tags', 'date']).sortBy('createdAt', 'asc').fetch();
+      let notes = await $content('notes').only(['title', 'slug', 'summary', 'tags', 'date', 'path']).sortBy('createdAt', 'asc').fetch();
       notes = notes.sort((a, b) => {
         const dateA = get(a, 'date');
         const dateB = get(b, 'date');
@@ -48,7 +48,8 @@ export default {
           return -1;
         }
       });
-      let projects = await $content('projects').only(['title', 'slug', 'summary', 'tags', 'date']).sortBy('createdAt', 'asc').fetch();
+
+      let projects = await $content('projects').only(['title', 'slug', 'summary', 'tags', 'date', 'path']).sortBy('createdAt', 'asc').fetch();
       projects = projects.sort((a, b) => {
         const dateA = get(a, 'date');
         const dateB = get(b, 'date');
@@ -59,7 +60,7 @@ export default {
           return -1;
         }
       });
-      let snippets = await $content('snippets').only(['title', 'slug', 'summary', 'tags', 'date']).sortBy('createdAt', 'asc').fetch();
+      let snippets = await $content('snippets').only(['title', 'slug', 'summary', 'tags', 'date', 'path']).sortBy('createdAt', 'asc').fetch();
 
       return { notes, projects, snippets };
     } catch (error) {
