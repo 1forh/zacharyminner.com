@@ -26,7 +26,7 @@ So easy. So effective. Another developer can review your pull request and gain a
 4.  Tell newer developers that this is the way to do things where you work. Get them using emojis. Get them on your side. They are easy to influence.
 5.  Bribe a coworker. A small bribe can go a long way to nudge the progress forward here. Don't be afraid to buy someone a beer if they'll try out [Gitmoji](https://gitmoji.carloscuesta.me/).
 6.  Just wait a little bit. Things will fall into place. Be patient.
-7.  After a few days you probably have the whole office using it. Nice work. 👍
+7.  After a few days, the whole office will be using it. Nice work. 👍
 
 ## Making Things Easier
 
