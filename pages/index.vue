@@ -72,8 +72,6 @@ export default {
       let choice = Math.floor(Math.random() * Math.floor(4));
       let theClass = '';
 
-      console.log(choice);
-
       switch (choice) {
         case 0:
           theClass = 'rotate-2';
