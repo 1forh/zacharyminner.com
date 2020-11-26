@@ -1,7 +1,7 @@
 ---
 date: 2020-11-22
-title: How to get your coworkers to use Gitmoji
-summary: Easy steps any developer can follow to get their coworkers to use Gitmoji
+title: How to convince your coworkers to use Gitmoji
+summary: Easy steps any developer can follow to convince their coworkers to use Gitmoji
 tags:
   - Git
   - Emojis
