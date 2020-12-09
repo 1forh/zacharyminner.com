@@ -3,7 +3,7 @@ title: VS Code - settings.json
 
 ---
 
-This is my VS Code settings.json as of 12/8/2020:
+This is my VS Code settings.json as of 12/8/2020.
 
 ```json
 {
