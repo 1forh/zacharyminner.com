@@ -11,7 +11,7 @@ const inOrder = [3, 4, 5, 6, 7, 8];
 const outOfOrder = [14, 34, 2, 3, 10, 18];
 
 function checkIfInOrder(numbers) {
-  return !!numbers.reduce((accumulator, currentValue) => (accumulator ? (Number(accumulator) + 1 === Number(currentValue) ? currentValue : false) : false));
+  return !!numbers.reduce((accumulator, currentValue) => (accumulator ? (accumulator + 1 === currentValue ? currentValue : false) : false));
 }
 
 console.log(checkIfInOrder(inOrder)); // true
