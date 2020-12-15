@@ -4,7 +4,7 @@ tags:
   - Nuxt.js
   - NPM
 title: nuxt command not found
-summary: How to solve the npm error: `nuxt command not found`
+summary: How to solve the npm error - nuxt command not found
 ---
 
 Step 1: Run `npm cache clean --force`
