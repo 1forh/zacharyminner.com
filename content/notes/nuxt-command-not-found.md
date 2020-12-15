@@ -1,5 +1,5 @@
 ---
-date: 2020-10-14T00:35:59Z
+date: 2020-12-15
 tags:
   - Nuxt.js
   - NPM
