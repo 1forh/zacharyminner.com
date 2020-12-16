@@ -20,8 +20,6 @@ export default {
       { hid: 'apple-mobile-web-app-title', name: 'apple-mobile-web-app-title', content: CONFIG.site_name },
     ],
     link: [
-      { rel: 'canonical', href: `${CONFIG.site_url}/` },
-
       { rel: 'icon', type: 'image/x-icon', href: '/favicons/favicon.ico' },
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicons/apple-touch-icon.png' },
       { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicons/favicon-32x32.png' },
