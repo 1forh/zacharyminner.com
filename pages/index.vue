@@ -33,13 +33,30 @@
 
 <script>
 import get from 'lodash/get';
-
 export default {
   async asyncData({ $content }) {
     try {
-      let notes = await $content('notes').only(['title', 'slug', 'summary', 'tags', 'date', 'path']).sortBy('date', 'asc').fetch();
-      let projects = await $content('projects').only(['title', 'slug', 'summary', 'tags', 'date', 'path']).sortBy('date', 'asc').fetch();
-      let snippets = await $content('snippets').only(['title', 'slug', 'summary', 'tags', 'date', 'path']).fetch();
+      let notes = await $content('notes').only(['title', 'slug', 'summary', 'tags', 'date', 'path']).sortBy('createdAt', 'asc').fetch();
+      notes = notes.sort((a, b) => {
+        const dateA = new Date(get(a, 'date'));
+        const dateB = new Date(get(b, 'date'));
+        if (dateA < dateB) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+      let projects = await $content('projects').only(['title', 'slug', 'summary', 'tags', 'date', 'path']).sortBy('createdAt', 'asc').fetch();
+      projects = projects.sort((a, b) => {
+        const dateA = new Date(get(a, 'date'));
+        const dateB = new Date(get(b, 'date'));
+        if (dateA < dateB) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+      let snippets = await $content('snippets').only(['title', 'slug', 'summary', 'tags', 'date', 'path']).sortBy('createdAt', 'asc').fetch();
       return { notes, projects, snippets };
     } catch (error) {
       console.log(error);
@@ -49,7 +66,6 @@ export default {
     rotate() {
       let choice = Math.floor(Math.random() * Math.floor(4));
       let theClass = '';
-
       switch (choice) {
         case 0:
           theClass = 'rotate-2';
@@ -63,7 +79,6 @@ export default {
           theClass = '-rotate-3';
           break;
       }
-
       return theClass;
     },
   },
