@@ -1,7 +1,7 @@
 ---
 date: 2020-12-9
 title: How do I check whether or not an array of numbers are in consecutive order using JavaScript?
-summary: Quick explaination of how to determine if an array of numbers are in consecutive order
+summary: Quick explanation of how to determine if an array of numbers are in consecutive order
 tags:
   - JavaScript
 ---
