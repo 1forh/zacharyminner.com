@@ -7,7 +7,9 @@ tags:
   - Firestore
 ---
 
-First we get today's date using `new Date()`. Then we set it to the very beginning of the day and convert it to a timestamp.
+First we get today's date using `new Date()`. Then we set it to midnight of today and convert it to a timestamp.
+
+**Note:** I had to add `+5` hours to get midnight in Eastern Time.
 
 ```jsx
 function getStartOfToday() {
@@ -18,9 +20,7 @@ function getStartOfToday() {
 }
 ```
 
-**Note:** I had to add `+5` hours to get midnight in Eastern Time.
-
-As you can see below, with this function we can run a Firestore query and ask for all documents that have a Timestamp greater than the beginning of today. This will return only the documents that have a timestamp from today. Woot! 🎊
+As you can see below, with the `getStartOfToday` function we can run a Firestore query and ask for all documents that have a Timestamp greater than the beginning of today. This will return only the documents that have a timestamp from today. Woot! 🎊
 
 ```jsx
 
