@@ -18,9 +18,9 @@ function getStartOfToday() {
 }
 ```
 
-With this function, we can run a Firestore query and ask for all documents that have a Timestamp greater than the beginning of today. This will return only the documents that have a timestamp from today. Woot! 🎊
-
 **Note:** I had to add `+5` hours to get midnight in Eastern Time.
+
+As you can see below, with this function we can run a Firestore query and ask for all documents that have a Timestamp greater than the beginning of today. This will return only the documents that have a timestamp from today. Woot! 🎊
 
 ```jsx
 
