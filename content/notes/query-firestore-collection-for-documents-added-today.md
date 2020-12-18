@@ -7,27 +7,37 @@ tags:
   - Firestore
 ---
 
-First we get today's date using `new Date()` and then we set it to the very beginning of the day.
+First we get today's date using `new Date()`. Then we set it to the very beginning of the day and convert it to a timestamp.
 
 ```jsx
-const startOfToday = new Date();
-startOfToday.setHours(0, 0, 0, 0);
+function getStartOfToday() {
+  const now = new Date();
+  now.setHours(5, 0, 0, 0); // +5 hours for Eastern Time
+  const timestamp = admin.firestore.Timestamp.fromDate(now);
+  return timestamp;
+}
 ```
 
-Once you have `startOfToday`, you can run a Firestore query and ask for all documents that have a Timestamp greater than the beginning of today. This will return only the documents that have a timestamp from today. Woot! 🎊
+With this function, we can run a Firestore query and ask for all documents that have a Timestamp greater than the beginning of today. This will return only the documents that have a timestamp from today. Woot! 🎊
+
+**Note:** I had to add `+5` hours to get midnight in Eastern Time.
 
 ```jsx
 
-const snapshot = await admin.firestore().collection('notes').where('date', '>', startOfDay).get();
+const snapshot = await admin.firestore().collection('notes').where('date', '>', getStartOfToday()).get();
 const notes = snapshot.docs.map((doc) => doc.data());
 ```
 
-This assume that your `date` field is of type `Timestamp`. Check out the full snippet below:
+This assumes that your `date` field is of type `Timestamp`. Check out the full snippet below:
 
 ```jsx
-const startOfDay = new Date();
-startOfDay.setHours(0, 0, 0, 0);
+function getStartOfToday() {
+  const now = new Date();
+  now.setHours(0, 0, 0, 0); // +5 hours for Eastern Time
+  const timestamp = admin.firestore.Timestamp.fromDate(now);
+  return timestamp;
+}
 
-const snapshot = await admin.firestore().collection('notes').where('date', '>', startOfDay).get();
+const snapshot = await admin.firestore().collection('notes').where('date', '>', getStartOfToday()).get();
 const notes = snapshot.docs.map((doc) => doc.data());
 ```
