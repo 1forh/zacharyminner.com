@@ -20,7 +20,7 @@ function getStartOfToday() {
 }
 ```
 
-As you can see below, with the `getStartOfToday` function we can run a Firestore query and ask for all documents that have a Timestamp greater than the beginning of today. This will return only the documents that have a timestamp from today. Woot! 🎊
+As you can see below, with the `getStartOfToday` function we can run a Firestore query and ask for all documents that have a Timestamp greater than the beginning of today. This will return only the documents that have a timestamp from today assuming your `date` field is of type `Timestamp`. Woot! 🎊
 
 ```jsx
 
@@ -28,7 +28,7 @@ const snapshot = await admin.firestore().collection('notes').where('date', '>', 
 const notes = snapshot.docs.map((doc) => doc.data());
 ```
 
-This assumes that your `date` field is of type `Timestamp`. Check out the full snippet below:
+Check out the full snippet below:
 
 ```jsx
 function getStartOfToday() {
