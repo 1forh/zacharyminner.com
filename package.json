@@ -6,7 +6,8 @@
     "debug": "nuxt --open",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "lint": "ls"
   },
   "dependencies": {
     "@fortawesome/fontawesome-pro": "^5.15.1",
