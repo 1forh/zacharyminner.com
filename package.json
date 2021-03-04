@@ -26,7 +26,7 @@
     "date-fns": "^2.16.1",
     "lodash": "^4.17.21",
     "nuxt": "^2.14.12",
-    "tailwindcss": "^2.0.2",
+    "tailwindcss": "^2.0.3",
     "vue-balance-text": "^1.2.3"
   },
   "devDependencies": {
