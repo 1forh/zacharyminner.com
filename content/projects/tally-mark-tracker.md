@@ -1,9 +1,9 @@
 ---
-title: Tally Log
+title: Tally Mark Tracker
 date: 12/08/2019
 tags:
   - Nuxt.js
-website: https://www.tallylog.com
+website: https://tallymarktracker.netlify.app/
 summary: Track your push-ups, squats, pull-ups, or anything with this simple tracking
   app!
 ---
