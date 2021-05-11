@@ -1,20 +1,20 @@
 <template>
-  <article class="relative pb-16 pt-4">
+  <article class="relative pt-4 pb-16">
     <div class="relative px-4 sm:px-6 lg:px-8">
-      <header class="text-lg max-w-prose mx-auto">
-        <div v-if="article.tags" class="justify-center flex space-x-3">
+      <header class="mx-auto text-lg max-w-prose">
+        <div v-if="article.tags" class="flex justify-center space-x-3">
           <base-tag v-for="(tag, index) in article.tags" :key="index">
             {{ tag }}
           </base-tag>
         </div>
-        <h1 class="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl" v-balance-text>
+        <h1 class="block mt-2 text-3xl font-bold leading-8 tracking-tight text-center text-gray-900 sm:text-4xl" v-balance-text>
           {{ article.title }}
         </h1>
-        <div class="flex justify-center mb-8 mt-4" v-if="article.website">
-          <a :href="article.website" target="_blank" class="text-sm font-bold border-2 border-gray-800 text-gray-800 px-3 py-1 hover:bg-gray-800 hover:text-white">View website</a>
+        <div class="flex justify-center mt-4 mb-8" v-if="article.website">
+          <a :href="article.website" target="_blank" class="px-3 py-1 text-sm font-bold text-gray-800 border-2 border-gray-800 hover:bg-gray-800 hover:text-white">View website</a>
         </div>
       </header>
-      <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
+      <div class="mx-auto mt-6 prose prose-lg text-gray-500">
         <nuxt-content :document="article" />
       </div>
     </div>
