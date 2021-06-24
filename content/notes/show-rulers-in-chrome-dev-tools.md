@@ -1,12 +1,12 @@
 ---
-title: Show Element Rules in Chrome Dev Tools
+title: Show Element Rulers in Chrome Dev Tools
 date: 06/24/2021
 summary: How to enable element rulers to display box model lines when inspecting elements
 tags:
   - 'Dev tools'
 ---
 
-You can enable Element Rulers in Chromium browsers. They are dope.
+You can enable element rulers in Chromium browsers. They are dope.
 
 <base-image src="/images/content/rulers-example.png" alt="Example of the box model lines" max-width="700px"></base-image>
 
