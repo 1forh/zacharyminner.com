@@ -1,5 +1,5 @@
 ---
-title: Show Element Rulers in Chrome Dev Tools
+title: Show rulers when inspecting elements via Chrome Dev Tools
 date: 06/24/2021
 summary: How to enable element rulers to display box model lines when inspecting elements
 tags:
