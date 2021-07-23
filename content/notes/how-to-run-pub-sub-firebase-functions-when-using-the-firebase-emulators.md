@@ -1,7 +1,7 @@
 ---
 date: 2021-05-17
 title: How to run Pub/Sub Firebase functions when using the Firebase emulators
-summary: Test pub/sub functionslocally with Firebase emulators and Firebase shell
+summary: Test pub/sub functions locally with Firebase emulators and Firebase shell
 tags:
   - Firebase
 ---
