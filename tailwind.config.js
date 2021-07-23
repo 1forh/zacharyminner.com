@@ -30,6 +30,9 @@ module.exports = {
                 color: colors.orange[800],
               },
             },
+            img: {
+              'border-radius': '6px',
+            },
           },
         },
       },

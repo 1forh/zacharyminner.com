@@ -21,6 +21,6 @@ You can change the background color and text color of VS Code's title bar per pr
 
 You can update the `titleBar.activeBackground` and `titleBar.inactiveBackground` to change the background color to any hex you would like.
 
-Seems cool to add the project's primary color here so you can easily recognize the VS Code window that your project is in. 😎
-
 ![How to set title bar color in VS Code per project](/images/content/vs-code-title-bar.png)
+
+Seems cool to add the project's primary color here so you can easily recognize the VS Code window that your project is in. 😎

@@ -1,9 +1,25 @@
 <template>
-  <div class="bg-primary-200 text-sm text-primary-800 rounded-sm px-2 py-1 text-12 font-semibold"><slot /></div>
+  <div class="px-2 py-1 text-sm font-semibold rounded-sm text-12" :class="[bgColorClass, textColorClass]">
+    {{ tag }}
+  </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    tag: {
+      type: String,
+    },
+  },
+  computed: {
+    bgColorClass() {
+      return 'bg-primary-200';
+    },
+    textColorClass() {
+      return 'text-primary-800';
+    }
+  },
+};
 </script>
 
 <style lang="postcss" scoped></style>

@@ -1,16 +1,14 @@
 <template>
-  <nuxt-link :to="item.path" class="px-5 py-8 relative block group">
-    <div class="absolute w-full h-full inset-0 bg-gray-50 rounded-sm shadow-md transform-gpu transition-transform" :class="[rotation, groupHoverRotation]" />
+  <nuxt-link :to="item.path" class="relative block px-5 py-8 group">
+    <div class="absolute inset-0 w-full h-full transition-transform rounded-sm shadow-md bg-gray-50 transform-gpu" :class="[rotation, groupHoverRotation]" />
     <div class="relative z-10">
       <div :class="{ 'mb-3': item.summary || item.tags }">
-        <p v-if="formattedDate" class="text-gray-500 text-sm">{{ formattedDate }}</p>
+        <p v-if="formattedDate" class="text-sm text-gray-500">{{ formattedDate }}</p>
         <h3 class="text-lg font-semibold">{{ item.title }}</h3>
       </div>
-      <p class="text-sm text-gray-600 mb-5" v-if="item.summary">{{ item.summary }}</p>
+      <p class="mb-5 text-sm text-gray-600" v-if="item.summary">{{ item.summary }}</p>
       <div v-if="item.tags" class="flex space-x-3">
-        <base-tag v-for="(tag, index) in item.tags" :key="index">
-          {{ tag }}
-        </base-tag>
+        <base-tag v-for="(tag, index) in item.tags" :key="index" :tag="tag" />
       </div>
     </div>
   </nuxt-link>

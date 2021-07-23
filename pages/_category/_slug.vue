@@ -3,9 +3,7 @@
     <div class="relative px-4 sm:px-6 lg:px-8">
       <header class="mx-auto text-lg max-w-prose">
         <div v-if="article.tags" class="flex justify-center space-x-3">
-          <base-tag v-for="(tag, index) in article.tags" :key="index">
-            {{ tag }}
-          </base-tag>
+          <base-tag v-for="(tag, index) in article.tags" :key="index" :tag="tag" />
         </div>
         <h1 class="block mt-2 text-3xl font-bold leading-8 tracking-tight text-center text-gray-900 sm:text-4xl" v-balance-text>
           {{ article.title }}
