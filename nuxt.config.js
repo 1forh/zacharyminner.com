@@ -99,8 +99,4 @@ export default {
   sitemap: {
     hostname: CONFIG.site_url,
   },
-
-  tailwindcss: {
-    jit: true,
-  },
 };

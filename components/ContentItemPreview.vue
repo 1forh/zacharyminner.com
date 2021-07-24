@@ -2,13 +2,13 @@
   <nuxt-link :to="item.path" class="relative block px-5 py-8 group">
     <div class="absolute inset-0 w-full h-full transition-transform rounded-sm shadow-md bg-gray-50 transform-gpu" :class="[rotation, groupHoverRotation]" />
     <div class="relative z-10">
-      <div :class="{ 'mb-3': item.summary || item.tags }">
+      <div :class="{ 'mb-2': item.summary || item.tags }">
         <p v-if="formattedDate" class="text-sm text-gray-500">{{ formattedDate }}</p>
-        <h3 class="text-lg font-semibold">{{ item.title }}</h3>
+        <h3 class="text-lg font-semibold leading-snug">{{ item.title }}</h3>
       </div>
       <p class="mb-5 text-sm text-gray-600" v-if="item.summary">{{ item.summary }}</p>
       <div v-if="item.tags" class="flex space-x-3">
-        <base-tag v-for="(tag, index) in item.tags" :key="index" :tag="tag" />
+        <base-tag v-for="(tag, index) in item.tags" :key="index" :tag="tag" :rotation="oppositeRotation" />
       </div>
     </div>
   </nuxt-link>
@@ -30,6 +30,15 @@ export default {
     },
   },
   computed: {
+    oppositeRotation() {
+      if (this.rotation.startsWith('-')) {
+        const split = this.rotation.split('-');
+        split.slice();
+        return split.join('-');
+      } else {
+        return `-${this.rotation}`;
+      }
+    },
     formattedDate() {
       const date = get(this.item, 'date');
       if (!date) return;
