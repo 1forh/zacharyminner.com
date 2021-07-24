@@ -55,6 +55,6 @@ module.exports = {
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
   purge: {
     layers: ['utilities'],
-    content: ['components/**/*.vue', 'layouts/**/*.vue', 'pages/**/*.vue', 'plugins/**/*.js', 'mixins/**/*.js', 'nuxt.config.js'],
+    content: ['components/**/*.vue', 'layouts/**/*.vue', 'pages/**/*.vue', 'plugins/**/*.js', 'mixins/**/*.js', 'nuxt.config.js', 'content/**/*.md'],
   },
 };
