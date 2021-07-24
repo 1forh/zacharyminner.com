@@ -60,4 +60,11 @@ export default {
 .tags-are-active .base-tag:not(.active) .base-tag-bg {
   @apply opacity-50;
 }
+
+.base-tag-bg {
+  outline: 1px solid transparent;
+  -webkit-backface-visibility: hidden;
+  will-change: transform;
+  -webkit-perspective: 1000;
+}
 </style>
