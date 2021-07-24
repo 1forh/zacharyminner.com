@@ -4,6 +4,7 @@ date: 7/24/2021
 tags:
   - Nuxt.js
   - React Native
+  - Firebase
 website: https://tallylog.com/
 summary: Keep track of daily push-ups, the number of times you managed to floss this week, or how many books you've read this year. Whatever you want!
 ---
