@@ -1,19 +1,6 @@
 <template>
   <div class="pb-12">
     <div class="container max-w-5xl">
-      <div v-if="tags" class="flex flex-wrap items-center max-w-3xl mb-5" :class="{ 'tags-are-active': activeTags.length > 0 }">
-        <content-filter
-          v-for="(tag, index) in tags"
-          :key="index"
-          :count="tag.count"
-          :tag="tag.text"
-          :active="activeTags.includes(tag.text)"
-          :rotation="rotate()"
-          class="mb-4 mr-5"
-          @filter="onFilter"
-        />
-      </div>
-
       <div class="space-y-16">
         <div v-if="displayedNotes.length">
           <h2 class="mb-10 text-3xl font-bold">Notes</h2>
