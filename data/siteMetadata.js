@@ -7,7 +7,7 @@ const siteMetadata = {
   siteUrl: 'https://www.zacharyminner.com',
   siteRepo: 'https://github.com/1forh/zacharyminner.com',
   siteLogo: '/static/images/logo.png',
-  image: '/static/images/avatar.png',
+  image: '/static/images/avatar.jpg',
   socialBanner: '/static/images/twitter-card.png',
   email: 'zach@skycatchfire.com',
   github: 'https://github.com/1forh',
