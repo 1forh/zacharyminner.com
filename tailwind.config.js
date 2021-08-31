@@ -35,6 +35,9 @@ module.exports = {
         DEFAULT: {
           css: {
             color: theme('colors.gray.700'),
+            img: {
+              borderRadius: '6px',
+            },
             a: {
               color: theme('colors.primary.500'),
               '&:hover': {
