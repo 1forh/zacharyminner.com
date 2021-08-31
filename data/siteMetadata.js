@@ -1,7 +1,7 @@
 const siteMetadata = {
   title: 'Zachary Minner',
   author: 'Zachary Minner',
-  headerTitle: "Heyo, I'm Zac",
+  headerTitle: "Zac's Garden",
   description: 'Projects, articles and other random stuff by Zachary Minner.',
   language: 'en-us',
   siteUrl: 'https://www.zacharyminner.com',
