@@ -1,6 +1,6 @@
 ---
 name: Zachary Minner
-avatar: /static/images/avatar.jpeg
+avatar: /static/images/avatar.png
 occupation: Developer
 company: SKYCATCHFIRE
 company_url: https://www.skycatchfire.com

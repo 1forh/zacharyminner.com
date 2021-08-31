@@ -15,18 +15,19 @@ Removed a file or a leftover `console.log`? Add a 🔥 emoji to the beginning of
 
 So easy. So effective. Another developer can review your pull request and gain a lot of context just by scanning your commit messages before diving deeper.
 
-<base-image src="/static/images/content/gitmoji-example-commits.png" alt="Gitmoji example commits" max-width="300px"></base-image>
+![Gitmoji example commits](/static/images/content/gitmoji-example-commits.png)
 
 ## The Steps
 
 1.  Start using Gitmoji yourself. Add an emoji to the beginning of each of your commits. You gotta set a good example and use it in every commit. Don't mess this up!
 2.  Make sure you send a link to [Gitmoji](https://gitmoji.carloscuesta.me/) in Slack a few times as a subtle hint to your coworkers.
-    <base-image src="/static/images/content/link-them-to-gitmoji.png" alt="Make sure to link them to Gitmoji's website" max-width="400px"></base-image>
 3.  Say good things about it so your coworkers feel like they're missing out.
 4.  Tell newer developers that this is the way to do things where you work. Get them using emojis. Get them on your side. They are easy to influence.
 5.  Bribe a coworker. A small bribe can go a long way to nudge the progress forward here. Don't be afraid to buy someone a beer 🍻 if they'll try out [Gitmoji](https://gitmoji.carloscuesta.me/).
 6.  Just wait a little bit. Things will fall into place. Be patient.
 7.  After a few days, the whole office will be using it. Nice work. 👍
+
+![Make sure to link them to Gitmoji's website](/static/images/content/link-them-to-gitmoji.png)
 
 ## Making Things Easier
 
