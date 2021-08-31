@@ -18,7 +18,7 @@ const MobileNav = () => {
   }
 
   return (
-    <div className="sm:hidden">
+    <div className="flex items-center sm:hidden">
       <button
         type="button"
         className="w-8 h-8 ml-1 mr-1 rounded"
