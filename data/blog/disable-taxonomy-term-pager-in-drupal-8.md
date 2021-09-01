@@ -4,8 +4,7 @@ date: 09/29/2019
 summary:
   In order to disable the pager on a taxonomy term page, you can set the `terms_per_page_admin`
   setting to a really high number.
-tags:
-  - Drupal 8
+tags: ['Drupal 8']
 ---
 
 ![drupal 8 pager](/static/static/images/content/drupal-8-pager.jpg)
