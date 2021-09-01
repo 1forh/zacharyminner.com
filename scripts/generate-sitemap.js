@@ -9,6 +9,8 @@ const siteMetadata = require('../data/siteMetadata')
     'pages/*.js',
     'data/blog/**/*.mdx',
     'data/blog/**/*.md',
+    'data/projects/**/*.mdx',
+    'data/projects/**/*.md',
     'public/tags/**/*.xml',
     '!pages/_*.js',
     '!pages/api',
@@ -22,6 +24,7 @@ const siteMetadata = require('../data/siteMetadata')
                 const path = page
                   .replace('pages/', '/')
                   .replace('data/blog', '/blog')
+                  .replace('data/projects', '/projects')
                   .replace('public/', '/')
                   .replace('.js', '')
                   .replace('.mdx', '')

@@ -1,5 +1,5 @@
 const siteMetadata = {
-  title: 'Zachary Minner',
+  title: 'Zachary Minner - Full Stack Developer',
   author: 'Zachary Minner',
   headerTitle: "Zac's Garden",
   description: 'Projects, articles and other random stuff by Zachary Minner.',
