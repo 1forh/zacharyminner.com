@@ -9,17 +9,17 @@ export default function ListLayout({
   title,
   initialDisplayPosts = [],
   pagination,
-  type = 'blog',
+  type = 'notes',
 }) {
   const [searchValue, setSearchValue] = useState('')
-  const filteredBlogPosts = posts.filter((frontMatter) => {
+  const filteredNotes = posts.filter((frontMatter) => {
     const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags.join(' ')
     return searchContent.toLowerCase().includes(searchValue.toLowerCase())
   })
 
   // If initialDisplayPosts exist, display it if no searchValue is specified
   const displayPosts =
-    initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredBlogPosts
+    initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredNotes
 
   return (
     <>
@@ -28,7 +28,7 @@ export default function ListLayout({
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             {title}
           </h1>
-          {type === 'blog' && (
+          {type === 'notes' && (
             <div className="relative max-w-lg">
               <input
                 aria-label="Search articles"
@@ -55,7 +55,7 @@ export default function ListLayout({
           )}
         </div>
         <ul>
-          {!filteredBlogPosts.length && 'No posts found.'}
+          {!filteredNotes.length && 'No posts found.'}
           {displayPosts.map((frontMatter) => {
             const { slug, date, title, summary, tags, postType } = frontMatter
 

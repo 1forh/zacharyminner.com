@@ -8,7 +8,7 @@ import formatDate from '@/lib/utils/formatDate'
 const MAX_DISPLAY = 5
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('blog')
+  const posts = await getAllFilesFrontMatter('notes')
 
   return { props: { posts } }
 }
@@ -23,7 +23,7 @@ export default function Home({ posts }) {
             Heyo, I'm Zachary Minner
           </h1>
           <h2 className="mb-16 text-lg prose text-gray-600 dark:text-gray-400">
-            Projects, articles and other random stuff by me.
+            Projects, notes and other random stuff by me.
           </h2>
         </div>
 
@@ -52,7 +52,7 @@ export default function Home({ posts }) {
                         <div>
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
                             <Link
-                              href={`/blog/${slug}`}
+                              href={`/notes/${slug}`}
                               className="text-gray-900 dark:text-gray-100"
                             >
                               {title}
@@ -70,7 +70,7 @@ export default function Home({ posts }) {
                       </div>
                       <div className="text-base font-medium leading-6">
                         <Link
-                          href={`/blog/${slug}`}
+                          href={`/notes/${slug}`}
                           className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                           aria-label={`Read "${title}"`}
                         >
@@ -88,11 +88,11 @@ export default function Home({ posts }) {
       {posts.length > MAX_DISPLAY && (
         <div className="flex justify-end text-base font-medium leading-6">
           <Link
-            href="/blog"
+            href="/notes"
             className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-            aria-label="all posts"
+            aria-label="all notes"
           >
-            All Posts &rarr;
+            All Notes &rarr;
           </Link>
         </div>
       )}

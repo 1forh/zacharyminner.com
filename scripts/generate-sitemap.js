@@ -7,8 +7,8 @@ const siteMetadata = require('../data/siteMetadata')
   const prettierConfig = await prettier.resolveConfig('./.prettierrc.js')
   const pages = await globby([
     'pages/*.js',
-    'data/blog/**/*.mdx',
-    'data/blog/**/*.md',
+    'data/notes/**/*.mdx',
+    'data/notes/**/*.md',
     'data/projects/**/*.mdx',
     'data/projects/**/*.md',
     'public/tags/**/*.xml',
@@ -23,7 +23,7 @@ const siteMetadata = require('../data/siteMetadata')
               .map((page) => {
                 const path = page
                   .replace('pages/', '/')
-                  .replace('data/blog', '/blog')
+                  .replace('data/notes', '/notes')
                   .replace('data/projects', '/projects')
                   .replace('public/', '/')
                   .replace('.js', '')
@@ -31,7 +31,7 @@ const siteMetadata = require('../data/siteMetadata')
                   .replace('.md', '')
                   .replace('/feed.xml', '')
                 const route = path === '/index' ? '' : path
-                if (page === `pages/404.js` || page === `pages/blog/[...slug].js`) {
+                if (page === `pages/404.js` || page === `pages/notes/[...slug].js`) {
                   return
                 }
                 return `
