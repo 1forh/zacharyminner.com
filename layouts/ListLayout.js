@@ -57,7 +57,8 @@ export default function ListLayout({
         <ul>
           {!filteredBlogPosts.length && 'No posts found.'}
           {displayPosts.map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
+            const { slug, date, title, summary, tags, postType } = frontMatter
+
             return (
               <li key={slug} className="py-4">
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
@@ -71,7 +72,7 @@ export default function ListLayout({
                     <div>
                       <h3 className="text-2xl font-bold leading-8 tracking-tight">
                         <Link
-                          href={`/${type}/${slug}`}
+                          href={`/${postType || type}/${slug}`}
                           className="text-gray-900 dark:text-gray-100"
                         >
                           {title}

@@ -11,7 +11,7 @@ import path from 'path'
 const root = process.cwd()
 
 export async function getStaticPaths() {
-  const tags = await getAllTags('blog')
+  const tags = await getAllTags('all')
 
   return {
     paths: Object.keys(tags).map((tag) => ({
@@ -24,9 +24,14 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const allPosts = await getAllFilesFrontMatter('blog')
+  const posts = await getAllFilesFrontMatter('blog')
+  let projects = await getAllFilesFrontMatter('projects')
+  projects = projects.map((project) => project.postType === 'projects')
+  const allPosts = [...posts, ...projects]
+
   const filteredPosts = allPosts.filter(
-    (post) => post.draft !== true && post.tags.map((t) => kebabCase(t)).includes(params.tag)
+    (post) =>
+      post.draft !== true && post.tags && post.tags.map((t) => kebabCase(t)).includes(params.tag)
   )
 
   // rss
