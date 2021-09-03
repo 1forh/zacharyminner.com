@@ -26,7 +26,10 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const posts = await getAllFilesFrontMatter('notes')
   let projects = await getAllFilesFrontMatter('projects')
-  projects = projects.map((project) => project.postType === 'projects')
+  projects = projects.map((project) => {
+    project.postType = 'projects'
+    return project
+  })
   const allPosts = [...posts, ...projects]
 
   const filteredPosts = allPosts.filter(
