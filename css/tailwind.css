@@ -30,3 +30,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+[class*='dark\:'] {
+  @apply transition-all duration-100;
+}
