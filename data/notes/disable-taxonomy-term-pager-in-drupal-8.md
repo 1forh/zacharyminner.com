@@ -7,7 +7,7 @@ summary:
 tags: ['Drupal 8']
 ---
 
-![drupal 8 pager](/static/static/images/content/drupal-8-pager.jpg)
+![drupal 8 pager](/static/images/content/drupal-8-pager.jpg)
 
 In order to disable the pager on a taxonomy term list page, you can set the `terms_per_page_admin` setting to a really high number.
 

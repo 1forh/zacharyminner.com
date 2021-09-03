@@ -15,7 +15,7 @@ Removed a file or a leftover `console.log`? Add a 🔥 emoji to the beginning of
 
 So easy. So effective. Another developer can review your pull request and gain a lot of context just by scanning your commit messages before diving deeper.
 
-![Gitmoji example commits](/static/static/images/content/gitmoji-example-commits.png)
+![Gitmoji example commits](/static/images/content/gitmoji-example-commits.png)
 
 ## The Steps
 
@@ -27,7 +27,7 @@ So easy. So effective. Another developer can review your pull request and gain a
 6.  Just wait a little bit. Things will fall into place. Be patient.
 7.  After a few days, the whole office will be using it. Nice work. 👍
 
-![Make sure to link them to Gitmoji's website](/static/static/images/content/link-them-to-gitmoji.png)
+![Make sure to link them to Gitmoji's website](/static/images/content/link-them-to-gitmoji.png)
 
 ## Making Things Easier
 

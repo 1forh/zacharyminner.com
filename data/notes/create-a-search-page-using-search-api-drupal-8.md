@@ -35,13 +35,13 @@ Using Drupal 8's Search API, we'll quickly run through the steps for building a 
 
 #### Enable Database Search and Search API modules
 
-![enable modules](/static/static/images/content/search-api-tutorial-1.png)
+![enable modules](/static/images/content/search-api-tutorial-1.png)
 
 #### Click Add Server button
 
-![add server](/static/static/images/content/search-api-tutorial-2.png)
+![add server](/static/images/content/search-api-tutorial-2.png)
 
-2. Fill in fields ![fill in fields](/static/static/images/content/search-api-tutorial-3.png)
+2. Fill in fields ![fill in fields](/static/images/content/search-api-tutorial-3.png)
 3. Save
 
 ### Navigate to Search API page
@@ -50,26 +50,26 @@ Using Drupal 8's Search API, we'll quickly run through the steps for building a 
 
 #### Click Add Index button
 
-1. ![add index](/static/static/images/content/search-api-tutorial-4.png)
+1. ![add index](/static/images/content/search-api-tutorial-4.png)
 2. Fill in fields and select datasources you want to index
-   ![select datasources](/static/static/images/content/search-api-tutorial-5.png)
+   ![select datasources](/static/images/content/search-api-tutorial-5.png)
 3. Scroll down and configure the datasources you selected
-   ![datasources](/static/static/images/content/search-api-tutorial-6.png)
+   ![datasources](/static/images/content/search-api-tutorial-6.png)
 4. Choose which server the indexes should use
 
-![server index](/static/static/images/content/search-api-tutorial-7.png) 5. Click the Save and add fields button
+![server index](/static/images/content/search-api-tutorial-7.png) 5. Click the Save and add fields button
 
-![save](/static/static/images/content/search-api-tutorial-8.png)
+![save](/static/images/content/search-api-tutorial-8.png)
 
 ### Navigate to Fields tab for datasource
 
 1. /admin/config/search/search-api/index/content/fields
-2. ![navigate to fields tab](/static/static/images/content/search-api-tutorial-9.png)
+2. ![navigate to fields tab](/static/images/content/search-api-tutorial-9.png)
 3. Click Add fields
    1. Add the fields that should be indexed
    2. Configure Type
    3. Configure Boost to desired value if applicable
-      ![configure boost](/static/static/images/content/search-api-tutorial-10.png)
+      ![configure boost](/static/images/content/search-api-tutorial-10.png)
 4. Click Save changes
 
 #### Click Processors tab
@@ -77,31 +77,31 @@ Using Drupal 8's Search API, we'll quickly run through the steps for building a 
 1. /admin/config/search/search-api/index/content/processors
 2. Enable HTML filter and Ignore case processors
 
-![enable filters](/static/static/images/content/search-api-tutorial-11.png) 3. Scroll down and update Processor settings for HTML filter
+![enable filters](/static/images/content/search-api-tutorial-11.png) 3. Scroll down and update Processor settings for HTML filter
 
-![filters](/static/static/images/content/search-api-tutorial-12.png) 4. Update Processor settings for Ignore case
+![filters](/static/images/content/search-api-tutorial-12.png) 4. Update Processor settings for Ignore case
 
-![update processor settings for ignore case](/static/static/images/content/search-api-tutorial-13.png) 5. Click Save
+![update processor settings for ignore case](/static/images/content/search-api-tutorial-13.png) 5. Click Save
 
 #### Click View tab
 
 1. Click the Index now button
 
-![start indexing](/static/static/images/content/search-api-tutorial-14.png)
+![start indexing](/static/images/content/search-api-tutorial-14.png)
 
 ### Create a view
 
 1. Name it Search
-2. In View Settings, choose Index Content ![view settings](/static/static/images/content/search-api-tutorial-15.png)
-3. Click the Create a page checkbox and configure ![create a page](/static/static/images/content/search-api-tutorial-16.png)
+2. In View Settings, choose Index Content ![view settings](/static/images/content/search-api-tutorial-15.png)
+3. Click the Create a page checkbox and configure ![create a page](/static/images/content/search-api-tutorial-16.png)
 4. Click Save and edit
 
 #### Once on the Search View page, add fields to display and configure
 
-1. /admin/structure/views/view/search ![view setup](/static/static/images/content/search-api-tutorial-17.png) ![setup fields](/static/static/images/content/search-api-tutorial-18.png)
+1. /admin/structure/views/view/search ![view setup](/static/images/content/search-api-tutorial-17.png) ![setup fields](/static/images/content/search-api-tutorial-18.png)
 
    Update Filter/Sort Criteria
 
-   ![setup filter and sort criteria](/static/static/images/content/search-api-tutorial-19.png)
+   ![setup filter and sort criteria](/static/images/content/search-api-tutorial-19.png)
 
    Create templates, output selected fields, style 😃

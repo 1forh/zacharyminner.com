@@ -6,7 +6,7 @@ summary: Add `--ignore-platform-reqs` flag to composer require command to get ar
 tags: ['Drupal 8', 'PHP', 'Composer']
 ---
 
-![](/static/static/images/content/screen-shot-2020-07-22-at-9-54-28-am.png)
+![](/static/images/content/screen-shot-2020-07-22-at-9-54-28-am.png)
 
 Add `--ignore-platform-reqs` flag to composer require command to get around this.
 
