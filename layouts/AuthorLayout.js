@@ -43,12 +43,6 @@ export default function AuthorLayout({ children, frontMatter }) {
                 {company}
               </a>
             </div>
-            <div className="flex pt-6 space-x-3">
-              <SocialIcon kind="mail" href={`mailto:${email}`} />
-              <SocialIcon kind="github" href={github} />
-              <SocialIcon kind="linkedin" href={linkedin} />
-              <SocialIcon kind="twitter" href={twitter} />
-            </div>
           </div>
           <div className="pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-2">{children}</div>
         </div>
