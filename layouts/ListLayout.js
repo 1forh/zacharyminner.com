@@ -10,6 +10,7 @@ export default function ListLayout({
   initialDisplayPosts = [],
   pagination,
   type = 'notes',
+  capitalizeTitle,
 }) {
   const [searchValue, setSearchValue] = useState('')
   const filteredNotes = posts.filter((frontMatter) => {
@@ -25,7 +26,11 @@ export default function ListLayout({
     <>
       <div className="divide-y">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h1
+            className={`text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 ${
+              capitalizeTitle === true ? 'capitalize' : ''
+            }`}
+          >
             {title}
           </h1>
           {type === 'notes' && (
