@@ -50,10 +50,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             className="pb-8 divide-y divide-gray-200 xl:divide-y-0 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6"
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
-            <div className="lg:pt-8">
-              <SidebarWidget>
+            <div className="lg:pt-6">
+              {/* <SidebarWidget>
                 <AuthorsWidget authorDetails={authorDetails} />
-              </SidebarWidget>
+              </SidebarWidget> */}
             </div>
 
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0 xl:col-span-3 xl:row-span-2">

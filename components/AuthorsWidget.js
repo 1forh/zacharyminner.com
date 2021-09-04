@@ -16,7 +16,7 @@ export default function AuthorsWidget({ authorDetails }) {
                   width="38px"
                   height="38px"
                   alt="avatar"
-                  className="w-10 h-10 rounded-full"
+                  className="w-10 h-10"
                 />
               )}
               <dl className="text-sm font-medium leading-5 whitespace-nowrap">

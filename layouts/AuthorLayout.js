@@ -26,7 +26,7 @@ export default function AuthorLayout({ children, frontMatter }) {
         </div>
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
           <div className="flex flex-col items-center pt-8 space-x-2">
-            <div className="w-48 h-48 overflow-hidden rounded-full">
+            <div className="w-48 h-48 overflow-hidden">
               <Image
                 src={avatar}
                 blurDataURL={avatar}
