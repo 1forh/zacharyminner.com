@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function DownloadOnAppStore({ href }) {
   return (
-    <div className="flex justify-center w-full mb-8">
+    <div className="flex justify-center w-full">
       <a href={href} target="_blank" rel="noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 119.664 40" className="w-[175px]">
           <path
