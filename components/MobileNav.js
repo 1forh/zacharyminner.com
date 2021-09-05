@@ -20,7 +20,7 @@ const MobileNav = () => {
 
   return (
     <div className="flex items-center sm:hidden">
-      <button type="button" className="rounded" aria-label="Toggle Menu" onClick={onToggleNav}>
+      <button type="button" className="py-2" aria-label="Toggle Menu" onClick={onToggleNav}>
         <Hamburger isOpen={navShow} />
       </button>
       <div
