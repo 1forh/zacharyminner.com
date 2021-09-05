@@ -75,7 +75,7 @@ export default function ListLayout({
                   </dl>
                   <div className="space-y-3 xl:col-span-3">
                     <div>
-                      <h3 className="text-2xl font-bold leading-8 tracking-tight">
+                      <h3 className="mb-1 text-2xl font-bold leading-8 tracking-tight">
                         <Link
                           href={`/${postType || type}/${slug}`}
                           className="text-gray-900 dark:text-gray-100"

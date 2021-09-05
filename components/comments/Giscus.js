@@ -41,7 +41,6 @@ const Giscus = ({ mapping }) => {
 
   useEffect(() => {
     LoadComments()
-    console.log('hit')
   }, [])
 
   // Reload on theme change

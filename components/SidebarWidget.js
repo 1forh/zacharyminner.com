@@ -8,7 +8,7 @@ export default function SidebarWidget({ children, heading, className, last }) {
       }`}
     >
       {heading && (
-        <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
+        <h2 className="mb-1 text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
           {heading}
         </h2>
       )}
