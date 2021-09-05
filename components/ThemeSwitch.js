@@ -39,7 +39,7 @@ const ThemeSwitch = () => {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        transition={{ type: 'spring', duration: 0.5 }}
+        transition={{ type: 'spring', tension: 100 }}
         animate={theme === 'dark' ? 'sun' : 'moon'}
         variants={svgVariants}
         className="!origin-center"
@@ -51,27 +51,27 @@ const ThemeSwitch = () => {
         <motion.circle
           cx="12"
           cy="12"
-          r="9"
+          r="4"
           mask="url(#mask)"
           fill="currentColor"
           animate={theme === 'dark' ? 'sun' : 'moon'}
           variants={circleVariants}
-          transition={{ type: 'spring', duration: 0.2 }}
+          transition={{ type: 'spring', tension: 100 }}
         />
         <motion.g
           stroke="currentColor"
-          transition={{ type: 'spring', duration: 0.2 }}
+          transition={{ type: 'spring', tension: 100 }}
           animate={theme === 'dark' ? 'sun' : 'moon'}
           variants={lineVariants}
         >
-          <line x1="12" y1="1" x2="12" y2="3" />
-          <line x1="12" y1="21" x2="12" y2="23" />
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-          <line x1="1" y1="12" x2="3" y2="12" />
-          <line x1="21" y1="12" x2="23" y2="12" />
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          <line x1="12" y1="1" x2="12" y2="3" vectorEffect="non-scaling-stroke" />
+          <line x1="12" y1="21" x2="12" y2="23" vectorEffect="non-scaling-stroke" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" vectorEffect="non-scaling-stroke" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" vectorEffect="non-scaling-stroke" />
+          <line x1="1" y1="12" x2="3" y2="12" vectorEffect="non-scaling-stroke" />
+          <line x1="21" y1="12" x2="23" y2="12" vectorEffect="non-scaling-stroke" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" vectorEffect="non-scaling-stroke" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" vectorEffect="non-scaling-stroke" />
         </motion.g>
       </motion.svg>
     </button>
