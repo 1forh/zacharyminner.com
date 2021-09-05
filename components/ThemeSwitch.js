@@ -28,7 +28,7 @@ const ThemeSwitch = () => {
     <button
       aria-label="Toggle Dark Mode"
       type="button"
-      className="w-8 h-8 p-1 ml-1 mr-1 rounded sm:ml-4"
+      className="w-8 h-8 p-1 ml-1 mr-5 rounded md:mr-0 sm:ml-4"
       onClick={() => setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')}
     >
       <motion.svg
@@ -42,7 +42,7 @@ const ThemeSwitch = () => {
         transition={{ type: 'spring', duration: 0.5 }}
         animate={theme === 'dark' ? 'sun' : 'moon'}
         variants={svgVariants}
-        class="!origin-center"
+        className="!origin-center"
       >
         <mask id="mask">
           <rect x="0" y="0" width="100%" height="100%" fill="white" />
