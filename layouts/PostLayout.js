@@ -83,14 +83,14 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                     {prev && (
                       <SidebarWidget heading="Previous Project">
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                          <Link href={`/projects/${prev.slug}`}>{prev.title}</Link>
+                          <Link href={`/notes/${prev.slug}`}>{prev.title}</Link>
                         </div>
                       </SidebarWidget>
                     )}
                     {next && (
                       <SidebarWidget heading="Next Project">
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                          <Link href={`/projects/${next.slug}`}>{next.title}</Link>
+                          <Link href={`/notes/${next.slug}`}>{next.title}</Link>
                         </div>
                       </SidebarWidget>
                     )}
