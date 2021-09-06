@@ -68,6 +68,8 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   <div className="flex justify-center lg:justify-start">
                     <a
                       href={website}
+                      target="_blank"
+                      rel="noreferrer"
                       className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                     >
                       View website
