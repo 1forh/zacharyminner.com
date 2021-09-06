@@ -1,9 +1,7 @@
 ---
 title: Bootstrap Grid Overlay Chrome Extension
 date: 10/03/2019
-tags:
-  - JavaScript
-  - Chrome Extension
+tags: ['JavaScript', 'Chrome Extension']
 website: https://chrome.google.com/webstore/detail/bootstrap-grid-overlay/mnlklmelflkheijccafopdohgclfefcg
 summary: Quickly toggle a Bootstrap Grid Overlay that automatically uses your application's
   styles to determine how it looks.
