@@ -6,6 +6,7 @@ tags:
 website: https://tallymarktracker.netlify.app/
 summary: Track your push-ups, squats, pull-ups, or anything with this simple tracking
   app!
+weight: 99
 ---
 
 ![Tally Mark Tracker](/static/images/content/tally-mark-tracker.jpg)

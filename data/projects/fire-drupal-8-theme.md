@@ -5,6 +5,7 @@ tags: ['Drupal 8']
 website: https://github.com/skycatchfire/fire-drupal
 summary: Fire is a custom Drupal 8 starter theme that we use at SKYCATCHFIRE as a
   base for all our new Drupal 8 websites and web applications.
+weight: 99
 ---
 
 ![SKYCATCHFIRE - Fire Drupal 8 theme](/static/images/content/skycatchfire--dark.png)

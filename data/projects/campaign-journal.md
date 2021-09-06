@@ -5,7 +5,8 @@ tags:
   - Nuxt.js
   - Firebase
 website: https://campaign-journal.web.app
-summary: "Campaign Journal let's keep track of Dungeons & Dragons campaigns. "
+summary: "Campaign Journal let's keep track of Dungeons & Dragons campaigns."
+weight: 99
 ---
 
 Campaign Journal let's keep track of Dungeons & Dragons campaigns. Whether you just want to take notes for your weekly campaigns or you want to produce grand stories that tell of your heroes' adventures, Campaign Journal can help!

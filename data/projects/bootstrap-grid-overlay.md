@@ -7,6 +7,7 @@ tags:
 website: https://chrome.google.com/webstore/detail/bootstrap-grid-overlay/mnlklmelflkheijccafopdohgclfefcg
 summary: Quickly toggle a Bootstrap Grid Overlay that automatically uses your application's
   styles to determine how it looks.
+weight: 0
 ---
 
 ![Bootstrap Grid Overlay - fluid container](/static/images/content/bootstrap-grid-overlay-fluid.jpg)

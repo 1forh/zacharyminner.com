@@ -1,7 +1,7 @@
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
-import ListLayout from '@/layouts/ListLayout'
+import NoteListLayout from '@/layouts/NoteListLayout'
 import { POSTS_PER_PAGE } from '../../notes'
 
 export async function getStaticPaths() {
@@ -45,7 +45,7 @@ export default function ProjectPage({ posts, initialDisplayPosts, pagination }) 
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <ListLayout
+      <NoteListLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}

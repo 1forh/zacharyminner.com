@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Pagination from '@/components/Pagination'
 import formatDate from '@/lib/utils/formatDate'
 
-export default function ListLayout({
+export default function NoteListLayout({
   posts,
   title,
   initialDisplayPosts = [],
@@ -59,7 +59,7 @@ export default function ListLayout({
             </div>
           )}
         </div>
-        <ul>
+        <ul className="pt-8 mt-8">
           {!filteredNotes.length && 'No posts found.'}
           {displayPosts.map((frontMatter) => {
             const { slug, date, title, summary, tags, postType } = frontMatter
