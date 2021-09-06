@@ -8,6 +8,7 @@ website: https://www.mtg-proxies.com
 summary: 'MTG Proxies allows you to proxy Magic: The Gathering tokens to use for your
   decks.'
 weight: 99
+featured: /static/images/content/mtg-proxies.jpg
 ---
 
 ![mtg proxies](/static/images/content/mtg-proxies.jpg)

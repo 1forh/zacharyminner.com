@@ -6,6 +6,7 @@ website: https://www.unofficialteslanews.com
 summary: Unofficial Tesla News was built at SKYCATCHFIRE to aggregate articles and
   videos from the most popular websites and YouTube channels.
 weight: 4
+featured: /static/images/content/unofficial-tesla-news.jpg
 ---
 
 ![Unofficial Tesla News](/static/images/content/unofficial-tesla-news.jpg)

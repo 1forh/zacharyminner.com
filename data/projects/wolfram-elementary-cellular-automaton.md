@@ -7,6 +7,7 @@ website: https://1forh.github.io/weca/
 summary: The user is able to select how many generations the simulation will run for
   and which ruleset to follow from a pre-established set of rulesets.
 weight: 98
+featured: /static/images/content/screen-shot-2020-05-15-at-4.54.30-pm.png
 ---
 
 ![Wolfram Elementary Cellular Automaton](/static/images/content/screen-shot-2020-05-15-at-4.54.30-pm.png)

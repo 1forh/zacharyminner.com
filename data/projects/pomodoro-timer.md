@@ -7,6 +7,7 @@ website: https://forhtimer.netlify.app/
 summary: A simple pomodoro timer application that allows a user to keep track of 30
   minute intervals.
 weight: 99
+featured: /static/images/content/screen-shot-2020-05-15-at-4.37.03-pm.png
 ---
 
 ![pomodoro timer](/static/images/content/screen-shot-2020-05-15-at-4.37.03-pm.png)

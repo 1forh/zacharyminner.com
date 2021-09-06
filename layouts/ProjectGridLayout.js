@@ -1,4 +1,5 @@
 import Link from '@/components/Link'
+import Image from '@/components/Image'
 import Tag from '@/components/Tag'
 import { useState } from 'react'
 
@@ -9,7 +10,6 @@ export default function ProjectGridLayout({ posts, title, capitalizeTitle }) {
     return searchContent.toLowerCase().includes(searchValue.toLowerCase())
   })
 
-  // If initialDisplayPosts exist, display it if no searchValue is specified
   const displayPosts = posts.length > 0 && !searchValue ? posts : filteredNotes
 
   return (
@@ -47,20 +47,33 @@ export default function ProjectGridLayout({ posts, title, capitalizeTitle }) {
             </svg>
           </div>
         </div>
-        <ul className="grid grid-cols-2 gap-8 pt-8 mt-8">
+        <ul className="grid grid-cols-1 gap-8 pt-8 mt-8 lg:gap-12 md:grid-cols-2">
           {!filteredNotes.length && <li className="mt-6">No projects found.</li>}
           {displayPosts.map((frontMatter) => {
-            const { slug, date, title, summary, tags, weight } = frontMatter
+            const { slug, title, summary, tags, featured } = frontMatter
 
             return (
               <li key={slug} className="py-4">
-                <article className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
-                  <div className="space-y-3 xl:col-span-3">
+                <article className="xl:items-baseline group">
+                  <div className="space-y-3">
                     <div>
+                      {featured && (
+                        <div className="mb-2">
+                          <Link href={`/projects/${slug}`}>
+                            <Image
+                              src={featured}
+                              alt={title}
+                              width={500}
+                              height={300}
+                              className="object-cover rounded-md"
+                            />
+                          </Link>
+                        </div>
+                      )}
                       <h3 className="mb-1 text-2xl font-semibold leading-8 tracking-tight">
                         <Link
                           href={`/projects/${slug}`}
-                          className="text-gray-900 dark:text-gray-100 hover:!text-primary-500 !duration-200"
+                          className="text-gray-900 dark:text-gray-100 group-hover:!opacity-50 !duration-200"
                         >
                           {title}
                         </Link>

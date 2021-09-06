@@ -12,7 +12,6 @@ export async function getStaticProps() {
       return -1
     }
   })
-  console.log(posts)
   return { props: { posts } }
 }
 
