@@ -9,9 +9,8 @@ Below is a snippet that you can add to your `functions.php` file to remove the d
 
 ```php
 function fire_theme_support() {
-	remove_theme_support('core-block-patterns');
+    remove_theme_support('core-block-patterns');
 }
-
 add_action('after_setup_theme', 'fire_theme_support');
 ```
 

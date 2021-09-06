@@ -81,14 +81,14 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 {(next || prev) && (
                   <div className="flex justify-between lg:flex-col">
                     {prev && (
-                      <SidebarWidget heading="Previous Project">
+                      <SidebarWidget heading="Previous Note">
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                           <Link href={`/notes/${prev.slug}`}>{prev.title}</Link>
                         </div>
                       </SidebarWidget>
                     )}
                     {next && (
-                      <SidebarWidget heading="Next Project">
+                      <SidebarWidget heading="Next Note">
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                           <Link href={`/notes/${next.slug}`}>{next.title}</Link>
                         </div>
