@@ -53,7 +53,7 @@ export default function Home({ posts }) {
                           <h2 className="mb-1 text-2xl font-semibold leading-8 tracking-tight">
                             <Link
                               href={`/notes/${slug}`}
-                              className="text-gray-900 dark:text-gray-100"
+                              className="text-gray-900 dark:text-gray-100 hover:!opacity-50 !duration-200"
                             >
                               {title}
                             </Link>

@@ -29,7 +29,7 @@ export default function Header() {
             <Link
               key={link.title}
               href={link.href}
-              className="p-1 font-medium text-gray-900 !duration-200 sm:p-4 dark:text-gray-100 hover:!text-primary-500"
+              className="p-1 font-medium text-gray-900 !duration-200 sm:p-4 dark:text-gray-100 hover:!opacity-50"
             >
               {link.title}
             </Link>
