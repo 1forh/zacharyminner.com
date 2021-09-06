@@ -50,7 +50,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               )}
 
               {website && (
-                <SidebarWidget className={`lg:pt-6 ${appStoreUrl ? '!pt-0' : '!pt-6'}`}>
+                <SidebarWidget className={`lg:pt-6 ${appStoreUrl ? '!pt-0 lg:!pt-6' : '!pt-6'}`}>
                   <div className="flex justify-center lg:justify-start">
                     <a
                       href={website}
