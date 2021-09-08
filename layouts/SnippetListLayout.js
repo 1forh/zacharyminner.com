@@ -41,7 +41,7 @@ export default function SnippetListLayout({
               aria-label="Search snippets"
               type="text"
               onChange={(e) => setSearchValue(e.target.value)}
-              placeholder="Search articles"
+              placeholder="Search snippets"
               className="block w-full px-4 py-2 text-gray-900 bg-white border border-gray-300 rounded-md outline-none dark:border-gray-900 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800 dark:text-gray-100"
             />
             <svg
@@ -63,7 +63,7 @@ export default function SnippetListLayout({
         <ul className="pt-8 mt-8">
           {!filteredNotes.length && 'No snippets found.'}
           {displayPosts.map((frontMatter) => {
-            const { slug, date, title, summary, postType } = frontMatter
+            const { slug, title, summary } = frontMatter
 
             return (
               <li key={slug} className="py-4">
@@ -72,7 +72,7 @@ export default function SnippetListLayout({
                     <div>
                       <h3 className="mb-1 text-2xl font-semibold leading-8 tracking-tight">
                         <Link
-                          href={`/${postType || type}/${slug}`}
+                          href={`/snippets/${slug}`}
                           className="text-gray-900 dark:text-gray-100 hover:!text-primary-500 !duration-200"
                         >
                           {title}
