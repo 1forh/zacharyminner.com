@@ -40,7 +40,7 @@ export default function SnippetLayout({ frontMatter, authorDetails, next, prev, 
                 {prev && (
                   <div className="pt-4 xl:pt-8">
                     <Link
-                      href={`/notes/${prev.slug}`}
+                      href={`/snippets/${prev.slug}`}
                       className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                     >
                       &larr; {prev.title}
@@ -50,7 +50,7 @@ export default function SnippetLayout({ frontMatter, authorDetails, next, prev, 
                 {next && (
                   <div className="pt-4 xl:pt-8">
                     <Link
-                      href={`/notes/${next.slug}`}
+                      href={`/snippets/${next.slug}`}
                       className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                     >
                       {next.title} &rarr;
