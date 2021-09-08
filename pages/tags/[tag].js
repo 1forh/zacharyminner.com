@@ -50,7 +50,6 @@ export async function getStaticProps({ params }) {
 export default function Tag({ posts, tag, allTags }) {
   // Capitalize first letter and convert space to dash
   const theTag = allTags[tag]
-  console.log(theTag)
 
   return (
     <>
