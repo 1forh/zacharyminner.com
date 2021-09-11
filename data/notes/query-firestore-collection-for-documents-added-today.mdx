@@ -7,22 +7,30 @@ tags:
   - Firestore
 ---
 
-This example assumes that each document in your collection has a date field. I have a `date` field on each of the documents in my `notes` collection.
+## Caveats
 
-<img src={'/static/images/content/firebase-notes-document-example.png'} className="max-w-[500px]" />
+This example assumes that each document in your collection has a date field. I'm also using the [Firebase Admin SDK](https://firebase.google.com/docs/admin/setup) as this code is run in a [Firebase Function](https://firebase.google.com/docs/functions).
 
-First we get today's date using `new Date()`. Then we set it to midnight of today and convert it to a timestamp.
+I have a `date` field on each of the documents in my `notes` collection.
 
-**Note:** I had to add `+5` hours to get midnight in Eastern Time.
+<img src={'/static/images/content/firebase-notes-document-example.png'} className="max-w-[400px]" />
+
+## Helper function
+
+In the `getStartOfToday` function below, first we get today's date using `new Date()`. Then we set it to midnight of today, convert it to a timestamp, and return the timestamp.
 
 ```jsx
 function getStartOfToday() {
   const now = new Date()
-  now.setHours(5, 0, 0, 0) // +5 hours for Eastern Time
+  now.setHours(5, 0, 0, 0) // +5 hours for easter standard time
   const timestamp = admin.firestore.Timestamp.fromDate(now)
-  return timestamp
+  return timestamp // ex. 1631246400
 }
 ```
+
+_Note: I had to add 5 hours to get EST. You might want to tweak this and test yourself._ 🤷‍♂️
+
+## Querying the `notes` collection
 
 As you can see below, with the `getStartOfToday` function we can run a Firestore query and ask for all documents that have a timestamp greater than the beginning of today. This will return only the documents that have a timestamp from today assuming your `date` field is of type `Timestamp`. Woot! 🎊
 
@@ -35,7 +43,7 @@ const snapshot = await admin
 const notes = snapshot.docs.map((doc) => doc.data())
 ```
 
-Check out the full snippet below:
+## All Together
 
 ```jsx
 function getStartOfToday() {
