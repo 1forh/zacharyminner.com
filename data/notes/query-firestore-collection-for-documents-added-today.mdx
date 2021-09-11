@@ -1,11 +1,15 @@
 ---
-date: 2020-12-18
+date: 2021-9-10
 title: How to query a Firestore collection for documents added today
-summary: Get all documents added today from a Firestore collection
+summary: Query all documents in a Firestore collection that were added today
 tags:
   - Firebase
   - Firestore
 ---
+
+This example assumes that each document in your collection has a date field. I have a `date` field on each of the documents in my `notes` collection.
+
+<img src={'/static/images/content/firebase-notes-document-example.png'} className="max-w-[500px]" />
 
 First we get today's date using `new Date()`. Then we set it to midnight of today and convert it to a timestamp.
 
@@ -20,7 +24,7 @@ function getStartOfToday() {
 }
 ```
 
-As you can see below, with the `getStartOfToday` function we can run a Firestore query and ask for all documents that have a Timestamp greater than the beginning of today. This will return only the documents that have a timestamp from today assuming your `date` field is of type `Timestamp`. Woot! 🎊
+As you can see below, with the `getStartOfToday` function we can run a Firestore query and ask for all documents that have a timestamp greater than the beginning of today. This will return only the documents that have a timestamp from today assuming your `date` field is of type `Timestamp`. Woot! 🎊
 
 ```jsx
 const snapshot = await admin
