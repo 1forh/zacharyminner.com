@@ -50,7 +50,7 @@ function getStartOfToday() {
   const now = new Date()
   now.setHours(5, 0, 0, 0) // +5 hours for Eastern Time
   const timestamp = admin.firestore.Timestamp.fromDate(now)
-  return timestamp
+  return timestamp // ex. 1631246400
 }
 
 const snapshot = await admin
