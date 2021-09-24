@@ -7,6 +7,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/comments'
 import DownloadOnAppStore from '@/components/DownloadOnAppStore'
+import DownloadOnPlayStore from '@/components/DownloadOnPlayStore'
 import AuthorsWidget from '@/components/AuthorsWidget'
 import SidebarWidget from '@/components/SidebarWidget'
 
@@ -16,10 +17,8 @@ const discussUrl = (slug) =>
     `${siteMetadata.siteUrl}/projects/${slug}`
   )}`
 
-const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
-
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
-  const { slug, fileName, title, tags, website, appStoreUrl } = frontMatter
+  const { slug, fileName, title, tags, website, appStoreUrl, playStoreUrl } = frontMatter
 
   return (
     <SectionContainer>
@@ -38,14 +37,25 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
             <div className="flex flex-col lg:pt-8">
-              {appStoreUrl && (
+              {(appStoreUrl || playStoreUrl) && (
                 <SidebarWidget>
-                  <dl>
-                    <dt className="sr-only">Download on the app store</dt>
-                    <dd>
-                      <DownloadOnAppStore href={appStoreUrl} />
-                    </dd>
-                  </dl>
+                  {appStoreUrl && (
+                    <dl>
+                      <dt className="sr-only">Download on the app store</dt>
+                      <dd>
+                        <DownloadOnAppStore href={appStoreUrl} />
+                      </dd>
+                    </dl>
+                  )}
+
+                  {playStoreUrl && (
+                    <dl className="mt-4">
+                      <dt className="sr-only">Download on Google Play Store</dt>
+                      <dd>
+                        <DownloadOnPlayStore href={playStoreUrl} />
+                      </dd>
+                    </dl>
+                  )}
                 </SidebarWidget>
               )}
 
