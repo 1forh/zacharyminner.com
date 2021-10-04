@@ -1,0 +1,81 @@
+---
+title: useColorTheme
+summary: This hook adds logic to check whether or not to use the default system theme or a theme set by the user.
+tags: ['React Native', 'React Hook']
+---
+
+This hook adds logic to check whether or not to use the default system theme or a theme set by the user. The hook also saves the users preference using React Native's AsyncStorage.
+
+```
+import React, { createContext, useState, useContext, useEffect } from 'react';
+import { useColorScheme } from 'react-native-appearance';
+import {
+  fetchDataFromDb,
+  saveItemToDb,
+  removeItemFromDb,
+} from '../utilities/db';
+
+const STORAGE_KEY_THEME = '@MyApp.ColorTheme';
+const STORAGE_KEY_SYSTEM = '@MyApp.IsUsingSystem';
+
+const ColorThemeContext = createContext(null);
+
+export const ColorThemeProvider = (props) => {
+  const defaultTheme = useColorScheme();
+
+  const [isUsingSystem, setIsUsingSystem] = useState(false);
+  const [activeTheme, setActiveTheme] = useState(defaultTheme);
+
+  const saveActiveTheme = async (theme) => {
+    await saveItemToDb(STORAGE_KEY_THEME, theme);
+    setActiveTheme(theme);
+  };
+
+  const resetActiveTheme = async (theme) => {
+    await removeItemFromDb(STORAGE_KEY_THEME);
+    setActiveTheme(defaultTheme);
+  };
+
+  const saveIsUsingSystem = async (is) => {
+    await saveItemToDb(STORAGE_KEY_SYSTEM, is);
+    setIsUsingSystem(is);
+
+    if (is) {
+      await resetActiveTheme();
+    }
+  };
+
+  const fetchInitialData = () => {
+    (async function () {
+      const t = await fetchDataFromDb(STORAGE_KEY_THEME);
+      if (t) {
+        setActiveTheme(t);
+      }
+      const s = await fetchDataFromDb(STORAGE_KEY_SYSTEM);
+      if (typeof s !== 'undefined') {
+        setIsUsingSystem(s);
+      }
+    })();
+  };
+
+  useEffect(() => {
+    fetchInitialData();
+  }, []);
+
+  return (
+    <ColorThemeContext.Provider
+      value={{
+        activeTheme,
+        saveActiveTheme,
+        resetActiveTheme,
+        isUsingSystem,
+        saveIsUsingSystem,
+      }}
+    >
+      {props.children}
+    </ColorThemeContext.Provider>
+  );
+};
+
+export const useColorTheme = () => useContext(ColorThemeContext);
+```
