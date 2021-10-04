@@ -1,0 +1,50 @@
+---
+title: useGameLoop
+summary: This hook uses setInterval to create a game loop that runs every certain amount of seconds.
+tags: ['React Native', 'React Hook']
+weight: 0
+---
+
+You can use this hook inside your components or other hooks to trigger functions and such for each tick of the game loop.
+
+```js
+import React, { useEffect, useState } from 'react';
+import { theConfig } from '../config/index';
+
+const timeBetweenTicks = 1000;
+
+const useGameLoop = () => {
+  const [started, setStarted] = useState(false);
+  const [tick, setTick] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (started) {
+        setTick((t) => t + 1);
+      }
+    }, timeBetweenTicks);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [started]);
+
+
+  const startTick = () => {
+    setStarted(true);
+  };
+
+  const stopTick = () => {
+    setStarted(false);
+  };
+
+  const resetTick = () => {
+    stopTick();
+    setTick(0);
+  };
+
+  return { startTick, stopTick, resetTick, tick };
+};
+
+export default useGameLoop;
+```
