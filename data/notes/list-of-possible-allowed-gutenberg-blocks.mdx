@@ -1,0 +1,95 @@
+---
+date: 2021-10-06
+title: List of possible allowed Gutenberg Blocks for WordPress
+summary: Helpful snippet that shows all of the allowed blocks that you can use. Removing items from this list will hide them in the Gutenberg editor.
+tags: ['WordPress', 'PHP', 'Gutenberg']
+---
+
+Helpful snippet that shows all of the allowed blocks that you can use. Removing items from this list will hide them in the Gutenberg editor.
+
+```php
+<?php
+    
+add_filter( 'allowed_block_types', 'set_allowed_block_types' );
+
+/**
+ * Set allowed gutenburg block types
+ * https://rudrastyh.com/gutenberg/remove-default-blocks.html
+ */
+function set_allowed_block_types( $allowed_blocks, $post ) {
+
+	// https://walterebert.com/blog/limiting-wordpress-gutenberg-blocks/
+	$allowed_blocks = array(
+		'core/shortcode',
+		'core/image',
+		'core/gallery',
+		'core/heading',
+		'core/quote',
+		'core/embed',
+		'core/list',
+		'core/separator',
+		'core/more',
+		'core/button',
+		'core/pullquote',
+		'core/table',
+		'core/preformatted',
+		'core/code',
+		'core/html',
+		'core/freeform',
+		'core/latest-posts',
+		'core/categories',
+		'core/cover-image',
+		'core/text-columns',
+		'core/verse',
+		'core/video',
+		'core/audio',
+		'core/block',
+		'core/paragraph',
+
+		'core-embed/twitter',
+		'core-embed/youtube',
+		'core-embed/facebook',
+		'core-embed/instagram',
+		'core-embed/wordpress',
+		'core-embed/soundcloud',
+		'core-embed/spotify',
+		'core-embed/flickr',
+		'core-embed/vimeo',
+		'core-embed/animoto',
+		'core-embed/cloudup',
+		'core-embed/collegehumor',
+		'core-embed/dailymotion',
+		'core-embed/funnyordie',
+		'core-embed/hulu',
+		'core-embed/imgur',
+		'core-embed/issuu',
+		'core-embed/kickstarter',
+		'core-embed/meetup-com',
+		'core-embed/mixcloud',
+		'core-embed/photobucket',
+		'core-embed/polldaddy',
+		'core-embed/reddit',
+		'core-embed/reverbnation',
+		'core-embed/screencast',
+		'core-embed/scribd',
+		'core-embed/slideshare',
+		'core-embed/smugmug',
+		'core-embed/speaker',
+		'core-embed/ted',
+		'core-embed/tumblr',
+		'core-embed/videopress',
+		'core-embed/wordpress-tv'
+	);
+
+	// if( $post->post_type === 'page' ) {
+	// 	$allowed_blocks[] = 'core/shortcode';
+	// }
+
+	return $allowed_blocks;
+
+}
+```
+
+This snippet was taken from this gist here. Very helpful! 
+
+https://gist.github.com/ThatGuySam/944d6f739eacb5708d6d4bd4eb26c938
