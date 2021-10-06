@@ -8,8 +8,9 @@ export default function DownloadOnPlayStore({ href }) {
         <Image
           src="/static/images/google-play-badge.png"
           alt="Download on Google Play Store"
-          width={245}
+          width={200}
           height={92}
+          className="object-contain"
         />
       </a>
     </div>
