@@ -9,6 +9,7 @@ module.exports = {
     './layouts/**/*.js',
     './lib/**/*.js',
     './data/**/*.mdx',
+    'tailwind.whitelist',
   ],
   darkMode: 'class',
   theme: {
