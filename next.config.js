@@ -49,6 +49,11 @@ module.exports = withBundleAnalyzer({
         destination: '/notes/meditations',
         permanent: true,
       },
+      {
+        source: '/bootstrap-grid-overlay',
+        destination: '/projects/bootstrap-grid-overlay',
+        permanent: true,
+      },
     ]
   },
 })
