@@ -54,6 +54,11 @@ module.exports = withBundleAnalyzer({
         destination: '/projects/bootstrap-grid-overlay',
         permanent: true,
       },
+      {
+        source: '/algorand-nfts-and-games-part-1',
+        destination: '/algorand-nfts-and-games',
+        permanent: true,
+      },
     ]
   },
 })
